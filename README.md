@@ -32,7 +32,8 @@ Link to the factsheets of each team and of each team-member. For example:
    * [Nuno França](factsheets/nuno_franca.md) 
  * [Team 2](factsheets/team2.md)
    * ...
-  
+
+
  * [Team 3](factsheets/team3.md)
    * [Afonso Martins](factsheets/afonso_martins.md) (SM)
    * [Anete Pereira](factsheets/anete_pereira.md)
@@ -40,5 +41,11 @@ Link to the factsheets of each team and of each team-member. For example:
    * [Hugo Castro](factsheets/hugo_castro.md) 
    * [José Sousa](factsheets/jose_sousa.md)
    * [Luís Paiva](factsheets/luis_paiva.md) (PO) 
+ * [Team 4](factsheets/team4/team1.md)
+   * [Afonso Pinto](factsheets/team4/afonso.md) 
+   * [Amanda Oliveira](factsheets/team4/amanda.md)(SPO)
+   * [Duarte Lopes](factsheets/team4/duarte.md)
+   * [Tiago Marques](factsheets/team4/tiago.md)
+   * [Tómas Martins](factsheets/team4/tomas.md) (SM)
 
 
