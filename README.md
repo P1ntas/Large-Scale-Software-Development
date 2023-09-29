@@ -25,9 +25,11 @@ Explain how to package, deploy and run the system to a production (or production
 Link to the factsheets of each team and of each team-member. For example:
 
  * [Team 1](factsheets/team1.md)
-   * [John Doe](factsheets/john_doe.md) (SPO)
-   * [Jane Doe](factsheets/jane_doe.md)
-   * [Richard Doe](factsheets/richard_doe.md) (SM)
+   * [Afonso Pacheco](factsheets/afonso_pacheco.md)
+   * [Artur Freitas](factsheets/artur_freitas.md) (PO)
+   * [João Araújo](factsheets/joao_araujo.md) (SM)
+   * [José Ramos](factsheets/jose_ramos.md)
+   * [Nuno França](factsheets/nuno_franca.md) 
  * [Team 2](factsheets/team2.md)
    * ...
 
