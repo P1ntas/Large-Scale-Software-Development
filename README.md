@@ -33,7 +33,7 @@ Link to the factsheets of each team and of each team-member. For example:
  * [Team 2](factsheets/team2.md)
    * ...
   
-  * [Team 3](factsheets/team3.md)
+ * [Team 3](factsheets/team3.md)
    * [Afonso Martins](factsheets/afonso_martins.md) (SM)
    * [Anete Pereira](factsheets/anete_pereira.md)
    * [Eduardo Silva](factsheets/eduardo_silva.md)
