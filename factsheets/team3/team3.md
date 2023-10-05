@@ -1,4 +1,4 @@
-# Factsheet for Team 4
+# Factsheet for Team 3
 
 ## Sprint 0
 
