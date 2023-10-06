@@ -1,4 +1,4 @@
-# Factsheet for Tómas Martns
+# Factsheet for José Sousa
 
 ## Sprint 0
 

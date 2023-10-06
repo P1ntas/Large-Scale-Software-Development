@@ -1,4 +1,4 @@
-# Factsheet for Afonso Pinto
+# Factsheet for Afonso Martins
 
 ## Sprint 0
 

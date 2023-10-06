@@ -1,4 +1,4 @@
-# Factsheet for Amanda Oliveira
+# Factsheet for Anete Pereira
 
 ## Sprint 0
 

@@ -1,4 +1,4 @@
-# Factsheet for Tiago Marques
+# Factsheet for Luis Paiva
 
 ## Sprint 0
 

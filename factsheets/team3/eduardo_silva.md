@@ -1,4 +1,4 @@
-# Factsheet for Duarte Lopes
+# Factsheet for Eduardo Silva
 
 ## Sprint 0
 
