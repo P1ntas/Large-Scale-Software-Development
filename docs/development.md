@@ -10,10 +10,6 @@ Identify main risks and justify the most important choices to show the soundness
 
 ## Technology
 
-Identify the main technologies, languages and frameworks used. Clearly identify which ones were restrictions imposed by the client and which were your own choices. Justify your choices and explain in your own words the motivation for the restrictions of your client.
-
-Explain the prototype or base implementation that you have implemented in Sprint 0, and how that has informed the rest of the development.
-
 ### First Prototype - Sprint 0
 
 At first, after the first contact with the client, we were told we were free to use any technology we wanted, as long as it doesn't require a lot of maintenance and it is open-source. With this in mind, we decided to use the following technologies, languages and frameworks:
