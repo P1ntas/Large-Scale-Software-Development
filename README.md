@@ -1,4 +1,4 @@
-# Product Name
+# MES for Industrial Automation
 
 Explain here in one or two sentences what is the goal of your product. More details about the product should be found in the [product management](docs/product.md) documentation (make sure you link it from here), which includes the product vision, market research and domain analysis.
  

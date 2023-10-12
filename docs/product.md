@@ -5,6 +5,8 @@
 Explain in few paragraphs what is the product vision that will guide the development of your product. Keep within ~1500 characters and user as reference the _Vision_ pattern in [The Scrum Book](http://scrumbook.org/).
 
 
+
+
 ## Market Research
 
 The following is a thorough survey of similar products and their pros and cons. The goal is to provide valuable insights into making an informed decision about our project and how to position it effectively in relation to our client.
@@ -110,16 +112,15 @@ Similar to the first representation, this diagram represents the main entities o
 
 - **EdgeX Foundry**: This system is built on top of the MQTT broker, so it is responsible for the communication between the MQTT broker and the databases and the **M**achine **L**earning **M**odel (**MLM**). It is also responsible to retrieve data to the Apache Storm/Flink instance to process it and filter it.
 
-- **Prometheus/InfluxDB**: These databases hold the data from the sensors. Both instances achieve the main purpose, but the pros of on system are the cons of the other. Prometheus has a built-in alert system, while InfluxDB has a built-in MQTT handler. While this has to be discussed with the client further, we decided to use Prometheus for the initial demo, since it is the most used system for this purpose and has an easier integration with Grafana.
+- **Prometheus**: This database hold the data from the sensors. Prometheus has a built-in alert and graph system. Prometheus scrapes the data that the EdgeX Foundry instance has available.
 
-- **PostgreSQL/MongoDB**: These databases hold the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors. The main difference between these two systems is that PostgreSQL is a relational database, while MongoDB is a document database. This means that PostgreSQL is more suitable for the static data, since it is more structured and achieves an higher confidence level to integrate with Grafana, while MongoDB is more suitable for the simulations data that the **MLM** will generate, since it is more flexible and can handle the data in a more efficient way. For now, we will stick with PostgreSQL, since it is the most used system for this purpose and has an easier integration with Grafana.
+- **PostgreSQL**: This database hold the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors. While PostgreSQL being a relational database, it is suitable for the static data, since it is more structured and achieves an higher confidence level to integrate with Grafana.
 
-- **Apache Storm/Apache Flink**: These systems are responsible for the data processing and the data filtering. They are also responsible for the communication between the databases and the **MLM**. The main difference between these two systems is that Apache Storm is a stream processing system, while Apache Flink is a stream processing system and a batch processing system. This means that Apache Flink is more suitable for the data processing and the data filtering, since it can handle both the real-time data and the historical data, while Apache Storm is more suitable for the communication between the databases and the **MLM**, since it is more lightweight and can handle the data in a more efficient way. For now, we will stick with Apache Storm, since it is the most used system for this purpose.
+- **Apache Storm**: This systems is responsible for the data processing and the data filtering. It is also responsible for the communication between the databases and the **MLM**. 
 
 - **Machine Learning Model**: This model is responsible for the prediction of the sensors data. We will use most likely **PyTorch** to build and train it. The results of a prediction will be sent to the **Apache Storm** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
 
-
-
+- **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The Grafana instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
 
 
 
