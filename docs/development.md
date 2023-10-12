@@ -59,11 +59,7 @@ The domain of the architecture can be seen [here](product.md#domain-analysis).
 
 ##  Development guide
 
-Explain what a new developer to the project should know in order to develop the system, including who to build, run and test it in a development environment. 
-
-Document any APIs, formats and protocols needed for development (but don't forget that public APIs should also be accessible from the "How to use" section in your README.md file).
-
-Describe coding conventions and other guidelines adopted by the project.
+In this section you can find a comprehensive guide on how to fully setup a production-ready environment with all the needed features to start contributing.
 
 ### Requirements
 
