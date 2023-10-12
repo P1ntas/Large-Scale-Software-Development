@@ -75,6 +75,8 @@ With this in mind, we can infer that our project should be based on open-source 
 
 ## Domain Analysis
 
+### First Representation
+
 According to the project guidelines, we achieved a consensus on the following domain analysis:
 
 ![Domain Analysis](images/domain_model_1.png)
@@ -92,6 +94,33 @@ This diagram represents the main entities of our project and how it would be int
     - **Prometheus**: This database holds the data from the sensors. It is used to create the graphs and the alerts. Prometheus scrapes the data that the python instance generated and sent to the **Flask** server. This flask server, exposes the data via HTTP, so that Prometheus can scrape it at a given interval.
 
 - **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The Grafana instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
+
+
+### Second Representation
+
+After having the first representation of the domain model and the Q&A session with the client, we decided to change the domain model to the following:
+
+![Domain Analysis](images/domain_model_2.png)
+
+Similar to the first representation, this diagram represents the main entities of our project and how it would be integrated towards the first Sprint. It shows the relation between the different entities and the data flows within them. The main entities are the following:
+
+- **Factory**: The factory keeps being the main entity of the project. It represents the factory where the production takes place. It has multiple systems, those containing multiple sensors attatched to it. The data from the sensors are fetched by the systems and now are sent to a central MQTT broker. 
+
+- **MQTT Broker**: This broker receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance.
+
+- **EdgeX Foundry**: This system is built on top of the MQTT broker, so it is responsible for the communication between the MQTT broker and the databases and the **M**achine **L**earning **M**odel (**MLM**). It is also responsible to retrieve data to the Apache Storm/Flink instance to process it and filter it.
+
+- **Prometheus/InfluxDB**: These databases hold the data from the sensors. Both instances achieve the main purpose, but the pros of on system are the cons of the other. Prometheus has a built-in alert system, while InfluxDB has a built-in MQTT handler. While this has to be discussed with the client further, we decided to use Prometheus for the initial demo, since it is the most used system for this purpose and has an easier integration with Grafana.
+
+- **PostgreSQL/MongoDB**: These databases hold the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors. The main difference between these two systems is that PostgreSQL is a relational database, while MongoDB is a document database. This means that PostgreSQL is more suitable for the static data, since it is more structured and achieves an higher confidence level to integrate with Grafana, while MongoDB is more suitable for the simulations data that the **MLM** will generate, since it is more flexible and can handle the data in a more efficient way. For now, we will stick with PostgreSQL, since it is the most used system for this purpose and has an easier integration with Grafana.
+
+- **Apache Storm/Apache Flink**: These systems are responsible for the data processing and the data filtering. They are also responsible for the communication between the databases and the **MLM**. The main difference between these two systems is that Apache Storm is a stream processing system, while Apache Flink is a stream processing system and a batch processing system. This means that Apache Flink is more suitable for the data processing and the data filtering, since it can handle both the real-time data and the historical data, while Apache Storm is more suitable for the communication between the databases and the **MLM**, since it is more lightweight and can handle the data in a more efficient way. For now, we will stick with Apache Storm, since it is the most used system for this purpose.
+
+- **Machine Learning Model**: This model is responsible for the prediction of the sensors data. We will use most likely **PyTorch** to build and train it. The results of a prediction will be sent to the **Apache Storm** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
+
+
+
+
 
 
 ## Sprint Reviews
