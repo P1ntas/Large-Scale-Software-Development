@@ -17,7 +17,7 @@ Defer more details about the technical vision to the [development](docs/developm
 
 ## How to run and operate in a production environment
 
-Explain how to package, deploy and run the system to a production (or production-like) environment. If needed, link to external resources or additional markdown files with further details (please place these in the [docs](docs/) directory).
+For a full guide and explanation on the project's environment, technologies and setup, please refer to the [Development Guide](docs/development.md#development-guide).
 
 
 ## Contributions
