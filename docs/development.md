@@ -7,6 +7,13 @@ Describe the architecture and design of the system. Use component/deployment dia
 Be clear about what is the current architecture/design and what is the one you envision in the future, in case they are different. 
 Identify main risks and justify the most important choices to show the soundness of the architecture and design that you have implemented or plan to implement.
 
+### First Prototype - Sprint 0
+
+The architecture of the first prototype can be seen [here](product.md#domain-analysis).
+
+We decided to use Docker to create the containers for the databases, the python instance and Grafana. This way, we can easily deploy the system in any machine that has docker installed.
+
+# TODO FINISH
 
 ## Technology
 
