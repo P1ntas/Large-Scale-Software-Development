@@ -1,24 +1,18 @@
-# Factsheet for Tómas Martns
+# Factsheet for Tomás Martins
 
 ## Sprint 0
 
-Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
+My major contributions consisted about searching for possible technologies to use, mainly related with database ones, like Firebase. In the end, we went with PostgreSQL, as proposed by one of my colleagues.
 
 
 ### The two user stories that I am most proud of
 
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
+I contributed to this [issue](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/9), by helping to make the tasks that the development team will have to carry out clearer and more to the point.
 
 
 ### The two pull requests that I am most proud of
 
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
+(N/A) in sprint 0.
 
 
 ### Two contributions of other types that I am most proud of
