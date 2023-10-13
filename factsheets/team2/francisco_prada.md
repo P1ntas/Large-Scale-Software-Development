@@ -2,8 +2,7 @@
 
 ## Sprint 0
 
-Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
-
+Since this sprint was mainly used for the creation of user stories and other related content, there was no real contributions on my part as Scrum Master, except maybe for a basic review of some of the created issues.
 
 ### The two user stories that I am most proud of
 
