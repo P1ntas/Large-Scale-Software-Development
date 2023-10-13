@@ -2,8 +2,7 @@
 
 ## Sprint 0
 
-Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
-
+ Took part in the writing of the initial user stories 
 
 ### The two user stories that I am most proud of
 
