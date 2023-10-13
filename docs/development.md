@@ -93,9 +93,9 @@ The idea for the SQL structure was taken from [here](https://www.festo.com/net/S
 
 The following images shows the schematic of the system and the database representation:
 
-![image](printscreens/visual.png)
+![image](images/domain_model_1.png)
 
-![image](printscreens/uml%20db%20representation.png)
+![image](images/uml_db_1.png)
 
 ### Usage
 
@@ -118,7 +118,7 @@ Then, add a new server with the following credentials:
 **Password**: postgres
 ```
 
-![gif](printscreens/pgAdmin.gif)
+![gif](images/pgAdmin.gif)
 
 #### PostgreSQL
 
@@ -163,7 +163,7 @@ After logging in, you will be prompted to change the password, but you can skip 
 
 From there, select on the left side the `Dashboards` tab. This will show the available dashboards folders. Select the `General` folder and then select the `General View` dashboard. 
 
-![gif](printscreens/grafana_home.gif)
+![gif](images/grafana_home.gif)
 
 Note: If you wish to change the existing dashboards, that won't be possible because they are provisioned. You can import the same dashboards, that are stored under `grafana/provisioning/dashboards/general`, and change them as you wish. 
 
