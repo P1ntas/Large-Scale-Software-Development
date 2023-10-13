@@ -9,7 +9,7 @@ Briefly state what you believe were your best contributions to the project durin
 
 This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
 
- * #1
+ * #1 Create an alert after some amount of time for a periodic check on any given machine
  * #2
 
 
@@ -17,13 +17,13 @@ This can include user stories that you have written or refined during the sprint
 
 This can include PRs that you have implemented or reviewed during the sprint.
 
- * #3
- * #4
+ * #3 product.md branch
+ * #4 fact_sheets_team4
 
 
 ### Two contributions of other types that I am most proud of
 
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
+ Wrote a market research  text for product.md, and created a user story for our project to create an alert after some amount of time for a periodic check on any given machine.
 
 
 
