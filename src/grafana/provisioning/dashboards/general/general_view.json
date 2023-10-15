@@ -1,0 +1,1008 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 3,
+      "panels": [],
+      "title": "General View",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "links": [
+            {
+              "title": "Check ${__data.fields.name} Factory",
+              "url": "http://localhost:3000/d/a8fd2bab-acc8-4bf5-a0f8-b874d82f481c/general-view?var-factory_name=${__data.fields.name}"
+            }
+          ],
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "total_systems"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Total Systems"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "longitude"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": true,
+                  "tooltip": true,
+                  "viz": true
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "latitude"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": true,
+                  "tooltip": true,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 18,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 2,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": true,
+              "style": {
+                "color": {
+                  "field": "total_systems",
+                  "fixed": "dark-green"
+                },
+                "opacity": 0.4,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "field": "total_systems",
+                  "fixed": 15,
+                  "max": 15,
+                  "min": 7
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "A"
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Layer 1",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "coords",
+          "lat": 39.808455,
+          "lon": -9.019563,
+          "zoom": 6.42
+        }
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    factory.name,\r\n    factory.tag,\r\n    factory.location,\r\n    factory.longitude,\r\n    factory.latitude,\r\n    COUNT(system.id) AS total_systems\r\nFROM factory\r\nINNER JOIN system ON factory.id = system.factory_id\r\nWHERE factory.id IN ($factory_id)\r\nGROUP BY factory.name, factory.tag, factory.longitude, factory.latitude, factory.location;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Panel Title",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 40
+              },
+              {
+                "color": "green",
+                "value": 70
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 12,
+        "y": 1
+      },
+      "id": 27,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^systems_working_or_online$/",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT\r\n    COUNT(*) AS total_systems,\r\n    SUM(CASE WHEN system.status = 'Working' OR system.status = 'Online' THEN 1 ELSE 0 END) AS systems_working_or_online\r\nFROM factory\r\nINNER JOIN system ON factory.id = system.factory_id\r\nWHERE factory.id IN ($factory_id);\r\n\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "System Status v1",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "systems_working_or_online",
+                "total_systems"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Systems Online"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Systems Working"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Systems Requiring Maintenance"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Systems Offline"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 1
+      },
+      "id": 42,
+      "options": {
+        "displayLabels": [
+          "percent"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true,
+          "values": [
+            "value"
+          ]
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    SUM(CASE WHEN system.status = 'Online' THEN 1 ELSE 0 END) AS \"Systems Online\",\r\n    SUM(CASE WHEN system.status = 'Working' THEN 1 ELSE 0 END) AS \"Systems Working\",\r\n    SUM(CASE WHEN system.status = 'Maintenance Required' THEN 1 ELSE 0 END) AS \"Systems Requiring Maintenance\",\r\n    SUM(CASE WHEN system.status = 'Offline' THEN 1 ELSE 0 END) AS \"Systems Offline\"\r\nFROM factory\r\nINNER JOIN system ON factory.id = system.factory_id\r\nWHERE factory.id IN ($factory_id);\r\n\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "System Status v2",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 12,
+        "y": 10
+      },
+      "id": 1,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select Count(*) from factory where id IN ( $factory_id  )",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Active Facilities",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 18,
+        "y": 10
+      },
+      "id": 50,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto",
+          "height": 600
+        },
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "let all_data = [];\nlet colorMap = {\n  'Systems Online': '#91cc75',\n  'Systems Working': '#5470c6',\n  'Systems Requiring Maintenance': '#fac858',\n  'Systems Offline': '#ee6666'\n};\n\ndata.series.forEach((s) => {\n  ['Systems Online', 'Systems Working', 'Systems Requiring Maintenance', 'Systems Offline'].forEach((status) => {\n    let value = s.fields.find((f) => f.name === status).values;\n    if (value > 0) {\n      all_data.push({ value, name: status, color: colorMap[status] });\n    }\n  });\n});\n\n// Sort the data for the chart by value in descending order\nall_data.sort((a, b) => b.value - a.value);\n\n// Define a custom order for the legend data\nconst customLegendOrder = ['Systems Online', 'Systems Working', 'Systems Requiring Maintenance', 'Systems Offline'];\n\n// Use the custom order for the legend data\nlet legendData = customLegendOrder.filter((item) => all_data.some((data) => data.name === item));\n\n// Use the all_data array for your chart\nreturn {\n  title: {\n    text: 'System Status v3',\n    left: 'center'\n  },\n  tooltip: {\n    trigger: 'item',\n    formatter: '{a} <br/>{b}: {c} ({d}%)'\n  },\n  legend: {\n    orient: 'horizontal',\n    bottom: 10,\n    data: legendData // Use custom ordered legend data\n  },\n  series: [\n    {\n      name: 'System Status',\n      type: 'pie',\n      radius: '50%',\n      data: all_data, // Use all_data for your chart\n      emphasis: {\n        itemStyle: {\n          shadowBlur: 10,\n          shadowOffsetX: 0,\n          shadowColor: 'rgba(0, 0, 0, 0.5)'\n        }\n      },\n      // Set item color based on the color property in all_data\n      itemStyle: {\n        color: (params) => params.data.color\n      }\n    }\n  ]\n};\n",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "height": 400,
+          "name": "default"
+        }
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    SUM(CASE WHEN system.status = 'Online' THEN 1 ELSE 0 END) AS \"Systems Online\",\r\n    SUM(CASE WHEN system.status = 'Working' THEN 1 ELSE 0 END) AS \"Systems Working\",\r\n    SUM(CASE WHEN system.status = 'Maintenance Required' THEN 1 ELSE 0 END) AS \"Systems Requiring Maintenance\",\r\n    SUM(CASE WHEN system.status = 'Offline' THEN 1 ELSE 0 END) AS \"Systems Offline\"\r\nFROM factory\r\nINNER JOIN system ON factory.id = system.factory_id\r\nWHERE factory.id IN ($factory_id);\r\n\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 19
+      },
+      "id": 4,
+      "panels": [],
+      "repeat": "factory_name",
+      "repeatDirection": "h",
+      "title": "Factory: $factory_name",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "Maintenance Required": {
+                  "color": "yellow",
+                  "index": 2
+                },
+                "Offline": {
+                  "color": "red",
+                  "index": 3
+                },
+                "Online": {
+                  "color": "green",
+                  "index": 0
+                },
+                "Working": {
+                  "color": "blue",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Status"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "color-background"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ID"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 28
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ID"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "Check this system further",
+                    "url": "http://localhost:3000/d/c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b/systems-view?orgId=1&refresh=5s&${factory_name:queryparam}&${factory_id:queryparam}&var-system_id=${__data.fields.ID}"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 0,
+        "y": 20
+      },
+      "id": 20,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "\r\n\r\nSELECT\r\n    s.id AS \"ID\",\r\n    sm.name AS \"Name\",\r\n    sm.type AS \"Type\",\r\n    sm.manufacturer AS \"Manufacturer\",\r\n    s.status AS \"Status\"\r\nFROM system AS s\r\nINNER JOIN system_model AS sm ON s.system_model_id = sm.id\r\nINNER JOIN factory AS f ON s.factory_id = f.id\r\nWHERE f.name IN ($factory_name);\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Systems",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 8,
+        "y": 20
+      },
+      "id": 57,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto",
+          "height": 600
+        },
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "let all_data = [];\nlet colorMap = {\n  'Systems Online': '#91cc75',\n  'Systems Working': '#5470c6',\n  'Systems Requiring Maintenance': '#fac858',\n  'Systems Offline': '#ee6666'\n};\n\ndata.series.forEach((s) => {\n  ['Systems Online', 'Systems Working', 'Systems Requiring Maintenance', 'Systems Offline'].forEach((status) => {\n    let value = s.fields.find((f) => f.name === status).values;\n    if (value > 0) {\n      all_data.push({ value, name: status, color: colorMap[status] });\n    }\n  });\n});\n\n// Sort the data for the chart by value in descending order\nall_data.sort((a, b) => b.value - a.value);\n\n// Define a custom order for the legend data\nconst customLegendOrder = ['Systems Online', 'Systems Working', 'Systems Requiring Maintenance', 'Systems Offline'];\n\n// Use the custom order for the legend data\nlet legendData = customLegendOrder.filter((item) => all_data.some((data) => data.name === item));\n\n// Use the all_data array for your chart\nreturn {\n  title: {\n    text: 'System Status',\n    left: 'center'\n  },\n  tooltip: {\n    trigger: 'item',\n    formatter: '{a} <br/>{b}: {c} ({d}%)'\n  },\n  legend: {\n    orient: 'horizontal',\n    bottom: 10,\n    data: legendData // Use custom ordered legend data\n  },\n  series: [\n    {\n      name: 'System Status',\n      type: 'pie',\n      radius: '50%',\n      data: all_data, // Use all_data for your chart\n      emphasis: {\n        itemStyle: {\n          shadowBlur: 10,\n          shadowOffsetX: 0,\n          shadowColor: 'rgba(0, 0, 0, 0.5)'\n        }\n      },\n      // Set item color based on the color property in all_data\n      itemStyle: {\n        color: (params) => params.data.color\n      }\n    }\n  ]\n};\n",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "height": 400,
+          "name": "default"
+        }
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    SUM(CASE WHEN system.status = 'Online' THEN 1 ELSE 0 END) AS \"Systems Online\",\r\n    SUM(CASE WHEN system.status = 'Working' THEN 1 ELSE 0 END) AS \"Systems Working\",\r\n    SUM(CASE WHEN system.status = 'Maintenance Required' THEN 1 ELSE 0 END) AS \"Systems Requiring Maintenance\",\r\n    SUM(CASE WHEN system.status = 'Offline' THEN 1 ELSE 0 END) AS \"Systems Offline\"\r\nFROM factory\r\nINNER JOIN system ON factory.id = system.factory_id\r\nWHERE factory.name IN ($factory_name);\r\n\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "volkovlabs-echarts-panel"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "postgres",
+          "uid": "PostgreSQL"
+        },
+        "definition": "select name from factory",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Factory Name",
+        "multi": true,
+        "name": "factory_name",
+        "options": [],
+        "query": "select name from factory",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "postgres",
+          "uid": "PostgreSQL"
+        },
+        "definition": "select id from factory where name IN ($factory_name)",
+        "hide": 2,
+        "includeAll": true,
+        "label": "Factory ID",
+        "multi": true,
+        "name": "factory_id",
+        "options": [],
+        "query": "select id from factory where name IN ($factory_name)",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "postgres",
+          "uid": "PostgreSQL"
+        },
+        "definition": "select s.id from system_model sm\ninner join system s on sm.id = s.system_model_id\ninner join factory f on f.id = s.factory_id\nwhere f.name in ($factory_name)",
+        "hide": 0,
+        "includeAll": true,
+        "multi": true,
+        "name": "system_id",
+        "options": [],
+        "query": "select s.id from system_model sm\ninner join system s on sm.id = s.system_model_id\ninner join factory f on f.id = s.factory_id\nwhere f.name in ($factory_name)",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": [
+            "Online"
+          ],
+          "value": [
+            "Online"
+          ]
+        },
+        "hide": 0,
+        "includeAll": true,
+        "label": "System Status",
+        "multi": true,
+        "name": "status",
+        "options": [
+          {
+            "selected": false,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "selected": false,
+            "text": "Offline",
+            "value": "Offline"
+          },
+          {
+            "selected": true,
+            "text": "Online",
+            "value": "Online"
+          },
+          {
+            "selected": false,
+            "text": "Working",
+            "value": "Working"
+          },
+          {
+            "selected": false,
+            "text": "Maintenance Required",
+            "value": "Maintenance Required"
+          }
+        ],
+        "query": "Offline, Online, Working, Maintenance Required",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "General View",
+  "uid": "a8fd2bab-acc8-4bf5-a0f8-b874d82f481c",
+  "version": 1,
+  "weekStart": ""
+}

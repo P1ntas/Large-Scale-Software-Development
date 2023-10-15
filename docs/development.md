@@ -69,7 +69,7 @@ In this section you can find a comprehensive guide on how to fully setup a produ
 
 ### Installation / Setup
 
-First of all, make sure you are in the root directory of the project.
+First of all, make sure you are in the `src` directory of the project.
 
 If you are running **Windows**, you can use the `install.bat` script. Otherwise, if you are using **Linux**, you can use the `install.sh` script.
 
