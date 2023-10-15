@@ -1,0 +1,21 @@
+apiVersion: 1
+
+datasources:
+  - name: PostgreSQL
+    type: postgres
+    url: postgres:5432
+    database: postgres
+    user: postgres
+    secureJsonData:
+      password: "postgres"
+    jsonData:
+      sslmode: "disable"  # Disabling TLS/SSL
+      postgresVersion: 1100 # 1100=11
+      timescaledb: false
+    editable: false
+
+  - name: Prometheus
+    type: prometheus
+    url: http://prometheus:9090
+    access: proxy
+    editable: false
