@@ -2,14 +2,14 @@
 
 ## Sprint 0
 
-Briefly state what you believe were the team's best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other teams, state explicitly that that was the case, not forgetting to explain what was your team's role in it.
+Contributed towards the approval of the initial technology common basis, wrote the initial user stories and helped organize the project backlog. Actively established contact with the client and setup the communication environment. 
 
 
 ### The four user stories that we are most proud of
 
 This can include user stories that the team has written or refined during the sprint. If it was a refinement, explain what you have added or changed.
 
- * #1
+ * #1 
  * #2
 
 
