@@ -1,0 +1,9 @@
+id,name,manufacturer,type
+1,3D Printer,Schneider,Module
+2,Conveyor Belt,Siemens,Module
+3,Robot Arm,Festo,Module
+4,Pneumatic Gripper,Siemens,Component
+5,Vacuum Gripper,Festo,Component
+6,RFID,Rockwell,Station
+7,PLC,ABB,Station
+8,HMI,Festo,Station

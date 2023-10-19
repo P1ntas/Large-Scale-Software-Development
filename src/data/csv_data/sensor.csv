@@ -1,0 +1,139 @@
+id,expansion_id,sensor_model_id,status
+1,1,1,Maintenance Required
+2,1,2,Maintenance Required
+3,2,3,Maintenance Required
+4,2,1,Working
+5,3,1,Online
+6,4,2,Offline
+7,4,3,Online
+8,5,1,Working
+9,6,1,Working
+10,7,3,Online
+11,8,2,Online
+12,9,2,Online
+13,10,1,Online
+14,10,3,Working
+15,11,2,Working
+16,11,2,Working
+17,12,3,Maintenance Required
+18,12,1,Online
+19,13,1,Offline
+20,13,1,Maintenance Required
+21,14,1,Online
+22,15,3,Offline
+23,15,2,Offline
+24,16,2,Offline
+25,17,1,Working
+26,18,3,Online
+27,19,3,Offline
+28,20,1,Working
+29,21,2,Working
+30,22,1,Offline
+31,23,1,Offline
+32,23,3,Online
+33,24,1,Working
+34,25,1,Online
+35,25,3,Online
+36,26,1,Online
+37,27,1,Working
+38,28,1,Working
+39,28,1,Online
+40,29,2,Working
+41,29,1,Working
+42,30,2,Online
+43,31,3,Working
+44,31,3,Offline
+45,32,3,Offline
+46,32,1,Offline
+47,33,1,Working
+48,33,2,Online
+49,34,1,Online
+50,34,2,Online
+51,35,2,Maintenance Required
+52,36,3,Working
+53,37,1,Online
+54,38,1,Online
+55,39,1,Offline
+56,40,2,Online
+57,40,2,Working
+58,41,1,Working
+59,42,2,Online
+60,42,2,Online
+61,43,2,Working
+62,43,1,Online
+63,44,1,Online
+64,45,1,Working
+65,46,2,Online
+66,47,2,Working
+67,47,1,Online
+68,48,1,Working
+69,48,3,Online
+70,49,2,Offline
+71,50,2,Offline
+72,51,3,Working
+73,52,2,Offline
+74,52,3,Working
+75,53,3,Offline
+76,54,1,Working
+77,54,3,Offline
+78,55,3,Working
+79,55,2,Working
+80,56,2,Online
+81,56,3,Working
+82,57,2,Online
+83,57,2,Maintenance Required
+84,58,2,Online
+85,58,2,Online
+86,59,2,Offline
+87,59,3,Offline
+88,60,2,Working
+89,60,3,Working
+90,61,3,Online
+91,62,2,Online
+92,62,3,Working
+93,63,1,Maintenance Required
+94,64,3,Offline
+95,65,3,Working
+96,65,1,Working
+97,66,3,Online
+98,66,3,Working
+99,67,2,Maintenance Required
+100,68,2,Online
+101,68,1,Working
+102,69,1,Online
+103,69,1,Working
+104,70,3,Working
+105,71,1,Working
+106,71,2,Online
+107,72,1,Working
+108,72,1,Online
+109,73,3,Offline
+110,73,2,Online
+111,74,2,Working
+112,74,1,Maintenance Required
+113,75,3,Working
+114,76,2,Working
+115,76,2,Working
+116,77,2,Working
+117,78,2,Working
+118,78,2,Working
+119,79,1,Working
+120,80,2,Offline
+121,81,2,Maintenance Required
+122,82,1,Offline
+123,83,3,Working
+124,84,2,Online
+125,84,1,Online
+126,85,3,Maintenance Required
+127,85,3,Working
+128,86,2,Working
+129,86,3,Online
+130,87,1,Online
+131,87,3,Maintenance Required
+132,88,1,Online
+133,88,1,Online
+134,89,2,Offline
+135,90,2,Online
+136,91,3,Working
+137,91,3,Online
+138,92,1,Online
