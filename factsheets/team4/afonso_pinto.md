@@ -29,7 +29,27 @@ This can include PRs that you have implemented or reviewed during the sprint.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
+
+This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
+
+ * #1 As a user, I want the system to store all monitoring data for future use in enhancing and training the machine learning model. This data will be crucial for improving the system's autonomous decision-making capabilities. 
+ * #2 As a user, I expect the system to utilize a knowledge base and machine learning algorithms to autonomously make decisions about what is necessary for the machine's efficient operation. I rely on the system's AI to determine maintenance and operational needs. 
+
+
+### The two pull requests that I am most proud of
+
+This can include PRs that you have implemented or reviewed during the sprint.
+
+ * #3 team4-sprint1
+ * #4 
+
+
+### Two contributions of other types that I am most proud of
+
+I initiated the process by creating a script to generate mock-up data, which served as the foundation for our training and testing data. Subsequently, I meticulously processed and prepared the data for analysis. Additionally, 
+
+I also took the lead in training two critical machine learning models: Decision Trees and K-Nearest Neighbors (KNN). These models will play a significant role in the system's ability to autonomously make decisions related to maintenance and operational needs, enabling more informed and efficient operations.
 
 
 ## Sprint 2
