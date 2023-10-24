@@ -33,8 +33,6 @@
 
     The broker should be running on the default port `1883` (keep this in mind for the next steps).
 
-- Then, open the 4DIAC-IDE and import the [DINASORE](../config/DINASORE) project. To do that, go to `File > Import... > General > Existing Projects into Workspace` and select the [DINASORE](../config/DINASORE) folder.
-
 - Then, in order to run DINASORE on your system, you need to run the following commands:
     ```sh
     # Move to the dinasore's root folder
@@ -53,6 +51,87 @@
     ```
 
     **NOTE**: For Mac and Linux users, run with the flag -B to avoid the creation of cache folders (conflicts with the FBs folders): ```python -B core/main.py```
+
+    For this project, we need to run two instances of DINASORE, one for the FORTE_PC and another for the FORTE_PC_1. For that, you can run the following commands:
+    ```sh
+    python core/main.py
+
+    # And on another terminal
+
+    python core/main.py -p 61500 -u 4841
+    ```
+
+
+- Now, you can open the 4DIAC-IDE and import the [function blocks folder](./resources/function_blocks/). For that, you can follow the next steps:
+    1. Open the 4DIAC-IDE
+    2. Go to File -> New -> New System -> *Name the project as *MES*** -> Finish
+    3. On the System Explorer, left click to open the **MES** -> Right click on the **Type Library** -> Import -> General -> File System -> Next -> Browse -> Select the [function blocks folder](./resources/function_blocks/) -> Finish
+    4. On the System Explorer, open **System Configuration** (**1**). Now add 2 FORTE_PC (**2**) and 1 Ethernet (**3**). Link the Forte PCs to the Ethernet (**4**). Update the port of the second FORTE_PC to 61500 (**5**).
+
+        ![image](./images/Screenshot_1.png)
+
+    5. On the System Explorer, open **MESApp**
+    6. From the palette on the right side, drag the following function blocks:
+        - SENSOR_SIMULATOR_V2
+        - MOVING_AVERAGE_V2
+        - MQTT_PUBLISHER_V3
+        - MQTT_SUBSCRIBER_V3
+        - PROMETHEUS_WRITER
+
+        ![image](./images/Screenshot_2.png)
+    7. Now, proceed to link the function blocks and fill the parameters with:
+        - **SENSOR_SIMULATOR_V2**: OFFSET = 0. You can twist this value to emulate, for example, a sensor that can overheat (Offset = 10) or a sensor that is working above the desired temperature (Offset = -10).
+        - **MOVING_AVERAGE_V2**: WINDOW = 5. This value is the number of samples that the moving average will use to calculate the average value. You can change this value to see how the moving average changes.
+        - **MQTT_PUBLISHER_V3**: 
+            - TOPIC = "sensor_data". This is the topic that the publisher will use to publish sensor data to.
+            - HOST = "localhost". This is the IP address of the MQTT Broker on your machine.
+            - PORT = 1883. This is the port of the MQTT Broker on your machine.
+            - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
+            - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
+            - VALUE_NAME_3 = "moving_average". This is the moving average of the sensor.
+        - **MQTT_SUBSCRIBER_V3**:
+            - TOPIC = "sensor_data". This is the topic that the subscriber will use to subscribe to.
+            - HOST = "localhost". This is the IP address of the MQTT Broker on your machine.
+            - PORT = 1883. This is the port of the MQTT Broker on your machine.
+            - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
+            - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
+            - VALUE_NAME_3 = "moving_average". This is the moving average of the sensor.
+        - **PROMETHEUS_WRITER**:
+            - HOST = "localhost". This is the IP address of the Prometheus Gateway running on docker.
+            - PORT = 9091. This is the port of the Prometheus Gateway running on docker.
+            - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
+            - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
+            - VALUE_NAME_2_DESCR = "Current value of the sensor". This is the description of the current value of the sensor.
+            - VALUE_NAME_3 = "moving_average". This is the moving average of the sensor.
+            - VALUE_NAME_3_DESCR = "Moving average of the sensor". This is the description of the moving average of the sensor.
+            - JOB_NAME = "sensor_data". This is the job name of the sensor data.
+
+        ![image](./images/Screenshot_3.png)
+        
+        NOTE: Make sure to link the function blocks as shown in the image above. This step is important to ensure that the function blocks are linked in the correct order and that it follows the flow of the data.
+
+    8. Link the function blocks to the corresponding FORTE_PC:
+        - **SENSOR_SIMULATOR_V2**, **MOVING_AVERAGE_V2**, **MQTT_PUBLISHER_V3**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC" -> Select "EMB_RES"
+        - **MQTT_SUBSCRIBER_V3**, **PROMETHEUS_WRITER**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC_1" -> Select "EMB_RES"
+
+        ![image](./images/Screenshot_4.png)
+
+    9. Now the systems are ready for deploy. Change to the **Deploy View** (right corner icon or Window -> Perspective -> Open Perspective -> Deployment);
+
+    10. Select your configuration and click Deploy to upload the configuration to the Smart Components;
+
+        ![image](./images/Screenshot_5.png)
+
+    11. To monitor the system, change to the previous view, then right-click on the project folder, and select Monitor System. Now you can select which variables you want to monitor, for that right-click inside the variable and select Watch;
+
+        ![image](./images/Screenshot_7.png)
+
+    12. To stop the monitoring process, right-click in the project folder and select Remove Watches and unselect Monitor System;
+
+    13. If you want to reset each component, right-click in his name in the left bar and select Delete all Resources;
+
+    14. Finally, to check the data structure or monitor the process using OPC-UA, you can use the [Prosys client](https://www.prosysopc.com/products/opc-client/), connecting to the component IP address at port 4840 and 4841.
+
 
 
 ## Learn More

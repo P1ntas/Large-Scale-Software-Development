@@ -42,7 +42,6 @@ class MQTT_SUBSCRIBER_V3:
                 return [event_value, None, 0, 0.0, 0.0]
 
         elif event_name == 'READ':
-            # wait for new messages
             while not self.stop.is_set():
                 self.resources.new_message.wait()
 
