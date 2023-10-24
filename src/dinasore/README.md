@@ -31,7 +31,7 @@
     net start mosquitto
     ```
 
-    The broker should be running on the default port `1883` (keep this in mind for the next steps).
+    The broker should be running on the default port `1883`.
 
 - Then, in order to run DINASORE on your system, you need to run the following commands:
     ```sh
@@ -54,6 +54,8 @@
 
     For this project, we need to run two instances of DINASORE, one for the FORTE_PC and another for the FORTE_PC_1. For that, you can run the following commands:
     ```sh
+    # On the first terminal
+
     python core/main.py
 
     # And on another terminal
@@ -72,11 +74,11 @@
 
     5. On the System Explorer, open **MESApp**
     6. From the palette on the right side, drag the following function blocks:
-        - SENSOR_SIMULATOR_V2
-        - MOVING_AVERAGE_V2
-        - MQTT_PUBLISHER_V3
-        - MQTT_SUBSCRIBER_V3
-        - PROMETHEUS_WRITER
+        - **SENSOR_SIMULATOR_V2**
+        - **MOVING_AVERAGE_V2**
+        - **MQTT_PUBLISHER_V3**
+        - **MQTT_SUBSCRIBER_V3**
+        - **PROMETHEUS_WRITER**
 
         ![image](./images/Screenshot_2.png)
     7. Now, proceed to link the function blocks and fill the parameters with:
@@ -132,7 +134,17 @@
 
     14. Finally, to check the data structure or monitor the process using OPC-UA, you can use the [Prosys client](https://www.prosysopc.com/products/opc-client/), connecting to the component IP address at port 4840 and 4841.
 
+## Troubleshooting
 
+If you are having any kinds of problem, please try to follow the [dinasore tutorials](https://github.com/DIGI2-FEUP/dinasore/wiki/3.-Tutorials-Resume). They follow similar steps to the ones described above, but with more details that could help you.
+
+Either ways, if you are still having problems, please contact [João Araújo](../../factsheets/team1/joao_araujo.md).
+
+## What Have We Achieved
+
+- We have created a system that retrieves the existing sensors from the PostgreSQL database and simulates the data of each existing sensor. Then, the system calculates the moving average of the sensor data and publishes the data to a MQTT Broker. Then, another system subscribes to the MQTT Broker and writes the data to a Prometheus Gateway, so that it can be monitored using Grafana.
+
+It is important to add that while we are working on mock data, the system is ready to work with real data. For that, we just need to change the **SENSOR_SIMULATOR_V2** function block to a function block that reads the data from the real sensor later on.
 
 ## Learn More
 
