@@ -3,6 +3,10 @@
 ## Contents
 
 - [Installation Guide](#installation-guide)
+- [How to Run](#how-to-run)
+- [Troubleshooting](#troubleshooting)
+- [What Have We Achieved](#what-have-we-achieved)
+- [Learn More](#learn-more)
 - [References](#references)
 
 
@@ -22,6 +26,8 @@
     **NOTE**: For more details about the 4DIAC-IDE, check this [link](https://eclipse.dev/4diac/en_help.php?helppage=html/4diacIDE/overview.html).
 
     **NOTE**: After instalation, ensure you have the 4DIAC-IDE outside of the root of this project, otherwise it will be submited to git.
+
+- (Optional for now) Install [Prosys OPC UA Browser 4.4.0-126](https://www.prosysopc.com/products/opc-client/). This OPC client can be used to observe the results of the OPC UA server built in DINASORE.
 
 
 ## How to Run
