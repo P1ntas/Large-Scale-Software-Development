@@ -9,7 +9,6 @@
 - [Learn More](#learn-more)
 - [References](#references)
 
-
 ## Installation Guide
 
 - Install the [Mosquitto Broker](https://mosquitto.org/download/) for your system under the default directory.
@@ -148,13 +147,15 @@ Either ways, if you are still having problems, please contact [João Araújo](..
 
 ## What Have We Achieved
 
-- We have created a system that retrieves the existing sensors from the PostgreSQL database and simulates the data of each existing sensor. Then, the system calculates the moving average of the sensor data and publishes the data to a MQTT Broker. Then, another system subscribes to the MQTT Broker and writes the data to a Prometheus Gateway, so that it can be monitored using Grafana.
+- We have created a system that retrieves the existing sensors from the **PostgreSQL** database and simulates the data of each existing sensor. Then, the system calculates the moving average of the sensor data and publishes the data to a MQTT Broker. Then, another system subscribes to the MQTT Broker and writes the data to a **Prometheus Gateway**, so that it can be monitored using **Grafana**.
 
-It is important to add that while we are working on mock data, the system is ready to work with real data. For that, we just need to change the **SENSOR_SIMULATOR_V2** function block to a function block that reads the data from the real sensor later on.
+- It is important to add that while we are working on mock data, the system is ready to work with real data. For that, we just need to change the **SENSOR_SIMULATOR_V2** function block to a function block that reads the data from the real sensor later on.
 
 ## Learn More
 
 - [DINASORE - A tool for distributed function-block-based systems](https://medium.com/@jrffmatias/dinasore-a-tool-for-distributed-function-block-based-systems-f2613a37e1ca). This article explains the main features of DINASORE with a simple example.
+
+- [DINASORE - Build new function blocks](https://github.com/DIGI2-FEUP/dinasore/wiki/2.1.-Build-new-Function-Blocks). This wiki guide explains how you can create your own function blocks written in C#, Python, or Java.
 
 - [Prosys OPC UA Browser 4.4.0-126](https://www.prosysopc.com/products/opc-client/). This OPC client can be used to observe the results of the OPC UA server built in DINASORE.
 
