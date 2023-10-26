@@ -3,6 +3,7 @@ version: '3'
 services:
   postgres:
     image: postgres:11
+    container_name: postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -15,6 +16,7 @@ services:
 
   grafana:
     image: grafana/grafana:10.1.4
+    container_name: grafana
     environment:
       - GF_INSTALL_PLUGINS=volkovlabs-echarts-panel
     depends_on:
@@ -32,6 +34,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4
+    container_name: pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: postgres@pg.pg
       PGADMIN_DEFAULT_PASSWORD: postgres
@@ -44,6 +47,7 @@ services:
 
   prometheus:
     image: prom/prometheus
+    container_name: prometheus
     volumes:
       - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus-data:/prometheus
@@ -61,12 +65,27 @@ services:
 
   flask-app:
     build: ./server
+    container_name: flask-app
     depends_on:
       - postgres
     ports:
       - "8000:8000"
     networks:
       - monitoring-network
+    
+  mqtt-broker:
+    image: eclipse-mosquitto
+    container_name: mqtt5
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    networks:
+      - monitoring-network
+    volumes:
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-logs:/mosquitto/log
+      - ./config:/mosquitto/config:rw
+    restart: unless-stopped
 
 networks:
   monitoring-network:
@@ -77,3 +96,6 @@ volumes:
   prometheus-config:
   prometheus-data:
   grafana-data:
+  mosquitto-data:
+  mosquitto-logs:
+  config:
