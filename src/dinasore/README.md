@@ -13,7 +13,7 @@
 
 - Proceed to install the [requirements](../config/requirements.txt) if you haven't already, by running the [install.bash](../install.bash) if you are on Linux/Mac or the [install.bat](../install.bat) if you are on Windows.
 
-- Install 4DIAC-IDE for your system, using any these permalinks:
+- Install 4DIAC-IDE for your system, using any of these permalinks:
     - [4diac IDE 1.11.0 Windows 64-bit](http://www.eclipse.org/downloads/download.php?file=/4diac/releases/1.11/4diac-ide/4diac-ide-incubation_1.11.0-win32.win32.x86_64.zip)
     - [4diac IDE 1.11.0 Linux 64-bit](http://www.eclipse.org/downloads/download.php?file=/4diac/releases/1.11/4diac-ide/4diac-ide-incubation_1.11.0-linux.gtk.x86_64.tar.gz)
     - [4diac IDE 1.11.0 Mac OS X](http://www.eclipse.org/downloads/download.php?file=/4diac/releases/1.11/4diac-ide/4diac-ide-incubation_1.11.0-macosx.cocoa.x86_64.dmg)
