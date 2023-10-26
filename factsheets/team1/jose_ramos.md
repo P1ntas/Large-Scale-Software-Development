@@ -25,7 +25,21 @@ As I said before, my market research was crucial in the creation of user stories
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+I was assigned to upgrade the current database squema.
+
+### The two user stories that I am most proud of
+
+- [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Did the database squema. Probably will need to upgrade in the future.
+
+
+### The two pull requests that I am most proud of
+
+N/A
+
+
+### Two contributions of other types that I am most proud of
+
+N/A
 
 
 ## Sprint 2
