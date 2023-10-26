@@ -13,8 +13,8 @@ Also, after the first two Q&A sessions with the client, I've come up with new te
 This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
 
 The two PRs I'm most proud are:
+- [#12](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/12) - The development of the Architecture and Design of models eased the visualization of the technologies to be used.
 - [#17](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/17) - The inclusion of the first prototype in the repository was a crucial step to show the integration of the first technologies that we were going to use, as well as an easy way to build the prototype on the other's machines.
-- [#17](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/12) - The development of the Architecture and Design of models eased the visualization of the technologies to be used.
 
 ### Two contributions of other types that I am most proud of
 
@@ -36,7 +36,7 @@ The two PRs I'm most proud are:
 
 - [#27](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/27) - Fixed DINASORE's features to be used in our project with ease.
 
-- [#32](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/32) - Sucessfuly integrated DINASORE into our project with [Team 2](../team2/team2.md). This integration was essential to show the client that our project is feasible to be updated by managers that would use this later on, since the pipeline is fully customizable.
+- [#34](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/32) - Sucessfuly integrated DINASORE into our project with [Team 2](../team2/team2.md). This integration was essential to show the client that our project is feasible to be updated by managers that would use this later on, since the pipeline is fully customizable.
 
 
 ### Two contributions of other types that I am most proud of
