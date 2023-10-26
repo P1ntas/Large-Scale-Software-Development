@@ -10,7 +10,6 @@ If you have any doubts or dificulties, feel free to contact me through Discord.
 - [Installation / Setup](#installation--setup)
 - [Usage](#usage)
   - [pgAdmin](#pgadmin)
-  - [Flask](#flask)
   - [Prometheus](#prometheus)
   - [Grafana](#grafana)
 - [Post](#post)
@@ -43,7 +42,7 @@ This will install the necessary python packages and create the necessary docker 
 - `pgAdmin` running under the port `4321`;
 - `PostgreSQL` running under the port `5432`;
 - `Prometheus` running under the port `9090`;
-- `Flask` running under the port `8000`.
+- `Prometheus Pushgateway` running under the port `9091`.
 
 The script will populate the `PostgreSQL` database with the necessary tables and data after the containers are up and running.
 
@@ -93,12 +92,6 @@ docker exec -it postgres psql -U postgres
 You can use the file `data/push_to_db.py` to push data to the database.
 
 Note: If you are having problems (for example, have postgres also installed on your machine), you can push the data manually on the `pgAdmin` interface through the `Query Tool` tab.
-
-### Flask
-
-The `Flask` server will query the `PostgreSQL` database and expose the data under `localhost:8000/metrics` for `Prometheus` to scrape. This data contains the generated value for each sensor in the database, that is being updated every few seconds.
-
-You can enter the url in your browser to see the data that is being sent to `Prometheus`.
 
 ### Prometheus
 
