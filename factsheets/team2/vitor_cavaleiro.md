@@ -4,32 +4,17 @@
 
 Contributed by sharing thoughts and opinions concerning the initial user stories.
 
-
-### The two user stories that I am most proud of
-
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
-
-
-### The two pull requests that I am most proud of
-
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
-
-
-### Two contributions of other types that I am most proud of
-
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
-
-
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### General considerations
+During this sprint, I aimed to understand the DINASORE tool's workflow. To achieve this, I followed the provided tutorials, studied the tool's architecture, and participated in the team meetings for further development and planning. In addition to this, the team conducted a practical test using a customized pipeline that closely matched the client's requirements. I was responsible for writing unit tests for the implemented function blocks.
+
+### Two contributions that I am most proud of
+- Set up and studied DINASORE. Shared thoughts about the tool with colleagues.
+- Created unit tests for the pipeline created by [João Araújo](../factsheets/team1/joao_araujo.md), contributing for the product quality.
+
+### Pull Requests Made
+- The inclusion of the unit tests, which can be found [here](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/commit/f27b58669f545f5121a45e5d4119ea4918d5571b).
 
 
 ## Sprint 2

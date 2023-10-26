@@ -4,31 +4,10 @@
 
 Since this sprint was mainly used for the creation of user stories and other related content, there was no real contributions on my part.
 
-### The two user stories that I am most proud of
-
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
-
-
-### The two pull requests that I am most proud of
-
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
-
-
-### Two contributions of other types that I am most proud of
-
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
-
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+In this sprint, I participated in the meetings that were held to discuss and develop the program in DINASORE. Since it is still early in the development of the program, there wasn't much I could do to participate in the development of the program (besides the meetings), so I didn't do much.
 
 
 ## Sprint 2

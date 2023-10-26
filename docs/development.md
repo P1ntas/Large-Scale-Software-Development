@@ -45,11 +45,9 @@ After the first prototype, we had a Q&A session with the client which enlightene
 
 - **Prometheus**: Prometheus was used to create the database that holds the data from the sensors. It is used to create the graphs and the alerts. Prometheus scrapes the data that the python instance generated and sent to the **Flask** server. We had the option to choose a **InfluxDB** database, which is also a time series database. Both instances achieve the main purpose, but the pros of on system are the cons of the other. Prometheus has a built-in alert system, while InfluxDB has a built-in MQTT handler. While this has to be discussed with the client further, we decided to use Prometheus for the second prototype, since it is the most used system for this purpose and has an easier integration with Grafana.
 
-- **Eclipe Mosquitto**: Eclipse Mosquitto was used to create the MQTT broker that receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance. This technology was chosen because it is open-source, easy to use, and it is one of the most used technologies in the world for MQTT brokers. We also had the option to choose **EMQX**, which is also a MQTT broker. Both instances achieve the main purpose, but we decided to keep with **Eclipse Mosquitto** since it has an easier integration with EdgeX Foundry.
+- **Eclipse Mosquitto**: Eclipse Mosquitto was used to create the MQTT broker that receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance. This technology was chosen because it is open-source, easy to use, and it is one of the most used technologies in the world for MQTT brokers. We also had the option to choose **EMQX**, which is also a MQTT broker. Both instances achieve the main purpose, but we decided to keep with **Eclipse Mosquitto** since it has an easier integration with EdgeX Foundry.
 
-- **EdgeX Foundry**: EdgeX Foundry was used to create the system that is built on top of the MQTT broker, so it is responsible for the communication between the MQTT broker and the databases and the **M**achine **L**earning **M**odel (**MLM**). It is also responsible to retrieve data to the Apache Storm instance to process it and filter it. It also receives any request made from the Grafana instance (for example, to simulate a new production line) and sends to the desired handler. This technology was chosen because it is open-source, easy to use, and it is one of the most used technologies in the world for IoT systems. We had more options to choose from, but this one was the most suitable for our project.
-
-- **Apache Storm**: Apache Storm was used to create the system that is responsible for the communication between the databases and the **MLM**. This technology was chosen because it is open-source, easy to use, and it is one of the most used technologies in the world for stream processing systems. We also had the option to choose **Apache Flink**, which is also a stream processing system and a batch processing system. This means that Apache Flink is more suitable for the data processing and the data filtering, since it can handle both the real-time data and the historical data, while Apache Storm is more suitable for the communication between the databases and the **MLM**, since it is more lightweight and can handle the data in a more efficient way. For now, we will stick with Apache Storm, since it is the most used system for this purpose.
+- **DINASORE**: DINASORE is a distributed platform that enables reconfiguration of Cyber-Physical System (CPS). The DINASORE platform allows the implementation of python Function Block (FB) based pipelines for sensor integration, data processing, and systems control. It is also equipped to reach the product's goal of being an Industry 4.0 application, as it uses the OPC-UA protocol to allow communication with the other industrial components. While not our first choice for a pipelining technology, it was requested by the client to be used at sensor-level. 
 
 - **PyTorch**: PyTorch was used to create the **MLM** that is responsible for the prediction of the sensors data. This technology was chosen because it is open-source, easy to use, and it is one of the most used technologies in the world for machine learning models. We had more options to choose from, but for now, we will stick with PyTorch, since it will achieve our main purpose.
 
@@ -198,4 +196,29 @@ Provide here an historical record (for each sprint) of the four key metrics and 
 
 ## Restrospectives
 
-Describe (possibly as separate markdown files linked form this section) a written account of your retrospectives. There should be, for each sprint, one retrospective for the entire project, and one for each team.
+### **Sprint 1 (12 October - 26 October)**
+
+#### Project Retrospective
+
+#### Team 1 Retrospective
+
+#### Team 2 Retrospective
+Our team's main objective this first sprint was familiarizing ourselves with the DINASORE technology and its requirements for a full and thorough implementation in our project. For this sprint, we worked in conjunction with [João Araújo](../factsheets/team1/joao_araujo.md) throughout the whole process. Overall, the team exceeded expectations in not only understanding the technology at hand but also in its partial integration in the main codebase. Documentation and a setup guide were also written. Furthermore, the client's feedback was fully positive, which also confirmed the direction in which the team was headed.
+
+#### Team 3 Retrospective
+
+#### Team 4 Retrospective
+
+#
+
+### **Sprint 2**
+
+#
+
+### **Sprint 3**
+
+#
+
+### **Sprint 4**
+
+
