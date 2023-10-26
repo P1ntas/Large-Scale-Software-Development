@@ -11,8 +11,6 @@
 
 ## Installation Guide
 
-- Install the [Mosquitto Broker](https://mosquitto.org/download/) for your system under the default directory.
-
 - Proceed to install the [requirements](../config/requirements.txt) if you haven't already, by running the [install.bash](../install.bash) if you are on Linux/Mac or the [install.bat](../install.bat) if you are on Windows.
 
 - Install 4DIAC-IDE for your system, using any these permalinks:
@@ -31,14 +29,9 @@
 
 ## How to Run
 
-- Start by running the Mosquitto Broker. For that, you can run the following command under the mosquitto folder:
-    ```sh
-    net start mosquitto
-    ```
+- Make sure you have all the docker containers running. You will need to have **PostgreSQL**, **MQTT-Broker** and **Pushgateway** running, which have `5432`, `1883` and `9091` ports associated, respectively.
 
-    The broker should be running on the default port `1883`.
-
-- Then, in order to run DINASORE on your system, you need to run the following commands:
+- In order to run DINASORE on your system, you need to run the following commands:
     ```sh
     # Move to the dinasore's root folder
     cd src/dinasore
