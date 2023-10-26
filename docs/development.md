@@ -201,6 +201,7 @@ Provide here an historical record (for each sprint) of the four key metrics and 
 #### Project Retrospective
 
 #### Team 1 Retrospective
+For the first sprint, our team's objectives were to create a database suitable for static and real-time data, setup Grafana, design and implement a page that allows workers to view machine logs and characteristics, and we were also responsible ([João Araújo](../factsheets/team1/joao_araujo.md)) with helping other team members. In conclusion, we were able to do most tasks, but work still needs to be done.
 
 #### Team 2 Retrospective
 Our team's main objective this first sprint was familiarizing ourselves with the DINASORE technology and its requirements for a full and thorough implementation in our project. For this sprint, we worked in conjunction with [João Araújo](../factsheets/team1/joao_araujo.md) throughout the whole process. Overall, the team exceeded expectations in not only understanding the technology at hand but also in its partial integration in the main codebase. Documentation and a setup guide were also written. Furthermore, the client's feedback was fully positive, which also confirmed the direction in which the team was headed.
