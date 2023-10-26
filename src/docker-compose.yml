@@ -62,16 +62,6 @@ services:
       - "9091:9091"
     networks:
       - monitoring-network
-
-  flask-app:
-    build: ./server
-    container_name: flask-app
-    depends_on:
-      - postgres
-    ports:
-      - "8000:8000"
-    networks:
-      - monitoring-network
     
   mqtt-broker:
     image: eclipse-mosquitto
