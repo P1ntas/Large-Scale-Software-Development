@@ -4,32 +4,15 @@
 
 Since this sprint was mainly used for the creation of user stories and other related content, there was no real contributions on my part as Scrum Master, except maybe for a basic review of some of the created issues.
 
-### The two user stories that I am most proud of
-
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
-
-
-### The two pull requests that I am most proud of
-
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
-
-
-### Two contributions of other types that I am most proud of
-
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
-
-
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### General considerations
+In this sprint, we were more concerned about understanding the workflow of the DINASORE tool. With this in mind, we went through the presented tutorials, step by step, in order for us to have a full grasp on how the Function Block programming works. Furthermore, we already tested it out with a custom pipeline, which was aligned with the client's perspective.
 
+### Two contributions of other types that I am most proud of
+As mentioned before, I worked more on the part of understanding and usage of the DINASORE tool.
+- Setted up DINASORE and helped the other members of the team when needed
+- Tested the pipeline created by [João Araújo](../factsheets/team1/joao_araujo.md)
 
 ## Sprint 2
 

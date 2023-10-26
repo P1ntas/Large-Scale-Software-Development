@@ -1,6 +1,6 @@
 # MES for Industrial Automation
 
-Explain here in one or two sentences what is the goal of your product. More details about the product should be found in the [product management](docs/product.md) documentation (make sure you link it from here), which includes the product vision, market research and domain analysis.
+Our product aims to be a helpful, all-encompassing tool for industrial organizations to achieve the goals of [Industry 4.0](https://www.ibm.com/topics/industry-4-0) that consist in improving product quality, reducing costs, and meeting regulatory requirements while staying adaptable to changing market conditions. More information about our product's vision and objectives can be found in the [Product Management](docs/product.md) document.
  
 
 ## How to use
@@ -18,7 +18,6 @@ Defer more details about the technical vision to the [development](docs/developm
 ## How to run and operate in a production environment
 
 For a full guide and explanation on the project's environment, technologies and setup, please refer to the [Development Guide](docs/development.md#development-guide).
-
 
 ## Contributions
 
