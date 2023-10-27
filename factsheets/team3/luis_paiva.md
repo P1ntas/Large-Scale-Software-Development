@@ -29,8 +29,23 @@ This can be anything that you think worked particularly well and benefited the p
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+As stated in the development document, the work the team developed during this sprint was mainly related to implementing automatic notifications linked to the data visualization interface, Grafana, and its dashboards.
 
+### The two user stories that I am most proud of
+
+This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
+
+ * [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented an automatic notification for testing purposes with different data and delivery endpoints
+
+### The two pull requests that I am most proud of
+
+None Relevant
+
+### Two contributions of other types that I am most proud of
+
+We completed the tasks we set out to do in this sprint succefully. We tested how real-time notifications work with both email and Discord integration and we discover is feasible.
+
+As a Product Owner, it was my role during the meeting with the client to ask pertinent questions about our feature in order to clarify my team's doubts. For exmple, the type of data we would receive from the sensors to understand which alerts would be relevant to send to users. 
 
 ## Sprint 2
 

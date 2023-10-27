@@ -28,7 +28,23 @@ This can be anything that you think worked particularly well and benefited the p
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+As stated in the development document, the work the team developed during this sprint was mainly related to implementing automatic notifications linked to the data visualization interface, Grafana, and its dashboards. 
+
+### The two user stories that I am most proud of
+
+ * [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented an automatic notification for testing purposes with different data and delivery endpoints
+
+
+### The two pull requests that I am most proud of
+
+None relevant
+
+
+### Two contributions of other types that I am most proud of
+
+We successfully achieved the objectives for this sprint, testing the implementation of the notifications both with an email endpoint and a Discord bot (webhook). The tasks developed during this sprint helped us prove that having real-time notifications is feasible, and the pull request with the complete code for this feature will be done during sprint 2, when we have real-time data being streamed to the dashboards, as only then we can create more types of notifications and complete the testing process. We also need to figure out a way to ensure user acknowledgement and tracking.
+
+As a Scrum Master, I also helped organize the team’s workflow during the sprint.
 
 
 ## Sprint 2
