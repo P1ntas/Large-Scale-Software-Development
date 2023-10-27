@@ -32,7 +32,7 @@ As stated in the development document, the work the team developed during this s
 
 ### The two user stories that I am most proud of
 
- * [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/13) - Implemented an automatic notification for testing purposes with different data and delivery endpoints
+ * [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented an automatic notification for testing purposes with different data and delivery endpoints
 
 
 ### The two pull requests that I am most proud of
