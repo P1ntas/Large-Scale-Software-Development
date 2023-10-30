@@ -29,6 +29,8 @@ The two PRs we're most proud of:
 
 - Our market research played a vital role in shaping various aspects of the project, including the creation of user stories, the product vision, questions related to the system, and many other key elements.
 
+- We contributed to the project startup regarding the technologies used for future work.
+
 
 ## Sprint 1
 
