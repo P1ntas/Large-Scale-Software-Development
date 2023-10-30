@@ -2,35 +2,18 @@
 
 ## Sprint 0
 
-Took part towards the approval of the initial technology common basis, contributed to crafting the initial user stories and helped organize the project backlog with all the Product Owners. Also established contact with the client and helped setup the communication environment between the whole class and the client.
-
-
-### The two user stories that I am most proud of
-
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
-
-
-### The two pull requests that I am most proud of
-
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
-
-
-### Two contributions of other types that I am most proud of
-
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
-
+### Contribution
+As a Product Owner (PO), i took part towards the approval of the initial technology common basis, contributed to crafting the initial user stories and helped organize the project backlog with all the Product Owners. Also established contact with the client and helped setup the communication environment between the whole class and the client.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### Contribution
+Like the previous Sprint, continued the communication with the client in order to clarify the doubts that my team had. I also helped to propose some solutions based on the client's feedback. 
 
+### The two user stories that I am most proud of
+My team's issues: 
+- As a User, I want to have a solid database that can store the machine's logs over time, so that I can visualize it later
+- As a User I want to be able to see a detailed log of a specific machine's characteristics so that I can monitor its state over time
 
 ## Sprint 2
 
