@@ -1,36 +1,38 @@
-# Factsheet for John Doe
+# Factsheet for Nuno França
 
 ## Sprint 0
 
-Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
+My contribution in this sprint consistent of learning teamwork and learning more about the future work, that must be done.
 
 
 ### The two user stories that I am most proud of
 
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
+No user stories were written in this sprint
 
 
 ### The two pull requests that I am most proud of
 
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
+No pull requests were made in this sprint
 
 
 ### Two contributions of other types that I am most proud of
 
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
+The biggest contribution to this sprint was without a doubt João Araújo.
 
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
 
+- #4 - Helped in the integration of the Grafana dashboard.
+
+### The two pull requests that I am most proud of
+
+- No pull requests were made in this sprint
+
+### Two contributions of other types that I am most proud of
+
+- The biggest contribution was sharing thoughts and ideas about the current and next sprints 
 
 ## Sprint 2
 

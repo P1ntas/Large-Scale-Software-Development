@@ -17,14 +17,26 @@ I contributed to this [issue](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Pr
 
 ### Two contributions of other types that I am most proud of
 
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
+(N/A) in sprint 0.
 
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+My major contributions consisted guidance to Team 4's dev team and collective brainstorms to clarify how we would proceed from sprint 1 onwards. Some work was done, about connecting the database to the future ML model, but that's far from done.
 
+
+### The two user stories that I am most proud of
+
+During sprint 1, no user stories were created by me or with my contribution.
+
+
+### The two pull requests that I am most proud of
+
+No relevant pull requests were created by me during sprint 1, besides some for documentation and the some that I approved but didn't create.
+
+### Two contributions of other types that I am most proud of
+
+Besides guiding my dev team and the contribution I did to establish a better communication between team members and between us and other teams, there's nothing to highlight.
 
 ## Sprint 2
 

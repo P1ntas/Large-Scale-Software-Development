@@ -1,0 +1,10 @@
+psutil
+cryptography
+opcua
+numpy
+argparse
+scikit-learn
+pandas
+paho.mqtt
+prometheus_client
+psycopg2

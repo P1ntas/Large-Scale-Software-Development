@@ -2,35 +2,19 @@
 
 ## Sprint 0
 
+### General Contributions
+
 Contributed towards the approval of the initial technology common basis, took part in the writing of the initial user stories and helped organize the project backlog. Actively established contact with the client and setup the communication environment.
-
-
-### The two user stories that I am most proud of
-
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
-
-
-### The two pull requests that I am most proud of
-
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
-
-
-### Two contributions of other types that I am most proud of
-
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
-
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
 
+ * Team 2's Issues - DINASORE Implementation, Dockerization and other DINASORE-related backlog items 
+
+### General Contributions
+
+Continued working with the client to further understand the need for the DINASORE technology in this project. Familiarized myself with the development environment and technologies so I could better communicate the team's questions and feedback in more technical questions, and followed the team's progress closely to source out doubts that needed to be answered. Prepared sprint backlog with the help of the team.
 
 ## Sprint 2
 

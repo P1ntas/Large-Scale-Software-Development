@@ -1,35 +1,39 @@
-# Factsheet for John Doe
+# Factsheet for Afonso Pacheco
 
 ## Sprint 0
 
-Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
+My major contributions consisted about searching to understand more about the project and sharing opinions.
 
 
 ### The two user stories that I am most proud of
 
 This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
 
- * #1
- * #2
-
-
 ### The two pull requests that I am most proud of
 
 This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
-
 
 ### Two contributions of other types that I am most proud of
 
 This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
 
-
+João did the biggest contribution to the project, in this phase my biggest contribution was debating and giving opinions.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
+
+- [#13](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/13) - The successful integration of [DINASORE](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/13) on the project. This was essential to show the client that our project is feasible to be used in any kind of environment, as well as it is easy to integrate the pipeline with other technologies that may come.
+
+- [#4](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/4) - The integration of a new dashboard in Grafana that is more user-friendly and has more information than the previous one.
+
+
+### The two pull requests that I am most proud of
+
+- In this sprint there were no pull requests because Me and Nuno did some upgrade in terms of visualization of the data in the dashboard, however the work is not finished until the database is not complete.
+
+
+### Two contributions of other types that I am most proud of
 
 
 ## Sprint 2

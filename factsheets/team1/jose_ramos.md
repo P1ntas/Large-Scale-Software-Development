@@ -4,32 +4,42 @@
 
 Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
 
+For the initial sprint, my work was mainly based on market research and creating some questions for the client to answer. In my research, I found some similar technologies, such as [critical manufacturing software](https://www.criticalmanufacturing.com/industries/discrete-manufacturing/) for factory management, that was also used as inspiration for our user stories and product vision regarding system visualization and requirements, and I also found [Notion](https://www.notion.so/) for tasks and work management.
+
 
 ### The two user stories that I am most proud of
 
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
+N/A
 
 
 ### The two pull requests that I am most proud of
 
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
+N/A
 
 
 ### Two contributions of other types that I am most proud of
 
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
+As I said before, my market research was crucial in the creation of user stories, product vision, questions regarding the system, and many other things.
 
 
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+I was assigned to upgrade the current database squema.
+
+### The two user stories that I am most proud of
+
+- [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Did the database squema. Probably will need to upgrade in the future.
+
+
+### The two pull requests that I am most proud of
+
+N/A
+
+
+### Two contributions of other types that I am most proud of
+
+N/A
 
 
 ## Sprint 2

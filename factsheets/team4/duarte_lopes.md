@@ -21,7 +21,19 @@ Since this sprint was mainly used for the creation of user stories and other rel
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
+
+* The whole team worked on the user story assigned to us at the beginning of the sprint.
+
+
+### The two pull requests that I am most proud of
+
+* N/A
+
+
+### Two contributions of other types that I am most proud of
+
+* Created branch team4_sprint1 and developed a script that fetches all the tables from the database and stores it in .csv files.
 
 
 ## Sprint 2
