@@ -21,7 +21,19 @@ João did the biggest contribution to the project, in this phase my biggest cont
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
+
+- [#13](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/13) - The successful integration of [DINASORE](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/13) on the project. This was essential to show the client that our project is feasible to be used in any kind of environment, as well as it is easy to integrate the pipeline with other technologies that may come.
+
+- [#4](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/4) - The integration of a new dashboard in Grafana that is more user-friendly and has more information than the previous one.
+
+
+### The two pull requests that I am most proud of
+
+- In this sprint there were no pull requests because Me and Nuno did some upgrade in terms of visualization of the data in the dashboard, however the work is not finished until the database is not complete.
+
+
+### Two contributions of other types that I am most proud of
 
 
 ## Sprint 2
