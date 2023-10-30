@@ -1,6 +1,7 @@
 # Factsheet for Team 4
 
 ## Sprint 0
+
 During Sprint 0, Team 4 made significant contributions to the project by focusing on testing and refining key components of the system to meet the client's requirements. We conducted thorough testing of Prometheus, Grafana, and Postgres for the database, ensuring the foundation for the project was robust and reliable.
 
 ### The four user stories that we are most proud of
