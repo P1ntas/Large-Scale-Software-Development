@@ -181,6 +181,6 @@ For a full guide and explanation on the project's environment, technologies and 
    * [Amanda Oliveira](factsheets/team4/amanda_oliveira.md)(SPO)
    * [Duarte Lopes](factsheets/team4/duarte_lopes.md)
    * [Tiago Marques](factsheets/team4/tiago_marques.md)
-   * [Tómas Martins](factsheets/team4/tomas_martins.md) (SM)
+   * [Tomás Martins](factsheets/team4/tomas_martins.md) (SM)
 
 
