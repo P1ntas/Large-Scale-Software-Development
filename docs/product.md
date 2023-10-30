@@ -114,20 +114,18 @@ Similar to the first representation, this diagram represents the main entities o
 - **Factory**: The factory keeps being the main entity of the project. It represents the factory where the production takes place. It has multiple systems, those containing multiple sensors attatched to it. The data from the sensors are fetched by the systems and now are sent to a central MQTT broker. 
 
 - **Eclipse Mosquitto**: Eclipse Mosquitto was used to create the MQTT broker that receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance. 
-  
-- **EdgeX Foundry**: This system is built on top of the MQTT broker, so it is responsible for the communication between the MQTT broker and the databases and the **M**achine **L**earning **M**odel (**MLM**). It is also responsible to retrieve data to the Apache Storm/Flink instance to process it and filter it.
 
 - **Prometheus**: This database hold the data from the sensors. Prometheus has a built-in alert and graph system. Prometheus scrapes the data that the EdgeX Foundry instance has available.
 
 - **PostgreSQL**: This database hold the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors. While PostgreSQL being a relational database, it is suitable for the static data, since it is more structured and achieves an higher confidence level to integrate with Grafana.
 
-- **Apache Storm**: This systems is responsible for the data processing and the data filtering. It is also responsible for the communication between the databases and the **MLM**. 
-
 - **PyTorch**: PyTorch was used to create the **Machine Learning Model** that is responsible for the prediction of the sensors data. The results of a prediction will be sent to the **Apache Storm** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
   
-- **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The Grafana instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
+- **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The **Grafana** instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
 
 - **DINASORE**: The DINASORE platform allows the implementation of python Function Block (FB) based pipelines for sensor integration, data processing, and systems control. It uses the OPC-UA protocol to allow communication with the other industrial components.
+
+- **4DIAC-IDE**: The 4DIAC-IDE is a crucial tool that enables the configuration of **DINASORE**. It’s an integrated development environment that facilitates the creation and management of industrial automation applications. **4DIAC-IDE** supports the creation of Python-based Function Blocks (FBs), which are vital for sensor integration, data processing, and systems control in **DINASORE**. Moreover, **4DIAC-IDE** allows communication with other industrial components via the OPC-UA protocol. This makes **4DIAC-IDE** a central piece in the configuration and operation of **DINASORE**, enabling efficient and effective integration of the various system components.
 
 ## Sprint Reviews
 
