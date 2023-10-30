@@ -4,15 +4,15 @@
 
 Our team played a pivotal role in establishing the project's foundation. We collectively approved the initial technology framework, organized the project backlog, and initiated client communication.
 
-During the project's start, our team led the creation of our first prototype through thorough research, simplifying the setup process in a Docker container. Clear documentation made it accessible to the team. We identified new technologies following client Q&A sessions.
+During the project's start, our team led the creation of our first prototype through thorough research, simplifying the setup process in a Docker container. Clear documentation made it accessible to the teams. We identified new technologies following client Q&A sessions.
 
 In this sprint, our focus was on teamwork and market research. Our research uncovered technologies like critical manufacturing software and Notion for project inspiration and management.
 
 
 ### The four user stories that we are most proud of
 
-- As a User, I want to have a solid database that can store the machine's logs over time, so that I can visualize it later
-- As a User I want to be able to see a detailed log of a specific machine's characteristics so that I can monitor its state over time
+- [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) As a User, I want to have a solid database that can store the machine's logs over time, so that I can visualize it later
+- [#4](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/4) As a User I want to be able to see a detailed log of a specific machine's characteristics so that I can monitor its state over time
 
 ### The four pull requests that we are most proud of
 
