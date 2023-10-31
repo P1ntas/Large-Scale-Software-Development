@@ -95,9 +95,9 @@ This diagram represents the main entities of our project and how it would be int
 - **Python Instance**: This istance, for the first part of the project, holds the data from the sensors (or should we say, it simulates it) and sends it to the databases.
 
 - **Databases**: The present databases holds 2 types of data: the data from the sensors and the static data from the systems themselfs.
-    
+
     - **PostgreSQL**: This database holds the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors.
-    
+
     - **Prometheus**: This database holds the data from the sensors. It is used to create the graphs and the alerts. Prometheus scrapes the data that the python instance generated and sent to the **Flask** server. This flask server, exposes the data via HTTP, so that Prometheus can scrape it at a given interval.
 
 - **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The Grafana instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
@@ -111,7 +111,7 @@ After having the first representation of the domain model and the Q&A session wi
 
 Similar to the first representation, this diagram represents the main entities of our project and how it would be integrated towards the first Sprint. It shows the relation between the different entities and the data flows within them. The main entities are the following:
 
-- **Factory**: The factory keeps being the main entity of the project. It represents the factory where the production takes place. It has multiple systems, those containing multiple sensors attatched to it. The data from the sensors are fetched by the systems and now are sent to a central MQTT broker. 
+- **Factory**: The factory keeps being the main entity of the project. It represents the factory where the production takes place. It has multiple systems, those containing multiple sensors attatched to it. The data from the sensors are fetched by the systems and now are sent to a central MQTT broker.
 
 - **MQTT Broker**: This broker receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance.
 
@@ -121,7 +121,7 @@ Similar to the first representation, this diagram represents the main entities o
 
 - **PostgreSQL**: This database hold the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors. While PostgreSQL being a relational database, it is suitable for the static data, since it is more structured and achieves an higher confidence level to integrate with Grafana.
 
-- **Apache Storm**: This systems is responsible for the data processing and the data filtering. It is also responsible for the communication between the databases and the **MLM**. 
+- **Apache Storm**: This systems is responsible for the data processing and the data filtering. It is also responsible for the communication between the databases and the **MLM**.
 
 - **Machine Learning Model**: This model is responsible for the prediction of the sensors data. We will use most likely **PyTorch** to build and train it. The results of a prediction will be sent to the **Apache Storm** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
 
@@ -131,4 +131,10 @@ Similar to the first representation, this diagram represents the main entities o
 
 ## Sprint Reviews
 
-Record of each sprint review, stating *when* they happened, *which version* was demonstrated (refer to specific git tags and/or version number of the product increment), and the main feedback provided by the customer. Refer also to the consequences of that feedback to the planning of the product, when relevant.
+
+### Team 2
+#### Sprint 1
+Our team's main objective this first sprint was familiarizing ourselves with the DINASORE technology and its requirements for a full and thorough implementation in our project. For this sprint, we worked in conjunction with [João Araújo](../factsheets/team1/joao_araujo.md) throughout the whole process. Overall, the team exceeded expectations in not only understanding the technology at hand but also in its partial integration in the main codebase. Documentation and a setup guide were also written.
+Furthermore, the client's feedback was fully positive, which also confirmed the direction in which the team was headed, although there were some drawbacks with the meeting with the client, such as the resistance on their part for us to work with real data from the laboratory in the future. However, since the whole project is not that complex, it may not bring any consequences to its development.
+The meeting for this sprint review was done on the 26th of october of 2023, together with all the other members of the team and the previously mentioned Team 1 member, João Araújo.
+
