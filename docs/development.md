@@ -2,9 +2,9 @@
 
 ## Architecture and design
 
-Describe the architecture and design of the system. Use component/deployment diagrams. If needed, resort to package diagrams to organize them into more manageable parts. 
+Describe the architecture and design of the system. Use component/deployment diagrams. If needed, resort to package diagrams to organize them into more manageable parts.
 
-Be clear about what is the current architecture/design and what is the one you envision in the future, in case they are different. 
+Be clear about what is the current architecture/design and what is the one you envision in the future, in case they are different.
 Identify main risks and justify the most important choices to show the soundness of the architecture and design that you have implemented or plan to implement.
 
 ### First Prototype - Sprint 0
@@ -47,7 +47,7 @@ After the first prototype, we had a Q&A session with the client which enlightene
 
 - **Eclipse Mosquitto**: Eclipse Mosquitto was used to create the MQTT broker that receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance. This technology was chosen because it is open-source, easy to use, and it is one of the most used technologies in the world for MQTT brokers. We also had the option to choose **EMQX**, which is also a MQTT broker. Both instances achieve the main purpose, but we decided to keep with **Eclipse Mosquitto** since it has an easier integration with EdgeX Foundry.
 
-- **DINASORE**: DINASORE is a distributed platform that enables reconfiguration of Cyber-Physical System (CPS). The DINASORE platform allows the implementation of python Function Block (FB) based pipelines for sensor integration, data processing, and systems control. It is also equipped to reach the product's goal of being an Industry 4.0 application, as it uses the OPC-UA protocol to allow communication with the other industrial components. While not our first choice for a pipelining technology, it was requested by the client to be used at sensor-level. 
+- **DINASORE**: DINASORE is a distributed platform that enables reconfiguration of Cyber-Physical System (CPS). The DINASORE platform allows the implementation of python Function Block (FB) based pipelines for sensor integration, data processing, and systems control. It is also equipped to reach the product's goal of being an Industry 4.0 application, as it uses the OPC-UA protocol to allow communication with the other industrial components. While not our first choice for a pipelining technology, it was requested by the client to be used at sensor-level.
 
 - **PyTorch**: PyTorch was used to create the **MLM** that is responsible for the prediction of the sensors data. This technology was chosen because it is open-source, easy to use, and it is one of the most used technologies in the world for machine learning models. We had more options to choose from, but for now, we will stick with PyTorch, since it will achieve our main purpose.
 
@@ -138,7 +138,7 @@ Note: If you are having problems (for example, have postgres also installed on y
 
 ### Prometheus
 
-To access the `Prometheus` interface, go to `localhost:9090`. 
+To access the `Prometheus` interface, go to `localhost:9090`.
 
 To verify if the data is being scraped from the `Pushgateway` server, go to the `Status > Targets` tab and check if the `pushgateway` is up and running. If it is, it should show `UP` under the `State` column.
 
@@ -162,13 +162,13 @@ To access the `Grafana` interface, go to `localhost:3000`. Login with the follow
 
 After logging in, you will be prompted to change the password, but you can skip it. After that, you will be redirected to the `Home Dashboard`.
 
-From there, select on the left side the `Dashboards` tab. This will show the available dashboards folders. Select the `General` folder and then select the `General View` dashboard. 
+From there, select on the left side the `Dashboards` tab. This will show the available dashboards folders. Select the `General` folder and then select the `General View` dashboard.
 
 ![gif](../docs/images/grafana_home.gif)
 
 Now, you can play around with the variables and see the data in the dashboard.
 
-Note: If you wish to change the existing dashboards, that won't be possible because they are provisioned. You can import the same dashboards, that are stored under `grafana/provisioning/dashboards/general`, and change them as you wish. 
+Note: If you wish to change the existing dashboards, that won't be possible because they are provisioned. You can import the same dashboards, that are stored under `grafana/provisioning/dashboards/general`, and change them as you wish.
 
 If you want to create your own dashboard, you can use the Grafana's built-in tools, but you are free to use plugins to achieve your desired needs. The following plugins are recommended:
 - [Apache ECharts](https://grafana.com/grafana/plugins/volkovlabs-echarts-panel/). You can use the [Apache Echarts Playground](https://echarts.apache.org/examples/en/index.html) to tryout the different charts and see the code behind them;
@@ -193,11 +193,11 @@ In order to run the sensor simulator, you have to run DINASORE on your system. F
 # Move to the dinasore's root folder
 cd src/dinasore
 
-# Default values: 
-# <ip_address>=localhost, <port_diac>=61499, 
+# Default values:
+# <ip_address>=localhost, <port_diac>=61499,
 # <port_opc>=4840, <log_level>=ERROR,
 # <number_samples>=5, <seconds_per_sample>=20
-python core/main.py -a <ip_address> \ 
+python core/main.py -a <ip_address> \
                     -p <port_diac> \
                     -u <port_opc> \
                     -l <log_level> \
@@ -238,7 +238,7 @@ python core/main.py -p 61500 -u 4841
   7. Now, proceed to link the function blocks and fill the parameters with:
       - **SENSOR_SIMULATOR_V2**: OFFSET = 0. You can twist this value to emulate, for example, a sensor that can overheat (Offset = 10) or a sensor that is working above the desired temperature (Offset = -10).
       - **MOVING_AVERAGE_V2**: WINDOW = 5. This value is the number of samples that the moving average will use to calculate the average value. You can change this value to see how the moving average changes.
-      - **MQTT_PUBLISHER_V3**: 
+      - **MQTT_PUBLISHER_V3**:
           - TOPIC = "sensor_data". This is the topic that the publisher will use to publish sensor data to.
           - HOST = "localhost". This is the IP address of the MQTT Broker on your machine.
           - PORT = 1883. This is the port of the MQTT Broker on your machine.
@@ -263,7 +263,7 @@ python core/main.py -p 61500 -u 4841
           - JOB_NAME = "sensor_data". This is the job name of the sensor data.
 
       ![image](../docs/images/Screenshot_3.png)
-      
+
       NOTE: Make sure to link the function blocks as shown in the image above. This step is important to ensure that the function blocks are linked in the correct order and that it follows the flow of the data.
 
   8. Link the function blocks to the corresponding FORTE_PC:
@@ -318,7 +318,14 @@ After the sprint has ended, looking back we noticed we need to improve in some t
 
 
 #### Team 2 Retrospective
-Our team's main objective this first sprint was familiarizing ourselves with the DINASORE technology and its requirements for a full and thorough implementation in our project. For this sprint, we worked in conjunction with [João Araújo](../factsheets/team1/joao_araujo.md) throughout the whole process. Overall, the team exceeded expectations in not only understanding the technology at hand but also in its partial integration in the main codebase. Documentation and a setup guide were also written. Furthermore, the client's feedback was fully positive, which also confirmed the direction in which the team was headed.
+Negative points :
+- Difficulty in organizing the work considering that it was too sequential
+- There were some problems when setting up the DINASORE tool and the 4diac IDE
+
+Positive points:
+- Good comunication between team members
+- Good starting basis regarding the used technology
+
 
 #### Team 3 Retrospective
 During this sprint, our team was assigned the task of developing automatic notifications for events and familiarising with the way they work and are implemented in the Grafana platform. Although we were able to achieve this goal successfully, creating some test notifications, as data was still not dynamic, in large quantity and following a defined pipeline, we were not able to fully develop and test this feature. In conclusion, we acquired all the necessary knowledge to finish this task in the next sprint alongside another task assigned to us, as the work done by the other teams regarding the stream of data will support our development of this feature.
