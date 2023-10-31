@@ -43,17 +43,25 @@ Additionally, we were was tasked with the responsibility of upgrading the existi
 
 - [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Did the database squema. Probably will need to upgrade in the future.
 
+- [#13](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/13) - Helped team 2 in the progression of the user stories.
+
 ### The four pull requests that we are most proud of
 
 - [#27](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/27) - Fixed DINASORE's features to be used in our project with ease.
 
 - [#34](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/32) - Sucessfuly integrated DINASORE into our project with [Team 2](../team2/team2.md). This integration was essential to show the client that our project is feasible to be updated by managers that would use this later on, since the pipeline is fully customizable.
 
+- [#49](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/49) - Uploaded the new database uml.
+
 ### Four contributions of other types that we are most proud of
 
-- We've undertaken the task of documenting DINASORE, providing a user-friendly tutorial for our fellow team members. This documentation empowers others to easily follow and customize the pipeline to suit their specific requirements in the future.
+- We've undertaken the task of documenting DINASORE, providing a user-friendly tutorial for our fellow team members.
 
-- In addition to our documentation work, we've been actively assisting [Team 2](../team2/team2.md) and [Team 3](../team4/team4.md) in integrating DINASORE into the project. Furthermore, we've been instrumental in the development of a robust sensor generator, ensuring that it generates the essential data needed to train their respective models effectively.
+- In addition to our documentation work, we've been actively assisting [Team 2](../team2/team2.md) and [Team 3](../team4/team4.md) in integrating DINASORE into the project. 
+
+- We've been instrumental in the development of a robust sensor generator, ensuring that it generates the essential data needed to train their respective models effectively.
+
+- The documentation we did empowers others to easily follow and customize the pipeline to suit their specific requirements in the future.
 
 ## Sprint 2
 
