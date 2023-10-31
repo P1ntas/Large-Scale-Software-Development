@@ -131,9 +131,10 @@ Similar to the first representation, this diagram represents the main entities o
 
 ## Sprint Reviews
 
+### **Sprint 1 (12 October - 26 October)**
 
-### Team 2
-#### Sprint 1
+#### Team 2
+
 Our team's main objective this first sprint was familiarizing ourselves with the DINASORE technology and its requirements for a full and thorough implementation in our project. For this sprint, we worked in conjunction with [João Araújo](../factsheets/team1/joao_araujo.md) throughout the whole process. Overall, the team exceeded expectations in not only understanding the technology at hand but also in its partial integration in the main codebase. Documentation and a setup guide were also written.
 Furthermore, the client's feedback was fully positive, which also confirmed the direction in which the team was headed, although there were some drawbacks with the meeting with the client, such as the resistance on their part for us to work with real data from the laboratory in the future. However, since the whole project is not that complex, it may not bring any consequences to its development.
 The meeting for this sprint review was done on the 26th of october of 2023, together with all the other members of the team and the previously mentioned Team 1 member, João Araújo.

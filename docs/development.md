@@ -193,11 +193,11 @@ In order to run the sensor simulator, you have to run DINASORE on your system. F
 # Move to the dinasore's root folder
 cd src/dinasore
 
-# Default values: 
-# <ip_address>=localhost, <port_diac>=61499, 
+# Default values:
+# <ip_address>=localhost, <port_diac>=61499,
 # <port_opc>=4840, <log_level>=ERROR,
 # <number_samples>=5, <seconds_per_sample>=20
-python core/main.py -a <ip_address> \ 
+python core/main.py -a <ip_address> \
                     -p <port_diac> \
                     -u <port_opc> \
                     -l <log_level> \
@@ -238,7 +238,7 @@ python core/main.py -p 61500 -u 4841
   7. Now, proceed to link the function blocks and fill the parameters with:
       - **SENSOR_SIMULATOR_V2**: OFFSET = 0. You can twist this value to emulate, for example, a sensor that can overheat (Offset = 10) or a sensor that is working above the desired temperature (Offset = -10).
       - **MOVING_AVERAGE_V2**: WINDOW = 5. This value is the number of samples that the moving average will use to calculate the average value. You can change this value to see how the moving average changes.
-      - **MQTT_PUBLISHER_V3**: 
+      - **MQTT_PUBLISHER_V3**:
           - TOPIC = "sensor_data". This is the topic that the publisher will use to publish sensor data to.
           - HOST = "localhost". This is the IP address of the MQTT Broker on your machine.
           - PORT = 1883. This is the port of the MQTT Broker on your machine.
@@ -263,7 +263,7 @@ python core/main.py -p 61500 -u 4841
           - JOB_NAME = "sensor_data". This is the job name of the sensor data.
 
       ![image](../docs/images/Screenshot_3.png)
-      
+
       NOTE: Make sure to link the function blocks as shown in the image above. This step is important to ensure that the function blocks are linked in the correct order and that it follows the flow of the data.
 
   8. Link the function blocks to the corresponding FORTE_PC:
@@ -319,12 +319,12 @@ After the sprint has ended, looking back we noticed we need to improve in some t
 
 #### Team 2 Retrospective
 Negative points :
-    - Difficulty in organizing the work considering that it was too sequential
-    - There were some problems when setting up the DINASORE tool and the 4diac IDE
+- Difficulty in organizing the work considering that it was too sequential
+- There were some problems when setting up the DINASORE tool and the 4diac IDE
 
 Positive points:
-    - Good comunication between team members
-    - Good starting basis regarding the used technology
+- Good comunication between team members
+- Good starting basis regarding the used technology
 
 
 #### Team 3 Retrospective
