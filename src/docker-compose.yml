@@ -76,8 +76,8 @@ services:
       - mosquitto-logs:/mosquitto/log
       - ./config:/mosquitto/config:rw
     restart: unless-stopped
-  
-  dinasore:
+
+  dinasore-1:
     image: dinasore:latest
     container_name: dinasore
     environment:
@@ -89,7 +89,22 @@ services:
     networks:
       - monitoring-network
     volumes:
-      - dinasore-data:/var/lib/dinasore/data
+      - dinasore:/var/lib/dinasore/data
+    restart: unless-stopped
+
+  dinasore-2:
+    image: dinasore:latest
+    container_name: dinasore
+    environment:
+      - DINASORE_4DIAC_PORT=61500
+      - DINASORE_OPCUA_PORT=4841 
+    ports:
+      - "61500:61500" 
+      - "4841:4841"  
+    networks:
+      - monitoring-network
+    volumes:
+      - dinasore:/var/lib/dinasore/data
     restart: unless-stopped
 
 networks:
@@ -103,5 +118,5 @@ volumes:
   grafana-data:
   mosquitto-data:
   mosquitto-logs:
-  dinasore-data:
+  dinasore:
   config:

@@ -4,8 +4,6 @@ RUN apt-get update \
     && apt-get -y install libpq-dev gcc \
     && pip install psycopg2
 
-#FROM python:3.6-slim
-
 RUN mkdir -p usr/src/dinasore-ua
 
 WORKDIR /usr/src/dinasore-ua
