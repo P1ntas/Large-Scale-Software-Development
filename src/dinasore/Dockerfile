@@ -1,4 +1,10 @@
-FROM python:3.6-slim
+FROM python:3.8.3-slim
+
+RUN apt-get update \
+    && apt-get -y install libpq-dev gcc \
+    && pip install psycopg2
+
+#FROM python:3.6-slim
 
 RUN mkdir -p usr/src/dinasore-ua
 
@@ -10,10 +16,10 @@ COPY core ./core
 COPY data_model ./data_model
 COPY tests ./tests
 COPY requirements.txt ./
-# COPY resources ./resources
+COPY resources ./resources
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-# RUN python tests/__init__.py
+#RUN python tests/__init__.py
 
 ENTRYPOINT [ "python", "core/main.py" ]
