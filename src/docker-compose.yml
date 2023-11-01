@@ -77,6 +77,21 @@ services:
       - mosquitto-logs:/mosquitto/log
       - ./config:/mosquitto/config:rw
     restart: unless-stopped
+  
+  dinasore:
+    image: dinasore:latest
+    container_name: dinasore
+    environment:
+      - DINASORE_4DIAC_PORT=61499 
+      - DINASORE_OPCUA_PORT=4840 
+    ports:
+      - "61499:61499" 
+      - "4840:4840"  
+    networks:
+      - monitoring-network
+    volumes:
+      - dinasore-data:/var/lib/dinasore/data
+    restart: unless-stopped
 
   dinasore_1:
     build: ./dinasore
