@@ -1,0 +1,27 @@
+id,factory_id,system_model_id,status
+1,1,1,Working
+2,1,1,Online
+3,1,2,Working
+4,1,1,Online
+5,1,3,Maintenance Required
+6,1,3,Working
+7,1,1,Offline
+8,1,2,Online
+9,1,1,Online
+10,1,1,Working
+11,2,3,Working
+12,2,1,Working
+13,2,1,Online
+14,2,3,Working
+15,2,3,Offline
+16,2,3,Online
+17,2,1,Online
+18,2,2,Working
+19,2,1,Online
+20,2,2,Offline
+21,3,2,Working
+22,3,3,Working
+23,3,1,Offline
+24,3,2,Online
+25,3,2,Maintenance Required
+26,3,1,Offline

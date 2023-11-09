@@ -1,0 +1,4 @@
+id,name,manufacturer,type,min_value,max_value
+1,Thermocouple,Siemens,Temperature,25.5103,67.4001
+2,Rotameter,Schneider,Flow,19.8129,77.538
+3,Strain Gauge,Festo,Pressure,21.9307,72.3351

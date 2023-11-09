@@ -19,24 +19,24 @@ docker-compose up -d
 echo "Finalized Docker Compose"
 
 # Check if Python is installed
-if ! command -v python &> /dev/null
+if ! command -v python3 &> /dev/null
 then
     echo "Python is not installed. Please install Python and try again."
     exit 1
 fi
 
 # Check if pip is installed
-if ! command -v pip &> /dev/null
+if ! command -v pip3 &> /dev/null
 then
     echo "pip is not installed. Please install pip and try again."
     exit 1
 fi
 
 # Install the required Python packages
-pip install -r config/requirements.txt
+pip3 install -r config/requirements.txt
 
 echo "Waiting for the database to be ready..."
 # Run the Python script
-python main.py
+python3 main.py
 
 echo "Finalized pushing data to the database"

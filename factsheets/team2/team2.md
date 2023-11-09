@@ -4,32 +4,23 @@
 
 Contributed towards the approval of the initial technology common basis, wrote the initial user stories and helped organize the project backlog. Actively established contact with the client and setup the communication environment. 
 
-
-### The four user stories that we are most proud of
-
-This can include user stories that the team has written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1 
- * #2
-
-
-### The four pull requests that we are most proud of
-
-This can include PRs that the team has implemented or reviewed during the sprint.
-
- * #3
- * #4
-
-
-### Four contributions of other types that we are most proud of
-
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
-
-
-
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
+
+ * Every DINASORE-related issue of the sprint.
+
+
+### The two pull requests that I am most proud of
+
+ * [#30](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/30)
+ * [#31](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/31)
+
+
+### General Contributions
+
+**This sprint, the team worked closely with [João Araújo](../factsheets/team1/joao_araujo.md). We will be taking his work into account when talking about the team's contributions.**
+Took care of the familiarization and implementation of the DINASORE technology and further discusses the architecture and requirements in the data extraction stage of the product (sensor-level extraction).
 
 
 ## Sprint 2

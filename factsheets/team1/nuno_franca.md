@@ -12,7 +12,7 @@ No user stories were written in this sprint
 
 ### The two pull requests that I am most proud of
 
-No pull requests were made in this sptrin
+No pull requests were made in this sprint
 
 
 ### Two contributions of other types that I am most proud of
@@ -22,8 +22,17 @@ The biggest contribution to this sprint was without a doubt João Araújo.
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+### The two user stories that I am most proud of
 
+- #4 - Helped in the integration of the Grafana dashboard.
+
+### The two pull requests that I am most proud of
+
+- No pull requests were made in this sprint
+
+### Two contributions of other types that I am most proud of
+
+- The biggest contribution was sharing thoughts and ideas about the current and next sprints 
 
 ## Sprint 2
 

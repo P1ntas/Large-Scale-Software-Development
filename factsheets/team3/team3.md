@@ -2,8 +2,19 @@
 
 ## Sprint 0
 
-Briefly state what you believe were the team's best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other teams, state explicitly that that was the case, not forgetting to explain what was your team's role in it.
+Sprint 0 was dedicated to technology familiarization, with a primary focus on Grafana running on Docker. Over the course of three weeks, the team achieved several key milestones in their pursuit of understanding and gaining proficiency in these technologies.
 
+Key Achievements:
+
+- The team successfully set up a development environment by deploying Grafana on Docker containers. This achievement was crucial in ensuring that the team had a stable and consistent environment for further development.
+
+- Team members engaged in thorough research and exploration of Grafana, gaining a fundamental understanding of its features, capabilities, and use cases. This exploration included the creation of sample dashboards and the customization of visualization options within Grafana.
+
+- As part of technology familiarization, the team connected Grafana to various data sources, demonstrating an understanding of how data can be ingested into Grafana for visualization and analysis.
+
+- The team proactively utilized online resources, tutorials, and official documentation to enhance their understanding of Grafana and Docker. This commitment to self-learning was a commendable effort during this sprint.
+
+The team encountered some challenges during this sprint, including initial configuration issues and learning curve associated with Docker and Grafana. However, these challenges served as valuable learning experiences, highlighting the importance of effective troubleshooting and the necessity of in-depth documentation.
 
 ### The four user stories that we are most proud of
 

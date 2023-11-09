@@ -1,0 +1,93 @@
+id,system_id,expansion_model_id,status
+1,1,1,Online
+2,1,6,Maintenance Required
+3,1,4,Online
+4,1,6,Working
+5,2,2,Online
+6,2,7,Online
+7,2,2,Working
+8,3,7,Online
+9,3,5,Working
+10,3,8,Maintenance Required
+11,3,1,Online
+12,4,2,Offline
+13,4,7,Working
+14,5,8,Maintenance Required
+15,5,8,Working
+16,5,2,Working
+17,5,6,Working
+18,6,5,Working
+19,6,3,Working
+20,6,7,Working
+21,7,8,Online
+22,7,5,Working
+23,7,1,Online
+24,7,3,Working
+25,8,6,Online
+26,8,6,Offline
+27,8,1,Working
+28,9,6,Maintenance Required
+29,9,5,Working
+30,9,6,Working
+31,9,7,Maintenance Required
+32,9,2,Maintenance Required
+33,10,5,Offline
+34,10,2,Online
+35,11,3,Working
+36,11,7,Maintenance Required
+37,12,2,Maintenance Required
+38,12,6,Online
+39,12,5,Working
+40,12,6,Working
+41,13,7,Offline
+42,13,3,Working
+43,13,8,Working
+44,14,4,Online
+45,14,3,Maintenance Required
+46,14,1,Maintenance Required
+47,14,6,Maintenance Required
+48,15,3,Working
+49,15,5,Working
+50,15,1,Online
+51,15,2,Online
+52,15,8,Online
+53,16,4,Offline
+54,16,7,Working
+55,16,7,Working
+56,16,3,Maintenance Required
+57,17,3,Offline
+58,17,1,Working
+59,17,1,Offline
+60,17,8,Online
+61,18,6,Online
+62,18,4,Working
+63,19,1,Maintenance Required
+64,19,4,Working
+65,19,5,Maintenance Required
+66,19,6,Working
+67,19,2,Working
+68,20,2,Online
+69,20,8,Working
+70,21,2,Working
+71,21,2,Maintenance Required
+72,22,7,Working
+73,22,8,Working
+74,23,3,Online
+75,23,1,Online
+76,23,4,Maintenance Required
+77,23,1,Online
+78,23,4,Online
+79,24,3,Online
+80,24,7,Online
+81,24,1,Offline
+82,24,8,Online
+83,24,2,Online
+84,25,6,Working
+85,25,2,Maintenance Required
+86,25,7,Offline
+87,25,8,Offline
+88,25,5,Online
+89,26,1,Maintenance Required
+90,26,2,Online
+91,26,8,Working
+92,26,5,Working
