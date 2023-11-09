@@ -31,7 +31,7 @@ class IncrementalFaultValue:
         self._update_value()
         return self.value
 
-def simulate_faults(values = [], fault_rate = 0.1, fault_duration= 0.25, fault_type = 'distinct', step = 0.05, type = 'temperature'):
+def simulate_faults(values = [], fault_rate = 0.1, fault_duration= 0.25, fault_type = 'distinct', step = 0.05, type = 'temperature', fault_value_growth= 1.0):
     """
     Simulate faults for the given values.
     After the system enters a fault state, the kind of failure is chosen randomly and stays in that state for a random time.
@@ -83,9 +83,9 @@ def simulate_faults(values = [], fault_rate = 0.1, fault_duration= 0.25, fault_t
 
         # If the system is in a fault state, the value is modified
         if fault_state == 'high':
-            v += incremental_fault_value.get_current_value()
+            v += incremental_fault_value.get_current_value()*fault_value_growth
         elif fault_state == 'low':
-            v -= incremental_fault_value.get_current_value()
+            v -= incremental_fault_value.get_current_value()*fault_value_growth
             if type != 'temperature':
                 v = 0 if v < 0 else v
 
@@ -93,6 +93,7 @@ def simulate_faults(values = [], fault_rate = 0.1, fault_duration= 0.25, fault_t
         result.append((t, v))
 
     return result, fault_state
+
 
 def test_simulate_faults():
     # Test normal behavior with no faults
