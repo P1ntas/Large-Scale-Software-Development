@@ -1,97 +1,5 @@
-import pytest
 
-import matplotlib.pyplot as plt
 import random
-import math
-
-DEFAULT_STEP_AIR_FLOW = 0.05
-DEFAULT_STEP_PRESSURE = 0.04
-DEFAULT_STEP_TEMP = 0.8
-
-DEFAULT_NOISE_LEVEL_AIR_FLOW = 0.05
-DEFAULT_NOISE_LEVEL_PRESSURE = 0.01
-DEFAULT_NOISE_LEVEL_TEMP= 1.2
-
-DEFAULT_AIR_FLOW_VALUES = [
-    (0, 0.3),
-    (0.4, 0.3),
-    (0.6, 3.3),
-    (0.7, 2.2),
-    (1.7, 1.7),
-    (2.2, 1.6),
-    (2.7, 1.7),
-    (3.5, 1.6),
-    (5, 1.6),
-    (5.5, 1),
-    (6, 0.7),
-    (7, 0.3),
-    (10, 0.3)
-]
-
-DEFAULT_TEMP_VALUES = [
-    (0, 26),
-    (4, 27),
-    (8, 26),
-    (9, 42),
-    (10, 53),
-    (11, 60),
-    (12, 65),
-    (13, 70),
-    (14.2, 75),
-    (15.5, 80),
-    (17, 83),
-    (19, 85),
-    (22, 88),
-    (25, 89),
-    (30, 90),
-    (46, 90),
-    (48, 75),
-    (49, 70),
-    (51, 63),
-    (52, 63),
-    (53, 70),
-    (55.5, 80),
-    (57, 83),
-    (59, 85),
-    (62, 88),
-    (65, 89),
-    (80, 90),
-    (86, 90),
-    (88, 75),
-    (89, 70),
-    (91, 63),
-    (93, 58),
-    (97, 48),
-    (100, 44),
-    (105, 39),
-    (110, 35), 
-    (120, 30), 
-    (140, 26),
-    (150, 26)
-]
-
-DEFAULT_PRESSURE_VALUES = [
-    (0, 0.1),
-    (0.4, 0.1),
-    (0.6, 1.6),
-    (1.2, 1.6),
-    (1.3, 0.82),
-    (2.2, 0.8),
-    (2.7, 0.82),
-    (3.5, 0.8),
-    (5, 0.8),
-    (5.1, 0.5),
-    (6, 0.5),
-    (6.9, 0.5),
-    (7, 0.1),
-    (10, 0.1)
-]
-
-DEFAULT_VALUES = {
-    'flow': (DEFAULT_STEP_AIR_FLOW, DEFAULT_NOISE_LEVEL_AIR_FLOW, DEFAULT_AIR_FLOW_VALUES),
-    'temperature': (DEFAULT_STEP_TEMP, DEFAULT_NOISE_LEVEL_TEMP, DEFAULT_TEMP_VALUES),
-    'pressure': (DEFAULT_STEP_PRESSURE, DEFAULT_NOISE_LEVEL_PRESSURE, DEFAULT_PRESSURE_VALUES)
-}
 
 class IncrementalFaultValue:
     def __init__(self, target, step = 0.5, time = 10, time_step = 0.1) -> None:
@@ -123,7 +31,7 @@ class IncrementalFaultValue:
         self._update_value()
         return self.value
 
-def simulate_faults(values = DEFAULT_TEMP_VALUES.copy(), fault_rate = 0.1, fault_duration= 0.25, fault_type = 'distinct', step = 0.05, type = 'temperature'):
+def simulate_faults(values = [], fault_rate = 0.1, fault_duration= 0.25, fault_type = 'distinct', step = 0.05, type = 'temperature'):
     """
     Simulate faults for the given values.
     After the system enters a fault state, the kind of failure is chosen randomly and stays in that state for a random time.
