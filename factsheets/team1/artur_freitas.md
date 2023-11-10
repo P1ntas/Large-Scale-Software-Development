@@ -17,7 +17,7 @@ My team's issues:
 
 ## Sprint 2
 
-...
+As a PO, i refined some of the draft user stories in order to simplify the work flow and division between teams.
 
 
 ## Sprint 3
