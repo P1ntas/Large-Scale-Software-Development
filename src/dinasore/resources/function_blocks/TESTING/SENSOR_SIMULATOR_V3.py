@@ -278,7 +278,6 @@ def create_distribution_within_range(min_value=10, max_value=100, offset=0, max_
     
     return transformed_values
 
-
 class SENSOR_SIMULATOR_V3:
 
     MAX_RETRIES = 10
@@ -291,7 +290,7 @@ class SENSOR_SIMULATOR_V3:
         self.data = None
         self.data_length = 0
         self.curr_sensor_index = 0
-        self.sensor_thresholds = [] # [(sensor_id, min_value, max_value)]}
+        self.sensor_thresholds = [] # [(sensor_id, min_value, max_value, type)]}
         self.sensor_data = [] # {[(sensor_id,[values])]
 
     def _db_connection(self):
@@ -330,11 +329,11 @@ class SENSOR_SIMULATOR_V3:
             print("Fetching sensors data...")
 
             cursor.execute("""
-                select s.id, sm.min_value, sm.max_value from sensor s
+                select s.id, sm.min_value, sm.max_value, sm.type from sensor s
                 inner join sensor_model sm on s.sensor_model_id = sm.id
             """)
             
-            self.data = cursor.fetchall()
+            self.sensor_thresholds = cursor.fetchall()
         except Exception as e:
             print(f"An error occurred: {e}")
         finally:
@@ -343,7 +342,7 @@ class SENSOR_SIMULATOR_V3:
             if connection:
                 connection.close()
 
-    def schedule(self, event_name, event_value, offset):
+    def schedule(self, event_name, event_value, fault_ratio):
         if event_name == 'INIT':
             self.distribution_index = 0
             print('Fetching sensors data...')
@@ -354,16 +353,18 @@ class SENSOR_SIMULATOR_V3:
                 print('No sensors data')
                 raise Exception("No sensors data")
             
-            self.data_length = len(self.data)
-
-            for sensor_id, min_value, max_value in self.data:
-                self.sensor_thresholds.append((sensor_id, min_value, max_value))
+            self.data_length = len(self.sensor_thresholds)
             
             return [event_value, None, 0, 0]
 
         elif event_name == 'READ':
 
             try:
+                
+                
+                
+
+
                 if self.curr_sensor_index >= self.data_length:
                     self.curr_sensor_index = 0
                     self.distribution_index += 1
@@ -371,8 +372,8 @@ class SENSOR_SIMULATOR_V3:
                     if self.distribution_index >= self.MAX_SAMPLES:
                         self.distribution_index = 0
                 if self.curr_sensor_index >= len(self.sensor_data):
-                    sensor_id, min_value, max_value = self.sensor_thresholds[self.curr_sensor_index]
-                    self.sensor_data.append((sensor_id, create_distribution_within_range(min_value, max_value, offset, self.MAX_SAMPLES)))
+                    sensor_id, min_value, max_value, type = self.sensor_thresholds[self.curr_sensor_index]
+                    self.sensor_data.append((sensor_id, create_distribution_within_range(min_value, max_value, 0, self.MAX_SAMPLES)))
 
                 sensor_id, values = self.sensor_data[self.curr_sensor_index]
                 value = values[self.distribution_index]
