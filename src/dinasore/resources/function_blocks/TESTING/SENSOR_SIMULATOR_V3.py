@@ -33,7 +33,7 @@ def create_distribution_within_range(min_value=10, max_value=100, offset=0, max_
     return transformed_values
 
 
-class SENSOR_SIMULATOR_V2:
+class SENSOR_SIMULATOR_V3:
 
     MAX_RETRIES = 10
     RETRY_DELAY_SECONDS = 5
@@ -48,7 +48,7 @@ class SENSOR_SIMULATOR_V2:
         self.sensor_thresholds = [] # [(sensor_id, min_value, max_value)]}
         self.sensor_data = [] # {[(sensor_id,[values])]
 
-    def __db_connection(self):
+    def _db_connection(self):
         for attempt in range(self.MAX_RETRIES):
             print(f"Attempt {attempt}: Connecting to the database")
             try:
@@ -70,25 +70,26 @@ class SENSOR_SIMULATOR_V2:
                     print(f"Max retries reached. An error occurred: {e}")
                     raise e
                 
-    def __fetch_sensors_data(self):
+    def _fetch_sensors_data(self):
         connection = None
         cursor = None
         try:
             print("Connecting to the database...")
-            connection = self.__db_connection()
+            connection = self._db_connection()
 
             if not connection:
                 raise Exception("No connection to database")
             
             cursor = connection.cursor()
             print("Fetching sensors data...")
+
             cursor.execute("""
                 select s.id, sm.min_value, sm.max_value from sensor s
                 inner join sensor_model sm on s.sensor_model_id = sm.id
             """)
-            return cursor.fetchall()
+            
+            self.data = cursor.fetchall()
         except Exception as e:
-            print(f"An error occurred: {e}")
             print(f"An error occurred: {e}")
         finally:
             if cursor:
@@ -100,7 +101,7 @@ class SENSOR_SIMULATOR_V2:
         if event_name == 'INIT':
             self.distribution_index = 0
             print('Fetching sensors data...')
-            self.data = self.__fetch_sensors_data()
+            self._fetch_sensors_data()
             print('Sensors data fetched')
             
             if not self.data:
@@ -116,7 +117,6 @@ class SENSOR_SIMULATOR_V2:
 
         elif event_name == 'READ':
 
-            #print('Reading sensor data...')
             try:
                 if self.curr_sensor_index >= self.data_length:
                     self.curr_sensor_index = 0
@@ -127,7 +127,6 @@ class SENSOR_SIMULATOR_V2:
                 if self.curr_sensor_index >= len(self.sensor_data):
                     sensor_id, min_value, max_value = self.sensor_thresholds[self.curr_sensor_index]
                     self.sensor_data.append((sensor_id, create_distribution_within_range(min_value, max_value, offset, self.MAX_SAMPLES)))
-                    # print('Sensor data read')
 
                 sensor_id, values = self.sensor_data[self.curr_sensor_index]
                 value = values[self.distribution_index]
@@ -137,9 +136,8 @@ class SENSOR_SIMULATOR_V2:
                 # wait some time
                 time.sleep(5/(self.data_length + 1))
 
-                # print(f"Current indexes: Sensor - {self.curr_sensor_index} ;;;;;; Distribution - {self.distribution_index}, Sensor '{sensor_id}' value: {value}")
-
                 return [None, event_value, sensor_id, value]
+            
             except Exception as e:
                 print(f"An error occurred: {e}")
                 return [None, None, None, None]

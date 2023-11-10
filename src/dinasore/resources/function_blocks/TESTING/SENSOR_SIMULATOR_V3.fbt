@@ -14,7 +14,6 @@
       </Event>
     </EventOutputs>
     <InputVars>
-      <VarDeclaration Name="OFFSET" Type="INT" OpcUa="Constant"/>
     </InputVars>
     <OutputVars>
       <VarDeclaration Name="SENSOR_ID" Type="INT" OpcUa="Variable"/>
