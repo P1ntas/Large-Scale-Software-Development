@@ -58,6 +58,7 @@ services:
 
   pushgateway:
     image: prom/pushgateway
+    container_name: pushgateway
     ports:
       - "9091:9091"
     networks:
@@ -77,34 +78,30 @@ services:
       - ./config:/mosquitto/config:rw
     restart: unless-stopped
 
-  dinasore-1:
-    image: dinasore:latest
-    container_name: dinasore
-    environment:
-      - DINASORE_4DIAC_PORT=61499 
-      - DINASORE_OPCUA_PORT=4840 
+  dinasore_1:
+    build: ./dinasore
+    container_name: dinasore_1
+    command: python core/main.py -p 61499 -u 4840 -a dinasore_1
     ports:
       - "61499:61499" 
       - "4840:4840"  
     networks:
       - monitoring-network
     volumes:
-      - dinasore:/var/lib/dinasore/data
+      - dinasore1-data:/var/lib/dinasore/data
     restart: unless-stopped
 
-  dinasore-2:
-    image: dinasore:latest
-    container_name: dinasore
-    environment:
-      - DINASORE_4DIAC_PORT=61500
-      - DINASORE_OPCUA_PORT=4841 
+  dinasore_2:
+    build: ./dinasore
+    container_name: dinasore_2
+    command: python core/main.py -p 61500 -u 4841 -a dinasore_2
     ports:
       - "61500:61500" 
       - "4841:4841"  
     networks:
       - monitoring-network
     volumes:
-      - dinasore:/var/lib/dinasore/data
+      - dinasore2-data:/var/lib/dinasore/data
     restart: unless-stopped
 
 networks:
@@ -118,5 +115,6 @@ volumes:
   grafana-data:
   mosquitto-data:
   mosquitto-logs:
-  dinasore:
+  dinasore1-data:
+  dinasore2-data:
   config:
