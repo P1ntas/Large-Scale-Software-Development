@@ -15,6 +15,11 @@
     </EventOutputs>
     <InputVars>
       <VarDeclaration Name="FAULT_RATIO" Type="REAL" OpcUa="Constant"/>
+      <VarDeclaration Name="POSTGRES_DB" Type="STRING" OpcUa="Constant"/>
+      <VarDeclaration Name="POSTGRES_USER" Type="STRING" OpcUa="Constant"/>
+      <VarDeclaration Name="POSTGRES_PASSWORD" Type="STRING" OpcUa="Constant"/>
+      <VarDeclaration Name="POSTGRES_HOST" Type="STRING" OpcUa="Constant"/>
+      <VarDeclaration Name="POSTGRES_PORT" Type="INT" OpcUa="Constant"/>
     </InputVars>
     <OutputVars>
       <VarDeclaration Name="SENSOR_ID" Type="INT" OpcUa="Variable"/>

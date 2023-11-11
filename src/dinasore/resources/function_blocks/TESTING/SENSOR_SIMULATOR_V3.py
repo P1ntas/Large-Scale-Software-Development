@@ -298,11 +298,11 @@ class SENSOR_SIMULATOR_V3:
             print(f"Attempt {attempt}: Connecting to the database")
             try:
                 connection = psycopg2.connect(
-                    dbname='postgres',
-                    user='postgres',
-                    password='postgres',
-                    host='localhost',
-                    port='5432'
+                    dbname=self.dbname,
+                    user=self.user,
+                    password=self.password,
+                    host=self.host,
+                    port=self.port
                 )
                 print("Successfully connected to the database")
                 return connection
@@ -342,9 +342,15 @@ class SENSOR_SIMULATOR_V3:
             if connection:
                 connection.close()
 
-    def schedule(self, event_name, event_value, fault_ratio):
+    def schedule(self, event_name, event_value, fault_ratio, postgres_db, postgres_user, postgres_password, postgres_host, postgres_port,):
         if event_name == 'INIT':
             self.distribution_index = 0
+            self.dbname = postgres_db
+            self.user = postgres_user
+            self.password = postgres_password
+            self.host = postgres_host
+            self.port = postgres_port
+            
             print('Fetching sensors data...')
             self._fetch_sensors_data()
             print('Sensors data fetched')
