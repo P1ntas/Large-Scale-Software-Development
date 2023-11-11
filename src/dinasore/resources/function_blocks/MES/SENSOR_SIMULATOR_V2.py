@@ -2,28 +2,22 @@ import numpy as np
 import time
 import psycopg2
 
-
-def create_distribution(offset=0, max_samples=300):
+def create_distribution(max_samples = 300):
     # generate values based in the normal distribution
     mu, sigma = 0.5, 0.1
     s = np.random.normal(mu, sigma, 3000)
     # organizes the values in a normal curve
     hist, _ = np.histogram(s, bins=np.arange(0.2, 0.8, 0.002))
-    values2sort = offset + (hist / 4)
+    values2sort = (hist / 4)
     # split the array to start in a random place
     split_value = np.random.randint(0, max_samples)
     final_values = np.concatenate(
         [values2sort[split_value:], values2sort[0:split_value]])
     return final_values
 
-
-def create_distribution_within_range(
-        min_value=10,
-        max_value=100,
-        offset=0,
-        max_samples=300):
-    final_values = create_distribution(offset, max_samples)
-
+def create_distribution_within_range(min_value=10, max_value=100, max_samples = 300):
+    final_values = create_distribution(max_samples)
+    
     # Current range of the data
     a = np.min(final_values)
     b = np.max(final_values)
@@ -55,7 +49,7 @@ class SENSOR_SIMULATOR_V2:
         self.sensor_thresholds = []  # [(sensor_id, min_value, max_value)]}
         self.sensor_data = []  # {[(sensor_id,[values])]
 
-    def __db_connection(self):
+    def __db_connection(self, host = 'localhost', port = 5432):
         for attempt in range(self.MAX_RETRIES):
             print(f"Attempt {attempt}: Connecting to the database")
             try:
@@ -63,8 +57,8 @@ class SENSOR_SIMULATOR_V2:
                     dbname='postgres',
                     user='postgres',
                     password='postgres',
-                    host='localhost',
-                    port='5432'
+                    host=host,
+                    port=port
                 )
                 print("Successfully connected to the database")
                 return connection
@@ -77,13 +71,13 @@ class SENSOR_SIMULATOR_V2:
                 else:
                     print(f"Max retries reached. An error occurred: {e}")
                     raise e
-
-    def __fetch_sensors_data(self):
+                
+    def __fetch_sensors_data(self, host, port):
         connection = None
         cursor = None
         try:
             print("Connecting to the database...")
-            connection = self.__db_connection()
+            connection = self.__db_connection(host, port)
 
             if not connection:
                 raise Exception("No connection to database")
@@ -104,11 +98,11 @@ class SENSOR_SIMULATOR_V2:
             if connection:
                 connection.close()
 
-    def schedule(self, event_name, event_value, offset):
+    def schedule(self, event_name, event_value, postgres_host, postgres_port):
         if event_name == 'INIT':
             self.distribution_index = 0
             print('Fetching sensors data...')
-            self.data = self.__fetch_sensors_data()
+            self.data = self.__fetch_sensors_data(postgres_host, postgres_port)
             print('Sensors data fetched')
 
             if not self.data:
@@ -135,9 +129,7 @@ class SENSOR_SIMULATOR_V2:
                         self.distribution_index = 0
                 if self.curr_sensor_index >= len(self.sensor_data):
                     sensor_id, min_value, max_value = self.sensor_thresholds[self.curr_sensor_index]
-                    self.sensor_data.append(
-                        (sensor_id, create_distribution_within_range(
-                            min_value, max_value, offset, self.MAX_SAMPLES)))
+                    self.sensor_data.append((sensor_id, create_distribution_within_range(min_value, max_value, self.MAX_SAMPLES)))
                     # print('Sensor data read')
 
                 sensor_id, values = self.sensor_data[self.curr_sensor_index]
