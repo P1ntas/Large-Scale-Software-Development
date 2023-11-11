@@ -81,7 +81,7 @@ services:
   dinasore_1:
     build: ./dinasore
     container_name: dinasore_1
-    command: python core/main.py -p 61499 -u 4840 -a dinasore_1
+    command: python -B core/main.py -p 61499 -u 4840 -a dinasore_1
     ports:
       - "61499:61499" 
       - "4840:4840"  
@@ -94,7 +94,7 @@ services:
   dinasore_2:
     build: ./dinasore
     container_name: dinasore_2
-    command: python core/main.py -p 61500 -u 4841 -a dinasore_2
+    command: python -B core/main.py -p 61500 -u 4841 -a dinasore_2
     ports:
       - "61500:61500" 
       - "4841:4841"  
