@@ -331,8 +331,9 @@ class SENSOR_SIMULATOR_V3:
         min_value, max_value, type = self.sensor_thresholds[sensor_id]
         fault_state, incremental_fault = self.fault_states.get(sensor_id, ('normal', None))
 
+        step, noise_level, def_values = DEFAULT_VALUES[type]
+        
         if incremental_fault is None:
-            step, noise_level, def_values = DEFAULT_VALUES[type]
             target_fault_value = (max_value - min_value) / 8
             incremental_fault = IncrementalFaultValue(target_fault_value, step=self.STEP, time_step=step)
 
