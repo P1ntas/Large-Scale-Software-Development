@@ -6,9 +6,9 @@ import bisect
 
 # TODO: save fault_state and last value of 'IncrementalFaultValue' for each sensor
 
-DEFAULT_STEP_AIR_FLOW = 0.8
-DEFAULT_STEP_PRESSURE = 0.8
-DEFAULT_STEP_TEMP = 0.8
+DEFAULT_STEP_AIR_FLOW = 0.5
+DEFAULT_STEP_PRESSURE = 0.5
+DEFAULT_STEP_TEMP = 0.5
 
 DEFAULT_NOISE_LEVEL_AIR_FLOW = 0.05
 DEFAULT_NOISE_LEVEL_PRESSURE = 0.01
@@ -265,7 +265,7 @@ class SENSOR_SIMULATOR_V3:
 
     MAX_RETRIES = 10
     RETRY_DELAY_SECONDS = 5
-    STEP = 0.05
+    STEP = 0.5
 
     def _db_connection(self):
         for attempt in range(self.MAX_RETRIES):
@@ -420,7 +420,7 @@ class SENSOR_SIMULATOR_V3:
                 value = np.round(find_nearest_value(values, self.distribution_index),2)
 
                 if self.curr_sensor_index == 0:
-                    print(f"Current sensor index: {self.curr_sensor_index} + {value} + {self.distribution_index} + {len(self.sensor_data[self.keys_list[self.curr_sensor_index]])}")
+                    print(f"Current sensor index: {self.curr_sensor_index} + {value} + {np.round(self.distribution_index,0)} + {len(self.sensor_data[self.keys_list[self.curr_sensor_index]])} + time: {time.time() - self.start_time}")
                 
                 # wait some time
                 time.sleep(0.5/(self.data_length + 1))
