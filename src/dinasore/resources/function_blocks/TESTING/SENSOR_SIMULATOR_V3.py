@@ -255,7 +255,7 @@ def find_nearest_value(values, timestamp):
         before = values[index - 1]
         after = values[index]
         if after[0] - timestamp < timestamp - before[0]:
-            ret_val = after[1]
+            ret_val = after
         else:
             ret_val = before
 
@@ -396,22 +396,31 @@ class SENSOR_SIMULATOR_V3:
                 if self.curr_sensor_index >= self.data_length:
                     self.curr_sensor_index = 0
 
-                curr_time_diff = (time.time() - self.start_time) % self.time_per_cycle 
+                curr_time_diff = (time.time() - self.start_time) % self.time_per_cycle
                 new_index = curr_time_diff / self.STEP
 
+                # print(new_index, self.distribution_index)
+
                 if self.distribution_index > new_index:
-                    self.distribution_index = new_index
+                    self.distribution_index = 0
 
                     # Regenerate sensor data
                     for sensor_id in self.sensor_thresholds:
                         self._generate_and_store_sensor_data(sensor_id)
+                else:
+                    self.distribution_index = new_index
                 
 
                 # print(self.sensor_data[self.keys_list[self.curr_sensor_index]])
                 values = self.sensor_data[self.keys_list[self.curr_sensor_index]]
                 sensor_id = self.keys_list[self.curr_sensor_index]
 
+                # print(f"Current distribution index: {self.distribution_index}")
+
                 value = np.round(find_nearest_value(values, self.distribution_index),2)
+
+                if self.curr_sensor_index == 0:
+                    print(f"Current sensor index: {self.curr_sensor_index} + {value} + {self.distribution_index} + {len(self.sensor_data[self.keys_list[self.curr_sensor_index]])}")
                 
                 # wait some time
                 time.sleep(0.5/(self.data_length + 1))
