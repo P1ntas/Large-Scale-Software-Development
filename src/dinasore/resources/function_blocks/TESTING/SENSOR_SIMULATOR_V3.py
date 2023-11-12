@@ -6,9 +6,11 @@ import bisect
 
 # TODO: save fault_state and last value of 'IncrementalFaultValue' for each sensor
 
-DEFAULT_STEP_AIR_FLOW = 0.5
-DEFAULT_STEP_PRESSURE = 0.5
-DEFAULT_STEP_TEMP = 0.5
+DEFAULT_STEP = 0.5
+
+DEFAULT_STEP_AIR_FLOW = DEFAULT_STEP
+DEFAULT_STEP_PRESSURE = DEFAULT_STEP
+DEFAULT_STEP_TEMP = DEFAULT_STEP
 
 DEFAULT_NOISE_LEVEL_AIR_FLOW = 0.05
 DEFAULT_NOISE_LEVEL_PRESSURE = 0.01
@@ -265,7 +267,7 @@ class SENSOR_SIMULATOR_V3:
 
     MAX_RETRIES = 10
     RETRY_DELAY_SECONDS = 5
-    STEP = 0.5
+    STEP = DEFAULT_STEP
 
     def _db_connection(self):
         for attempt in range(self.MAX_RETRIES):
