@@ -97,6 +97,8 @@ In this section you can find a comprehensive guide on how to fully setup a produ
   - `Prometheus` running under the port `9090`;
   - `Prometheus Pushgateway` running under the port `9091`.
   - `Mosquitto MQTT Broker` running under the port `1883`.
+  - `4-DIAC` running under the ports `61499-61500`.
+  - `UPC_UA` running under the ports `4840-4841`.
 
   The script will populate the `PostgreSQL` database with the necessary tables and data after the containers are up and running.
 
@@ -406,7 +408,6 @@ During this sprint, the most positive point was the good communication that was 
 #### Team 4 Retrospective
 
 
-#
 
 ### **Sprint 4**
 
