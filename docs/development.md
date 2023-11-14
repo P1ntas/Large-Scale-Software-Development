@@ -97,8 +97,8 @@ In this section you can find a comprehensive guide on how to fully setup a produ
   - `Prometheus` running under the port `9090`;
   - `Prometheus Pushgateway` running under the port `9091`.
   - `Mosquitto MQTT Broker` running under the port `1883`.
-  - `4-DIAC` running under the ports `61499-61500`.
-  - `UPC_UA` running under the ports `4840-4841`.
+  - `Dinasore Instances` running under the ports `61499-61500`, to connect with 4-DIAC.
+  - `Dinasore Instances` running under the ports `4840-4841`, to connect with the OPC UA server.
 
   The script will populate the `PostgreSQL` database with the necessary tables and data after the containers are up and running.
 
@@ -368,6 +368,7 @@ Positive points:
 #### Team 3 Retrospective
 
 During this sprint, our team was assigned the task of developing automatic notifications for events and familiarising with the way they work and are implemented in the Grafana platform. Although we were able to achieve this goal successfully, creating some test notifications, as data was still not dynamic, in large quantity and following a defined pipeline, we were not able to fully develop and test this feature. In conclusion, we acquired all the necessary knowledge to finish this task in the next sprint alongside another task assigned to us, as the work done by the other teams regarding the stream of data will support our development of this feature.
+
 
 #### Team 4 Retrospective
 
