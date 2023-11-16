@@ -13,6 +13,7 @@ If you have any doubts or dificulties, following the guides, please contact [Jo√
   - [Grafana](#grafana)
   - [MQTT Broker](#mqtt-broker)
   - [4DIAC-IDE](#4diac-ide)
+  - [Sonarqube](#sonarqube)
 
 ## Introduction
 
@@ -54,6 +55,7 @@ This project is part of the **MES for Industrial Automation** project, which con
   - `Prometheus` running under the port `9090`;
   - `Prometheus Pushgateway` running under the port `9091`.
   - `Mosquitto MQTT Broker` running under the port `1883`.
+  - `Sonarqube` running under the port `9000`.
 
   The script will populate the `PostgreSQL` database with the necessary tables and data after the containers are up and running.
 
@@ -246,3 +248,35 @@ python core/main.py -p 61500 -u 4841
   13. If you want to reset each component, right-click in his name in the left bar and select Delete all Resources;
 
   14. Finally, to check the data structure or monitor the process using OPC-UA, you can use the [Prosys client](https://www.prosysopc.com/products/opc-client/), connecting to the component IP address at port 4840 and 4841.
+
+### Sonarqube
+
+To access the `Sonarqube` interface, go to `localhost:9000`. Login with the following credentials:
+```markdown
+**Username**: admin
+**Password**: admin
+```
+
+After logging in, change the password. You will be redirected to the `projects` page.
+
+![image](../docs/images/sonarqube_projects.png)
+
+The next step is to create a new project. For that, click on the `Add a project` button. Select the manual option, and give your project a name and project key. In this case, name it `MES`.
+
+![image](../docs/images/sonarqube_create_project.png)
+
+Afterward, you will be prompted to generate a token. We will name it `MES_Analysis`.
+
+![image](../docs/images/sonarqube_create_token.png)
+
+To generate the best command for the scanner, customize your environment and the system you are running.
+
+Follow the instructions on the screen to configure the scanner.
+
+![image](../docs/images/sonarqube_configuration.png)
+
+Finally, copy the command and run it on a terminal in the src folder of the project.
+
+After scanning the files, you can check the results on the `Sonarqube` interface.
+
+![image](../docs/images/sonarqube_results.png)
