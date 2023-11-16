@@ -304,6 +304,13 @@ Describe how you captured each of the "four key metrics" (e.g., automatic mechan
 
 Provide here an historical record (for each sprint) of the four key metrics and velocity.
 
+| Sprint | Velocity (T1) | Velocity (T2) | Velocity (T3) | Velocity (T4) | Velocity (Product) |
+|-------------|-------------|-------------|-------------|-------------|-------------|
+| 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 8 | 0 | 2 | 10 |
+| 2 | 5 | 3 | 0 | 0 | 8 |
+| 3 |  |  |  |  |  |
+| 4 |  |  |  |  |  |
 
 ## Restrospectives
 
