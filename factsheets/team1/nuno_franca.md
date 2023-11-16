@@ -46,6 +46,8 @@ The biggest contribution to this sprint was without a doubt João Araújo.
 
 - #67 - Finished the grafana dashboard implementation
 
+- #75 - Finished implementing the logs in Grafana
+
 ### Two contributions of other types that I am most proud of
 
 - The biggest contribution was sharing thoughts and ideas about the current and next sprints 
