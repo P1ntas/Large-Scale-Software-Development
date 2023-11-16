@@ -38,15 +38,15 @@ The biggest contribution to this sprint was without a doubt João Araújo.
 
 ### The two user stories that I am most proud of
 
-- #4 - Helped in the integration of new graphs in the Grafana dashboard.
+- [#4](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/4) - Helped in the integration of new graphs in the Grafana dashboard.
 
-- #4 - Shared ideas in how to make the logs more dynamic to the end user.
+- [#4](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/4) - Shared ideas in how to make the logs more dynamic to the end user.
 
 ### The two pull requests that I am most proud of
 
-- #67 - Finished the grafana dashboard implementation
+- [#67](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/67) - Finished the grafana dashboard implementation
 
-- #75 - Finished implementing the logs in Grafana
+- [#75](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/75) - Finished implementing the logs in Grafana
 
 ### Two contributions of other types that I am most proud of
 
