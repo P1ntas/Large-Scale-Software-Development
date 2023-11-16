@@ -34,7 +34,7 @@ I was assigned to upgrade the current database squema.
 
 ### The two pull requests that I am most proud of
 
-N/A
+- [#49](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/49) - Uploaded the new database uml.
 
 
 ### Two contributions of other types that I am most proud of
