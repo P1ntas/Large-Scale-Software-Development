@@ -119,7 +119,7 @@ Similar to the first representation, this diagram represents the main entities o
 
 - **PostgreSQL**: This database hold the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors. While PostgreSQL being a relational database, it is suitable for the static data, since it is more structured and achieves an higher confidence level to integrate with Grafana.
 
-- **PyTorch**: PyTorch was used to create the **Machine Learning Model** that is responsible for the prediction of the sensors data. The results of a prediction will be sent to the **Apache Storm** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
+- **PyTorch**: PyTorch was used to create the **Machine Learning Model** that is responsible for the prediction of the sensors data. The results of a prediction will be sent to the **MQTT Broker** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
   
 - **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The **Grafana** instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
 
@@ -130,6 +130,10 @@ Similar to the first representation, this diagram represents the main entities o
 ## Sprint Reviews
 
 ### **Sprint 1 (12 October - 26 October)**
+
+#### Team 1
+
+Our team's main objective this first sprint was to implement a Grafana dashboard for users to view and select a machine going for the machine status page; develop a database schema for storing machine characteristics data, namely, add a new table to store machine maintenance data, refine current tables, ensure scalability and efficient storage of historical data and fix DINASORE's features to be used in our project with ease. [João Araújo](../factsheets/team1/joao_araujo.md) also sucessfuly integrated DINASORE into our project with Team 2.The team objectives were successfully accomplished.  
 
 #### Team 2
 
