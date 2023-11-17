@@ -308,6 +308,61 @@
       "type": "volkovlabs-echarts-panel"
     },
     {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PCC52D03280B7034C"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 10,
+        "y": 4
+      },
+      "id": 48,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": false,
+        "sortOrder": "Descending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    timestamp AS \"time\",\r\n    s.id AS \"sensor_id\",\r\n    s.status AS \"sensor_status\"\r\nFROM\r\n    sensor s\r\nJOIN\r\n    expansion e ON s.expansion_id = e.id\r\nJOIN\r\n    system sys ON e.system_id = sys.id\r\nJOIN\r\n    factory f ON sys.factory_id = f.id\r\nWHERE\r\n    timestamp >= $__timeFrom() AND timestamp <= $__timeTo()\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Status Logs",
+      "type": "logs"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
@@ -801,6 +856,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 1,
+  "version": 3,
   "weekStart": ""
 }
