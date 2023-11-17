@@ -346,7 +346,7 @@ During sprint 1, our team had to deal with a PBI that was of low priority but hi
 ### **Sprint 2 (26 October - 17 November)**
 
 #### Overall Retrospective
-On one hand, the class worked steadily on the respective issues and never stood still. On the other hand, there were no standards defined until late in the sprint, regarding commit messages, branch name structure and everything related with work guidelines.
+On the one hand, the class worked steadily on the issues, never standing still. On the other hand, no standards were defined until late in the sprint, in terms of commit messages, branch name structure, and anything else related to working guidelines.
 
 #### Team 1 Retrospective
 
@@ -357,8 +357,7 @@ During this sprint, the team continued focusing on the implementation of the aut
 However, the team considers that the feature is done, although it can be refined in future iterations of the project, as more data becomes available (e.g. discrimination between temperature/pressure types), which will enable to define more suitable ranges for each type of sensor.
 
 #### Team 4 Retrospective
-During this sprint, the most positive point was the good communication maintained throughout the sprint duration, either synchronously or asynchronously. The least positive part would be the fact that the client tends to communicate in a rather vague way. To improve on this last topic, our team's SM might have to participate in the meetings between the client and the PO's to grasp the situation with his more technical view of the issue.
-
+During this sprint, the most positive point was the good communication that was maintained throughout the sprint, either synchronous or asynchronous. The least positive part would be the fact that the client tends to communicate in a rather vague way. In order to improve this last point, our team's SM may need to attend the meetings between the client and the PO's in order to understand the situation with his more technical point of view.
 #
 
 ### **Sprint 3 (17 November - ...)**
