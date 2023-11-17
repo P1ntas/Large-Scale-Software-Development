@@ -129,13 +129,14 @@ Similar to the first representation, this diagram represents the main entities o
 
 
 
-## Sprint Reviews
+## Sprint Reviews (for all teams)
 
 ### **Sprint 1 (12 October - 26 October)**
-
-#### Team 2
 
 Our team's main objective this first sprint was familiarizing ourselves with the DINASORE technology and its requirements for a full and thorough implementation in our project. For this sprint, we worked in conjunction with [João Araújo](../factsheets/team1/joao_araujo.md) throughout the whole process. Overall, the team exceeded expectations in not only understanding the technology at hand but also in its partial integration in the main codebase. Documentation and a setup guide were also written.
 Furthermore, the client's feedback was fully positive, which also confirmed the direction in which the team was headed, although there were some drawbacks with the meeting with the client, such as the resistance on their part for us to work with real data from the laboratory in the future. However, since the whole project is not that complex, it may not bring any consequences to its development.
 The meeting for this sprint review was done on the 26th of october of 2023, together with all the other members of the team and the previously mentioned Team 1 member, João Araújo.
 
+### **Sprint 2 (26 October - 17 November)**
+
+The meeting for this sprint review was done on the 17th of November of 2023, together with all other teams. Overall, the client is satisfied with work being done. The client suggested for the teams to focus more on the job scheduling part of the system. Team 1, especially [João Araújo](../factsheets/team1/joao_araujo.md), supported every team a bit in their respective issues and integration with the overall system. Team 2 focused on DINASORE sensor blocks refinements and dockerization of the 4-DIAC IDE, and in the end started the CI/CD part of the project with the goal of stable deployment. Team 3 continued the work around alerts and notifications. Team 4 continued the work around the automatization of the system, by analyzing system data for the planning of a future ML model. All teams made the joint effort of trying to improve the teamwork methodologies, by agreeing on standards for the commit messages, branch names, PBI references and pull requests structure, among other things.
