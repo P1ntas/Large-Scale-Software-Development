@@ -40,10 +40,45 @@ This can be anything that you think worked particularly well and benefited the p
 
 ## Sprint 1
 
-... (repeat structure of the section for Sprint 0)
+During Sprint 1, the team initiated automatic notifications development in Grafana, achieving successful test creation despite limitations in dynamic data. Valuable insights gained lay the foundation for completion in the next sprint, with collaboration on data streaming expected to enhance feature development.
+
+Key achievements:
+
+- The team successfully implemented an automatic notification for testing purposes with different data and delivery endpoints. This achievement was crucial in demonstrating the feasibility of the feature and identifying potential issues.
+
+- The team successfully implemented a Discord bot to receive notifications, demonstrating the ability to integrate Grafana with external applications.
+
+- The sprint provided essential insights, laying the groundwork for completing the task in the next sprint.
 
 
 ## Sprint 2
+
+In Sprint 2, the team focused on implementing the automatic notifications feature, overcoming unexpected complexities in the process. Project setup issues arose due to the integration of a dynamic Prometheus data simulator, requiring a time-consuming reconfiguration. Despite challenges with the simulator software, successful implementation of key user story components was achieved. However, a limitation in Grafana was identified, preventing users from acknowledging notifications; instead, subsequent alerts are generated upon issue resolution.
+
+Key achievements:
+
+- The team successfully implemented various notifications for sensors, including value is higher than X and value is lower than Y. These are the main type of notifications of interest for our project.
+
+- The team successfully implemented notifications for when the values are restored to normal conditions, marking the problem as resolved.
+
+- Essentialy, the team successfully implemented the automatic notifications feature, despite setbacks and opportunities for refinement in the future.
+
+### The user storie that we are most proud of
+
+ * [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented automatic notifications based on value ranges for sensor dynamic data
+
+### The pull request that we are most proud of
+
+ * #3
+ * #4
+
+
+### Four contributions of other types that we are most proud of
+
+ * #1 - Adaptability and problem-solving skills were evident in addressing challenges related to the project setup and the integration of the Prometheus data simulator in this sprint.
+ * #2 - Taking into account feedback from the last sprint, the team thrived to improve the branch and commit naming conventions (using GitFlow and other patterns), as well as the pull request templates, to make the project more organized and easier to understand for everyone.
+ * #3 - We made sure that the feature we developed is well documented and tested, improving on the previous sprint regarding this aspect. Also, the code review process was improved, with more attention to detail and more thoroughness.
+ * #4 - We collaborated with other teams by providing feedback, asking questions and overall helping each other to improve the project as a whole.
 
 ...
 
