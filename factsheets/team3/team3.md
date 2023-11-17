@@ -69,7 +69,7 @@ Key achievements:
 
 ### The pull request that we are most proud of
 
-* [#91](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/91)
+* [#91](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/91)  - Implemented alerting/notification features
 
 ### Four contributions of other types that we are most proud of
 
