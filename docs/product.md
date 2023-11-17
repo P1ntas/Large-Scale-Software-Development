@@ -113,26 +113,25 @@ Similar to the first representation, this diagram represents the main entities o
 
 - **Factory**: The factory keeps being the main entity of the project. It represents the factory where the production takes place. It has multiple systems, those containing multiple sensors attatched to it. The data from the sensors are fetched by the systems and now are sent to a central MQTT broker.
 
-- **MQTT Broker**: This broker receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance.
-
-- **EdgeX Foundry**: This system is built on top of the MQTT broker, so it is responsible for the communication between the MQTT broker and the databases and the **M**achine **L**earning **M**odel (**MLM**). It is also responsible to retrieve data to the Apache Storm/Flink instance to process it and filter it.
+- **Eclipse Mosquitto**: Eclipse Mosquitto was used to create the MQTT broker that receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance. 
 
 - **Prometheus**: This database hold the data from the sensors. Prometheus has a built-in alert and graph system. Prometheus scrapes the data that the EdgeX Foundry instance has available.
 
 - **PostgreSQL**: This database hold the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors. While PostgreSQL being a relational database, it is suitable for the static data, since it is more structured and achieves an higher confidence level to integrate with Grafana.
 
-- **Apache Storm**: This systems is responsible for the data processing and the data filtering. It is also responsible for the communication between the databases and the **MLM**.
+- **PyTorch**: PyTorch was used to create the **Machine Learning Model** that is responsible for the prediction of the sensors data. The results of a prediction will be sent to the **MQTT Broker** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
+  
+- **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The **Grafana** instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
 
-- **Machine Learning Model**: This model is responsible for the prediction of the sensors data. We will use most likely **PyTorch** to build and train it. The results of a prediction will be sent to the **Apache Storm** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
+- **DINASORE**: The DINASORE platform allows the implementation of python Function Block (FB) based pipelines for sensor integration, data processing, and systems control. It uses the OPC-UA protocol to allow communication with the other industrial components.
 
-- **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The Grafana instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
-
-
+- **4DIAC-IDE**: The 4DIAC-IDE is a crucial tool that enables the configuration of **DINASORE**. It’s an integrated development environment that facilitates the creation and management of industrial automation applications. **4DIAC-IDE** supports the creation of Python-based Function Blocks (FBs), which are vital for sensor integration, data processing, and systems control in **DINASORE**. Moreover, **4DIAC-IDE** allows communication with other industrial components via the OPC-UA protocol. This makes **4DIAC-IDE** a central piece in the configuration and operation of **DINASORE**, enabling efficient and effective integration of the various system components.
 
 ## Sprint Reviews (for all teams)
 
 ### **Sprint 1 (12 October - 26 October)**
 
+Our team's main objective this first sprint was to implement a Grafana dashboard for users to view and select a machine going for the machine status page; develop a database schema for storing machine characteristics data, namely, add a new table to store machine maintenance data, refine current tables, ensure scalability and efficient storage of historical data and fix DINASORE's features to be used in our project with ease. [João Araújo](../factsheets/team1/joao_araujo.md) also sucessfuly integrated DINASORE into our project with Team 2.The team objectives were successfully accomplished.  
 Our team's main objective this first sprint was familiarizing ourselves with the DINASORE technology and its requirements for a full and thorough implementation in our project. For this sprint, we worked in conjunction with [João Araújo](../factsheets/team1/joao_araujo.md) throughout the whole process. Overall, the team exceeded expectations in not only understanding the technology at hand but also in its partial integration in the main codebase. Documentation and a setup guide were also written.
 Furthermore, the client's feedback was fully positive, which also confirmed the direction in which the team was headed, although there were some drawbacks with the meeting with the client, such as the resistance on their part for us to work with real data from the laboratory in the future. However, since the whole project is not that complex, it may not bring any consequences to its development.
 The meeting for this sprint review was done on the 26th of october of 2023, together with all the other members of the team and the previously mentioned Team 1 member, João Araújo.

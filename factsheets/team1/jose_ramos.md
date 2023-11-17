@@ -44,8 +44,25 @@ N/A
 
 ## Sprint 2
 
-...
+I was assigned to upgrade the current database uml and to create the SQL schema. Also, as a scrum master I distributed the work among my team members and kept in touch with other teams work.
 
+### The two user stories that I am most proud of
+
+- [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Upgraded the database schema in a way that is both scalable and optimized for enhanced performance.
+- 
+- [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Created a SQL schema to be used in the next sprint.
+
+
+### The two pull requests that I am most proud of
+
+- [#49](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/74) - Uploaded the new database uml and the SQL schema.
+
+
+### Two contributions of other types that I am most proud of
+
+- As a scrum master I went to a meeting with the other scrum masters and we got on the project board to discuss which user stories were going to be implemented, although this was a bit hard since the product backlog had almost only drafts and no user stories.
+
+- In a different meeting that I made, we also discussed how we were going to deal with the low technical practices.
 
 ## Sprint 3
 
