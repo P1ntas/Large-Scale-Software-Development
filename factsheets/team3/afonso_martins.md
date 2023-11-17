@@ -59,7 +59,7 @@ As a Scrum Master, I helped the team with the code itself and with the organizat
 
  ### The pull request that I am most proud of
 
-None relevant
+* [#91](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/91)  - Implemented alerting/notification features
 
  ### Two contributions of other types that I am most proud of
 
