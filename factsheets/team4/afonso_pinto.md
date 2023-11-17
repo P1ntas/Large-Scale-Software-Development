@@ -54,7 +54,26 @@ I also took the lead in training two critical machine learning models: Decision 
 
 ## Sprint 2
 
-...
+### The two user stories that I am most proud of
+
+This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
+
+ * #1 ML model - Data Preparation - Issue 1
+ * #2 ML model - Data Preparation - Issue 2 - helped on data generation
+
+
+### The two pull requests that I am most proud of
+
+This can include PRs that you have implemented or reviewed during the sprint.
+
+ * #3 feature/data analysis 
+
+
+### Two contributions of other types that I am most proud of
+
+I worked data on data preparation. I indentified data to be cleanse, checked for correlation between different variables and which ones would be preferable for our model.
+
+I also helped on data generation in order to train our model
 
 
 ## Sprint 3

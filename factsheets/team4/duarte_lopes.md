@@ -38,7 +38,22 @@ Since this sprint was mainly used for the creation of user stories and other rel
 
 ## Sprint 2
 
-...
+### The two user stories that I am most proud of
+
+* At the beginning of the sprint the team had a meeting where we divided our inital issue which was an epic into three smaller issues
+* I then was assigned to work with Tiago in the Data Pipeline
+
+
+### The two pull requests that I am most proud of
+
+* N/A
+
+
+### Two contributions of other types that I am most proud of
+
+* I worked in the branch feature/data_analysis
+* Started to clean the data
+* Worked with the data that João Araújo provided us since the data isn't already present in the database and it's not that clear. This was a huge help.
 
 
 ## Sprint 3
