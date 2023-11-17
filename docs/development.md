@@ -316,7 +316,8 @@ Provide here an historical record (for each sprint) of the four key metrics and 
 
 ### **Sprint 1 (12 October - 26 October)**
 
-#### Project Retrospective
+#### Overall Retrospective
+(missing on sprint 1)
 
 #### Team 1 Retrospective
 For the first sprint, our team's objectives were to create a database suitable for static and real-time data, setup Grafana, design and implement a page that allows workers to view machine logs and characteristics, and we were also responsible ([João Araújo](../factsheets/team1/joao_araujo.md)) with helping other team members. In conclusion, we were able to do most tasks, but work still needs to be done.
@@ -340,14 +341,51 @@ During this sprint, our team was assigned the task of developing automatic notif
 #### Team 4 Retrospective
 During sprint 1, our team had to deal with a PBI that was of low priority but high workload, which consisted of creating a ML model that, through the information it receives from the database, manipulates the operation of the machines so that it is as efficient as possible. Our efforts turned to understanding as best as we could how we were going to approach the issue, planning the development and integration of the solution. There was also a limitation on the work we could do, as we needed data we didn't have, since the integration of the sensors with the system had not yet been done and the said ML model needs real data to be trained. So, we plan to continue working in this same issue during next sprint, to finish it as quick as possible.
 
-### **Sprint 2**
+#
+
+### **Sprint 2 (26 October - 17 November)**
+
+#### Overall Retrospective
+On one hand, the class worked steadily on the respective issues and never stood still. On the other hand, there were no standards defined until late in the sprint, regarding commit messages, branch name structure and everything related with work guidelines.
+
+#### Team 1 Retrospective
+
+#### Team 2 Retrospective
 
 #### Team 3 Retrospective
 During this sprint, the team continued focusing on the implementation of the automatic notifications feature, that turned out to be badly evaluated in terms of effort estimation, as it was more complex than initially thought. Also, the team had to deal with setup issues of the project. As a dynamic Prometheus data simulator was added by another team, we had to re-do our setup, and this took some time, as the software used to simulate the data (Dinasore and 4DIAC-IDE) was excessively complex and not well maintained in terms of versioning and support from the original developers. The team was also able to conclude that, using Grafana, there is no viable way for the user that receives the notification to acknowledge it: there is only going to be another notification when the issue is resolved (e.g., the temperature is back to normal). This is a limitation of Grafana. For the other points of the user story that was attributed to us, we were able to implement them successfully, and notifications are working based off dynamic data from sensors that is being streamed from Prometheus to Grafana.
 However, the team considers that the feature is done, although it can be refined in future iterations of the project, as more data becomes available (e.g. discrimination between temperature/pressure types), which will enable to define more suitable ranges for each type of sensor.
 
-### **Sprint 3**
+#### Team 4 Retrospective
+During this sprint, the most positive point was the good communication maintained throughout the sprint duration, either synchronously or asynchronously. The least positive part would be the fact that the client tends to communicate in a rather vague way. To improve on this last topic, our team's SM might have to participate in the meetings between the client and the PO's to grasp the situation with his more technical view of the issue.
+
+#
+
+### **Sprint 3 (17 November - ...)**
+
+#### Overall Retrospective
+
+#### Team 1 Retrospective
+
+#### Team 2 Retrospective
+
+#### Team 3 Retrospective
+
+#### Team 4 Retrospective
+
+
+#
 
 ### **Sprint 4**
+
+#### Overall Retrospective
+
+#### Team 1 Retrospective
+
+#### Team 2 Retrospective
+
+#### Team 3 Retrospective
+
+#### Team 4 Retrospective
 
 
