@@ -69,14 +69,14 @@ Key achievements:
 
 ### The pull request that we are most proud of
 
- * #3
+* [#91](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/91)  - Implemented alerting/notification features
 
 ### Four contributions of other types that we are most proud of
 
- * #1 - Adaptability and problem-solving skills were evident in addressing challenges related to the project setup and the integration of the Prometheus data simulator in this sprint.
- * #2 - Taking into account feedback from the last sprint, the team thrived to improve the branch and commit naming conventions (using GitFlow and other patterns), as well as the pull request templates, to make the project more organized and easier to understand for everyone.
- * #3 - We made sure that the feature we developed is well documented and tested, improving on the previous sprint regarding this aspect. Also, the code review process was improved, with more attention to detail and more thoroughness.
- * #4 - We collaborated with other teams by providing feedback, asking questions and overall helping each other to improve the project as a whole.
+ * 1 - Adaptability and problem-solving skills were evident in addressing challenges related to the project setup and the integration of the Prometheus data simulator in this sprint.
+ * 2 - Taking into account feedback from the last sprint, the team thrived to improve the branch and commit naming conventions (using GitFlow and other patterns), as well as the pull request templates, to make the project more organized and easier to understand for everyone.
+ * 3 - We made sure that the feature we developed is well documented and tested, improving on the previous sprint regarding this aspect. Also, the code review process was improved, with more attention to detail and more thoroughness.
+ * 4 - We collaborated with other teams by providing feedback, asking questions and overall helping each other to improve the project as a whole.
 
 ...
 
