@@ -43,8 +43,13 @@ No pull requests have been made in Sprint 1.
 
 ## Sprint 2
 
-...
+In this sprint, I played a pivotal role in simplifying our team's workflow by taking charge of organizing ideas and breaking down tasks into manageable steps. As a Product Owner, The PO´s team facilitated the cleaning and refinement of drafts within the product backlog. Additionally, I contributed to the creation of new issues and user stories, ensuring that each task is well-defined and aligns with project goals. A key focus of this sprint was to enhance overall project organization. Together with the team, we successfully divided the workload into smaller, actionable items, promoting efficiency and clarity in our approach.
 
+### Two contributions of other types that I am most proud of
+
+1. Improving Git Organization and Code Review: I'm proud of our efforts to organize Git, making sure we have strong processes for reviewing pull requests and leaving comments on code changes and commits in general. This structured way of checking our code doesn't just make it better but also helps us work together as a large team.
+
+2. Proactive Support and Issue Resolution: I'm happy to actively helped my team with any issues related to the product and answer questions during production. By being available and responsive, I've contributed to a smoother code development process. This kind of support speeded up issue resolution.
 
 ## Sprint 3
 
