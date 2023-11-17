@@ -35,7 +35,14 @@ In this sprint I discussed some topics with my team and developed some code in p
 
 ## Sprint 2
 
-...
+### The two user stories that I am most proud of
+
+ * Still not really a user story and it's also related to what I did on the last sprint. But since the team couldn't get good data to work on the machine learning data, there was a member from other team (João Araújo) that created some more realistic data and better references. What I did was go to his code, on the graphs he generated on a part of the project related to the dinasore, and stored some variables he created and used for the plots in some csv's files.
+
+
+### The two pull requests that I am most proud of
+
+ * I haven't asked for a pull request for the csv's files because it is to soon to merge with the main project. It will be done once we finish developing the machine learning model.
 
 
 ## Sprint 3
