@@ -19,7 +19,22 @@ Later in the sprint worked mostly together with [João Araújo](../team1/joao_ar
  
 ## Sprint 2
 
-...
+
+#### The user story that I am most proud of
+ * [#29](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/29)  
+
+### The two pull requests that I am most proud of
+
+This can include PRs that you have implemented or reviewed during the sprint.
+
+ * #3 [83] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/83)
+ * #4 [52] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/52)
+
+
+### Two contributions of other types that I am most proud of
+
+- The help given to the team regarding the dockerization which was the main task for our group.
+- The update of the documentation regarding the new sensor simulator which led me to integrate it in the pipeline with the help of João (responsible for the creation of this FB) and test it in order to find the correct parameters. As this was done after the dockerization it included updating also the documentation regarding other parameters, mainly hosts.  
 
 
 ## Sprint 3
