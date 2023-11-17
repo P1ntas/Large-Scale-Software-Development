@@ -70,8 +70,6 @@ Key achievements:
 ### The pull request that we are most proud of
 
  * #3
- * #4
-
 
 ### Four contributions of other types that we are most proud of
 

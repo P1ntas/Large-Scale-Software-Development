@@ -342,8 +342,6 @@ During sprint 1, our team had to deal with a PBI that was of low priority but hi
 
 ### **Sprint 2**
 
-#
-
 ### **Sprint 3**
 
 #### Team 3 Retrospective
