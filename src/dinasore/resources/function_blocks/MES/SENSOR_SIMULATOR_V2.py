@@ -17,7 +17,11 @@ def create_distribution(offset=0, max_samples=300):
     return final_values
 
 
-def create_distribution_within_range(min_value=10, max_value=100, offset=0, max_samples=300):
+def create_distribution_within_range(
+        min_value=10,
+        max_value=100,
+        offset=0,
+        max_samples=300):
     final_values = create_distribution(offset, max_samples)
 
     # Current range of the data
@@ -131,8 +135,9 @@ class SENSOR_SIMULATOR_V2:
                         self.distribution_index = 0
                 if self.curr_sensor_index >= len(self.sensor_data):
                     sensor_id, min_value, max_value = self.sensor_thresholds[self.curr_sensor_index]
-                    self.sensor_data.append((sensor_id, create_distribution_within_range(
-                        min_value, max_value, offset, self.MAX_SAMPLES)))
+                    self.sensor_data.append(
+                        (sensor_id, create_distribution_within_range(
+                            min_value, max_value, offset, self.MAX_SAMPLES)))
                     # print('Sensor data read')
 
                 sensor_id, values = self.sensor_data[self.curr_sensor_index]
@@ -141,7 +146,7 @@ class SENSOR_SIMULATOR_V2:
                 self.curr_sensor_index += 1
 
                 # wait some time
-                time.sleep(5/(self.data_length + 1))
+                time.sleep(5 / (self.data_length + 1))
 
                 # print(f"Current indexes: Sensor - {self.curr_sensor_index} ;;;;;; Distribution - {self.distribution_index}, Sensor '{sensor_id}' value: {value}")
 

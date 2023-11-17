@@ -11,7 +11,8 @@ class MOVING_AVERAGE_V2:
 
         elif event_name == 'RUN':
             if sensor_id not in self.values_dict:
-                # Initialize an empty list for the sensor_id if it doesn't exist
+                # Initialize an empty list for the sensor_id if it doesn't
+                # exist
                 self.values_dict[sensor_id] = []
             # Appends the value to the list for the corresponding sensor_id
             self.values_dict[sensor_id].append(value)

@@ -6,19 +6,36 @@ class PROMETHEUS_WRITER:
     def __init__(self):
         self.client = None
 
-    def schedule(self, event_name, event_value,
-                 host, port,
-                 value_name_1, value_name_2, value_name_2_descr, value_name_3, value_name_3_descr, job_name,
-                 value_1, value_2, value_3):
+    def schedule(
+            self,
+            event_name,
+            event_value,
+            host,
+            port,
+            value_name_1,
+            value_name_2,
+            value_name_2_descr,
+            value_name_3,
+            value_name_3_descr,
+            job_name,
+            value_1,
+            value_2,
+            value_3):
         if event_name == 'INIT':
             print('Setting up prometheus db')
             try:
                 self.registry = CollectorRegistry()
 
-                self.SENSOR_VALUE = Gauge(value_name_2, value_name_2_descr, [
-                                          value_name_1], registry=self.registry)
-                self.MOVING_AVERAGE = Gauge(value_name_3, value_name_3_descr, [
-                                            value_name_1], registry=self.registry)
+                self.SENSOR_VALUE = Gauge(
+                    value_name_2,
+                    value_name_2_descr,
+                    [value_name_1],
+                    registry=self.registry)
+                self.MOVING_AVERAGE = Gauge(
+                    value_name_3,
+                    value_name_3_descr,
+                    [value_name_1],
+                    registry=self.registry)
                 self.JOB_NAME = job_name
                 self.PUSHGATEWAY_ADDRESS = f"{host}:{port}"
                 print('Set up prometheus db sucessfully')
