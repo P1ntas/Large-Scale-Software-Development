@@ -72,7 +72,7 @@
 
     5. On the System Explorer, open **MESApp**
     6. From the palette on the right side, drag the following function blocks:
-        - **SENSOR_SIMULATOR_V2**
+        - **SENSOR_SIMULATOR_V3**
         - **MOVING_AVERAGE_V2**
         - **MQTT_PUBLISHER_V3**
         - **MQTT_SUBSCRIBER_V3**
@@ -80,24 +80,33 @@
 
         ![image](./images/Screenshot_2.png)
     7. Now, proceed to link the function blocks and fill the parameters with:
-        - **SENSOR_SIMULATOR_V2**: OFFSET = 0. You can twist this value to emulate, for example, a sensor that can overheat (Offset = 10) or a sensor that is working above the desired temperature (Offset = -10).
-        - **MOVING_AVERAGE_V2**: WINDOW = 5. This value is the number of samples that the moving average will use to calculate the average value. You can change this value to see how the moving average changes.
+        - **SENSOR_SIMULATOR_V3**: 
+            - POSTGRES_DB = "postgres". This is the name of the database.
+            - POSTGRES_USER = "postgres". This is the username of postgres
+            - POSTGRES_PASSWORD = "postgres". This is the password to access postgres
+            - POSTGRES_HOST = "postgres". This is the IP address of the postgres on your machine.
+            - POSTGRES_PORT = 5432. This is the port of the postgres on your machine.
+            - FAULT_RATIO = 0.0. This value is kept between 0.0 and 1.0. It represents the chance of a failure for each cycle.
+            - FAULT_VALUE_MULTIPLIER = 1.0. This value must be bigger than 0.
+            - TIME_PER_CYCLE = 200. This value corresponds to the time in seconds of each cycle.
+
+        - **MOVING_AVERAGE_V2**: WINDOW = 1. This value is the number of samples that the moving average will use to calculate the average value. You can change this value to see how the moving average changes.
         - **MQTT_PUBLISHER_V3**: 
             - TOPIC = "sensor_data". This is the topic that the publisher will use to publish sensor data to.
-            - HOST = "localhost". This is the IP address of the MQTT Broker on your machine.
+            - HOST = "mqtt5". This is the IP address of the MQTT Broker on your machine.
             - PORT = 1883. This is the port of the MQTT Broker on your machine.
             - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
             - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
             - VALUE_NAME_3 = "moving_average". This is the moving average of the sensor.
         - **MQTT_SUBSCRIBER_V3**:
             - TOPIC = "sensor_data". This is the topic that the subscriber will use to subscribe to.
-            - HOST = "localhost". This is the IP address of the MQTT Broker on your machine.
+            - HOST = "mqtt5". This is the IP address of the MQTT Broker on your machine.
             - PORT = 1883. This is the port of the MQTT Broker on your machine.
             - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
             - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
             - VALUE_NAME_3 = "moving_average". This is the moving average of the sensor.
         - **PROMETHEUS_WRITER**:
-            - HOST = "localhost". This is the IP address of the Prometheus Gateway running on docker.
+            - HOST = "pushgateway". This is the IP address of the Prometheus Gateway running on docker.
             - PORT = 9091. This is the port of the Prometheus Gateway running on docker.
             - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
             - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
@@ -111,7 +120,7 @@
         NOTE: Make sure to link the function blocks as shown in the image above. This step is important to ensure that the function blocks are linked in the correct order and that it follows the flow of the data.
 
     8. Link the function blocks to the corresponding FORTE_PC:
-        - **SENSOR_SIMULATOR_V2**, **MOVING_AVERAGE_V2**, **MQTT_PUBLISHER_V3**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC" -> Select "EMB_RES"
+        - **SENSOR_SIMULATOR_V3**, **MOVING_AVERAGE_V2**, **MQTT_PUBLISHER_V3**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC" -> Select "EMB_RES"
         - **MQTT_SUBSCRIBER_V3**, **PROMETHEUS_WRITER**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC_1" -> Select "EMB_RES"
 
         ![image](./images/Screenshot_4.png)
