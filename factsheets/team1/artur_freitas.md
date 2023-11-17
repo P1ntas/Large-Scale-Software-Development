@@ -11,14 +11,21 @@ As a Product Owner (PO), i took part towards the approval of the initial technol
 Like the previous Sprint, continued the communication with the client in order to clarify the doubts that my team had. I also helped to propose some solutions based on the client's feedback. 
 
 ### The two user stories that I am most proud of
-My team's issues: 
-- As a User, I want to have a solid database that can store the machine's logs over time, so that I can visualize it later
-- As a User I want to be able to see a detailed log of a specific machine's characteristics so that I can monitor its state over time
+My team's user stories: 
+- As a User, I want to have a solid database that can store the machine's logs over time, so that I can visualize it later.
+
 
 ## Sprint 2
 
+### Contribution
 As a PO, i refined some of the draft user stories in order to simplify the work flow and division between teams.
 
+Additionally, I also enhanced the development.md file regarding the metrics section, specifying each team's velocity in every sprint and aggregating the weight of completed user stories.
+
+### The two user stories that I am most proud of
+My team's user stories:
+- As a User I want to be able to see a detailed log of a specific machine's characteristics so that I can monitor its state over time;
+- As a User, I expect to have reference graphs for each kind of sensor, so that I can train ML models based on them.
 
 ## Sprint 3
 
