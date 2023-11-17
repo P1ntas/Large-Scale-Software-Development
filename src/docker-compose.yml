@@ -58,6 +58,7 @@ services:
 
   pushgateway:
     image: prom/pushgateway
+    container_name: pushgateway
     ports:
       - "9091:9091"
     networks:
@@ -76,6 +77,67 @@ services:
       - mosquitto-logs:/mosquitto/log
       - ./config:/mosquitto/config:rw
     restart: unless-stopped
+  
+  sonarqube:
+    image: sonarqube:8.9.1-community
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    networks:
+      - monitoring-network
+    restart: unless-stopped
+
+  dinasore_1:
+    build: ./dinasore
+    container_name: dinasore_1
+    command: python -B core/main.py -p 61499 -u 4840 -a dinasore_1
+    ports:
+      - "61499:61499" 
+      - "4840:4840"  
+    networks:
+      - monitoring-network
+    volumes:
+      - dinasore1-data:/var/lib/dinasore/data
+    restart: unless-stopped
+
+  dinasore_2:
+    build: ./dinasore
+    container_name: dinasore_2
+    command: python -B core/main.py -p 61500 -u 4841 -a dinasore_2
+    ports:
+      - "61500:61500" 
+      - "4841:4841"  
+    networks:
+      - monitoring-network
+    volumes:
+      - dinasore2-data:/var/lib/dinasore/data
+    restart: unless-stopped
+
+  dinasore_1:
+    build: ./dinasore
+    container_name: dinasore_1
+    command: python -B core/main.py -p 61499 -u 4840 -a dinasore_1
+    ports:
+      - "61499:61499" 
+      - "4840:4840"  
+    networks:
+      - monitoring-network
+    volumes:
+      - dinasore1-data:/var/lib/dinasore/data
+    restart: unless-stopped
+
+  dinasore_2:
+    build: ./dinasore
+    container_name: dinasore_2
+    command: python -B core/main.py -p 61500 -u 4841 -a dinasore_2
+    ports:
+      - "61500:61500" 
+      - "4841:4841"  
+    networks:
+      - monitoring-network
+    volumes:
+      - dinasore2-data:/var/lib/dinasore/data
+    restart: unless-stopped
 
 networks:
   monitoring-network:
@@ -88,4 +150,6 @@ volumes:
   grafana-data:
   mosquitto-data:
   mosquitto-logs:
+  dinasore1-data:
+  dinasore2-data:
   config:

@@ -121,7 +121,7 @@ python core/main.py -p 61500 -u 4841
       ![image](./docs/images/Screenshot_3.png)
 
   8. Link the function blocks to the corresponding FORTE_PC:
-      - **SENSOR_SIMULATOR_V2**, **MOVING_AVERAGE_V2**, **MQTT_PUBLISHER_V3**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC" -> Select "EMB_RES"
+      - **SENSOR_SIMULATOR_V3**, **MOVING_AVERAGE_V2**, **MQTT_PUBLISHER_V3**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC" -> Select "EMB_RES"
       - **MQTT_SUBSCRIBER_V3**, **PROMETHEUS_WRITER**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC_1" -> Select "EMB_RES"
 
       ![image](./docs/images/Screenshot_4.png)

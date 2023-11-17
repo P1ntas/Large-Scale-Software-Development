@@ -1,0 +1,19 @@
+apiVersion: 1
+contactPoints:
+    - orgId: 1
+      name: Discord Bot
+      receivers:
+        - uid: bc4c2b75-e095-4e3d-8f61-742dcf71cb8c
+          type: discord
+          settings:
+            url: https://discord.com/api/webhooks/1174298865235669103/68jy6ezGOH-jXzOwHBQw4Mr4D8sn13bNtrDIoekqnhRL4c_hwd69bfr7GXc1X5reXMcO
+            use_discord_username: false
+          disableResolveMessage: false
+    - orgId: 1
+      name: email receiver
+      receivers:
+        - uid: de462897-9748-4330-8bef-9a85abba00f2
+          type: email
+          settings:
+            addresses: <example@email.com>
+          disableResolveMessage: false

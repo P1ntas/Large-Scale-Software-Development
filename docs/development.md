@@ -97,6 +97,9 @@ In this section you can find a comprehensive guide on how to fully setup a produ
   - `Prometheus` running under the port `9090`;
   - `Prometheus Pushgateway` running under the port `9091`.
   - `Mosquitto MQTT Broker` running under the port `1883`.
+  - `Dinasore Instances` running under the ports `61499-61500`, to connect with 4-DIAC.
+  - `Dinasore Instances` running under the ports `4840-4841`, to connect with the OPC UA server.
+  - `SonarQube` running under the port `9000` to run the static analysis.
 
   The script will populate the `PostgreSQL` database with the necessary tables and data after the containers are up and running.
 
@@ -304,6 +307,38 @@ python core/main.py -p 61500 -u 4841
 
   14. Finally, to check the data structure or monitor the process using OPC-UA, you can use the [Prosys client](https://www.prosysopc.com/products/opc-client/), connecting to the component IP address at port 4840 and 4841.
 
+### Sonarqube
+
+To access the `Sonarqube` interface, go to `localhost:9000`. Login with the following credentials:
+```markdown
+**Username**: admin
+**Password**: admin
+```
+
+After logging in, change the password. You will be redirected to the `projects` page.
+
+![image](../docs/images/sonarqube_projects.png)
+
+The next step is to create a new project. For that, click on the `Add a project` button. Select the manual option, and give your project a name and project key. In this case, name it `MES`.
+
+![image](../docs/images/sonarqube_create_project.png)
+
+Afterward, you will be prompted to generate a token. We will name it `MES_Analysis`.
+
+![image](../docs/images/sonarqube_create_token.png)
+
+To generate the best command for the scanner, customize your environment and the system you are running.
+
+Follow the instructions on the screen to configure the scanner.
+
+![image](../docs/images/sonarqube_configuration.png)
+
+Finally, copy the command and run it on a terminal in the src folder of the project.
+
+After scanning the files, you can check the results on the `Sonarqube` interface.
+
+![image](../docs/images/sonarqube_results.png)
+
 ## Security concerns
 
 As of the end of Sprint 2 (16/11/2023), there are no security concerns to be tackled. The project is mostly self-contained and doesn't need to handle any type of sensitive information or possible data leakage. However, with _Sonarqube_, possible security vulnerabilities are scanned every time changes to the project's code occur, and this, this section is subject to change as more features are implemented.
@@ -367,6 +402,7 @@ Positive points:
 
 During this sprint, our team was assigned the task of developing automatic notifications for events and familiarising with the way they work and are implemented in the Grafana platform. Although we were able to achieve this goal successfully, creating some test notifications, as data was still not dynamic, in large quantity and following a defined pipeline, we were not able to fully develop and test this feature. In conclusion, we acquired all the necessary knowledge to finish this task in the next sprint alongside another task assigned to us, as the work done by the other teams regarding the stream of data will support our development of this feature.
 
+
 #### Team 4 Retrospective
 
 During sprint 1, our team had to deal with a PBI that was of low priority but high workload, which consisted of creating a ML model that, through the information it receives from the database, manipulates the operation of the machines so that it is as efficient as possible. Our efforts turned to understanding as best as we could how we were going to approach the issue, planning the development and integration of the solution. There was also a limitation on the work we could do, as we needed data we didn't have, since the integration of the sensors with the system had not yet been done and the said ML model needs real data to be trained. So, we plan to continue working in this same issue during next sprint, to finish it as quick as possible.
@@ -406,7 +442,6 @@ During this sprint, the most positive point was the good communication that was 
 #### Team 4 Retrospective
 
 
-#
 
 ### **Sprint 4**
 

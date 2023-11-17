@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd">
-<FBType Name="SENSOR_SIMULATOR_V2" OpcUa="DEVICE.SENSOR">
+<FBType Name="SENSOR_SIMULATOR_V3" OpcUa="DEVICE.SENSOR">
   <InterfaceList>
     <EventInputs>
       <Event Name="INIT" Type="Event"/>
@@ -14,8 +14,14 @@
       </Event>
     </EventOutputs>
     <InputVars>
+      <VarDeclaration Name="POSTGRES_DB" Type="STRING" OpcUa="Constant"/>
+      <VarDeclaration Name="POSTGRES_USER" Type="STRING" OpcUa="Constant"/>
+      <VarDeclaration Name="POSTGRES_PASSWORD" Type="STRING" OpcUa="Constant"/>
       <VarDeclaration Name="POSTGRES_HOST" Type="STRING" OpcUa="Constant"/>
       <VarDeclaration Name="POSTGRES_PORT" Type="INT" OpcUa="Constant"/>
+      <VarDeclaration Name="FAULT_RATIO" Type="REAL" OpcUa="Constant"/>
+      <VarDeclaration Name="FAULT_VALUE_MULTIPLIER" Type="REAL" OpcUa="Constant"/>
+      <VarDeclaration Name="TIME_PER_CYCLE" Type="REAL" OpcUa="Constant"/>
     </InputVars>
     <OutputVars>
       <VarDeclaration Name="SENSOR_ID" Type="INT" OpcUa="Variable"/>
