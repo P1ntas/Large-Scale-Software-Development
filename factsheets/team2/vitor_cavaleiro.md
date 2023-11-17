@@ -19,7 +19,18 @@ During this sprint, I aimed to understand the DINASORE tool's workflow. To achie
 
 ## Sprint 2
 
-...
+### General considerations
+
+In this sprint, my primary focus was on elevating the development workflow by delving into and incorporating static analysis tools. I proposed a suite of tools to our scrum masters, and successfully integrated SonarQube into our project.
+This approach holds significant promise in enhancing code quality and identifying potential issues at this stage of development. SonarQube, a robust static analysis tool, brings valuable insights into code quality, security vulnerabilities, and code smells on the project.
+
+### Two contributions that I am most proud of
+- Establish a local SonarQube instance to facilitate team-wide testing of code quality.
+- Develop comprehensive documentation for SonarQube, covering setup instructions and configuration details.
+- Provide descriptions of identified code vulnerabilities and insights into code quality based on SonarQube analysis.
+
+### Pull Requests Made
+- The integration of SonarQube, which can be found [here](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/73).
 
 
 ## Sprint 3

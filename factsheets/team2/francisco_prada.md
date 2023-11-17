@@ -16,7 +16,15 @@ As mentioned before, I worked more on the part of understanding and usage of the
 
 ## Sprint 2
 
-...
+### General considerations
+In this second sprint, I continued to develop my tasks as Scrum Master and help my team through some hardships on their work, trying to solve them, and take some issues on my own. However, in retrospective, there should have been a better communication as SM with the other team members at the beginning of the sprint, although this mistake was corrected through it.
+
+### The two pull requests that I am most proud of
+- [DINASORE Dockerization](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/52): although I did not assign myself on it, my contribution on this PR is explained below.
+- [CI/CD Integration](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/71): although we will probably add some other tools to the CI/CD thoughout the remaining sprints, I already configured some such as Pylint, Python Package using Conda for the Continuous Integration.
+
+### Two contributions of other types that I am most proud of
+- Helped in the Dockerization issue, although I could not completely correct some errors that appeared along the way.
 
 
 ## Sprint 3

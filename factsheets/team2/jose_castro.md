@@ -18,7 +18,13 @@ Continued working with the client to further understand the need for the DINASOR
 
 ## Sprint 2
 
-...
+### The two user stories that I am most proud of
+- [#62 - Setup CI/CD Environment](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/62)
+- [#82- Job Scheduling Feature](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/62)
+
+### General Contributions
+
+Continuous communication with the team. Familiarized myself with CI/CD environments and cloud services for production servers and started said setup of production server, and drew up the issues to tackle these needs. Communicated with client to understand priorities moving forward.
 
 
 ## Sprint 3
