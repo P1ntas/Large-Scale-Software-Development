@@ -49,7 +49,31 @@ NO relevant Pull requests were created, given the fact that we didn't finish the
 
 ## Sprint 2
 
-...
+During Sprint 2, Team 4 made progress by focusing on the PBI's that were assigned, that resulted of the split of an epic into four smaller issues. Throughout the sprint, our team managed to understand better the issue and to underline a solid way to approach it in order to come up with a solution.
+
+### The four user stories that we are most proud of
+
+In this sprint, three issues were created anew by splitting a previous [PBI (epic)](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/8) into smaller ones. They were:
+
+- [#53](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/53)
+- [#54](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/54)
+- [#55](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/55)
+
+### The four pull requests that we are most proud of
+
+NO relevant Pull requests were created, given the fact that we didn't finish the assignment because of the sheer size of it and the time window given for the sprint.
+
+Even though that, we managed to create a sensor data simulation with the help of Team 1, specially João Araújo. That work, being more of analytical nature, doesn't represent itself as code in the repository in more than a script, and doesn't add any functionality to the project, yet. That data simulation will be used to create the ML model and train it for future integration.
+
+### Four contributions of other types that we are most proud of
+
+1. **Client Collaboration**: Team 4 played their part in liaising with the client to understand their requirements. We facilitated effective communication between the Product Owner (PO) and the Development Team, ensuring that the client's vision was accurately represented in the project. This close collaboration was essential in aligning our efforts with the client's expectations.
+
+2. **Requirement Clarity**: We actively worked on clarifying requirements during discussions with the client. This was crucial in eliminating any ambiguities and uncertainties.
+
+3. **Adaptation to Client Needs**: We were agile in our approach and made necessary adjustments to the work being done based on feedback from the meetings with the client. This adaptability allowed us to better cater to the client's evolving needs and ensure the project was on the right track from the beginning.
+
+4. **Working guidelines**: During this sprint, Team 4 made a joint effort with other teams on the implementation of working guideline, such as commit message structure, branch naming, etc.
 
 
 ## Sprint 3
