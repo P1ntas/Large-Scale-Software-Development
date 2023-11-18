@@ -47,9 +47,9 @@ My major contributions consisted on guidance to Team 4's dev team and collective
 
 By splitting our [epic](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/8) into three smaller issues:
 
--[#53](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/53)
--[#54](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/54)
--[#55](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/55)
+- [#53](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/53)
+- [#54](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/54)
+- [#55](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/55)
 
 Those issues still need refinement, more specifically on the structure (convert them into user stories style and creating a well defined task list).
 
