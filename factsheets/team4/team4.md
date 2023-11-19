@@ -61,7 +61,7 @@ In this sprint, three issues were created anew by splitting a previous [PBI (epi
 
 ### The four pull requests that we are most proud of
 
-NO relevant Pull requests were created, given the fact that we didn't finish the assignment because of the sheer size of it and the time window given for the sprint.
+No relevant Pull requests were created, given the fact that we didn't finish the assignment because of the sheer size of it and the time window given for the sprint.
 
 Even though that, we managed to create a sensor data simulation with the help of Team 1, specially João Araújo. That work, being more of analytical nature, doesn't represent itself as code in the repository in more than a script, and doesn't add any functionality to the project, yet. That data simulation will be used to create the ML model and train it for future integration.
 
