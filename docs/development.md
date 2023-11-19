@@ -361,9 +361,15 @@ The Sonar scanner reports a 6.2% code duplication. Additionally, it falsely sugg
 
 ## Metrics
 
-Describe how you captured each of the "four key metrics" (e.g., automatic mechanism, survey to the team on the end of each sprint).
+For every sprint, the following process metrics are being recorded:
 
-Provide here an historical record (for each sprint) of the four key metrics and velocity.
+| Sprint | Deployment Frequency | MTTR | Lead Time | Change Failure Rate |
+|-------------|-------------|-------------|-------------|-------------|
+| 0 | - | - | - | - | 
+| 1 | - | - | - | - | 
+| 2 | one every two days | 3 hours | 2 weeks | 20% | 
+| 3 |   |   |   |   | 
+| 4 |   |   |   |   |
 
 | Sprint | Velocity (T1) | Velocity (T2) | Velocity (T3) | Velocity (T4) | Velocity (Product) |
 |-------------|-------------|-------------|-------------|-------------|-------------|
