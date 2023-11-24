@@ -8,14 +8,14 @@ if %errorlevel% neq 0 (
 )
 
 :: Check if Docker Compose is installed
-where docker-compose >nul 2>nul
+where docker compose >nul 2>nul
 if %errorlevel% neq 0 (
     echo Docker Compose is not installed. Please install Docker Compose and try again.
     exit /b
 )
 
 :: Run Docker Compose
-docker-compose up -d
+docker compose up -d
 
 echo Finalized Docker Compose
 
