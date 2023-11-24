@@ -382,7 +382,7 @@ On the one hand, the class worked steadily on the issues, never standing still. 
 
 #### Team 2 Retrospective
 
-For this sprint, the team committed to take care of both the Dockerization process of the DINASORE tool and the initial setup of the CI/CD tools which will be used throughout the rest of the project. We also took care of some other steps such as updating the documentation by introducing the new sensor simulator, and setting the configuration of some tools that can be used to analyse the codebase. In terms of collaboration conventions, our team subscribes to a tight gitflow usage and manages the codebase correctly. However, we can still point out some inconsistencies, like the lack of thorough PR commentary, which we still need to work on.
+Although communication started off a bit rocky, there was a noticeable improvement in communication and collaboration among team members in the latter half of the sprint. This positive trend contributed to a more cohesive and productive work environment. Due to this, the team successfully accomplished all the predefined tasks set at the beginning of the sprint and dynamically assigned itself to next steps of the project. However, the collaborative hurdles at the start of the sprint, mixed in with sequential work that affected other tasks assigned to the team, meant that productivity bloomed late in the sprint. Even then, our team is proud of the work we've done and with our growth from the first sprint.
 
 #### Team 3 Retrospective
 
