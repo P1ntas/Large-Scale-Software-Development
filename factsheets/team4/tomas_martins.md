@@ -40,8 +40,27 @@ Besides guiding my dev team and the contribution I did to establish a better com
 
 ## Sprint 2
 
-...
+My major contributions consisted on guidance to Team 4's dev team and collective brainstorms to clarify how we would proceed from sprint 2 onwards. As a scrum master, participated in two meetings with the other scrum masters from other teams and helped with the creation and implementation of working guidelines.
 
+
+### The two user stories that I am most proud of
+
+By splitting our [epic](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/8) into three smaller issues:
+
+- [#53](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/53)
+- [#54](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/54)
+- [#55](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/55)
+
+Those issues still need refinement, more specifically on the structure (convert them into user stories style and creating a well defined task list).
+
+### The two pull requests that I am most proud of
+
+No relevant pull requests were created by me during sprint 2, besides some for documentation and the some that I approved but didn't create.
+
+### Two contributions of other types that I am most proud of
+
+- Guiding my dev team and the contribution I did to establish a better communication between team members and between us and other teams.
+- Meeting the other scrum masters and establishing working guideline such as the structure of commit messages, branch naming, pull requests' names, etc.
 
 ## Sprint 3
 
