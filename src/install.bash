@@ -8,14 +8,14 @@ then
 fi
 
 # Check if Docker Compose is installed
-if ! command -v docker-compose &> /dev/null
+if ! command -v docker compose &> /dev/null
 then
     echo "Docker Compose is not installed. Please install Docker Compose and try again."
     exit 1
 fi
 
 # Run Docker Compose
-docker-compose up -d
+docker compose up -d
 echo "Finalized Docker Compose"
 
 # Check if Python is installed
