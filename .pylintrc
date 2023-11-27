@@ -1,0 +1,20 @@
+[MESSAGES CONTROL]
+
+disable=missing-module-docstring,
+        invalid-name,
+        missing-class-docstring,
+        missing-function-docstring,
+        too-many-arguments,
+        no-else-return,
+        inconsistent-return-statements,
+        too-few-public-methods,
+        wrong-import-order,
+        unused-argument,
+        import-error,
+        duplicate-code,
+        unused-variable
+
+
+[REPORTS]
+
+output-format = colorized
