@@ -95,6 +95,14 @@ CREATE TABLE sensor (
     status status NOT NULL DEFAULT 'Offline'
 );
 
+CREATE TABLE task(
+    id SERIAL PRIMARY KEY,
+    system_id INTEGER NOT NULL REFERENCES system(id),
+    name TEXT NOT NULL,
+    duration INTEGER NOT NULL,
+    energetic_costs INTEGER NOT NULL
+);
+
 -------------------------------------------------------------------------------------------------------------------
 
 
