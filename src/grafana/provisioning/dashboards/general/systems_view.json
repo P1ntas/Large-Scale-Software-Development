@@ -313,7 +313,7 @@
         "uid": "PCC52D03280B7034C"
       },
       "gridPos": {
-        "h": 8,
+        "h": 9,
         "w": 12,
         "x": 10,
         "y": 4
@@ -373,42 +373,62 @@
             "mode": "thresholds"
           },
           "custom": {
-            "fillOpacity": 70,
+            "fillOpacity": 55,
             "hideFrom": {
               "legend": false,
               "tooltip": false,
               "viz": false
             },
             "insertNulls": 600000,
-            "lineWidth": 0,
+            "lineWidth": 1,
             "spanNulls": false
           },
-          "mappings": [
-            {
-              "options": {
-                "Task 1": {
-                  "color": "semi-dark-green",
-                  "index": 0
-                },
-                "Task 2": {
-                  "color": "semi-dark-red",
-                  "index": 1
-                }
-              },
-              "type": "value"
-            }
-          ],
+          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "transparent",
+                "color": "text",
                 "value": null
               }
             ]
           }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CP Lab"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "pattern": "^.*T1 -.*$",
+                      "result": {
+                        "color": "semi-dark-green",
+                        "index": 0
+                      }
+                    },
+                    "type": "regex"
+                  },
+                  {
+                    "options": {
+                      "pattern": "^.*T2 -.*$",
+                      "result": {
+                        "color": "semi-dark-red",
+                        "index": 1
+                      }
+                    },
+                    "type": "regex"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 8,
@@ -425,7 +445,7 @@
           "showLegend": true
         },
         "mergeValues": true,
-        "rowHeight": 0.9,
+        "rowHeight": 0.93,
         "showValue": "never",
         "tooltip": {
           "mode": "single",
@@ -441,7 +461,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\r\n    time_series AS \"time\",\r\n    CASE\r\n        WHEN random() < 0.4 THEN 'Task 1'\r\n        WHEN random() >= 0.4 AND random() < 0.8 THEN 'Task 2'\r\n        ELSE null\r\n    END AS \"$system_model_name\"\r\nFROM\r\n    generate_series(\r\n        $__timeFrom()::timestamp,\r\n        $__timeTo()::timestamp,\r\n        '10 min'::interval\r\n    ) AS time_series;\r\n",
+          "rawSql": "SELECT\r\n    time_series AS \"time\",\r\n    CASE\r\n        WHEN random() < 0.4 THEN (\r\n            SELECT 'T1 - ' || name FROM task WHERE system_id = $system_id ORDER BY id ASC LIMIT 1\r\n        )\r\n        WHEN random() >= 0.4 AND random() < 0.8 THEN (\r\n            SELECT 'T2 - ' || name FROM task WHERE system_id = $system_id ORDER BY id DESC LIMIT 1\r\n        )\r\n        ELSE null\r\n    END AS \"$system_model_name\"\r\nFROM\r\n    generate_series(\r\n        $__timeFrom()::timestamp,\r\n        $__timeTo()::timestamp,\r\n        '10 min'::interval\r\n    ) AS time_series;\r\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -842,7 +862,7 @@
     "list": [
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "Continental",
           "value": "Continental"
         },
@@ -890,16 +910,16 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "1",
-          "value": "1"
+          "selected": true,
+          "text": "4",
+          "value": "4"
         },
         "datasource": {
           "type": "postgres",
           "uid": "PostgreSQL"
         },
         "definition": "select s.id from system s\ninner join factory f on f.id = s.factory_id\nwhere f.id = $factory_id",
-        "hide": 2,
+        "hide": 0,
         "includeAll": false,
         "label": "System",
         "multi": false,
@@ -915,8 +935,8 @@
       {
         "current": {
           "selected": false,
-          "text": "MPS 203 I4.0",
-          "value": "MPS 203 I4.0"
+          "text": "CP Lab",
+          "value": "CP Lab"
         },
         "datasource": {
           "type": "postgres",
@@ -995,6 +1015,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 7,
+  "version": 11,
   "weekStart": ""
 }
