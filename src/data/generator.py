@@ -118,9 +118,9 @@ def data_generator():
                     for m in range(2):
                         task_name = random.choice([tsk_name for tsk_name in task_names if tsk_name != def_task_name])
                         def_task_name = task_name
-                        duration = random.choice([10,20,30,40,50,60])
+                        duration = random.choice(['10 min','20 min','30 min','40 min','50 min' , '60 min'])
                         energetic_costs = random.randint(40,70)
-                        f.write(f"INSERT INTO task (system_id, name, duration, energetic_costs) VALUES ({current_system_id}, '{task_name}', {duration}, {energetic_costs});\n")
+                        f.write(f"INSERT INTO task (system_id, name, duration, energetic_costs) VALUES ({current_system_id}, '{task_name}', '{duration}', {energetic_costs});\n")
     
     
     except Exception as e:

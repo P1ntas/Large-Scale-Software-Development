@@ -383,7 +383,35 @@
             "lineWidth": 1,
             "spanNulls": false
           },
-          "mappings": [],
+          "links": [
+            {
+              "targetBlank": true,
+              "title": "LINK",
+              "url": "https://github.com/grafana/grafana/pull/50226"
+            }
+          ],
+          "mappings": [
+            {
+              "options": {
+                "pattern": "^.*T1 -.*$",
+                "result": {
+                  "color": "semi-dark-green",
+                  "index": 1
+                }
+              },
+              "type": "regex"
+            },
+            {
+              "options": {
+                "pattern": "^.*T2 -.*$",
+                "result": {
+                  "color": "semi-dark-red",
+                  "index": 2
+                }
+              },
+              "type": "regex"
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -397,32 +425,16 @@
         "overrides": [
           {
             "matcher": {
-              "id": "byName",
-              "options": "CP Lab"
+              "id": "byRegexp",
+              "options": "^.*T1 -.*$"
             },
             "properties": [
               {
-                "id": "mappings",
+                "id": "links",
                 "value": [
                   {
-                    "options": {
-                      "pattern": "^.*T1 -.*$",
-                      "result": {
-                        "color": "semi-dark-green",
-                        "index": 0
-                      }
-                    },
-                    "type": "regex"
-                  },
-                  {
-                    "options": {
-                      "pattern": "^.*T2 -.*$",
-                      "result": {
-                        "color": "semi-dark-red",
-                        "index": 1
-                      }
-                    },
-                    "type": "regex"
+                    "title": "NEW",
+                    "url": "https://www.youtube.com/"
                   }
                 ]
               }
@@ -862,7 +874,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "Continental",
           "value": "Continental"
         },
@@ -910,7 +922,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "4",
           "value": "4"
         },
@@ -935,8 +947,8 @@
       {
         "current": {
           "selected": false,
-          "text": "CP Lab",
-          "value": "CP Lab"
+          "text": "CP Factory",
+          "value": "CP Factory"
         },
         "datasource": {
           "type": "postgres",
@@ -1015,6 +1027,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 11,
+  "version": 6,
   "weekStart": ""
 }
