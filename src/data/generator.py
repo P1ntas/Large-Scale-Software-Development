@@ -41,6 +41,11 @@ def data_generator():
         'Rotameter': [random.uniform(10, 50), random.uniform(51, 100)],
         'Strain Gauge': [random.uniform(10, 50), random.uniform(51, 100)]
     }
+    task_names= ['Uniformity Testing', 'X-ray Inspection', 'Balancing', 'Curing Process', 'Rubber Compound Extrusion', 'Temperature and Pressure Calibration',
+                 'Material Feeding Control', 'Quality Check at Extrusion Point', 'Inner Liner Material Feeding', 'Adhesive Application', 'Liner Thickness Control',
+                  'Wire Spool Loading', 'Bead Winding Process', 'Bead Diameter Verification', 'Cutting and Shaping', 'Quality Inspection at Bead Assembly', 'Conveyor Belt Alignment',
+                   'Pallet Loading and Unloading', 'Material Transport to Different Stations', 'Gripper Calibration', 'Robot Arm Lubrication' ]
+
 
     # Give a higher probability to the 'Working'/'Online' status
     status_options = ['Offline', 'Working', 'Working', 'Working', 'Maintenance Required', 'Online', 'Online', 'Online']
@@ -108,6 +113,14 @@ def data_generator():
                             sens_status = random.choice(status_options)
                             f.write(f"INSERT INTO sensor (expansion_id, sensor_model_id, status) VALUES ({current_expansion_id}, {sensor_model_id}, '{sens_status}');\n")
 
+                    # Writing tasks
+                    for m in range(2):
+                        task_name = task_names[j*m+m]
+                        duration = random.randint(5,10)
+                        energetic_costs = random.randint(40,70)
+                        f.write(f"INSERT INTO task (system_id, name, duration, energetic_costs) VALUES ({j+1}, '{task_name}', {duration}, {energetic_costs});\n")
+    
+    
     except Exception as e:
         print(f"An error occurred: {e}")
 
