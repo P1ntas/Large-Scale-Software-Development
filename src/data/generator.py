@@ -1,4 +1,5 @@
 import random
+from datetime import datetime, timedelta
 
 def data_generator():
     facilities = ['Continental', 'Bosch', 'Volkswagen Autoeuropa']
@@ -115,14 +116,48 @@ def data_generator():
 
                     # Writing tasks
                     def_task_name = ''
+                    task_duration = {}
                     for m in range(2):
                         task_name = random.choice([tsk_name for tsk_name in task_names if tsk_name != def_task_name])
                         def_task_name = task_name
                         duration = random.choice(['10 min','20 min','30 min','40 min','50 min' , '60 min'])
+                        task_duration[m] = duration
                         energetic_costs = random.randint(40,70)
                         f.write(f"INSERT INTO task (system_id, name, duration, energetic_costs) VALUES ({current_system_id}, '{task_name}', '{duration}', {energetic_costs});\n")
-    
-    
+
+                    start_date = datetime.now() - timedelta(hours=20)
+                    mins_in_a_day = 24 * 60
+                    n = 0
+
+                    while n < mins_in_a_day:
+                        # select duration of a task
+                        choices = {
+                            0: 3, # 1/3 chance to select task 1
+                            1: 3, # 1/3 chance to select task 2
+                            2: 3  # 1/3 chance to select null
+                        }
+                        random_task = random.choices(list(choices.keys()), weights=choices.values())[0]
+                        
+                        if random_task != 2:
+                            task_id = 2 * current_system_id + random_task - 1
+                            duration_str = task_duration[random_task]
+                        else:
+                            task_id = None
+                            duration_str = random.choice(['10 min', '20 min', '30 min', '40 min', '50 min', '60 min'])
+
+                        duration_minutes = int(duration_str.split()[0])
+
+                        timestamp = start_date + timedelta(minutes=n)
+
+                        if task_id:
+                            # Write to file
+                            f.write(f"INSERT INTO task_timeseries (task_id, timestamp, system_id) VALUES ({task_id}, '{timestamp}', {current_system_id});\n")
+                        else:
+                            # Write to file
+                            f.write(f"INSERT INTO task_timeseries (timestamp, system_id) VALUES ('{timestamp}', {current_system_id});\n")
+                        # Increment n by the duration in minutes
+                        n += duration_minutes
+
     except Exception as e:
         print(f"An error occurred: {e}")
 
