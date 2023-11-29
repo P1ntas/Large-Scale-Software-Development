@@ -67,6 +67,61 @@ For security-related questions regarding the project and respective testing logs
 
 For an explanation pertaining the project's quality assurance, please refer to the [Quality Assurance sheet](./development/quality_assurance.md).
 
+### Sonarqube
+
+To access the `Sonarqube` interface, go to `localhost:9000`. Login with the following credentials:
+```markdown
+**Username**: admin
+**Password**: admin
+```
+
+After logging in, change the password. You will be redirected to the `projects` page.
+
+![image](../docs/images/sonarqube_projects.png)
+
+The next step is to create a new project. For that, click on the `Add a project` button. Select the manual option, and give your project a name and project key. In this case, name it `MES`.
+
+![image](../docs/images/sonarqube_create_project.png)
+
+Afterward, you will be prompted to generate a token. We will name it `MES_Analysis`.
+
+![image](../docs/images/sonarqube_create_token.png)
+
+To generate the best command for the scanner, customize your environment and the system you are running.
+
+Follow the instructions on the screen to configure the scanner.
+
+![image](../docs/images/sonarqube_configuration.png)
+
+Finally, copy the command and run it on a terminal in the src folder of the project.
+
+After scanning the files, you can check the results on the `Sonarqube` interface.
+
+![image](../docs/images/sonarqube_results.png)
+
+## Security concerns
+
+As of the end of Sprint 2 (16/11/2023), there are no security concerns to be tackled. The project is mostly self-contained and doesn't need to handle any type of sensitive information or possible data leakage. However, with _Sonarqube_, possible security vulnerabilities are scanned every time changes to the project's code occur, and this, this section is subject to change as more features are implemented.
+
+### SonarQube - Latest scan on branch `main` 
+
+The Sonar scanner indicates no vulnerabilities, providing an A-grade security rating. Nonetheless, it highlights 25 security hotspots, which, while not categorized as vulnerabilities, are flagged as security concerns requiring manual assessment.
+
+
+## Quality assurance
+
+Continuous Integration (CI) tools are currently set in place to ensure correct codebase management and consistency. In terms of static analysis, code is scanned using linters everytime a PR wants to commit changed into the _main_ branch. Furthermore, a [SonarQube](https://www.sonarsource.com/products/sonarqube/?gads_campaign=SQ-Mroi-PMax&gads_ad_group=Global&gads_keyword=&gad_source=1&gclid=CjwKCAiAu9yqBhBmEiwAHTx5pxnFfXXnEDXFcodcgZRO5zP1ALPlJ4zaqIEvecU6Sz8-9v2VsiagzxoCHjUQAvD_BwE) environment was setup, giving us access to more code analysis and extensive reports about bugs, security and vulnerabilities. Moreover, a [Bandit](https://bandit.readthedocs.io/en/latest/config.html#bandit-settings) workflow was implemented for different types of tests. The several available tests are [here](https://bandit.readthedocs.io/en/latest/plugins/index.html).
+The Continuous Integration linter is complaining, however, about some default formatting of the DINASORE blocks (source code for the DINASORE technology, which should not be changed), which can cause problems in the future.
+
+### SonarQube - Latest scan on branch `main`
+
+The Sonar scanner reports a 6.2% code duplication. Additionally, it falsely suggests a 0.0% code coverage, despite the presence of tests in the project. This discrepancy arises from the scanner's current lack of configuration to detect coverage, an issue to be solved in the next sprint. Regarding code smells, the scanner identifies 79 instances but assigns an A-grade rating for maintainability. In terms of reliability, the scanner points out 2 bugs.
+
+
+
+## Metrics
+>>>>>>> 69a2593 (docs: adds bandit description)
+
 ## Metrics (10/10)
 For every sprint, the following process metrics are being recorded:
 
