@@ -1,0 +1,4 @@
+[bandit]
+targets = src/data,src/dinasore,src/grafana
+exclude_dirs = src/data/csv_data
+skips = B105,B106,B107,B505,B509,B608,B610,B611,B703
