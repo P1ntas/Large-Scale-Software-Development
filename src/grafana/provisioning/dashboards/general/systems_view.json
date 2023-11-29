@@ -314,7 +314,7 @@
       },
       "gridPos": {
         "h": 9,
-        "w": 12,
+        "w": 14,
         "x": 10,
         "y": 4
       },
@@ -379,7 +379,7 @@
               "tooltip": false,
               "viz": false
             },
-            "insertNulls": false,
+            "insertNulls": 3600000,
             "lineWidth": 0,
             "spanNulls": false
           },
@@ -491,8 +491,8 @@
         ]
       },
       "gridPos": {
-        "h": 9,
-        "w": 10,
+        "h": 6,
+        "w": 24,
         "x": 0,
         "y": 13
       },
@@ -552,7 +552,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 22
+        "y": 19
       },
       "id": 3,
       "panels": [],
@@ -612,7 +612,7 @@
         "h": 12,
         "w": 4,
         "x": 0,
-        "y": 23
+        "y": 20
       },
       "id": 7,
       "options": {
@@ -671,7 +671,7 @@
         "h": 12,
         "w": 5,
         "x": 4,
-        "y": 23
+        "y": 20
       },
       "id": 29,
       "options": {
@@ -729,7 +729,7 @@
         "h": 12,
         "w": 5,
         "x": 9,
-        "y": 23
+        "y": 20
       },
       "id": 32,
       "options": {
@@ -787,7 +787,7 @@
         "h": 12,
         "w": 5,
         "x": 14,
-        "y": 23
+        "y": 20
       },
       "id": 31,
       "options": {
@@ -845,7 +845,7 @@
         "h": 12,
         "w": 5,
         "x": 19,
-        "y": 23
+        "y": 20
       },
       "id": 30,
       "options": {
@@ -951,9 +951,9 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "1",
-          "value": "1"
+          "selected": true,
+          "text": "2",
+          "value": "2"
         },
         "datasource": {
           "type": "postgres",
@@ -976,8 +976,8 @@
       {
         "current": {
           "selected": false,
-          "text": "CP Lab",
-          "value": "CP Lab"
+          "text": "MPS 203 I4.0",
+          "value": "MPS 203 I4.0"
         },
         "datasource": {
           "type": "postgres",
@@ -1049,8 +1049,8 @@
       {
         "current": {
           "selected": false,
-          "text": "13",
-          "value": "13"
+          "text": "20",
+          "value": "20"
         },
         "hide": 0,
         "includeAll": false,
