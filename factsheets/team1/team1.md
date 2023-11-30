@@ -105,7 +105,24 @@ Additionally, we were was tasked with the responsibility of upgrading the existi
 
 ## Sprint 3
 
-...
+### The four user stories that we are most proud of
+
+- [#102](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/102) - Sucessfuly created new visualizations in Grafana with the details of a systems job scheduler. Also displays the jobs running at a given time and allows the user to see the details of a given job.
+
+- [#98](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/98) - Together with [Team 2](../team2/team2.md), we fixed the documentation content distribution across multiple files and fixed previous documentation issues.
+
+### The four pull requests that we are most proud of
+
+- [#114](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/114) - This PR was essential to add the new Grafana visualizations to the development branch according to a systems job scheduler.
+
+- [#101](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/101) - Updated the documentation and the Changelog to reflect the changes made in the project in sprint 2.
+
+
+### Four contributions of other types that we are most proud of
+
+- I've been helping [Team 2](../team2/team2.md) with the fix of the documentation content distribution across multiple files and fixed previous documentation issues.
+
+- I've helped my team members to understand the new view of the project according to the client's feedback and helped them to understand the new requirements for the next sprint.
 
 
 ## Sprint 4
