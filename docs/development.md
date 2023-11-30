@@ -304,6 +304,15 @@ python core/main.py -p 61500 -u 4841
 
   14. Finally, to check the data structure or monitor the process using OPC-UA, you can use the [Prosys client](https://www.prosysopc.com/products/opc-client/), connecting to the component IP address at port 4840 and 4841.
 
+## Staging, Production & Deployment
+
+Both staging & production servers are hosted using [`Google Cloud`](https://cloud.google.com/)'s infrastructure. Both are running on [`Google Compute Engine`](https://cloud.google.com/compute), a *GCP* service that allows for creation and usage of remote Virtual Machines with differing levels of performance - presently, the machine type in usage is the *n2d-standard-2* because of the heavy weight of the containerized services the project employs.
+
+To achieve effective deployment, the staging server is updated **every time** the *main* branch is updated, while the production server hosts only the releases made at the end of each sprint (NOTE: each release is tagged accordingly in the project's repository). Because of the [Github Action](https://github.com/google-github-actions/ssh-compute)'s faulty behaviour, a new work-around to ensure Continued Development is currently being worked on - at the minute, deployment is being made manually.
+
+Currently, the project's production server is hosted at `http://34.42.26.53`, in which the Grafana dashboard is accessed [**here**](http://34.42.26.53:3000) and the Prometheus display [**here**](http://34.42.26.53:9090). As of this time, the current deployed version is the Sprint 2 release, found [here](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/commit/b8df7e7f3e7ae9e9fead7e118e39fe88676f94c6).
+
+
 ## Security concerns
 
 As of the end of Sprint 2 (16/11/2023), there are no security concerns to be tackled. The project is mostly self-contained and doesn't need to handle any type of sensitive information or possible data leakage. However, with _Sonarqube_, possible security vulnerabilities are scanned every time changes to the project's code occur, and this, this section is subject to change as more features are implemented.
