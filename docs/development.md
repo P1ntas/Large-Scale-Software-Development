@@ -93,7 +93,7 @@ Follow the instructions on the screen to configure the scanner.
 
 ![image](../docs/images/sonarqube_configuration.png)
 
-BBefore running the scanner, perform a code coverage analysis. SonarQube supports the reporting of test coverage information as part of the analysis of the project. However, SonarQube does not generate the coverage report itself. Using Tox, a local automated test tool, it is possible to assert code coverage and generate reports. There is a tox.ini file in the `src` folder that can be configured to run the tests and generate the coverage report. To run the tests, run the command `tox` on the terminal in the `src` folder. This will generate a coverage report in the `analysis` folder. Make sure you map the coverage report to the `sonar-project.properties` file.
+Before running the scanner, perform a code coverage analysis. SonarQube supports the reporting of test coverage information as part of the analysis of the project. However, SonarQube does not generate the coverage report itself. Using Tox, a local automated test tool, it is possible to assert code coverage and generate reports. There is a tox.ini file in the `src` folder that can be configured to run the tests and generate the coverage report. To run the tests, run the command `tox` on the terminal in the `src` folder. This will generate a coverage report in the `analysis` folder. Make sure you map the coverage report to the `sonar-project.properties` file.
 
 Finally, copy the scanner command and run it on a terminal in the src folder of the project.
 
