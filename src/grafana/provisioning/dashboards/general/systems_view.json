@@ -386,7 +386,7 @@
           "links": [
             {
               "title": "${__data.fields.task_name}",
-              "url": "http://localhost:3000/d/c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b/systems-view?var-task_id=${__data.fields.task_id}﻿&﻿${factory_name:queryparam}﻿&﻿${factory_id:queryparam}﻿&﻿${system_id:queryparam}﻿&﻿${system_model_name:queryparam}﻿&﻿${expansion_id:queryparam}﻿&﻿${sensor_id:queryparam}﻿&var-task_timeseries_id=${__data.fields.task_timeseries_id}"
+              "url": "http://${host:query}:3000/d/c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b/systems-view?var-task_id=${__data.fields.task_id}﻿&﻿${factory_name:queryparam}﻿&﻿${factory_id:queryparam}﻿&﻿${system_id:queryparam}﻿&﻿${system_model_name:queryparam}﻿&﻿${expansion_id:queryparam}﻿&﻿${sensor_id:queryparam}﻿&var-task_timeseries_id=${__data.fields.task_timeseries_id}"
             }
           ],
           "mappings": [
@@ -1019,6 +1019,34 @@
     "list": [
       {
         "current": {
+          "selected": true,
+          "text": "development",
+          "value": "localhost"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Host",
+        "multi": false,
+        "name": "host",
+        "options": [
+          {
+            "selected": true,
+            "text": "development",
+            "value": "localhost"
+          },
+          {
+            "selected": false,
+            "text": "deployment",
+            "value": "34.42.26.53"
+          }
+        ],
+        "query": "development : localhost, deployment : 34.42.26.53",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
           "selected": false,
           "text": "Continental",
           "value": "Continental"
@@ -1067,9 +1095,9 @@
       },
       {
         "current": {
-          "selected": true,
-          "text": "3",
-          "value": "3"
+          "selected": false,
+          "text": "4",
+          "value": "4"
         },
         "datasource": {
           "type": "postgres",
@@ -1092,8 +1120,8 @@
       {
         "current": {
           "selected": false,
-          "text": "MPS 203 I4.0",
-          "value": "MPS 203 I4.0"
+          "text": "CP Factory",
+          "value": "CP Factory"
         },
         "datasource": {
           "type": "postgres",
@@ -1125,7 +1153,7 @@
           "uid": "PostgreSQL"
         },
         "definition": "select e.id from expansion e\ninner join system s on s.id = e.system_id\nwhere s.id = $system_id",
-        "hide": 0,
+        "hide": 2,
         "includeAll": true,
         "label": "Expansion ID",
         "multi": false,
@@ -1149,7 +1177,7 @@
           "uid": "PostgreSQL"
         },
         "definition": "select id from sensor where expansion_id in ($expansion_id)",
-        "hide": 0,
+        "hide": 2,
         "includeAll": true,
         "label": "Sensor ID",
         "multi": true,
@@ -1165,16 +1193,16 @@
       {
         "current": {
           "selected": false,
-          "text": "2",
-          "value": "2"
+          "text": "3",
+          "value": "3"
         },
-        "hide": 0,
+        "hide": 2,
         "includeAll": false,
         "multi": false,
         "name": "task_id",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "None",
             "value": "None"
           }
@@ -1187,17 +1215,17 @@
       {
         "current": {
           "selected": false,
-          "text": "32",
-          "value": "32"
+          "text": "330",
+          "value": "330"
         },
         "description": "",
-        "hide": 0,
+        "hide": 2,
         "includeAll": false,
         "multi": false,
         "name": "task_timeseries_id",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "None",
             "value": "None"
           }
@@ -1217,6 +1245,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 32,
+  "version": 46,
   "weekStart": ""
 }
