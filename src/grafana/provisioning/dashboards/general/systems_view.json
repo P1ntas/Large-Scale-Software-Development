@@ -373,15 +373,15 @@
             "mode": "thresholds"
           },
           "custom": {
-            "fillOpacity": 70,
+            "fillOpacity": 63,
             "hideFrom": {
               "legend": false,
               "tooltip": false,
               "viz": false
             },
             "insertNulls": false,
-            "lineWidth": 0,
-            "spanNulls": false
+            "lineWidth": 1,
+            "spanNulls": 3600000
           },
           "links": [
             {
@@ -503,11 +503,23 @@
                 }
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "task_name"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Task"
+              }
+            ]
           }
         ]
       },
       "gridPos": {
-        "h": 6,
+        "h": 7,
         "w": 24,
         "x": 0,
         "y": 13
@@ -520,8 +532,8 @@
           "placement": "bottom",
           "showLegend": true
         },
-        "mergeValues": true,
-        "rowHeight": 0.9,
+        "mergeValues": false,
+        "rowHeight": 1,
         "showValue": "auto",
         "tooltip": {
           "mode": "single",
@@ -600,7 +612,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 19
+        "y": 20
       },
       "id": 93,
       "options": {
@@ -656,7 +668,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 24
+        "y": 25
       },
       "id": 3,
       "panels": [],
@@ -716,7 +728,7 @@
         "h": 12,
         "w": 4,
         "x": 0,
-        "y": 25
+        "y": 26
       },
       "id": 7,
       "options": {
@@ -775,7 +787,7 @@
         "h": 12,
         "w": 5,
         "x": 4,
-        "y": 25
+        "y": 26
       },
       "id": 29,
       "options": {
@@ -833,7 +845,7 @@
         "h": 12,
         "w": 5,
         "x": 9,
-        "y": 25
+        "y": 26
       },
       "id": 32,
       "options": {
@@ -891,7 +903,7 @@
         "h": 12,
         "w": 5,
         "x": 14,
-        "y": 25
+        "y": 26
       },
       "id": 31,
       "options": {
@@ -949,7 +961,7 @@
         "h": 12,
         "w": 5,
         "x": 19,
-        "y": 25
+        "y": 26
       },
       "id": 30,
       "options": {
@@ -1056,8 +1068,8 @@
       {
         "current": {
           "selected": true,
-          "text": "6",
-          "value": "6"
+          "text": "3",
+          "value": "3"
         },
         "datasource": {
           "type": "postgres",
@@ -1080,8 +1092,8 @@
       {
         "current": {
           "selected": false,
-          "text": "CP Factory",
-          "value": "CP Factory"
+          "text": "MPS 203 I4.0",
+          "value": "MPS 203 I4.0"
         },
         "datasource": {
           "type": "postgres",
@@ -1153,8 +1165,8 @@
       {
         "current": {
           "selected": false,
-          "text": "12",
-          "value": "12"
+          "text": "2",
+          "value": "2"
         },
         "hide": 0,
         "includeAll": false,
@@ -1175,8 +1187,8 @@
       {
         "current": {
           "selected": false,
-          "text": "240",
-          "value": "240"
+          "text": "32",
+          "value": "32"
         },
         "description": "",
         "hide": 0,
@@ -1205,6 +1217,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 30,
+  "version": 32,
   "weekStart": ""
 }
