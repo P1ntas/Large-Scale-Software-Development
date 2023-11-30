@@ -350,13 +350,24 @@ The Sonar scanner indicates no vulnerabilities, providing an A-grade security ra
 
 ## Quality assurance
 
-Continuous Integration (CI) tools are currently set in place to ensure correct codebase management and consistency. In terms of static analysis, code is scanned using linters everytime a PR wants to commit changed into the _main_ branch. Furthermore, a [SonarQube](https://www.sonarsource.com/products/sonarqube/?gads_campaign=SQ-Mroi-PMax&gads_ad_group=Global&gads_keyword=&gad_source=1&gclid=CjwKCAiAu9yqBhBmEiwAHTx5pxnFfXXnEDXFcodcgZRO5zP1ALPlJ4zaqIEvecU6Sz8-9v2VsiagzxoCHjUQAvD_BwE) environment was setup, giving us access to more code analysis and extensive reports about bugs, security and vulnerabilities. Moreover, a [Bandit](https://bandit.readthedocs.io/en/latest/config.html#bandit-settings) workflow was implemented for different types of tests. The several available tests are [here](https://bandit.readthedocs.io/en/latest/plugins/index.html).
+Continuous Integration (CI) tools are currently set in place to ensure correct codebase management and consistency. In terms of static analysis, code is scanned using linters everytime a PR wants to commit changed into the _main_ branch. Furthermore, a [SonarQube](https://www.sonarsource.com/products/sonarqube/?gads_campaign=SQ-Mroi-PMax&gads_ad_group=Global&gads_keyword=&gad_source=1&gclid=CjwKCAiAu9yqBhBmEiwAHTx5pxnFfXXnEDXFcodcgZRO5zP1ALPlJ4zaqIEvecU6Sz8-9v2VsiagzxoCHjUQAvD_BwE) environment was setup, giving us access to more code analysis and extensive reports about bugs, security and vulnerabilities. 
+
 For the linters we also use [Pylint](https://pylint.pycqa.org/en/latest/user_guide/usage/run.html), which checks the code structure of the custom DINASORE blocks. This linter was altered so it could accept the default structure of DINASORE blocks without raising any exceptions.
 ![image](../docs/images/configuration_linter.png)
 Finally, the used package manager was configured using both [Pytest](https://docs.pytest.org/en/7.4.x/) and [Conda](https://docs.conda.io/en/latest/). The **environment.yml** file shows the several dependencies that will be used by Conda.
 ![image](../docs/images/environment_yml.png)
 In the worflow .yml file, meanwhile, it was necessary to install all the project requirements, otherwise they wouldn't be recognised.
 ![image](../docs/images/configuration_manager.png)
+
+Moreover, a [Bandit](https://bandit.readthedocs.io/en/latest/config.html#bandit-settings) workflow was implemented for different types of tests. The several available tests are [here](https://bandit.readthedocs.io/en/latest/plugins/index.html). The workflow was configured to skip the default code of the chosen tecnologies, as well as irrelevant tests for our application, as we can see in the following files (.bandit and bandit.yaml, respectively):
+
+![.bandit](../docs/images/configuration_bandit_ini.png)
+
+![bandit_yaml](../docs/images/configuration_bandit_skip.png)
+
+Bandit workflow configuration file:
+
+![bandit_yml](../docs/images/configuration_bandit.png)
 
 
 ### SonarQube - Latest scan on branch `main`
