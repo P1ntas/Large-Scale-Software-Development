@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from src.dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER import PROMETHEUS_WRITER
+from dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER import PROMETHEUS_WRITER
 
 class Test_PROMETHEUS_WRITER(unittest.TestCase):
     def setUp(self):
@@ -10,8 +10,8 @@ class Test_PROMETHEUS_WRITER(unittest.TestCase):
     def tearDown(self):
         del self.writer
     
-    @patch('src.dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.CollectorRegistry')
-    @patch('src.dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.Gauge')
+    @patch('dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.CollectorRegistry')
+    @patch('dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.Gauge')
     def test_schedule_init(self, mock_gauge, mock_registry):
         event_name = 'INIT'
         event_value = 1
@@ -48,8 +48,8 @@ class Test_PROMETHEUS_WRITER(unittest.TestCase):
         self.assertEqual(self.writer.JOB_NAME, job_name)
         self.assertEqual(self.writer.PUSHGATEWAY_ADDRESS, f"{host}:{port}")
 
-    @patch('src.dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.CollectorRegistry')
-    @patch('src.dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.Gauge')
+    @patch('dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.CollectorRegistry')
+    @patch('dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.Gauge')
     def test_schedule_init_failure(self, mock_gauge, mock_registry):
         # mock exception
         mock_registry.side_effect = Exception('Registry exception')
@@ -86,7 +86,7 @@ class Test_PROMETHEUS_WRITER(unittest.TestCase):
         self.assertFalse(hasattr(self.writer, 'JOB_NAME'))
         self.assertFalse(hasattr(self.writer, 'PUSHGATEWAY_ADDRESS'))
 
-    @patch('src.dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.push_to_gateway')
+    @patch('dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.push_to_gateway')
     def test_schedule_run(self, mock_push_to_gateway):
         # prepare mocks
         mock_push_to_gateway.return_value = None
@@ -125,7 +125,7 @@ class Test_PROMETHEUS_WRITER(unittest.TestCase):
         self.assertEqual(mock_push_to_gateway.call_count, 1)
         self.assertEqual(mock_push_to_gateway.call_args, ((f"{host}:{port}",), {'job': job_name, 'registry': self.writer.registry}))
 
-    @patch('src.dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.push_to_gateway')
+    @patch('dinasore.resources.function_blocks.MES.PROMETHEUS_WRITER.push_to_gateway')
     def test_schedule_run(self, mock_push_to_gateway):
         # prepare mocks
         mock_push_to_gateway.return_value = None

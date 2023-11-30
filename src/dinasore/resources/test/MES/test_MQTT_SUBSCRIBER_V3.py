@@ -1,6 +1,6 @@
 import unittest
-from src.dinasore.resources.function_blocks.MES.MQTT_SUBSCRIBER_V3 import MQTT_SUBSCRIBER_V3
-from src.dinasore.resources.function_blocks.MES.MQTT_SUBSCRIBER_V3 import SharedResources
+from dinasore.resources.function_blocks.MES.MQTT_SUBSCRIBER_V3 import MQTT_SUBSCRIBER_V3
+from dinasore.resources.function_blocks.MES.MQTT_SUBSCRIBER_V3 import SharedResources
 from threading import Event
 from unittest.mock import MagicMock
 
