@@ -1,0 +1,1 @@
+exclude_dirs: ['src/data/csv_data','src/dinasore/tests','src/dinasore/data_model_fboot','src/dinasore/core']

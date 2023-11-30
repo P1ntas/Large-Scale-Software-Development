@@ -22,4 +22,4 @@ jobs:
         pip install bandit
     - name: Run Bandit
       run: |
-        bandit -r .
+        bandit -c bandit.yaml -r .
