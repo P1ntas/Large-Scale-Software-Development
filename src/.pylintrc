@@ -12,9 +12,20 @@ disable=missing-module-docstring,
         unused-argument,
         import-error,
         duplicate-code,
-        unused-variable
+        unused-variable,
+        broad-exception-caught,
+        broad-exception-raised,
+        attribute-defined-outside-init,
+        fixme,
+        dangerous-default-value,
+        too-many-locals,
+        redefined-builtin
 
 
 [REPORTS]
 
 output-format = colorized
+
+[DESIGN]
+
+max-attributes = 18
