@@ -379,14 +379,14 @@
               "tooltip": false,
               "viz": false
             },
-            "insertNulls": 3600000,
+            "insertNulls": false,
             "lineWidth": 0,
             "spanNulls": false
           },
           "links": [
             {
               "title": "${__data.fields.task_name}",
-              "url": "http://localhost:3000/d/c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b/systems-view?var-task_id=${__data.fields.task_id}&${factory_name:queryparam}&${factory_id:queryparam}&${system_id:queryparam}&${system_model_name:queryparam}&${expansion_id:queryparam}&${sensor_id:queryparam}"
+              "url": "http://localhost:3000/d/c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b/systems-view?var-task_id=${__data.fields.task_id}﻿&﻿${factory_name:queryparam}﻿&﻿${factory_id:queryparam}﻿&﻿${system_id:queryparam}﻿&﻿${system_model_name:queryparam}﻿&﻿${expansion_id:queryparam}﻿&﻿${sensor_id:queryparam}﻿&var-task_timeseries_id=${__data.fields.task_timeseries_id}"
             }
           ],
           "mappings": [
@@ -487,6 +487,22 @@
                 }
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "task_timeseries_id"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": true,
+                  "tooltip": true,
+                  "viz": true
+                }
+              }
+            ]
           }
         ]
       },
@@ -521,7 +537,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "(SELECT tt.timestamp, t.name AS task_name, tt.task_id\r\nFROM task_timeseries tt\r\nINNER JOIN task t ON tt.task_id = t.id\r\nWHERE tt.task_id IS NOT NULL\r\nAND tt.system_id = $system_id \r\nAND tt.timestamp between $__timeFrom() AND $__timeTo() \r\n\r\nUNION\r\n\r\nSELECT tt.timestamp, NULL AS task_name, NULL as task_id\r\nFROM task_timeseries tt\r\nWHERE tt.task_id IS NULL\r\nAND tt.system_id = $system_id \r\nAND tt.timestamp between $__timeFrom() AND $__timeTo() \r\n)\r\n\r\nORDER BY timestamp;",
+          "rawSql": "(SELECT tt.timestamp, t.name AS task_name, tt.task_id, tt.id as task_timeseries_id\r\nFROM task_timeseries tt\r\nINNER JOIN task t ON tt.task_id = t.id\r\nWHERE tt.task_id IS NOT NULL\r\nAND tt.system_id = $system_id \r\nAND tt.timestamp between $__timeFrom() AND $__timeTo() \r\n\r\nUNION\r\n\r\nSELECT tt.timestamp, NULL AS task_name, NULL as task_id,  tt.id as task_timeseries_id\r\nFROM task_timeseries tt\r\nWHERE tt.task_id IS NULL\r\nAND tt.system_id = $system_id \r\nAND tt.timestamp between $__timeFrom() AND $__timeTo() \r\n)\r\n\r\nORDER BY timestamp;",
           "refId": "A",
           "sql": {
             "columns": [
@@ -542,9 +558,97 @@
           }
         }
       ],
-      "title": "Panel Title",
+      "title": "System Task Schedule",
       "transformations": [],
       "type": "state-timeline"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PCC52D03280B7034C"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 0,
+        "y": 19
+      },
+      "id": 93,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select  t.name, ts.timestamp as \"Start\", t.duration as \"Duration\", t.energetic_costs as \"Power Cost\" from task_timeseries ts\r\ninner join task t on t.id = ts.task_id\r\n\r\nwhere ts.id = $task_timeseries_id ",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Task Info",
+      "transformations": [],
+      "type": "table"
     },
     {
       "collapsed": false,
@@ -552,7 +656,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 24
       },
       "id": 3,
       "panels": [],
@@ -612,7 +716,7 @@
         "h": 12,
         "w": 4,
         "x": 0,
-        "y": 20
+        "y": 25
       },
       "id": 7,
       "options": {
@@ -671,7 +775,7 @@
         "h": 12,
         "w": 5,
         "x": 4,
-        "y": 20
+        "y": 25
       },
       "id": 29,
       "options": {
@@ -729,7 +833,7 @@
         "h": 12,
         "w": 5,
         "x": 9,
-        "y": 20
+        "y": 25
       },
       "id": 32,
       "options": {
@@ -787,7 +891,7 @@
         "h": 12,
         "w": 5,
         "x": 14,
-        "y": 20
+        "y": 25
       },
       "id": 31,
       "options": {
@@ -845,7 +949,7 @@
         "h": 12,
         "w": 5,
         "x": 19,
-        "y": 20
+        "y": 25
       },
       "id": 30,
       "options": {
@@ -952,8 +1056,8 @@
       {
         "current": {
           "selected": true,
-          "text": "2",
-          "value": "2"
+          "text": "6",
+          "value": "6"
         },
         "datasource": {
           "type": "postgres",
@@ -976,8 +1080,8 @@
       {
         "current": {
           "selected": false,
-          "text": "MPS 203 I4.0",
-          "value": "MPS 203 I4.0"
+          "text": "CP Factory",
+          "value": "CP Factory"
         },
         "datasource": {
           "type": "postgres",
@@ -1049,13 +1153,36 @@
       {
         "current": {
           "selected": false,
-          "text": "20",
-          "value": "20"
+          "text": "12",
+          "value": "12"
         },
         "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "task_id",
+        "options": [
+          {
+            "selected": false,
+            "text": "None",
+            "value": "None"
+          }
+        ],
+        "query": "None",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "240",
+          "value": "240"
+        },
+        "description": "",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "task_timeseries_id",
         "options": [
           {
             "selected": false,
@@ -1078,6 +1205,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 26,
+  "version": 30,
   "weekStart": ""
 }
