@@ -6,7 +6,7 @@ on:
       - main
       - dev
   pull_request:
-    branches: 
+    branches:
       - main
       - dev
 jobs:
@@ -27,5 +27,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint --rcfile=.pylintrc src/dinasore/resources/function_blocks/MES/*.py
-        
+        pylint --rcfile=src/.pylintrc src/dinasore/resources/function_blocks/MES/*.py
