@@ -67,17 +67,20 @@ During this sprint, the most positive point was the good communication that was 
 ### Team 1 Retrospective
 
 #### Start: 
-    - TODO
+    - Using a team branch to push the changes instead of creating a pull request of each feature/fix to the dev branch
+    - Communicating more with the team members to better understand the progress of the sprint
 
 #### Stop:
-    - TODO
+    - Lacking communication between team members
+    - Not working as soon as expected to finish the assigned issues
+    - Opening pull requests to the dev branch instead of the team branch
 
 #### Continue:
-    - TODO
+    - Following the coding guidelines correctly
 
 #### General Considerations:
 
-TODO
+Overall, we aren't totally happy with the work that was carried out this sprint. The lack of communication between the team members and the done work wasn't totally satisfactory. The meeting held in the start of the sprint was useful to understand the current status of the progress made towards our goals and to shift priorities when needed, but it wasn't enough to get more work done better and more adequately.
 
 ### Team 2 Retrospective
 
