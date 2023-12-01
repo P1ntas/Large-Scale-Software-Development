@@ -142,7 +142,9 @@ The meeting for this sprint review was done on the 17th of November of 2023, tog
 
 ### **Sprint 3 (17 November - 30 November)**
 
-Team 2 fixed the CI pipeline and integrated *Bandit* to scan for security issues; structured, started and integrated the job scheduling feature; revised documentation & added coding guidelines; added SonarQube test coverage; finalized setup of the remote deployment servers and attempted deployment automation with GitHub Actions, but was not finished this sprint.
+Team 1 updated the Grafana System's page with a timeseries regarding sensors values and thresholds; worker together with Team 2 to revise the documentation and coding guidelines. Team 2 fixed the CI pipeline and integrated *Bandit* to scan for security issues; structured, started and integrated the job scheduling feature; revised documentation & added coding guidelines; added SonarQube test coverage; finalized setup of the remote deployment servers and attempted deployment automation with GitHub Actions, but was not finished this sprint.
+
+All teams made the joint effort of improving the teamwork methodologies and coding guidelines.
 
 Because of a health problem on the client, there was no meeting this third sprint and, thus, no feedback was received at the time of writing (30/11/2023).
 
