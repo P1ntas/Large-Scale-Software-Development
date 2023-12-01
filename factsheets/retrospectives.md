@@ -88,6 +88,28 @@ Overall, we are happy with how our work was carried out this sprint. We effectiv
 
 ### Team 3 Retrospective
 
+During this sprint, our team was in charge of analyzing and trying to implement the issue [#7](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=41408318).
+
+The issue was somewhat related to the machine learning objective for the machines to auto-manage themselves. However, as we had already discussed with anotehr team, this is impossible to implement in relaity, once again due to the presence of only mock data. Also discussing both between us and with other teams, we came to the conclusion that this issue will most likely be abandoned. We also took advantage of the happiness meters to reflect this, as the poor interaction with the client also lead to this doubt state when implementing these kind of issues.
+
+However, we can still analyze this sprint in the "Start, Stop, Continue" way.
+
+### Start
+
+- We will start to work on another issue that is more feasible to implement, and that is not related to machine learning.
+- We will start to ask from more feedback from the client directly, as their requests are not always clear and feasible.
+- We should start dedicating more time to the project board organization and selection of issues to work on.
+
+### Stop
+
+- We will stop working on tasks that are too complex and maybe not so much aligned with the project's objectives and acceptance criteria.
+
+### Continue
+
+- We will continue to work hard and professionally on the issues we are assigned and try to deliver the best possible solutions.
+- We will continue to research and learn more about the technologies we are using, so that we can deliver better results.
+- We will continue to use good coding and project management practices, so we can stay organized.
+
 ### Team 4 Retrospective
 
 
