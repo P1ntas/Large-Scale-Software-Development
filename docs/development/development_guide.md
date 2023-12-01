@@ -70,7 +70,7 @@ Then, add a new server with the following credentials:
 **Password**: postgres
 ```
 
-![gif](../docs/images/pgAdmin.gif)
+![gif](../images/pgAdmin.gif)
 
 ### PostgreSQL
 
@@ -115,7 +115,7 @@ After logging in, you will be prompted to change the password, but you can skip 
 
 From there, select on the left side the `Dashboards` tab. This will show the available dashboards folders. Select the `General` folder and then select the `General View` dashboard.
 
-![gif](../docs/images/grafana_home.gif)
+![gif](../images/grafana_home.gif)
 
 Now, you can play around with the variables and see the data in the dashboard.
 
@@ -179,7 +179,7 @@ python core/main.py -p 61500 -u 4841
   3. On the System Explorer, left click to open the **MES** -> Right click on the **Type Library** -> Import -> General -> File System -> Next -> Browse -> Select the [function blocks folder](./resources/function_blocks/) -> Finish
   4. On the System Explorer, open **System Configuration** (**1**). Now add 2 FORTE_PC (**2**) and 1 Ethernet (**3**). Link the Forte PCs to the Ethernet (**4**). Update the port of the second FORTE_PC to 61500 (**5**).
 
-     ![image](../docs/images/Screenshot_1.png)
+     ![image](../images/Screenshot_1.png)
 
   5. On the System Explorer, open **MESApp**
   6. From the palette on the right side, drag the following function blocks:
@@ -190,7 +190,7 @@ python core/main.py -p 61500 -u 4841
      - **MQTT_SUBSCRIBER_V3**
      - **PROMETHEUS_WRITER**
 
-     ![image](../docs/images/Screenshot_2.png)
+     ![image](../images/Screenshot_2.png)
 
   7. Now, proceed to link the function blocks and fill the parameters with:
 
@@ -220,7 +220,7 @@ python core/main.py -p 61500 -u 4841
        - VALUE_NAME_3_DESCR = "Moving average of the sensor". This is the description of the moving average of the sensor.
        - JOB_NAME = "sensor_data". This is the job name of the sensor data.
 
-     ![image](../docs/images/Screenshot_3.png)
+     ![image](../images/Screenshot_3.png)
 
      NOTE: Make sure to link the function blocks as shown in the image above. This step is important to ensure that the function blocks are linked in the correct order and that it follows the flow of the data.
 
@@ -229,17 +229,17 @@ python core/main.py -p 61500 -u 4841
      - **SENSOR_SIMULATOR_V2**, **MOVING_AVERAGE_V2**, **MQTT_PUBLISHER_V3**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC" -> Select "EMB_RES"
      - **MQTT_SUBSCRIBER_V3**, **PROMETHEUS_WRITER**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC_1" -> Select "EMB_RES"
 
-     ![image](../docs/images/Screenshot_4.png)
+     ![image](../images/Screenshot_4.png)
 
   9. Now the systems are ready for deploy. Change to the **Deploy View** (right corner icon or Window -> Perspective -> Open Perspective -> Deployment);
 
   10. Select your configuration and click Deploy to upload the configuration to the Smart Components;
 
-      ![image](../docs/images/Screenshot_5.png)
+      ![image](../images/Screenshot_5.png)
 
   11. To monitor the system, change to the previous view, then right-click on the project folder, and select Monitor System. Now you can select which variables you want to monitor, for that right-click inside the variable and select Watch;
 
-      ![image](../docs/images/Screenshot_7.png)
+      ![image](../images/Screenshot_7.png)
 
   12. To stop the monitoring process, right-click in the project folder and select Remove Watches and unselect Monitor System;
 
