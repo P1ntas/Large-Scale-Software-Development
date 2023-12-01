@@ -78,8 +78,8 @@ Provide here an historical record (for each sprint) of the four key metrics and 
 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 0 | 8 | 0 | 2 | 10 |
 | 2 | 10 | 3 | 0 | 0 | 13 |
-| 3 |  |  |  |  |  |
-| 4 |  |  |  |  |  |
+| 3 | 6 | - | - | - | - |
+| 4 | - | - | - | - | - |
 
 ## Team Retrospectives
 
