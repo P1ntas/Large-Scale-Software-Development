@@ -64,6 +64,7 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 - Added CI tools to the project [#66](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/71).
     - Added Pylint as a GitHub Action to verify Python code.
     - Added Python Package using Conda as a GitHub Action to verify Jupyter Notebooks code.
+    - Added Bandit as a GitHub Action to analyse the Python code.
 
 ### Fixed
 - Fixed the [docker-compose.yml](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/main/src/docker-compose.yml) file to run the project on MAC OS.
@@ -76,3 +77,28 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 ### Removed
 - Removed extra documentation files that were inside the [source folder](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/tree/main/src).
 - Removed *Sensor_Simulator_V2* function block.
+
+## [0.0.4] - 2023-12-01
+
+### Added
+- Added remote deployment servers & respective [documentation](./docs/development/development_guide.md#staging-production--deployment).
+- Added a [Coding Guidelines section](./docs/development/development_guide.md#coding-guidelines) to the development guide.
+- Added a [Pylint](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/a8a85476b4c3b894c16eb8c6517d7d08d5f8e578/src/.pylintrc) configuration file for the linter to ignore some potential errors on the default DINASORE blocks.
+- Added two [Bandit](https://bandit.readthedocs.io/en/latest/index.html) setup files: [.bandit](../.bandit) to specify the targets and the tests plugins to skip and [bandit.yaml](../bandit.yaml) to specify the directories and/or files that we want to exclude from the verification.
+- Added a [Bandit configuration file](../.workflows/bandit.yml) to implement the workflow for the GitHub action.
+- Added two new visualizations in Grafana to display the job schedule and its tasks.
+
+### Fixed
+- Fixed the [docker-compose.yml](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/main/src/docker-compose.yml) to stop usage of deprecated modules.
+- Fixed the [environment.yml](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/a8a85476b4c3b894c16eb8c6517d7d08d5f8e578/environment.yml) to use the correct prefix path for Conda.
+- Fixed the [package.yml](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/a8a85476b4c3b894c16eb8c6517d7d08d5f8e578/.github/workflows/package.yml) to run the necessary commands for the worflow to work correctly.
+
+
+### Changed
+- Updated [development.md](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/main/docs/development.md) and separated the development guide, security concerns, quality assurance and retrospective sections into separate files for better readability. 
+- Updated `General View` and `System View` dashboards in Grafana to include the host to be used in the datalinks.
+- Updated the [create.sql](src/data/create.sql) file to contain the new tables for the job schedule and its tasks.
+- Updated the [generator.py](src/data/generator.py) script to include data for the tables of the job schedule and its tasks.
+
+### Removed
+...
