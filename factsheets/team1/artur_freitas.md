@@ -32,7 +32,7 @@ My team's user stories:
 ### Contribution
 In this sprint, as i'm the Product Owner, i helped refining the product backlog and actively collaborated with the development team to ensure a clear understanding of the user stories and their priorities. By communicating with them, i addressed questions, provided clarifications, and facilitated discussions to refine the backlog.
 
-I also engaged with the client to gather valuable feedback, incorporating their insights into the user stories. This iterative process helped all the teams to align the development efforts with the evolving project needs and ensured that the backlog accurately reflected client priorities.
+Also in this sprint we didn't have the client's feedback, because it wasn't possible for the PO's to meet with the client. But we will try to keep working without the feedback until we gather new information for our teams.
 
 ### The user story that I am most proud of
 My team's user stories:
