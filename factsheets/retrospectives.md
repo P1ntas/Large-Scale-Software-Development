@@ -38,7 +38,13 @@ During sprint 1, our team had to deal with a PBI that was of low priority but hi
 ### Overall Retrospective
 On the one hand, the class worked steadily on the issues, never standing still. On the other hand, no standards were defined until late in the sprint, in terms of commit messages, branch name structure, and anything else related to working guidelines.
 
-### Team 1 Retrospective
+#### Team 1 Retrospective
+Negative points :
+- Progress is sometimes obscure with our team and we don't really know what is going with other team members.
+
+Positive points:
+- Good comunication between other teams.
+- Started to use more technical practices.
 
 ### Team 2 Retrospective
 
