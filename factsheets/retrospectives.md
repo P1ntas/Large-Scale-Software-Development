@@ -66,6 +66,22 @@ During this sprint, the most positive point was the good communication that was 
 
 ### Team 1 Retrospective
 
+#### Start: 
+    - Using a team branch to push the changes instead of creating a pull request of each feature/fix to the dev branch
+    - Communicating more with the team members to better understand the progress of the sprint
+
+#### Stop:
+    - Lacking communication between team members
+    - Not working as soon as expected to finish the assigned issues
+    - Opening pull requests to the dev branch instead of the team branch
+
+#### Continue:
+    - Following the coding guidelines correctly
+
+#### General Considerations:
+
+Overall, we aren't totally happy with the work that was carried out this sprint. The lack of communication between the team members and the done work wasn't totally satisfactory. The meeting held in the start of the sprint was useful to understand the current status of the progress made towards our goals and to shift priorities when needed, but it wasn't enough to get more work done better and more adequately.
+
 ### Team 2 Retrospective
 
 #### Start: 
@@ -96,22 +112,34 @@ However, we can still analyze this sprint in the "Start, Stop, Continue" way.
 
 ### Start
 
-- We will start to work on another issue that is more feasible to implement, and that is not related to machine learning.
-- We will start to ask from more feedback from the client directly, as their requests are not always clear and feasible.
-- We should start dedicating more time to the project board organization and selection of issues to work on.
+    - We will start to work on another issue that is more feasible to implement, and that is not related to machine learning.
+    - We will start to ask from more feedback from the client directly, as their requests are not always clear and feasible.
+    - We should start dedicating more time to the project board organization and selection of issues to work on.
 
 ### Stop
 
-- We will stop working on tasks that are too complex and maybe not so much aligned with the project's objectives and acceptance criteria.
+    - We will stop working on tasks that are too complex and maybe not so much aligned with the project's objectives and acceptance criteria.
 
 ### Continue
 
-- We will continue to work hard and professionally on the issues we are assigned and try to deliver the best possible solutions.
-- We will continue to research and learn more about the technologies we are using, so that we can deliver better results.
-- We will continue to use good coding and project management practices, so we can stay organized.
+    - We will continue to work hard and professionally on the issues we are assigned and try to deliver the best possible   solutions.
+    - We will continue to research and learn more about the technologies we are using, so that we can deliver better results.
+    - We will continue to use good coding and project management practices, so we can stay organized.
 
 ### Team 4 Retrospective
 
+#### Start: 
+    - TODO
+
+#### Stop:
+    - TODO
+
+#### Continue:
+    - TODO
+
+#### General Considerations:
+
+TODO
 
 #
 
