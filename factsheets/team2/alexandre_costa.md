@@ -20,7 +20,13 @@ In this sprint, I worked on the dockerization of Dinasore and had my teammates j
 
 ## Sprint 3
 
-...
+In this sprint, I worked on the implementation of Bandit to help finding common security issues in Python code.
+
+#### Pull request that I am most proud of
+- [#105](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/105)
+
+#### The user story that I am most proud of
+- [#97](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/97)
 
 ## Sprint 4
 

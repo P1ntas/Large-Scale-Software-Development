@@ -39,7 +39,21 @@ This can include PRs that you have implemented or reviewed during the sprint.
 
 ## Sprint 3
 
-...
+#### The user story that I am most proud of
+ * [#102](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/102)
+
+### The two pull requests that I am most proud of
+
+This can include PRs that you have implemented or reviewed during the sprint.
+
+ * #3 [114] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/114)
+ * #4 [105] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/105)
+
+
+### Two contributions of other types that I am most proud of
+
+- Worked together with João in the machine's job schedule display. This led among other things to a change in the mockup data adding the task concept that would be used in grafana's state timeline. 
+- Took part in the work distribution, contributing for a better workflow inside the team.
 
 
 ## Sprint 4
