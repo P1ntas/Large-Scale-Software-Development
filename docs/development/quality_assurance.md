@@ -5,4 +5,10 @@ The Continuous Integration linter is complaining, however, about some default fo
 
 ## SonarQube - Latest scan on branch `main`
 
-The Sonar scanner reports a 6.2% code duplication. Additionally, it falsely suggests a 0.0% code coverage, despite the presence of tests in the project. This discrepancy arises from the scanner's current lack of configuration to detect coverage, an issue to be solved in the next sprint. Regarding code smells, the scanner identifies 79 instances but assigns an A-grade rating for maintainability. In terms of reliability, the scanner points out 2 bugs.
+The Sonar scanner reports a 6.0% code duplication. Additionally, the coverage report reveals a 3.2% code coverage. Regarding code smells, the scanner identifies 79 instances but assigns an A-grade rating for maintainability. In terms of reliability, the scanner points out 2 bugs.
+
+![SonarQube Quality Rating](../images/sonarqube_quality.png)
+
+Regarding code coverage, a lot of components that already came integrated with the DINASORE technology are not covered by tests. This is because the DINASORE technology is not supposed to be changed. If we only consider the implemented components, the coverage increases to 20.3%. The other statistics also improve.
+
+![SonarQube Quality Rating](../images/sonarqube_quality_2.png)

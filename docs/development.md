@@ -65,7 +65,7 @@ For security-related questions regarding the project and respective testing logs
 
 ## Quality Assurance
 
-For an explanation pertaining the project's quality assurance, please refer to the [Quality Assurance sheet](./development/security_concerns.md).
+For an explanation pertaining the project's quality assurance, please refer to the [Quality Assurance sheet](./development/quality_assurance.md).
 
 ## Metrics
 
