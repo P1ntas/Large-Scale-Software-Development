@@ -76,9 +76,9 @@ Provide here an historical record (for each sprint) of the four key metrics and 
 | Sprint | Velocity (T1) | Velocity (T2) | Velocity (T3) | Velocity (T4) | Velocity (Product) |
 |-------------|-------------|-------------|-------------|-------------|-------------|
 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 8 | 0 | 2 | 10 |
+| 1 | 8 | 8 | 0 | 2 | 18 |
 | 2 | 10 | 3 | 0 | 0 | 13 |
-| 3 | 6 | - | - | - | - |
+| 3 | 6 | - | - | - | 6 |
 | 4 | - | - | - | - | - |
 
 ## Team Retrospectives
