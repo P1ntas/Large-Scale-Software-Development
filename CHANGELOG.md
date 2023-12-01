@@ -6,7 +6,7 @@ Refer to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) for guidelines
 Note that the notion of a "changelog" (or of "release notes") is a common practice for projects with well establised releases, but is harder to adopt when using continuous deployment. You may need to adapt the guidelines above if that is your case.
 -->
 
-## [0.0.1] - 2023-09-30
+## [0.0.1] - 2023-09-30 (Sprint 0)
 
 ### Added
 
@@ -22,7 +22,7 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
     - Includes a simple dashboard with the data collected by the sensors being updated at runtime
     - Includes a README.md with instructions on how to run the demo
 
-## [0.0.2] - 2023-10-27
+## [0.0.2] - 2023-10-27 (Sprint 1)
 
 ### Added
 - Inclusion of DINASORE in the project
@@ -51,7 +51,7 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
     - The Gateway service will be used instead
 - Removed the Flask Server dependencies from requirements.txt
 
-## [0.0.3] - 2023-11-24
+## [0.0.3] - 2023-11-24 (Sprint 2)
 
 ### Added
 - Inclusion of alerting rules in Grafana [#91](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/91).
@@ -78,7 +78,7 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 - Removed extra documentation files that were inside the [source folder](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/tree/main/src).
 - Removed *Sensor_Simulator_V2* function block.
 
-## [0.0.4] - 2023-12-01
+## [0.0.4] - 2023-12-01 (Sprint 3)
 
 ### Added
 - Added remote deployment servers & respective [documentation](./docs/development/development_guide.md#staging-production--deployment).
@@ -102,3 +102,11 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 
 ### Removed
 ...
+
+### PBIs Done
+
+- [Fix Documentation](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=45604771)
+- [Fix CI tools problems](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=45479301)
+- [Job Scheduling](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=45645025)
+- [ML data preparation](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=43786291)
+- [SonarQube](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=43786291)
