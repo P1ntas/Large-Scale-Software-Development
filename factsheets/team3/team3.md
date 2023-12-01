@@ -83,7 +83,29 @@ Key achievements:
 
 ## Sprint 3
 
-...
+During Sprint 3, the team focused on trying to implement machine learning models and auto-manage features for the machines. However, we could only research about this feature until we came to the conclusion that it was not feasible to implement, at least in the current state of the project, as we were not provided with any form of real data that would enable us to successfuly implement and test this feature. The team also worked on the documentation and followed the established guidelines in order to maintain the quality of the project.
+
+Key achievements:
+
+- The team successfully gathered relevant information about the auto-manage feature, and we were able to conclude that it was not feasible to implement it in the current state of the project.
+
+- The information mentioned above was deemed relevant as it could be of great interest for future work on the project, and it was also a good learning experience for the team.
+
+- With these conclusions we are also able to focus on other features that are more feasible to implement, and that will be more useful for the project in the future.
+
+### The user storie that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### The pull request that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+### Four contributions of other types that we are most proud of
+
+ * 1 - The team continued to follow the branch and commit naming conventions (using GitFlow and other patterns), as well as the pull request templates, to make the project more organized and easier to understand for everyone.
+ * 2 - We made sure to inform other teams about our conclusions regarding the auto-manage feature, so that they could also focus on other features that are more feasible to implement.
+ * 3 - We collaborated with other teams by providing feedback, asking questions and overall helping each other to improve the project as a whole.
 
 
 ## Sprint 4

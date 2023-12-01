@@ -69,8 +69,25 @@ More testing, validation and betetr organization of the repository and overall w
 
 ## Sprint 3
 
-...
+During this phase of the project, I delved into understanding how to reinforce the security and access control measures for our Grafana system, particularly about safeguarding the data and configuration of performance indicators. My research involved a thorough investigation into methods for enhancing the security features of Grafana. Although the direct implementation is yet to be initiated, this research ensures a nuanced understanding of security measures, paving the way for the future implementation of strict access controls and data security protocols for our indicator configurations.
 
+These links emerged during our exploration: 
+- [Grafana roles and permissions documentation](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/)
+- [Grafana security blog post](https://grafana.com/blog/2022/02/22/how-secure-is-your-grafana-instance-what-you-need-to-know/)
+
+They proved to be a source of information, offering insights into best practices and strategies for augmenting the security landscape of Grafana.
+
+### The user storie that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### The pull request that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### Two contributions of other types that I am most proud of
+
+During this sprint I collaborated closely with José to better undersand the security concerns and features of Grafana.
 
 ## Sprint 4
 
