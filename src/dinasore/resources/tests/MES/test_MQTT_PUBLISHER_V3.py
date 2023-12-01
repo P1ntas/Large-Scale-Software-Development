@@ -1,5 +1,5 @@
 import unittest
-from dinasore.resources.function_blocks.MES.MQTT_PUBLISHER_V3 import MQTT_PUBLISHER_V3
+from src.dinasore.resources.function_blocks.MES.MQTT_PUBLISHER_V3 import MQTT_PUBLISHER_V3
 from unittest.mock import MagicMock
 from paho.mqtt.client import Client
 from copy import deepcopy

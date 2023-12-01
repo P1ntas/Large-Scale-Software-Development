@@ -1,5 +1,5 @@
 import unittest
-from dinasore.resources.function_blocks.MES.MOVING_AVERAGE_V2 import MOVING_AVERAGE_V2
+from src.dinasore.resources.function_blocks.MES.MOVING_AVERAGE_V2 import MOVING_AVERAGE_V2
 
 class TestMOVING_AVERAGE_V2(unittest.TestCase):
     def setUp(self):
