@@ -38,39 +38,25 @@ Managed the Dockerization for the DINASORE tool, established the majority of CI/
 
 ## Sprint 3
 
-...
+### Some user stories that we are most proud of
+
+- [Fix CI Tools](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/97)
+- [Job Scheduling: Visualization](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/102)
+- [SonarQube Coverage](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/112)
+
+### Some pull requests that we are most proud of
+
+- [Job Scheduling: Visualization](hhttps://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/114)
+- [SonarQube Coverage](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/116)
+- [Fix CI Tools](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/105)
+
+### General Contributions
+
+Fixed the CI pipeline and integrated *Bandit* to scan for security issues, structured, started and integrated the job scheduling feature, revised documentation & added coding guidelines, added SonarQube test coverage, finalized setup of the remote deployment servers and handled deployment automation with GitHub Actions.
 
 ## Sprint 4
 
 ...
-
-# Sprint Restrospectives
-
-## Sprint 1 
-
-Positive points:
-- Good comunication between team members
-- Good starting basis regarding the used technology
-
-Negative points :
-- Difficulty in organizing the work considering that it was too sequential
-- There were some problems when setting up the DINASORE tool and the 4diac IDE
-
-## Sprint 2
-
-Although communication started off a bit rocky, there was a noticeable improvement in communication and collaboration among team members in the latter half of the sprint. This positive trend contributed to a more cohesive and productive work environment. Due to this, the team successfully accomplished all the predefined tasks set at the beginning of the sprint and dynamically assigned itself to next steps of the project. However, the collaborative hurdles at the start of the sprint, mixed in with sequential work that affected other tasks assigned to the team, meant that productivity bloomed late in the sprint. Even then, our team is proud of the work we've done and with our growth from the first sprint.
-
-# Sprint Reviews
-
-## Sprint 1
-
-Our team's main objective this first sprint was familiarizing ourselves with the DINASORE technology and its requirements for a full and thorough implementation in our project. For this sprint, we worked in conjunction with [João Araújo](../factsheets/team1/joao_araujo.md) throughout the whole process. Overall, the team exceeded expectations in not only understanding the technology at hand but also in its partial integration in the main codebase. Documentation and a setup guide were also written.
-Furthermore, the client's feedback was fully positive, which also confirmed the direction in which the team was headed, although there were some drawbacks with the meeting with the client, such as the resistance on their part for us to work with real data from the laboratory in the future. However, since the whole project is not that complex, it may not bring any consequences to its development.
-The meeting for this sprint review was done on the 26th of october of 2023, together with all the other members of the team and the previously mentioned Team 1 member, João Araújo.
-
-## Sprint 2
-
-For this sprint, the team committed to take care of both the Dockerization process of the DINASORE tool and the initial setup of the CI/CD tools which will be used throughout the rest of the project. We also took care of some other steps such as updating the documentation by introducing the new sensor simulator, and setting the configuration of some tools that can be used to analyse the codebase. In terms of collaboration conventions, our team subscribes to a tight gitflow usage and manages the codebase correctly. However, we can still point out some inconsistencies, like the lack of thorough PR commentary, which we still need to work on.
 
 ## Overall Product
 

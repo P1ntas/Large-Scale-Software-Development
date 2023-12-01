@@ -60,13 +60,31 @@ During this sprint, the most positive point was the good communication that was 
 
 #
 
-## **Sprint 3 (17 November - ...)**
+## **Sprint 3 (17 November - 1 December)**
 
 ### Overall Retrospective
 
 ### Team 1 Retrospective
 
 ### Team 2 Retrospective
+
+#### Start: 
+    - Collecting more metrics in order to better understand our performance during our sprint and identify bottlenecks
+    - Enphasizing communication at the start of the sprint to make sure work is laid out more easily during its duration
+    - Using a team-wide branch to push changes instead of committing directly to the *dev* branch
+
+#### Stop:
+    - Committing directly to the *dev* branch 
+
+#### Continue:
+    - Good communication throughout the sprint
+    - Following the coding guidelines correctly
+    - Good work balance between teammates
+    - Good overall productivity
+
+#### General Considerations:
+
+Overall, we are happy with how our work was carried out this sprint. We effectively tackled the issues assigned to us and divided the work evenly, allowing for our most productive sprint yet. We held two team-wide meetings to understand the current status of the progress made towards our goals and shifted priorities when needed, which proved to be immensely useful to get more work done better and more adequately. 
 
 ### Team 3 Retrospective
 
