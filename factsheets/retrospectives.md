@@ -66,6 +66,19 @@ During this sprint, the most positive point was the good communication that was 
 
 ### Team 1 Retrospective
 
+#### Start: 
+    - TODO
+
+#### Stop:
+    - TODO
+
+#### Continue:
+    - TODO
+
+#### General Considerations:
+
+TODO
+
 ### Team 2 Retrospective
 
 #### Start: 
@@ -96,22 +109,34 @@ However, we can still analyze this sprint in the "Start, Stop, Continue" way.
 
 ### Start
 
-- We will start to work on another issue that is more feasible to implement, and that is not related to machine learning.
-- We will start to ask from more feedback from the client directly, as their requests are not always clear and feasible.
-- We should start dedicating more time to the project board organization and selection of issues to work on.
+    - We will start to work on another issue that is more feasible to implement, and that is not related to machine learning.
+    - We will start to ask from more feedback from the client directly, as their requests are not always clear and feasible.
+    - We should start dedicating more time to the project board organization and selection of issues to work on.
 
 ### Stop
 
-- We will stop working on tasks that are too complex and maybe not so much aligned with the project's objectives and acceptance criteria.
+    - We will stop working on tasks that are too complex and maybe not so much aligned with the project's objectives and acceptance criteria.
 
 ### Continue
 
-- We will continue to work hard and professionally on the issues we are assigned and try to deliver the best possible solutions.
-- We will continue to research and learn more about the technologies we are using, so that we can deliver better results.
-- We will continue to use good coding and project management practices, so we can stay organized.
+    - We will continue to work hard and professionally on the issues we are assigned and try to deliver the best possible   solutions.
+    - We will continue to research and learn more about the technologies we are using, so that we can deliver better results.
+    - We will continue to use good coding and project management practices, so we can stay organized.
 
 ### Team 4 Retrospective
 
+#### Start: 
+    - TODO
+
+#### Stop:
+    - TODO
+
+#### Continue:
+    - TODO
+
+#### General Considerations:
+
+TODO
 
 #
 
