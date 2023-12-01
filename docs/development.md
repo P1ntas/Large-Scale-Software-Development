@@ -67,7 +67,7 @@ For security-related questions regarding the project and respective testing logs
 
 For an explanation pertaining the project's quality assurance, please refer to the [Quality Assurance sheet](./development/security_concerns.md).
 
-## Metrics
+## Metrics (10/10)
 
 Describe how you captured each of the "four key metrics" (e.g., automatic mechanism, survey to the team on the end of each sprint).
 
@@ -78,7 +78,7 @@ Provide here an historical record (for each sprint) of the four key metrics and 
 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 8 | 8 | 0 | 2 | 18 |
 | 2 | 10 | 3 | 0 | 0 | 13 |
-| 3 | 6 | - | - | - | 6 |
+| 3 | 6 | 7 | - | - | 13 |
 | 4 | - | - | - | - | - |
 
 ## Team Retrospectives
