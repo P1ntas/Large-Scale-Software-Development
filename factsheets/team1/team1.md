@@ -111,12 +111,19 @@ Additionally, we were was tasked with the responsibility of upgrading the existi
 
 - [#98](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/98) - Together with [Team 2](../team2/team2.md), we fixed the documentation content distribution across multiple files and fixed previous documentation issues.
 
+- [#56](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/56) - Integrate real-time data feeds for maintenance features.
+
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Created a Mockup
+
 ### The four pull requests that we are most proud of
 
 - [#114](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/114) - This PR was essential to add the new Grafana visualizations to the development branch according to a systems job scheduler.
 
 - [#101](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/101) - Updated the documentation and the Changelog to reflect the changes made in the project in sprint 2.
 
+- [Mockup](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/documentation/docs/images/mockup.png) - Created a Mockup for Data Analytics page
+
+- [#108](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/108) - Implemented maintenance status, schedule and logs.
 
 ### Four contributions of other types that we are most proud of
 
