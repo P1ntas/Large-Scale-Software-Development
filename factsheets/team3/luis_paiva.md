@@ -68,9 +68,21 @@ More testing, validation and betetr organization of the repository and overall w
 
 
 ## Sprint 3
+During this project phase, as the Product Owner, i maintaned a continuous communication with the team to ensure a seamless workflow. While regrettably, we didn't have the opportunity to meet with the client this week, we have gained a clearer understanding of their requirements. Moving forward, I remain dedicated to facilitating effective communication and collaboration within the team, ensuring that our development aligns seamlessly with the client's expectations and project goals.
 
-...
+### The user storie that I am most proud of
 
+* None relevant, as we did not implement any code.
+
+ ### The pull request that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### Two contributions of other types that I am most proud of
+
+During this sprint, I communicated my team's work to the other product owners and shared other product owners ideas with my team.
+
+I helped to refine the product backlog.
 
 ## Sprint 4
 

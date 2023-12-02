@@ -69,8 +69,30 @@ More testing, validation and betetr organization of the repository and overall w
 
 ## Sprint 3
 
-...
+During this sprint, my contribution to the team and project overall, was to research ways of implementing auto-manage processess to the machines. As the sprint went by, the team globally realized that the implementation of this issue might not be feasible, which was actually our final conclusion.
+However, I gathered relevant information that might be useful later on, on an hypotetical stage of the project where the client would give us real data regarding machines and production lines. The following links contain this information:
 
+- [Grafana Machine Learning Documentation](https://grafana.com/docs/grafana-cloud/alerting-and-irm/machine-learning/) - Depicts the use of machine learning models that could be implemented if we used a Grafana cloud instance (however, this can be costly)
+
+- [Grafana Webinar on ML and adaptive alerts](https://grafana.com/go/webinar/grafana-machine-learning-adaptive-alerting/) - Introduction to predictions using Grafana linked data
+
+Reflecting on this sprint, I think I coud have contributed in a more positive way if the issue assigned to our team was simpler, as conciliating such a complex theme with other projects was very difficult. In the next sprint
+
+As a Scrum Master, I also interacted with the other teams Scrum Masters so we could decide what to do with the issues we faced along this sprint.
+
+### The user storie that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### The pull request that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### Two contributions of other types that I am most proud of
+
+During this sprint I interacted more with other teams and its members, and I also checked that the alerting feature makes sense with the data, which was updated (however, this can be improved in the next sprint).
+
+I played a big part in organizing our team's work and making sure everyone had something to do. We faced some challenges, but I helped my teammates when they needed support. 
 
 ## Sprint 4
 

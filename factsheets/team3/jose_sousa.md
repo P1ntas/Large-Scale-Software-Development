@@ -68,9 +68,20 @@ More testing, validation and betetr organization of the repository and overall w
 
 
 ## Sprint 3
+Throughout this project phase, I dedicated substantial time to researching ways to enhance the security and access control measures for our Grafana system, with a specific focus on safeguarding the data and configuration of performance indicators.
+I collaborated with my colleague, Eduardo, who was also working on this aspect of the project. Together, we shared insights, discussed findings, and coordinated our efforts to streamline our approach in fortifying the security of our Grafana instance. While the direct implementation is pending, this collaborative research helped us understand security measures.
 
-...
+### The user storie that I am most proud of
 
+* None relevant, as we did not implement any code.
+
+ ### The pull request that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### Two contributions of other types that I am most proud of
+
+I collaborated with Eduardo and the rest of the team to enhance the workflow and share ideas.
 
 ## Sprint 4
 

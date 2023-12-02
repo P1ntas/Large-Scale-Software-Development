@@ -65,7 +65,19 @@ More testing, validation and betetr organization of the repository and overall w
 
 ## Sprint 3
 
-...
+During this sprint, my primary focus was on advancing the subtask associated with our user story, specifically pertaining to the display of performance indicators through a user-friendly interface. To lay the groundwork for this task, I got into the extensive documentation provided by Grafana.The link [https://grafana.com/docs/grafana-cloud/introduction/metrics-and-visualizations/] served as a valuable resource, providing insights into the nuances of visualization options within the Grafana ecosystem. 
+I also dug deep into Grafana interface, checking out different ways to show our data in an easy-to-understand way. This part was super important for planning how our performance indicators will look. Even though I didn’t chenge the actual interface yet because we don’t have access to the real data of the machines, all this research sets us up well. It makes sure that when we have the data, we're on the right track to make our performance indicators look awesome and easy for everyone to use.
+
+### The user storie that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### The pull request that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### Two contributions of other types that I am most proud of
+With the knowledge that I acquired during this research, I helped my team members to better understand the grafana interface. 
 
 
 ## Sprint 4
