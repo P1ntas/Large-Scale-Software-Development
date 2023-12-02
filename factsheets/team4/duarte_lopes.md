@@ -58,7 +58,21 @@ Since this sprint was mainly used for the creation of user stories and other rel
 
 ## Sprint 3
 
-...
+### The two user stories that I am most proud of
+
+* ML model - Data Pipeline
+
+### The two pull requests that I am most proud of
+
+* feature/data_analysis
+
+
+### Two contributions of other types that I am most proud of
+
+* I worked in the branch feature/data_analysis
+* Started to clean the data
+* Worked with the data that João Araújo provided us since the data isn't already present in the database and it's not that clear. This was a huge help.
+* Created python scripts to generate data and train our model.
 
 
 ## Sprint 4
