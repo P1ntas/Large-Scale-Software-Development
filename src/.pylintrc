@@ -1,0 +1,31 @@
+[MESSAGES CONTROL]
+
+disable=missing-module-docstring,
+        invalid-name,
+        missing-class-docstring,
+        missing-function-docstring,
+        too-many-arguments,
+        no-else-return,
+        inconsistent-return-statements,
+        too-few-public-methods,
+        wrong-import-order,
+        unused-argument,
+        import-error,
+        duplicate-code,
+        unused-variable,
+        broad-exception-caught,
+        broad-exception-raised,
+        attribute-defined-outside-init,
+        fixme,
+        dangerous-default-value,
+        too-many-locals,
+        redefined-builtin
+
+
+[REPORTS]
+
+output-format = colorized
+
+[DESIGN]
+
+max-attributes = 18

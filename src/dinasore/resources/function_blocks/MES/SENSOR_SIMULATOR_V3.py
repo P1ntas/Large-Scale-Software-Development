@@ -1,7 +1,6 @@
 import numpy as np
 import time
 import psycopg2
-import time
 import bisect
 
 # TODO: save fault_state and last value of 'IncrementalFaultValue' for each sensor
@@ -68,8 +67,8 @@ DEFAULT_TEMP_VALUES = [
     (97, 48),
     (100, 44),
     (105, 39),
-    (110, 35), 
-    (120, 30), 
+    (110, 35),
+    (120, 30),
     (140, 26),
     (150, 26)
 ]
@@ -96,7 +95,7 @@ DEFAULT_VALUES = {
     'Temperature': (DEFAULT_STEP_TEMP, DEFAULT_NOISE_LEVEL_TEMP, DEFAULT_TEMP_VALUES),
     'Pressure': (DEFAULT_STEP_PRESSURE, DEFAULT_NOISE_LEVEL_PRESSURE, DEFAULT_PRESSURE_VALUES)
 }
-    
+
 class IncrementalFaultValue:
     def __init__(self, target, step = 0.05, time_step = 0.1) -> None:
         """
@@ -107,7 +106,11 @@ class IncrementalFaultValue:
         self.step = step * time_step * target
 
     def _update_value(self):
-        self.value = self.value + self.step if self.value + self.step <= self.target else self.target
+        self.value = (self.value
+                    + self.step
+                    if self.value
+                    + self.step <= self.target
+                    else self.target)
 
     def reset(self):
         self.value = 0
@@ -118,12 +121,22 @@ class IncrementalFaultValue:
         """
         self._update_value()
         return self.value
-    
-def simulate_faults(values = [], fault_rate = 0.1, fault_duration= 0.25, fault_type = 'distinct', step = 0.05, type = 'Temperature', fault_value_multiplier= 1.0, fault_state= 'normal', incremental_fault = None):
+
+def simulate_faults(values = [],
+                    fault_rate = 0.1,
+                    fault_duration= 0.25,
+                    fault_type = 'distinct',
+                    step = 0.05,
+                    type = 'Temperature',
+                    fault_value_multiplier= 1.0,
+                    fault_state= 'normal',
+                    incremental_fault = None):
     """
     Simulate faults for the given values.
-    After the system enters a fault state, the kind of failure is chosen randomly and stays in that state for a random time.
-    fault_type: 'continuous', 'distinct'. Continuous faults are not reset until the end of the simulation.
+    After the system enters a fault state, the kind of
+    failure is chosen randomly and stays in that state for a random time.
+    fault_type: 'continuous', 'distinct'.
+    Continuous faults are not reset until the end of the simulation.
     """
 
     # Initialize the result array with the original air_flow_values
@@ -132,10 +145,10 @@ def simulate_faults(values = [], fault_rate = 0.1, fault_duration= 0.25, fault_t
     # Initialize the fault timer
     fault_timer = 0
 
-    min_temp = min([v for _, v in values])
-    max_temp = max([v for _, v in values])
+    min_temp = min(v for _, v in values)
+    max_temp = max(v for _, v in values)
     value_interval = max_temp - min_temp
-    time_interval = (values[-1][0] - values[0][0])
+    time_interval = values[-1][0] - values[0][0]
 
     # Iterate over the original values
     for (t, v) in values:
@@ -162,7 +175,9 @@ def simulate_faults(values = [], fault_rate = 0.1, fault_duration= 0.25, fault_t
                     fault_state = np.random.choice(['high', 'low'])
 
                 # The fault timer is set to a random value
-                fault_timer = fault_duration*time_interval if fault_duration > 0 else  np.random.random()*time_interval + time_interval/24
+                fault_timer = (fault_duration*time_interval
+                               if fault_duration > 0
+                               else  np.random.random()*time_interval + time_interval/24)
 
         # If the system is in a fault state, the value is modified
         if fault_state == 'high':
@@ -204,7 +219,8 @@ def interpolate_with_noise(values, step=0.05, noise_level=0.1):
             denominator = np.exp(-i + 1) + 1.5
 
             # Introduce noise
-            noise = np.random.uniform(-adjusted_noise_level/denominator, adjusted_noise_level/denominator)
+            noise = np.random.uniform(-adjusted_noise_level/denominator,
+                                      adjusted_noise_level/denominator)
             current_temp_with_noise = current_temp + noise
 
             # Append the interpolated value to the list
@@ -212,11 +228,14 @@ def interpolate_with_noise(values, step=0.05, noise_level=0.1):
 
         # Add the last value of the current interval if it's not the last tuple
         if i < len(values) - 2:
-            interpolated_values.append((t2, temp2 + np.random.uniform(-adjusted_noise_level, adjusted_noise_level)))
+            interpolated_values.append((t2, temp2 + np.random.uniform(-adjusted_noise_level,
+                                                                      adjusted_noise_level)))
 
     # Append the last value of the entire sequence with noise
     final_time, final_temp = values[-1]
-    interpolated_values.append((final_time, final_temp + np.random.uniform(-adjusted_noise_level, adjusted_noise_level)))
+    interpolated_values.append((final_time, final_temp + np.random.uniform(
+        -adjusted_noise_level,
+        adjusted_noise_level)))
 
     return interpolated_values
 
@@ -224,7 +243,7 @@ def rescale_values(data, min_val, max_val, max_time=100):
     # Extracting the second element (value) from each tuple
     original_values = [val for _, val in data]
     original_times = [time for time, _ in data]
-    
+
     # Finding the actual min and max in the data
     actual_min_value = min(original_values)
     actual_max_value = max(original_values)
@@ -232,8 +251,9 @@ def rescale_values(data, min_val, max_val, max_time=100):
 
     # Scaling function
     def scale_value(x):
-        return np.round(min_val + (x - actual_min_value) * (max_val - min_val) / (actual_max_value - actual_min_value),2)
-    
+        return np.round(min_val + (x - actual_min_value) * (max_val - min_val) /
+                        (actual_max_value - actual_min_value),2)
+
     def scale_time(x):
         return np.round(x * max_time / actual_max_time, 1)
 
@@ -285,12 +305,13 @@ class SENSOR_SIMULATOR_V3:
             except Exception as e:
                 print(f"An error occurred: {e}")
                 if attempt < self.MAX_RETRIES:
-                    print(f"An error occurred: {e}. Retrying in {self.RETRY_DELAY_SECONDS} seconds...")
+                    print(f"An error occurred: {e}." +
+                          f"Retrying in {self.RETRY_DELAY_SECONDS} seconds...")
                     time.sleep(self.RETRY_DELAY_SECONDS)
                 else:
                     print(f"Max retries reached. An error occurred: {e}")
                     raise e
-                
+
     def _fetch_sensors_data(self):
         connection = None
         cursor = None
@@ -300,7 +321,7 @@ class SENSOR_SIMULATOR_V3:
 
             if not connection:
                 raise Exception("No connection to database")
-            
+
             cursor = connection.cursor()
             print("Fetching sensors data...")
 
@@ -313,11 +334,11 @@ class SENSOR_SIMULATOR_V3:
 
             if not res:
                 raise Exception("No sensors data")
-            
-            for sensor_id, min_value, max_value, type in res:
-                self.sensor_thresholds[sensor_id] = (min_value, max_value, type)
+
+            for sensor_id, min_value, max_value, type1 in res:
+                self.sensor_thresholds[sensor_id] = (min_value, max_value, type1)
                 self.keys_list.append(sensor_id)
-            
+
         except Exception as e:
             print(f"An error occurred: {e}")
         finally:
@@ -330,20 +351,24 @@ class SENSOR_SIMULATOR_V3:
         """
         Generate and store sensor data for a given sensor_id.
         """
-        min_value, max_value, type = self.sensor_thresholds[sensor_id]
+        min_value, max_value, type1 = self.sensor_thresholds[sensor_id]
         fault_state, incremental_fault = self.fault_states.get(sensor_id, ('normal', None))
 
-        step, noise_level, def_values = DEFAULT_VALUES[type]
-        
+        step, noise_level, def_values = DEFAULT_VALUES[type1]
+
         if incremental_fault is None:
             target_fault_value = (max_value - min_value) / 8
-            incremental_fault = IncrementalFaultValue(target_fault_value, step=self.STEP, time_step=step)
+            incremental_fault = IncrementalFaultValue(target_fault_value,
+                                                      step=self.STEP,
+                                                      time_step=step)
 
         self.fault_states[sensor_id] = (fault_state, incremental_fault)
 
-        rescaled_values = rescale_values(def_values, min_value, max_value, max_time=self.time_per_cycle)
+        rescaled_values = rescale_values(def_values, min_value,
+                                         max_value,
+                                         max_time=self.time_per_cycle)
         interpolated_values = interpolate_with_noise(rescaled_values, step, noise_level)
-        
+
         values, fault_state = simulate_faults(
             values= interpolated_values,
             fault_rate= self.fault_ratio,
@@ -354,7 +379,17 @@ class SENSOR_SIMULATOR_V3:
         self.sensor_data[sensor_id] = values
         self.fault_states[sensor_id] = (fault_state, incremental_fault)
 
-    def schedule(self, event_name, event_value, postgres_db, postgres_user, postgres_password, postgres_host, postgres_port, fault_ratio, fault_value_multiplier, time_per_cycle):
+    def schedule(self,
+                 event_name,
+                 event_value,
+                 postgres_db,
+                 postgres_user,
+                 postgres_password,
+                 postgres_host,
+                 postgres_port,
+                 fault_ratio,
+                 fault_value_multiplier,
+                 time_per_cycle):
         try:
             if event_name == 'INIT':
                 self.distribution = None
@@ -377,7 +412,7 @@ class SENSOR_SIMULATOR_V3:
                 self.fault_ratio = fault_ratio
                 self.fault_value_multiplier = fault_value_multiplier
                 self.time_per_cycle = time_per_cycle
-                
+
                 print('Fetching sensors data...')
                 self._fetch_sensors_data()
                 print('Sensors data fetched!')
@@ -386,13 +421,13 @@ class SENSOR_SIMULATOR_V3:
                 for sensor_id in self.sensor_thresholds:
                     self._generate_and_store_sensor_data(sensor_id)
                 print('Sensor data generated!')
-                
+
                 if not self.sensor_thresholds:
                     raise Exception("No sensors data")
-                
+
                 self.data_length = len(self.sensor_thresholds)
                 self.start_time = time.time()
-                
+
                 return [event_value, None, 0, 0]
 
             elif event_name == 'READ':
@@ -412,7 +447,7 @@ class SENSOR_SIMULATOR_V3:
                         self._generate_and_store_sensor_data(sensor_id)
                 else:
                     self.distribution_index = new_index
-                
+
 
                 # print(self.sensor_data[self.keys_list[self.curr_sensor_index]])
                 values = self.sensor_data[self.keys_list[self.curr_sensor_index]]
@@ -423,8 +458,11 @@ class SENSOR_SIMULATOR_V3:
                 value = np.round(find_nearest_value(values, self.distribution_index),2)
 
                 if self.curr_sensor_index == 0:
-                    print(f"Current sensor index: {self.curr_sensor_index} + {value} + {np.round(self.distribution_index,0)} + {len(self.sensor_data[self.keys_list[self.curr_sensor_index]])} + time: {time.time() - self.start_time}")
-                
+                    print(f"Current sensor index: {self.curr_sensor_index}" +
+                          f"{value} + {np.round(self.distribution_index,0)}" +
+                          f"{len(self.sensor_data[self.keys_list[self.curr_sensor_index]])}" +
+                          f"time: {time.time() - self.start_time}")
+
                 # wait some time
                 time.sleep(0.5/(self.data_length + 1))
 
@@ -434,4 +472,3 @@ class SENSOR_SIMULATOR_V3:
         except Exception as e:
             print(f"An error occurred: {e}")
             return [None, None, None, None]
-            

@@ -67,15 +67,89 @@ For security-related questions regarding the project and respective testing logs
 
 For an explanation pertaining the project's quality assurance, please refer to the [Quality Assurance sheet](./development/quality_assurance.md).
 
+### Sonarqube
+
+To access the `Sonarqube` interface, go to `localhost:9000`. Login with the following credentials:
+```markdown
+**Username**: admin
+**Password**: admin
+```
+
+After logging in, change the password. You will be redirected to the `projects` page.
+
+![image](../docs/images/sonarqube_projects.png)
+
+The next step is to create a new project. For that, click on the `Add a project` button. Select the manual option, and give your project a name and project key. In this case, name it `MES`.
+
+![image](../docs/images/sonarqube_create_project.png)
+
+Afterward, you will be prompted to generate a token. We will name it `MES_Analysis`.
+
+![image](../docs/images/sonarqube_create_token.png)
+
+To generate the best command for the scanner, customize your environment and the system you are running.
+
+Follow the instructions on the screen to configure the scanner.
+
+![image](../docs/images/sonarqube_configuration.png)
+
+Before running the scanner, perform a code coverage analysis. SonarQube supports the reporting of test coverage information as part of the analysis of the project. However, SonarQube does not generate the coverage report itself. Using Tox, a local automated test tool, it is possible to assert code coverage and generate reports. There is a tox.ini file on the project root that can be configured to run the tests and generate the coverage report. To run the tests, run the command `tox` on the terminal in the project root. This will generate a coverage report in the `analysis` folder. Make sure you map the coverage report to the `sonar-project.properties` file.
+
+Finally, copy the scanner command and run it on a terminal on the project root.
+
+After scanning the files, you can check the results on the `Sonarqube` interface.
+
+![image](../docs/images/sonarqube_results.png)
+
+## Security concerns
+
+As of the end of Sprint 2 (16/11/2023), there are no security concerns to be tackled. The project is mostly self-contained and doesn't need to handle any type of sensitive information or possible data leakage. However, with _Sonarqube_, possible security vulnerabilities are scanned every time changes to the project's code occur, and this, this section is subject to change as more features are implemented.
+
+### SonarQube - Latest scan on branch `main`
+
+The Sonar scanner indicates no vulnerabilities, providing an A-grade security rating. Nonetheless, it highlights 25 security hotspots, which, while not categorized as vulnerabilities, are flagged as security concerns requiring manual assessment.
+
+
+## Quality assurance
+
+Continuous Integration (CI) tools are currently set in place to ensure correct codebase management and consistency. In terms of static analysis, code is scanned using linters everytime a PR wants to commit changed into the _main_ branch. Furthermore, a [SonarQube](https://www.sonarsource.com/products/sonarqube/?gads_campaign=SQ-Mroi-PMax&gads_ad_group=Global&gads_keyword=&gad_source=1&gclid=CjwKCAiAu9yqBhBmEiwAHTx5pxnFfXXnEDXFcodcgZRO5zP1ALPlJ4zaqIEvecU6Sz8-9v2VsiagzxoCHjUQAvD_BwE) environment was setup, giving us access to more code analysis and extensive reports about bugs, security and vulnerabilities. 
+
+For the linters we also use [Pylint](https://pylint.pycqa.org/en/latest/user_guide/usage/run.html), which checks the code structure of the custom DINASORE blocks. This linter was altered so it could accept the default structure of DINASORE blocks without raising any exceptions.
+![image](../docs/images/configuration_linter.png)
+Finally, the used package manager was configured using both [Pytest](https://docs.pytest.org/en/7.4.x/) and [Conda](https://docs.conda.io/en/latest/). The **environment.yml** file shows the several dependencies that will be used by Conda.
+![image](../docs/images/environment_yml.png)
+In the worflow .yml file, meanwhile, it was necessary to install all the project requirements, otherwise they wouldn't be recognised.
+![image](../docs/images/configuration_manager.png)
+
+Moreover, a [Bandit](https://bandit.readthedocs.io/en/latest/config.html#bandit-settings) workflow was implemented for different types of tests. The several available tests are [here](https://bandit.readthedocs.io/en/latest/plugins/index.html). The workflow was configured to skip the default code of the chosen tecnologies, as well as irrelevant tests for our application, as we can see in the following files (.bandit and bandit.yaml, respectively):
+
+![.bandit](../docs/images/configuration_bandit_ini.png)
+
+![bandit_yaml](../docs/images/configuration_bandit_skip.png)
+
+Bandit workflow configuration file:
+
+![bandit_yml](../docs/images/configuration_bandit.png)
+
+
+### SonarQube - Latest scan on branch `main`
+
+The Sonar scanner reports a 6.2% code duplication. Additionally, it falsely suggests a 0.0% code coverage, despite the presence of tests in the project. This discrepancy arises from the scanner's current lack of configuration to detect coverage, an issue to be solved in the next sprint. Regarding code smells, the scanner identifies 79 instances but assigns an A-grade rating for maintainability. In terms of reliability, the scanner points out 2 bugs.
+
+
+
+## Metrics
+>>>>>>> 69a2593 (docs: adds bandit description)
+
 ## Metrics (10/10)
 For every sprint, the following process metrics are being recorded:
 
 | Sprint | Deployment Frequency | MTTR | Lead Time | Change Failure Rate |
 |-------------|-------------|-------------|-------------|-------------|
-| 0 | - | - | - | - | 
-| 1 | - | - | - | - | 
-| 2 | one every two days | 3 hours | 2 weeks | 20% | 
-| 3 |   |   |   |   | 
+| 0 | - | - | - | - |
+| 1 | - | - | - | - |
+| 2 | one every two days | 3 hours | 2 weeks | 20% |
+| 3 |   |   |   |   |
 | 4 |   |   |   |   |
 
 | Sprint | Velocity (T1) | Velocity (T2) | Velocity (T3) | Velocity (T4) | Velocity (Product) |

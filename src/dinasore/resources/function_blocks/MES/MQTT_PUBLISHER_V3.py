@@ -8,23 +8,12 @@ class MQTT_PUBLISHER_V3:
         self.client = Client()
         self.total_messages_sent = 0
 
-    def schedule(
-            self,
-            event_name,
-            event_value,
-            topic,
-            host,
-            port,
-            value_name_1,
-            value_name_2,
-            value_name_3,
-            value_1,
-            value_2,
-            value_3):
+    def schedule(self, event_name, event_value, topic, host, port, value_name_1, value_name_2,
+            value_name_3, value_1, value_2, value_3):
         if event_name == 'INIT':
             # connects to the broker
             try:
-                print(f"Connecting to the broker...")
+                print("Connecting to the broker...")
                 self.client.connect(host, port)
                 print(f"Connected to the broker {host}:{port}")
                 return [event_value, None]

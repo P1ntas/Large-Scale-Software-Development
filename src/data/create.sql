@@ -95,6 +95,22 @@ CREATE TABLE sensor (
     status status NOT NULL DEFAULT 'Offline'
 );
 
+CREATE TABLE task(
+    id SERIAL PRIMARY KEY,
+    system_id INTEGER NOT NULL REFERENCES system(id),
+    name TEXT NOT NULL,
+    duration INTERVAL NOT NULL,
+    energetic_costs INTEGER NOT NULL
+);
+
+CREATE TABLE task_timeseries (
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES task(id),
+    system_id INTEGER NOT NULL REFERENCES system(id),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (task_id, timestamp)
+);
+
 -------------------------------------------------------------------------------------------------------------------
 
 
