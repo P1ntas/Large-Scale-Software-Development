@@ -52,10 +52,11 @@ In this sprint, I played a pivotal role in simplifying our team's workflow by ta
 2. Proactive Support and Issue Resolution: I'm happy to actively helped my team with any issues related to the product and answer questions during production. By being available and responsive, I've contributed to a smoother code development process. This kind of support speeded up issue resolution.
 
 ## Sprint 3
+During this Sprint review, as the Product Owner, I collaborated closely with team members, providing valuable support and guidance. I facilitated a productive atmosphere by streamlining and organizing both the team and product boards, ensuring clarity and efficiency in our workflow. Also, organized the product backlog by removing epics and drafts, and submitted a refined version focused on meaningful issues. 
 
-...
+### Two contributions of other types that I am most proud of
 
-
+1. Optimizing Team Dynamics: Recognizing Achievements and Addressing Areas for Improvement.
 ## Sprint 4
 
 ...

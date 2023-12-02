@@ -63,8 +63,20 @@ More testing, validation and betetr organization of the repository and overall w
 
 ## Sprint 3
 
-...
+During this phase of the project, my focus was on advancing the task related to providing customizable notification settings. In pursuit of this goal, I conducted thorough research to identify robust strategies within Grafana's alerting and notification framework. This documentation delve into template notifications, a feature that could be instrumental in creating customizable and dynamic notification settings. This research phase laid a solid foundation to incorporating flexible and user-friendly notification settings into our system in the future, ensuring that users can efficiently customize alerts according to their unique needs and operational requirements.
 
+A significant resource I explored is the following link: [Grafana manage notifications](https://grafana.com/docs/grafana/latest/alerting/manage-notifications/template-notifications/).
+
+### The user storie that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+ ### The pull request that I am most proud of
+
+* None relevant, as we did not implement any code.
+
+### Two contributions of other types that I am most proud of
+I helped my team understand better how to customize notifications. 
 
 ## Sprint 4
 

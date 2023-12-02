@@ -55,8 +55,23 @@ The biggest contribution to this sprint was without a doubt João Araújo.
 
 ## Sprint 3
 
-...
+### The two user stories that I am most proud of
 
+- [#56](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/56) - Integrate real-time data feeds for maintenance features.
+
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Created a Mockup
+
+### The two pull requests that I am most proud of
+
+- [Mockup](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/documentation/docs/images/mockup.png) - Created a Mockup for Data Analytics page
+
+- [#108](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/108) - Implemented maintenance status, schedule and logs.
+
+### Two contributions of other types that I am most proud of
+
+- The biggest contribution was sharing thoughts and ideas about the current and next sprints.
+  
+- Helped my team member Afonso with maitenance logs funcionality of grafana.
 
 ## Sprint 4
 

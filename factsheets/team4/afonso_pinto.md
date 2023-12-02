@@ -78,7 +78,27 @@ I also helped on data generation in order to train our model
 
 ## Sprint 3
 
-...
+### The two user stories that I am most proud of
+
+ * #1 ML model - Model Evaluation
+ * #2 ML model - Data Pipeline
+ * #3 As a user, I expect the system to utilize a knowledge base and machine learning algorithms to autonomously make decisions about what is necessary for the machine's efficient operation. I rely on the system's AI to determine maintenance and operational needs.
+
+
+### The two pull requests that I am most proud of
+
+This can include PRs that you have implemented or reviewed during the sprint.
+
+ * #3 feature/sensor_data_machine_learning
+
+
+### Two contributions of other types that I am most proud of
+
+Identified the data that would be useful to train our model, such as `temperature`, `pressure`, `vibration`, `humidity` and `airflow`, among many others. I also created python scripts to generate enough data to train our model.
+
+After that, I worked on the data preparation, splitting and subsequent trained 3 models to best predict whether any given sensor would fail and/or need maintenance.
+
+Finally, I tried to improve the models by utilising hyperparameter tuning. The models achieved an accuracy of around 75% to 80%.
 
 
 ## Sprint 4

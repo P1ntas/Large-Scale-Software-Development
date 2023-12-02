@@ -29,8 +29,17 @@ In this second sprint, I continued to develop my tasks as Scrum Master and help 
 
 ## Sprint 3
 
-...
+### General consideration 
+In this third sprint, I was no longer the Scrum Master and focused on fixing the CI tools, mainly the linter and package manager. I also helped my teammates by reviewing some of their Pull Requests.
 
+### The two user stories that I am most proud of
+- [#97 - Fix the CI tools problems ](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/97): this issue was created originally from another user story: [#62](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/62). It was focused more on fixing and upgrading the integration of the CI/CD.
+
+### The two pull requests that I am most proud of
+- [#105 - Fix: CI Integration](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/105): as previously mentioned, this PR was intended to fix some problems with th CI tools. The configuration files for the pylint and bandit linters and package managers were altered so they wouldn't raise exceptions with default DINASORE blocks. This PR was made together with [Alexandre Costa](https://github.com/alexlcosta) and [Diogo Fonte](https://github.com/diogofonte).
+
+### Two contributions of other types that I am most proud of
+I also reviewed the PR's of [Test Coverage](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/116#pullrequestreview-1758656296) which implements the SonarQube tests and a [fix](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/120) when merging both SonarQube and the CI tools.
 
 ## Sprint 4
 

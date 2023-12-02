@@ -152,7 +152,9 @@ In order to contribute to the project, you have a few options:
 
 ## How to run and operate in a production environment
 
-For a full guide and explanation on the project's environment, technologies and setup, please refer to the [Development Guide](docs/development.md#development-guide).
+Currently, the project's production server is hosted at `http://34.42.26.53`, in which the Grafana dashboard is accessed [**here**](http://34.42.26.53:3000) and the Prometheus display [**here**](http://34.42.26.53:9090). As of this time, the current deployed version is the Sprint 3 release, adequately tagged on Github. 
+
+For a full guide and explanation on the project's environment, technologies and setup, please refer to the [Development Guide](docs/development/development_guide.md).
 
 ## Contributions
 

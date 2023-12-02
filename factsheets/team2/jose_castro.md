@@ -20,7 +20,7 @@ Continued working with the client to further understand the need for the DINASOR
 
 ### The two user stories that I am most proud of
 - [#62 - Setup CI/CD Environment](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/62)
-- [#82- Job Scheduling Feature](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/62)
+- [#82- Job Scheduling Feature](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/82)
 
 ### General Contributions
 
@@ -29,8 +29,20 @@ Continuous communication with the team. Familiarized myself with CI/CD environme
 
 ## Sprint 3
 
-...
+### General consideration 
 
+Along with my Product Owner duties, I actively participated in the setup of the both the deployment server and the automation of said deployment, which I started in the middle of the last sprint. Because of problems with the virtual machine, which had to be setup three different times because of crashes over an extended period of time (presumably due to the heavy load the DINASORE and SonarQube containers); and problems with the Github Action for deployment, whose functionalities were not fully working (a common problem that came up when discussing deployment automation with other colleagues), my progress was halted significantly. However, I am sure that, by the end of the first week of the next sprint, everything will be deploying smoothly through Github. Furthermore, I took care of restructuring the project's documentation in terms of file reorganization and addition of missing sections.
+
+In terms of PO-related work, our communication with the client was stalled because of a failed end-of-sprint meeting, which not able to attend. However, because of the good basis and knowledge of the end goals of the project we have come to cultivate, we were able to prepare and continue work for the next sprint as per usual.
+
+### User stories that I am most proud of
+- [Job Scheduling: Visualization](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/102): this issue was created from one of my previous user stories
+- [Development Sheet Additions](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/63)
+
+### Pull requests that I am most proud of
+- [Development Sheet Additions](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/63)
+- [Development Sheet Restructuring and Additions](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/98)
+- [Deployment Documentation](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/115)
 
 ## Sprint 4
 

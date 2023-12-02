@@ -66,7 +66,19 @@ I was assigned to upgrade the current database uml and to create the SQL schema.
 
 ## Sprint 3
 
-...
+### The two user stories that I am most proud of
+
+N/A
+
+
+### The two pull requests that I am most proud of
+
+N/A
+
+
+### Two contributions of other types that I am most proud of
+
+As a scrum master I helped with preparing the sprint backlog and assigning team members.
 
 
 ## Sprint 4
