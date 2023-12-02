@@ -68,10 +68,15 @@ For security-related questions regarding the project and respective testing logs
 For an explanation pertaining the project's quality assurance, please refer to the [Quality Assurance sheet](./development/quality_assurance.md).
 
 ## Metrics (10/10)
+For every sprint, the following process metrics are being recorded:
 
-Describe how you captured each of the "four key metrics" (e.g., automatic mechanism, survey to the team on the end of each sprint).
-
-Provide here an historical record (for each sprint) of the four key metrics and velocity.
+| Sprint | Deployment Frequency | MTTR | Lead Time | Change Failure Rate |
+|-------------|-------------|-------------|-------------|-------------|
+| 0 | - | - | - | - | 
+| 1 | - | - | - | - | 
+| 2 | one every two days | 3 hours | 2 weeks | 20% | 
+| 3 |   |   |   |   | 
+| 4 |   |   |   |   |
 
 | Sprint | Velocity (T1) | Velocity (T2) | Velocity (T3) | Velocity (T4) | Velocity (Product) |
 |-------------|-------------|-------------|-------------|-------------|-------------|

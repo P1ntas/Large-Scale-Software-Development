@@ -31,7 +31,16 @@ class MQTT_SUBSCRIBER_V3:
         self.resources.new_message.clear()
         self.stop = Event()
 
-    def schedule(self, event_name, event_value, topic, host, port, value_name_1, value_name_2, value_name_3):
+    def schedule(
+            self,
+            event_name,
+            event_value,
+            topic,
+            host,
+            port,
+            value_name_1,
+            value_name_2,
+            value_name_3):
         if event_name == 'INIT':
             try:
                 self.resources.connect(host, port)

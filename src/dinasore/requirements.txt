@@ -3,8 +3,6 @@ cryptography
 opcua
 numpy
 argparse
-scikit-learn
-pandas
 paho.mqtt
 prometheus_client
-psycopg2
+psycopg2-binary~=2.9.8
