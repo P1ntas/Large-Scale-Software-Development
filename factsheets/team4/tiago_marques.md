@@ -47,7 +47,16 @@ In this sprint I discussed some topics with my team and developed some code in p
 
 ## Sprint 3
 
-...
+I miss-calculated the end of this sprint. I was not able to do the task I was assigned (to develop a frontend page that shows a specific machine with the machine learning model working on it). Unfortunately all I did on this sprint was discuss some ideas and consolidate some good practices about the repository workflow.
+
+### The two user stories that I am most proud of
+
+ * N/A
+
+
+### The two pull requests that I am most proud of
+
+ * N/A
 
 
 ## Sprint 4
