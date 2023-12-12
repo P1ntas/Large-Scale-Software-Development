@@ -286,7 +286,7 @@
             }
           }
         ]
-      }
+      },
       {
         "type": "gauge",
         "title": "Temperature and Vibration",
