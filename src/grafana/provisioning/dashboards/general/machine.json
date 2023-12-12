@@ -1,0 +1,341 @@
+{
+    "annotations": {
+      "list": []
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": null,
+    "links": [],
+    "panels": [
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "fill": 1,
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "id": 2,
+        "legend": {
+          "avg": false,
+          "current": false,
+          "max": false,
+          "min": false,
+          "show": true,
+          "total": false,
+          "values": false
+        },
+        "lines": true,
+        "linewidth": 1,
+        "nullPointMode": "null",
+        "percentage": false,
+        "pluginVersion": "7.3.1",
+        "pointradius": 2,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "refId": "A",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "rawSql": "SELECT\n  UNIX_TIMESTAMP(time) as time_sec,\n  value as value,\n  'Machine Load' as metric\nFROM your_machine_load_table\nWHERE\n  $__timeFilter(time)\nORDER BY time ASC",
+            "datasource": {
+              "type": "postgres",
+              "uid": "-- Grafana --"
+            }
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Machine Load Over Time",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "fill": 1,
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "id": 3,
+        "legend": {
+          "avg": false,
+          "current": false,
+          "max": false,
+          "min": false,
+          "show": true,
+          "total": false,
+          "values": false
+        },
+        "lines": true,
+        "linewidth": 1,
+        "nullPointMode": "null",
+        "percentage": false,
+        "pluginVersion": "7.3.1",
+        "pointradius": 2,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "refId": "B",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "rawSql": "SELECT\n  UNIX_TIMESTAMP(time) as time_sec,\n  health_percentage as value,\n  'Machine Health' as metric\nFROM your_machine_health_table\nWHERE\n  $__timeFilter(time)\nORDER BY time ASC",
+            "datasource": {
+              "type": "postgres",
+              "uid": "-- Grafana --"
+            }
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Machine Health Percentage Over Time",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "percent",
+            "label": null,
+            "logBase": 1,
+            "max": "100",
+            "min": "0",
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "type": "stat",
+        "title": "Machine Running Time",
+        "id": 4,
+        "gridPos": {
+          "h": 6,
+          "w": 3,
+          "x": 0,
+          "y": 9
+        },
+        "targets": [
+          {
+            "refId": "A",
+            "format": "time_series",
+            "intervalFactor": 1,
+            "rawSql": "SELECT\n  MAX(UNIX_TIMESTAMP(time)) - MIN(UNIX_TIMESTAMP(time)) as value,\n  'Running Time' as metric\nFROM your_machine_activity_table\nWHERE\n  machine_id = 'specific_machine' AND\n  $__timeFilter(time)",
+            "datasource": {
+              "type": "postgres",
+              "uid": "-- Grafana --"
+            }
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "s"
+          },
+          "overrides": []
+        },
+        "pluginVersion": "7.3.1"
+    },
+    {
+        "type": "table",
+        "title": "Maintenance Alerts",
+        "id": 5,
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 0,
+          "y": 15
+        },
+        "targets": [
+          {
+            "refId": "A",
+            "format": "table",
+            "rawSql": "SELECT machine_id, maintenance_type, scheduled_date FROM maintenance_schedule WHERE scheduled_date BETWEEN NOW() AND DATE_ADD(NOW(), INTERVAL 30 DAY);",
+            "datasource": {
+              "type": "postgres",
+              "uid": "-- Grafana --"
+            }
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Production Output",
+        "id": 6,
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 6,
+          "y": 15
+        },
+        "targets": [
+          {
+            "refId": "B",
+            "format": "time_series",
+            "rawSql": "SELECT UNIX_TIMESTAMP(production_date) as time_sec, output_quantity as value, 'Production Output' as metric FROM production_output WHERE $__timeFilter(production_date);",
+            "datasource": {
+              "type": "postgres",
+              "uid": "-- Grafana --"
+            }
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Energy Consumption",
+        "id": 7,
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 12,
+          "y": 15
+        },
+        "targets": [
+          {
+            "refId": "C",
+            "format": "time_series",
+            "rawSql": "SELECT UNIX_TIMESTAMP(log_time) as time_sec, energy_used as value, 'Energy' as metric FROM energy_usage WHERE $__timeFilter(log_time);",
+            "datasource": {
+              "type": "postgres",
+              "uid": "-- Grafana --"
+            }
+          }
+        ]
+      }
+      {
+        "type": "gauge",
+        "title": "Temperature and Vibration",
+        "id": 8,
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 18,
+          "y": 15
+        },
+        "targets": [
+          {
+            "refId": "D",
+            "format": "time_series",
+            "rawSql": "SELECT UNIX_TIMESTAMP(log_time) as time_sec, temperature as value, 'Temperature' as metric FROM machine_logs WHERE $__timeFilter(log_time);",
+            "datasource": {
+              "type": "postgres",
+              "uid": "-- Grafana --"
+            }
+          },
+          {
+            "refId": "E",
+            "format": "time_series",
+            "rawSql": "SELECT UNIX_TIMESTAMP(log_time) as time_sec, vibration_level as value, 'Vibration' as metric FROM machine_logs WHERE $__timeFilter(log_time);",
+            "datasource": {
+              "type": "postgres",
+              "uid": "-- Grafana --"
+            }
+          }
+        ]
+      }            
+  ],
+  "refresh": "5s",
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": ["factory", "machine metrics"],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": ["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"],
+    "time_options": ["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"]
+  },
+  "timezone": "",
+  "title": "New Factory Machine Dashboard",
+  "uid": "new-factory-machine-dashboard",
+  "version": 1
+}
