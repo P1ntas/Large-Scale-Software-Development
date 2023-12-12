@@ -103,7 +103,26 @@ Finally, I tried to improve the models by utilising hyperparameter tuning. The m
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
+
+ * #1 As a User I want to be able to see a detailed page about a specific machine I choose so that I can monitor its current, real-time state
+
+
+### The pull request that I am most proud of
+
+This can include PRs that you have implemented or reviewed during the sprint.
+
+ * #3 feature/machine_page
+
+
+### Two contributions of other types that I am most proud of
+
+
+In creating the Grafana dashboard for monitoring factory machines, two contributions I am particularly proud of are:
+
+<b>Maintenance Alerts Panel:</b> This element enhances proactive maintenance planning by displaying upcoming scheduled maintenance events. It helps in minimizing unexpected downtimes and extending machine lifespan.
+
+<b>Energy Consumption Graph:</b> This graph provides real-time insights into the energy usage of machines. It is instrumental for identifying patterns in energy consumption, enabling the implementation of energy-saving measures and reducing operational costs.
 
 
 ## Overall Product
