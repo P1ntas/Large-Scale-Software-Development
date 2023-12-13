@@ -77,7 +77,20 @@ Since this sprint was mainly used for the creation of user stories and other rel
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
+
+* [https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=44034214](#57 Provide filtering and customization options for data analysis.)
+
+### The two pull requests that I am most proud of
+
+* [https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/146](#146 feat: added filter_page.json)
+
+
+### Two contributions of other types that I am most proud of
+
+* I worked in the branch feature/filter_page
+* Developed a page in grafana where it's possible to see all the current machines in the database and filter and order them by any parameter or a combination of various parameters.
+* I also added various stats to the page that I thought might be useful to the project itself
 
 
 ## Overall Product
@@ -87,14 +100,13 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+I worked in data modeling and grafana dashboards. My first job was getting the data ready and creating the machine learning models. The dashboards were made to be easily readible and add value to the user experience. These things improved how well the product works.
 
 
 ### Product Realization
 
-...
-
+I played a key role in making ideas into a real product. I did important things like cleaning up data and setting up machine learning. The Grafana dashboard I made is actually something the end user might find very useful and was definetly worth the time spent in implemention.
 
 ### Value for the Client
 
-...
+I made valuable additions to the product such as the AI to help with decisions and a dashboard that's easy for users to read information using filtering and ordering. This helps the client and gives them advantages like knowing the distribution of machines, saving energy, or getting better insights.
