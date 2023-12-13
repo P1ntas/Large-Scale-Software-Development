@@ -79,11 +79,11 @@ Since this sprint was mainly used for the creation of user stories and other rel
 
 ### The two user stories that I am most proud of
 
-* [https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=44034214](#57 Provide filtering and customization options for data analysis.)
+* #57 [Provide filtering and customization options for data analysis.](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=44034214)
 
 ### The two pull requests that I am most proud of
 
-* [https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/146](#146 feat: added filter_page.json)
+* #146 [feat: added filter_page.json](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/146)
 
 
 ### Two contributions of other types that I am most proud of
