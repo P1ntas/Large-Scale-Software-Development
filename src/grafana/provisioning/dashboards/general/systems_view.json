@@ -312,11 +312,135 @@
         "type": "postgres",
         "uid": "PCC52D03280B7034C"
       },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "Maintenance Required": {
+                  "color": "yellow",
+                  "index": 2
+                },
+                "Offline": {
+                  "color": "red",
+                  "index": 3
+                },
+                "Online": {
+                  "color": "green",
+                  "index": 0
+                },
+                "Working": {
+                  "color": "blue",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Expansion Status"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              }
+            ]
+          }
+        ]
+      },
       "gridPos": {
         "h": 9,
         "w": 14,
         "x": 10,
         "y": 4
+      },
+      "id": 100,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    e.id AS \"Expansion ID\",\r\n    em.name AS \"Expansion Name\",\r\n    em.type AS \"Expansion Type\",\r\n    em.manufacturer AS \"Expansion Manufacturer\",\r\n    e.status AS \"Expansion Status\"\r\nFROM\r\n    expansion AS e\r\nJOIN\r\n    expansion_model AS em ON e.expansion_model_id = em.id\r\nWHERE\r\n    e.system_id = $system_id;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "System",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PCC52D03280B7034C"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 0,
+        "y": 13
       },
       "id": 48,
       "options": {
@@ -338,7 +462,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\r\n    timestamp AS \"time\",\r\n    s.id AS \"sensor_id\",\r\n    s.status AS \"sensor_status\"\r\nFROM\r\n    sensor s\r\nJOIN\r\n    expansion e ON s.expansion_id = e.id\r\nJOIN\r\n    system sys ON e.system_id = sys.id\r\nJOIN\r\n    factory f ON sys.factory_id = f.id\r\nWHERE\r\n    timestamp >= $__timeFrom() AND timestamp <= $__timeTo()\r\n",
+          "rawSql": "SELECT\r\n    timestamp AS \"time\",\r\n    s.id AS \"sensor_id\",\r\n    s.status AS \"sensor_status\"\r\nFROM\r\n    sensor s\r\nJOIN\r\n    expansion e ON s.expansion_id = e.id\r\nJOIN\r\n    system sys ON e.system_id = sys.id\r\nJOIN\r\n    factory f ON sys.factory_id = f.id;\r\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -519,9 +643,9 @@
         ]
       },
       "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
+        "h": 6,
+        "w": 19,
+        "x": 5,
         "y": 13
       },
       "id": 80,
@@ -575,100 +699,12 @@
       "type": "state-timeline"
     },
     {
-      "datasource": {
-        "type": "postgres",
-        "uid": "PCC52D03280B7034C"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "auto",
-            "cellOptions": {
-              "type": "auto"
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 12,
-        "x": 0,
-        "y": 20
-      },
-      "id": 93,
-      "options": {
-        "cellHeight": "sm",
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": [
-            "sum"
-          ],
-          "show": false
-        },
-        "showHeader": true
-      },
-      "pluginVersion": "10.1.4",
-      "targets": [
-        {
-          "datasource": {
-            "type": "postgres",
-            "uid": "PCC52D03280B7034C"
-          },
-          "editorMode": "code",
-          "format": "table",
-          "rawQuery": true,
-          "rawSql": "select  t.name, ts.timestamp as \"Start\", t.duration as \"Duration\", t.energetic_costs as \"Power Cost\" from task_timeseries ts\r\ninner join task t on t.id = ts.task_id\r\n\r\nwhere ts.id = $task_timeseries_id ",
-          "refId": "A",
-          "sql": {
-            "columns": [
-              {
-                "parameters": [],
-                "type": "function"
-              }
-            ],
-            "groupBy": [
-              {
-                "property": {
-                  "type": "string"
-                },
-                "type": "groupBy"
-              }
-            ],
-            "limit": 50
-          }
-        }
-      ],
-      "title": "Task Info",
-      "transformations": [],
-      "type": "table"
-    },
-    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 19
       },
       "id": 3,
       "panels": [],
@@ -728,7 +764,7 @@
         "h": 12,
         "w": 4,
         "x": 0,
-        "y": 26
+        "y": 20
       },
       "id": 7,
       "options": {
@@ -787,7 +823,7 @@
         "h": 12,
         "w": 5,
         "x": 4,
-        "y": 26
+        "y": 20
       },
       "id": 29,
       "options": {
@@ -845,7 +881,7 @@
         "h": 12,
         "w": 5,
         "x": 9,
-        "y": 26
+        "y": 20
       },
       "id": 32,
       "options": {
@@ -903,7 +939,7 @@
         "h": 12,
         "w": 5,
         "x": 14,
-        "y": 26
+        "y": 20
       },
       "id": 31,
       "options": {
@@ -961,7 +997,7 @@
         "h": 12,
         "w": 5,
         "x": 19,
-        "y": 26
+        "y": 20
       },
       "id": 30,
       "options": {
@@ -1009,9 +1045,245 @@
         }
       ],
       "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PCC52D03280B7034C"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 32
+      },
+      "id": 93,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select  t.name, ts.timestamp as \"Start\", t.duration as \"Duration\", t.energetic_costs as \"Power Cost\" from task_timeseries ts\r\ninner join task t on t.id = ts.task_id\r\n\r\nwhere ts.id = $task_timeseries_id ",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Task Info",
+      "transformations": [],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PCC52D03280B7034C"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "Maintenance Required": {
+                  "color": "yellow",
+                  "index": 2
+                },
+                "Offline": {
+                  "color": "red",
+                  "index": 3
+                },
+                "Online": {
+                  "color": "green",
+                  "index": 0
+                },
+                "Working": {
+                  "color": "blue",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Sensor Status"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 19,
+        "x": 0,
+        "y": 36
+      },
+      "id": 107,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    s.id AS \"Sensor ID\",\r\n    sm.name AS \"Sensor Name\",\r\n    sm.type AS \"Sensor Type\",\r\n    s.status AS \"Sensor Status\"\r\nFROM\r\n    sensor AS s\r\nJOIN\r\n    sensor_model AS sm ON s.sensor_model_id = sm.id\r\nWHERE\r\n    s.expansion_id = $expansion_id;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 19,
+        "y": 36
+      },
+      "id": 116,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "|Maintenance Date| Technician|\n|-------|-----|\n|19/12/2023| Nuno Roberto|\n|16/02/2024| Afonso Dias|\n|30/04/2024| Joaquim Alberto|",
+        "mode": "markdown"
+      },
+      "pluginVersion": "10.1.4",
+      "title": "Panel Title",
+      "type": "text"
     }
   ],
-  "refresh": "30s",
+  "refresh": "5s",
   "schemaVersion": 38,
   "style": "dark",
   "tags": [],
@@ -1120,8 +1392,8 @@
       {
         "current": {
           "selected": false,
-          "text": "CP Factory",
-          "value": "CP Factory"
+          "text": "MPS 203 I4.0",
+          "value": "MPS 203 I4.0"
         },
         "datasource": {
           "type": "postgres",
@@ -1245,6 +1517,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 46,
+  "version": 45,
   "weekStart": ""
 }
