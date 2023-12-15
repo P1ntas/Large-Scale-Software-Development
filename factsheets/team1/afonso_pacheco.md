@@ -35,6 +35,7 @@ João did the biggest contribution to the project, in this phase my biggest cont
 
 ### Two contributions of other types that I am most proud of
 
+- The biggest contribution was sharing thoughts and ideas about the current and next sprints.
 
 ## Sprint 2
 
@@ -53,7 +54,7 @@ João did the biggest contribution to the project, in this phase my biggest cont
 ### Two contributions of other types that I am most proud of
 - Updated the product.md more specifically the recent tools that we're using in the project.
   
-- The biggest contribution was sharing thoughts and ideas about the current and next sprints 
+- The biggest contribution was sharing thoughts and ideas about the current and next sprints.
 
 
 ## Sprint 3
@@ -78,8 +79,23 @@ João did the biggest contribution to the project, in this phase my biggest cont
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
 
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Continue to develop the Data Analytics page.
+
+- TODO
+
+### The two pull requests that I am most proud of
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Corrected a bug related to the dashboard use dinasore data on the new graphs.
+
+- TODO
+
+### Two contributions of other types that I am most proud of
+  
+- The biggest contribution was sharing thoughts and ideas about the current sprint.
+
+- Engaging in talks with my team members in how to solve some related problems with our part.
 
 ## Overall Product
 
