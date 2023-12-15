@@ -75,8 +75,23 @@ The biggest contribution to this sprint was without a doubt João Araújo.
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
 
+- [#56](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/56) - Updated how the real-time data interacts with grafana.
+
+- TODO
+
+### The two pull requests that I am most proud of
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Debugged a problem related to how the real-time data is implemented
+
+- TODO
+
+### Two contributions of other types that I am most proud of
+
+- Engaging in talks with my team members in how to solve some related problems with our part.
+
+- Sharing thoughts and ideas about the current sprint.
 
 ## Overall Product
 
