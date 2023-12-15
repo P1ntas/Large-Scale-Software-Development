@@ -110,7 +110,32 @@ Key achievements:
 
 ## Sprint 4
 
-...
+During Sprint 4, the team focused on trying to implement machine learning models and auto-manage features for the machines. However, we could only research about this feature until we came to the conclusion that it was not feasible to implement, at least in the current state of the project, as we were not provided with any form of real data that would enable us to successfuly implement and test this feature. The team also worked on the documentation and followed the established guidelines in order to maintain the quality of the project.
+
+the team turned its focus on leveraging the capacities of Go's templating language to make maintenance notifications clearer and more human-readable. Also, the parameters for these notifications were reviewed: previously the notifications were firing based on hard-coded values, as at the time of the original implementation all we had was random mock data, which did not allow us to precisely set these parameters. This led to uncontrolalble notification firing, which obviously wasn't ideal.
+
+Key achievements:
+
+- The team successfully researched about ways to make notifications better overall, finding in [Go's templating language](https://grafana.com/docs/grafana/latest/alerting/manage-notifications/template-notifications/using-go-templating-language/) integration with Grafana the ideal solution.
+
+- The mock data coming from the generators was analyzed thoroughly in order to find the best notification parameters.
+
+- These parameters were used to tune the system accordingly.
+
+### The user storie that I am most proud of
+
+* [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented automatic notifications based on value ranges for sensor dynamic data - updated to feature Go's templating language and more accurate parameters
+
+ ### The pull request that I am most proud of
+
+ * [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
+
+### Four contributions of other types that we are most proud of
+
+ * 1 - The team continued to follow the branch and commit naming conventions (using GitFlow and other patterns), as well as the pull request templates, to make the project more organized and easier to understand for everyone.
+ * 2 - We refined the project objectives in order to reflect our priorities
+ * 3 - We implemented important features to make the project more usable and intuitive for the end-user. 
+ * 4 - We collaborated with other teams by providing feedback, asking questions and overall helping each other to improve the project as a whole.
 
 
 ## Overall Product
@@ -120,14 +145,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+During the project, the whole team strived to follow the establsihed guidelines and coding standards, in order to maintain the quality and scalability of the project. We also made sure to implement all of our features takeing into account the available technologies, and always documented our work. The work done laid the foundation for future work on the project, as it is independent of the set of data used, and we are proud of the results we achieved. Also, every member of the team contributed with technical knowledge, improving the overall technical soundness of the project.
 
 
 ### Product Realization
 
-...
+In this project, sometimes it was difficult to turn ideas into reality, as we were not provided with any real data to work with. However, the whole team was able to get better over time, overcoming the initial difficulties and achieving the goals we set for ourselves, implementing important features such as Grafana notifications. We think that the project is in a good state, and we are proud of the work we did. However, if there were additional sprints, we could clearly improve even more, integrating more features and improving the existing ones.
 
 
 ### Value for the Client
 
-...
+The value for the client of our project is clear: together with the other teams, we were able to implement a system that allows the client to monitor the machines in real-time, and to be notified when something goes wrong, alo integrating more features such as the machine learning ones. As the client's requisites were a bit vague, we sometimes had to make decisions on our own, but we think that the client will be satisfied with the results we achieved, as the system is functional and meets the main client's needs.
