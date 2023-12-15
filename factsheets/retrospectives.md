@@ -153,5 +153,25 @@ TODO
 
 ### Team 3 Retrospective
 
+During this sprint, our team was in charge of refining and making improvements to the issue [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5).
+
+The issue, in which we had already previously worked on, was related to implementing Grafana native notifications/alerts based on the data that is being streamed from Prometheus. The notifications are sent when the data is out of the normal range (firingg status), and another notification is sent when the data is back to normal (resolved status). This feature was already implemented, but it was not working as expected, as the notifications were being sent uncontrollably. So, we had to fix the issue adjusting the ranges and we took advantage of th opportunity to implement a templating language that could be of good use later on in the project, when we have real data.
+
+We will, as done before, analyze this sprint in the "Start, Stop, Continue" way.
+
+### Start (if there was another sprint)
+
+    - We would start to try to implement machine learning applied to our notifications.
+    - We would try to grab the client's attention to our needs.
+
+### Stop (if there was another sprint)
+
+    - We would stop spending so much time researching on the technologies we are using, as we sometimes are having less than ideal development time.
+
+### Continue (if there was another sprint)
+
+    - We would continue to work hard and professionally on the issues we are assigned and try to deliver the best possible solutions.
+    - We would continue to use good coding and project management practices, so we can stay organized.
+
 ### Team 4 Retrospective
 
