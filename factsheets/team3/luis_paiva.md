@@ -94,7 +94,7 @@ During this sprint, as the Product Owner, I upheld ongoing communication within 
 
  ### The pull request that I am most proud of
 
-* None relevant, as we did not implement any code.
+ * [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
 
  ### Two contributions of other types that I am most proud of
 
