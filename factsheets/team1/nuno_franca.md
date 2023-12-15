@@ -91,7 +91,7 @@ The biggest contribution to this sprint was without a doubt João Araújo.
 
 - Engaging in talks with my team members in how to solve some related problems with our part.
 
-- Sharing thoughts and ideas about the current sprint.
+- TODO
 
 ## Overall Product
 
