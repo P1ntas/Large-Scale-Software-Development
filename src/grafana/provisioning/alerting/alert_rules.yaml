@@ -1,12 +1,12 @@
 apiVersion: 1
 groups:
     - orgId: 1
-      name: Sensor
+      name: sensors
       folder: Sensor Alert
       interval: 1m
       rules:
-        - uid: fec54b70-a847-45d1-8f2d-28ff1fb8baeb
-          title: Sensor too high
+        - uid: d512011b-cec0-4929-afd8-8e209a31a000
+          title: Sensor value high
           condition: C
           data:
             - refId: A
@@ -67,7 +67,7 @@ groups:
                 conditions:
                     - evaluator:
                         params:
-                            - 70
+                            - 45
                         type: gt
                       operator:
                         type: and
@@ -88,14 +88,15 @@ groups:
                 type: threshold
           noDataState: NoData
           execErrState: Error
-          for: 1m
+          for: 5m
           annotations:
-            summary: The sensor value is too high
+            description: The sensor {{ index $labels "sensor_id" }} has exceeded the defined maximum temperature (45ºC)
+            summary: There are sensor values which are too high
           labels:
-            sensor: temperature
+            sensor: high
           isPaused: false
-        - uid: a0992742-033f-4915-aaca-eaff86f30bca
-          title: Sensor too low
+        - uid: b4218b01-a080-451f-89aa-20bc056bdf80
+          title: Sensor value low
           condition: C
           data:
             - refId: A
@@ -177,9 +178,10 @@ groups:
                 type: threshold
           noDataState: NoData
           execErrState: Error
-          for: 1m
+          for: 5m
           annotations:
-            summary: The sensor value is too low.
+            description: The sensor {{ index $labels "sensor_id" }} is below the defined minimum temperature (30ºC)
+            summary: There are sensor values which are too high
           labels:
-            sensor: temperature
+            sensor: low
           isPaused: false

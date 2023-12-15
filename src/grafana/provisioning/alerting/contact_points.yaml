@@ -3,7 +3,7 @@ contactPoints:
     - orgId: 1
       name: Discord Bot
       receivers:
-        - uid: bc4c2b75-e095-4e3d-8f61-742dcf71cb8c
+        - uid: a01c3a0a-1d91-44b5-a892-3b0988954210
           type: discord
           settings:
             url: https://discord.com/api/webhooks/1174298865235669103/68jy6ezGOH-jXzOwHBQw4Mr4D8sn13bNtrDIoekqnhRL4c_hwd69bfr7GXc1X5reXMcO
@@ -12,7 +12,7 @@ contactPoints:
     - orgId: 1
       name: email receiver
       receivers:
-        - uid: de462897-9748-4330-8bef-9a85abba00f2
+        - uid: b2612665-f2de-4dfc-963b-5dfd9a1cae75
           type: email
           settings:
             addresses: <example@email.com>
