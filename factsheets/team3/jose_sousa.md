@@ -85,8 +85,19 @@ I collaborated with Eduardo and the rest of the team to enhance the workflow and
 
 ## Sprint 4
 
-...
+In sprint 4, I focused on fine-tuning notification triggers to match the details in our updated user stories. I had to analyze the new data which was introduced in the project in order to find the best set of parameters that would regulate the notifications sent by Grafana.
 
+### The user storie that I am most proud of
+
+* [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented automatic notifications based on value ranges for sensor dynamic data - updated to feature Go's templating language and more accurate parameters
+
+ ### The pull request that I am most proud of
+
+* [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
+
+ ### Two contributions of other types that I am most proud of 
+I discussed my ideas with other team members.
+I worked closely with Anete in pair programming.
 
 ## Overall Product
 
@@ -95,14 +106,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+I always used the available technologies and tried to extract the most value from them, so I think that my contributions to the project were technically sound. For all of the user stories we were assigned,followed this mentality, and we were able to implement them successfully.
 
 
 ### Product Realization
 
-...
+All of our features were implemented, however I think that the notifications could be improveed in the future, as for all of the  project we didn't have access to real data, so we could not define the best parameters, for example. I think the client was also responsible for this.
 
 
 ### Value for the Client
 
-...
+I think overall the final product still holds value for the client, as the features we and the other teams implemented allow to perform the main objectives established in the beginning of the project. However, this is still a base that could be improved with real data.
