@@ -710,8 +710,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1132,7 +1131,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "development",
           "value": "localhost"
         },
@@ -1208,9 +1207,9 @@
       },
       {
         "current": {
-          "selected": true,
-          "text": "4",
-          "value": "4"
+          "selected": false,
+          "text": "1",
+          "value": "1"
         },
         "datasource": {
           "type": "postgres",
@@ -1315,7 +1314,7 @@
         "name": "task_id",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "None",
             "value": "None"
           }
@@ -1338,7 +1337,7 @@
         "name": "task_timeseries_id",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "None",
             "value": "None"
           }
@@ -1358,6 +1357,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 1,
+  "version": 7,
   "weekStart": ""
 }
