@@ -283,7 +283,7 @@
           "table": "task"
         }
       ],
-      "title": "Job Scheduling ",
+      "title": "Assign Task",
       "type": "volkovlabs-form-panel"
     },
     {
@@ -861,8 +861,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1336,8 +1335,8 @@
       {
         "current": {
           "selected": false,
-          "text": "All",
-          "value": "All"
+          "text": "2",
+          "value": "2"
         },
         "datasource": {
           "type": "postgres",
@@ -1384,8 +1383,8 @@
       {
         "current": {
           "selected": false,
-          "text": "CP Lab",
-          "value": "CP Lab"
+          "text": "MPS 203 I4.0",
+          "value": "MPS 203 I4.0"
         },
         "datasource": {
           "type": "postgres",
@@ -1466,7 +1465,7 @@
         "name": "task_id",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "None",
             "value": "None"
           }
@@ -1489,7 +1488,7 @@
         "name": "task_timeseries_id",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "None",
             "value": "None"
           }
@@ -1509,6 +1508,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 81,
+  "version": 11,
   "weekStart": ""
 }

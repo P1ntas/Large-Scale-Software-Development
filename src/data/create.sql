@@ -98,7 +98,7 @@ CREATE TABLE sensor (
 CREATE TABLE task(
     id SERIAL PRIMARY KEY,
     system_id INTEGER NOT NULL REFERENCES system(id),
-    name TEXT UNIQUE NOT NULL,
+    name TEXT NOT NULL,
     duration INTERVAL NOT NULL,
     energetic_costs INTEGER NOT NULL
 );
