@@ -125,7 +125,7 @@
         },
         "sync": true,
         "update": {
-          "code": "if (response && response.ok) {\n  notifySuccess(['Update', 'Values updated successfully.']);\n  locationService.reload();\n} else {\n  notifyError(['Update', 'An error occured updating values.']);\n}",
+          "code": "if (response && response.ok) {\n  notifySuccess(['Update', 'Values updated successfully.']);\n  locationService.reload()\n} else {\n  notifyError(['Update', 'An error occured updating values.']);\n}",
           "confirm": false,
           "contentType": "application/json",
           "datasource": "PostgreSQL",
@@ -135,6 +135,154 @@
         }
       },
       "pluginVersion": "3.4.0",
+      "title": "Job Scheduling ",
+      "type": "volkovlabs-form-panel"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PCC52D03280B7034C"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 119,
+      "options": {
+        "buttonGroup": {
+          "orientation": "center",
+          "size": "md"
+        },
+        "confirmModal": {
+          "body": "Please confirm to update changed values",
+          "cancel": "Cancel",
+          "columns": {
+            "name": "Label",
+            "newValue": "New Value",
+            "oldValue": "Old Value"
+          },
+          "confirm": "Confirm",
+          "title": "Confirm update request"
+        },
+        "elements": [
+          {
+            "id": "name",
+            "labelWidth": 10,
+            "options": [],
+            "optionsSource": "Query",
+            "queryOptions": {
+              "source": "A",
+              "value": "name"
+            },
+            "section": "",
+            "title": "Name",
+            "tooltip": "",
+            "type": "multiselect",
+            "uid": "666ebeaf-0604-4da6-8a7c-e669094ec811",
+            "unit": "",
+            "value": ""
+          },
+          {
+            "id": "start",
+            "labelWidth": 10,
+            "min": "2023-12-17T15:58:14.599Z",
+            "section": "",
+            "title": "Start Time",
+            "tooltip": "",
+            "type": "datetime",
+            "uid": "5e7bb5fb-1845-446b-8dbc-2d3f8c28a12c",
+            "unit": "",
+            "value": ""
+          }
+        ],
+        "initial": {
+          "code": "console.log(data, response, initial, elements);\n\n\n\n/**\n * Data Source\n * Requires form elements to be defined\n */\nconst dataQuery = toDataQueryResponse(response);\nconsole.log(dataQuery);",
+          "contentType": "application/json",
+          "datasource": "PostgreSQL",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "highlight": false,
+          "highlightColor": "red",
+          "method": "datasource"
+        },
+        "layout": {
+          "orientation": "horizontal",
+          "padding": 10,
+          "variant": "single"
+        },
+        "reset": {
+          "backgroundColor": "purple",
+          "foregroundColor": "yellow",
+          "icon": "process",
+          "text": "Reset",
+          "variant": "hidden"
+        },
+        "resetAction": {
+          "code": "if (response && response.ok) {\n  notifySuccess(['Update', 'Values updated successfully.']);\n  locationService.reload();\n} else {\n  notifyError(['Update', 'An error occured updating values.']);\n}",
+          "getPayload": "return {\n  rawSql: '',\n  format: 'table',\n}",
+          "mode": "initial"
+        },
+        "saveDefault": {
+          "icon": "save",
+          "text": "Save Default",
+          "variant": "hidden"
+        },
+        "submit": {
+          "backgroundColor": "purple",
+          "foregroundColor": "yellow",
+          "icon": "cloud-upload",
+          "text": "Submit",
+          "variant": "primary"
+        },
+        "sync": true,
+        "update": {
+          "code": "if (response && response.ok) {\n  notifySuccess(['Update', 'Values updated successfully.']);\n  locationService.reload()\n} else {\n  notifyError(['Update', 'An error occured updating values.']);\n}",
+          "confirm": false,
+          "contentType": "application/json",
+          "datasource": "PostgreSQL",
+          "getPayload": "const payload = {};\n\nelements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nif (!(\"start\" in payload && \"name\" in payload)) {\n  return\n}\n\n/**\n * Data Source payload\n */\nreturn {\n  rawSql: \"INSERT INTO task_timeseries(task_id, system_id, timestamp)\\\n          VALUES(\\\n            (SELECT id FROM task WHERE name = '\" + payload.name + \"' limit 1),\\\n            \"+ $system_id + \",\\\n            '\"+ payload.start + \"'\\\n          );\",\n\n  format: 'table',\n};",
+          "method": "datasource",
+          "payloadMode": "custom"
+        }
+      },
+      "pluginVersion": "3.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT name FROM task",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [
+                  {
+                    "name": "name",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "task"
+        }
+      ],
       "title": "Job Scheduling ",
       "type": "volkovlabs-form-panel"
     },
@@ -1361,6 +1509,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 63,
+  "version": 81,
   "weekStart": ""
 }
