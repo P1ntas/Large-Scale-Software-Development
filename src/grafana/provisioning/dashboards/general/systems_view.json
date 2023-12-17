@@ -52,7 +52,7 @@
         "elements": [
           {
             "hidden": false,
-            "id": "name ",
+            "id": "name",
             "labelWidth": 10,
             "section": "",
             "title": "Name",
@@ -123,16 +123,19 @@
           "text": "Submit",
           "variant": "primary"
         },
+        "sync": true,
         "update": {
-          "code": "return {\n  rawSql: 'INSERT INTO task (system_id, name, duration, energetic_costs) VALUES (1, ${payload.name}, ${playload.duration}, ${playload.energetic_costs});',\n  format: 'table',\n}",
+          "code": "if (response && response.ok) {\n  notifySuccess(['Update', 'Values updated successfully.']);\n  locationService.reload();\n} else {\n  notifyError(['Update', 'An error occured updating values.']);\n}",
           "confirm": false,
           "contentType": "application/json",
-          "getPayload": "const payload = {};\n\nelements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\nreturn payload;\n\n/**\n * Data Source payload\n */ \nreturn {\n  rawSql: '',\n  format: 'table',\n};",
-          "method": "-",
-          "payloadMode": "all"
+          "datasource": "PostgreSQL",
+          "getPayload": "const payload = {};\n\nelements.forEach((element) => {\n  if (!element.value) {\n    return;\n  }\n\n  payload[element.id] = element.value;\n})\n\n\n\n/**\n * Data Source payload\n */\nreturn {\n  rawSql: 'INSERT INTO task(system_id, name, duration, energetic_costs) VALUES(3, \\'' + payload.name + '\\', \\'' + payload.duration + ' min \\',' + payload.energetic_costs + ');',\n  format: 'table',\n};",
+          "method": "datasource",
+          "payloadMode": "custom"
         }
       },
-      "title": "Panel Title",
+      "pluginVersion": "3.4.0",
+      "title": "Job Scheduling ",
       "type": "volkovlabs-form-panel"
     },
     {
@@ -710,7 +713,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1160,8 +1164,8 @@
       {
         "current": {
           "selected": false,
-          "text": "Continental",
-          "value": "Continental"
+          "text": "Bosch",
+          "value": "Bosch"
         },
         "datasource": {
           "type": "postgres",
@@ -1184,8 +1188,8 @@
       {
         "current": {
           "selected": false,
-          "text": "1",
-          "value": "1"
+          "text": "All",
+          "value": "All"
         },
         "datasource": {
           "type": "postgres",
@@ -1208,8 +1212,8 @@
       {
         "current": {
           "selected": false,
-          "text": "1",
-          "value": "1"
+          "text": "9",
+          "value": "9"
         },
         "datasource": {
           "type": "postgres",
@@ -1232,8 +1236,8 @@
       {
         "current": {
           "selected": false,
-          "text": "MPS 203 I4.0",
-          "value": "MPS 203 I4.0"
+          "text": "CP Lab",
+          "value": "CP Lab"
         },
         "datasource": {
           "type": "postgres",
@@ -1305,8 +1309,8 @@
       {
         "current": {
           "selected": false,
-          "text": "3",
-          "value": "3"
+          "text": "17",
+          "value": "17"
         },
         "hide": 2,
         "includeAll": false,
@@ -1327,8 +1331,8 @@
       {
         "current": {
           "selected": false,
-          "text": "330",
-          "value": "330"
+          "text": "416",
+          "value": "416"
         },
         "description": "",
         "hide": 2,
@@ -1357,6 +1361,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 7,
+  "version": 63,
   "weekStart": ""
 }
