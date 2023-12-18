@@ -29,7 +29,7 @@ In this second sprint, I continued to develop my tasks as Scrum Master and help 
 
 ## Sprint 3
 
-### General consideration 
+### General consideration
 In this third sprint, I was no longer the Scrum Master and focused on fixing the CI tools, mainly the linter and package manager. I also helped my teammates by reviewing some of their Pull Requests.
 
 ### The two user stories that I am most proud of
@@ -43,7 +43,16 @@ I also reviewed the PR's of [Test Coverage](https://github.com/FEUP-MEIC-DS-2023
 
 ## Sprint 4
 
-...
+### General consideration
+During this final project sprint, I wasn't able to do anything meaningful besides talking with the rest of the team and trying to help with the Continuous Deployment.
+
+### The two user stories that I am most proud of
+
+### The two pull requests that I am most proud of
+
+
+### Two contributions of other types that I am most proud of
+
 
 
 ## Overall Product
