@@ -46,7 +46,7 @@ Similar to the last sprint, as we didn't have the meeting with the client, it wa
 Apart from that, i once again helped actively to ajust some inconsistencies in the product backlog and collaborated with the team in some technical detail understanding.
 
 ### Contributions of other types that I am most proud of
-I also helped with the communication across teams, by sharing the progress to the rest of the Product Owner's.
+I also helped with the communication across teams, by sharing the progress with the rest of the Product Owner's and understanding their work to give my team mates an overall update.
 
 
 ## Overall Product
