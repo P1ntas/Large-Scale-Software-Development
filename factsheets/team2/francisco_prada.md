@@ -44,32 +44,23 @@ I also reviewed the PR's of [Test Coverage](https://github.com/FEUP-MEIC-DS-2023
 ## Sprint 4
 
 ### General consideration
-During this final project sprint, I wasn't able to do anything meaningful besides talking with the rest of the team and trying to help with the Continuous Deployment.
+During this final project sprint, I wasn't able to do anything meaningful besides talking with the rest of the team, filling the happiness meters with the rest of the team members, doing some reviews in certain Pull Requests and trying to help with the Continuous Deployment.
 
 ### The two user stories that I am most proud of
 
 ### The two pull requests that I am most proud of
 
-
 ### Two contributions of other types that I am most proud of
-
+I reviewed the PR of Documentation regarding the [Development Guide for Sprint 4](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/158).
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
-
-...
-
+In my opinion, the tecnhologies used in this project fit its purpose, as well as the corresponding architecture. However, there was a bit of a struggle to understand the 4DIAC-IDE initially, but we were able to familiarize ourselves with this tool. Every aspect of the team's implementation is well documented, therefore, any possible problem can be easily solved.
 
 ### Product Realization
-
-...
-
+Although there are still some flaws with the overall product, the client was satisfied with it. Therefore, I consider it to be ready for its delivery. However, one crucial thing that's missing is the integration with real sensors. However, this was not desired by the clietn, so this option was discarded.
 
 ### Value for the Client
-
-...
+The client expressed contentment with the final outcome. The team's dedication to this project led us to deliver a great work, thereby validating the client's satisfaction.

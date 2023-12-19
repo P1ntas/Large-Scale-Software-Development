@@ -56,20 +56,36 @@ Fixed the CI pipeline and integrated *Bandit* to scan for security issues, struc
 
 ## Sprint 4
 
-...
+### Some user stories that we are most proud of
+
+- [Production Workflow Management: Identify Bottlenecks or Delays in Real Time](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/122)
+- [Production Workflow Management: Update Task](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/159)
+- [DINASORE: Integration with Live Sensors](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/157)
+
+### Some pull requests that we are most proud of
+
+- [Job Scheduling: Visualization](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/102)
+- [Production Workflow Management: Implement a Resource Allocation module for each Task](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103)
+- [Setup CI/CD](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/62)
+
+### General Contributions
+
+For this sprint, we had assigned the job scheduling feature. As grafanna works in a one directional way, we had to use a plugin named Data Manipulation. So the first part of this sprint was mostly used to get familiar with it.
+After this, we started the implementation. First a form was made for the creation of tasks. Finally, another form was created in order to assign tasks to a schedule.
+This methods would later be fundamental for the AI to interact with machines.
+
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a size of 40~100 words.
-
 ### Technical Soundness
 
-...
+In our point of view, the technologies used are correspondent with what this project and architecture asked, and their choice of usage is already explained in the different other documents in this project. Their implementation in this project was streamlined to be as easy as possible to build upon. The only problem I can trace in these contexts are the usage of the 4DIAC-IDE, as a manual setup is needed every time a new sensor is added, and this must also be done on the remote server.
+In general, I think the technical soundness of the project is one of the things we can most be proud of.
 
 ### Product Realization
 
-...
+The features implemented were in-line with the goals outlined by the client. Their implementation borders on every point we discussed with the client and obey the technical constraints required. The features in which we (Team 2) worked on were implemented thoroughly and documented accordingly. However, the final product is missing the integration between the Machine Learning component and the rest of the project.
 
 ### Value for the Client
 
-...
+The feedback received from the client was mostly positive, as most of the project requirements were met and handover questions were discussed and rested. This project served as a testing ground for, specifically, DINASORE and 4DIAC-IDE usage, which was a point the client made right at the start, and one of the main tasks our team realized. In our understanding, what we gathered from its implementation will be useful going forward, as it was also discussed that there might be further work done on top of it.

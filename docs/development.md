@@ -106,11 +106,11 @@ For every sprint, the following process metrics are being recorded:
 
 | Sprint | Deployment Frequency | MTTR | Lead Time | Change Failure Rate |
 |-------------|-------------|-------------|-------------|-------------|
-| 0 | - | - | - | - | 
-| 1 | - | - | - | - | 
-| 2 | one every two days | 3 hours | 2 weeks | 20% | 
-| 3 | - | - | - | - | 
-| 4 | one every four days | 5 days | 2 weeks | 15% |
+| 0 | - | - | - | - |
+| 1 | - | - | - | - |
+| 2 | one every two days | 3 hours | 2 weeks | 20% |
+| 3 | one every three days | 2 days | 2 weeks | 25% |
+| 4 | one every four days | 3 hours | 2 weeks | 15% |
 
 
 | Sprint | Velocity (T1) | Velocity (T2) | Velocity (T3) | Velocity (T4) | Velocity (Product) |
@@ -119,7 +119,7 @@ For every sprint, the following process metrics are being recorded:
 | 1 | 8 | 8 | 0 | 2 | 18 |
 | 2 | 10 | 3 | 1 | 0 | 13 |
 | 3 | 6 | 7 | 0 | - | 13 |
-| 4 | 6 | - | 2 | 6 | 14 |
+| 4 | 6 | 6 | 2 | 6 | 14 |
 
 ## Team Retrospectives
 

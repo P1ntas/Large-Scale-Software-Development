@@ -39,24 +39,18 @@ In this third sprint, I worked on the CI integration, more specifically on the i
 ## Sprint 4
 
 ### General considerations
-During the final sprint of the project, with other academic obligations and job commitments, I was unable to contribute to the development of the product. However, I always tried to stay up to date and participate in the decisions necessary for the final phase of the project.
-
+During the final sprint of the project, with other academic obligations and job commitments, I was unable to contribute to the development of the product. However, I always tried to stay up to date and participate in the decisions necessary for the final phase of the project. Besides that, I reviewed pull requests.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+The chosen technologies align with the project requirements and architecture, as detailed in the project documentation. Their implementation was designed for ease of extension. The main issue identified is the manual setup required in 4DIAC-IDE when adding a new sensor, necessitating the same setup on the remote server. Overall, the project's technical soundness is a notable achievement.
 
 ### Product Realization
 
-...
-
+Implemented features align closely with client goals and adhere to specified technical constraints. Team 2's contributions were thorough and well-documented. Notably, the final product lacks integration between the Machine Learning component and the rest of the project.
 
 ### Value for the Client
 
-...
+Client feedback was largely positive, acknowledging the fulfillment of most project requirements and successful resolution of handover questions.
