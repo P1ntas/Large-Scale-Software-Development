@@ -79,19 +79,19 @@ The biggest contribution to this sprint was without a doubt João Araújo.
 
 - [#56](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/56) - Updated how the real-time data interacts with grafana.
 
-- TODO
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Improved how the maintenance features are implemented.
 
 ### The two pull requests that I am most proud of
 
 - [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Debugged a problem related to how the real-time data is implemented
 
-- TODO
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Created new graphs in grafana that are useful in reading the information related to the system.
 
 ### Two contributions of other types that I am most proud of
 
 - Engaging in talks with my team members in how to solve some related problems with our part.
 
-- TODO
+- Gave insightful information on how we should proceed into the next sprint.
 
 ## Overall Product
 
