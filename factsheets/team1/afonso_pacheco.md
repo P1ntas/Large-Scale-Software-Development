@@ -83,19 +83,15 @@ João did the biggest contribution to the project, in this phase my biggest cont
 
 - [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Continue to develop the Data Analytics page.
 
-- TODO
-
 ### The two pull requests that I am most proud of
 
 - [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Corrected a bug related to the dashboard use dinasore data on the new graphs.
 
-- TODO
-
 ### Two contributions of other types that I am most proud of
   
-- The biggest contribution was sharing thoughts and ideas about the current sprint.
+- Sharing thoughts and ideas about the current sprint.
 
-- Engaging in talks with my team members in how to solve some related problems with our part.
+- Engaging in talks with my team members in how to solve some problems.
 
 ## Overall Product
 
@@ -104,14 +100,13 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
-
+I always used the available technologies and tried to extract the most from them, therefore my contributions to the project were technically sound. For all of the user stories we were assigned,followed this mentality, and we were able to implement them successfully.
 
 ### Product Realization
 
-...
+Transforming ideas into reality wasn't always straightforward. However, what we could implement were dashboards and the Data Analytics Page — a proof of successful component integration within our project.
 
 
 ### Value for the Client
 
-...
+In retrospect, my contributions hold significant value for the client. The data analytics page I helped develop was crucial, notifying about machine parameters and enabling quick detection of deviations. 
