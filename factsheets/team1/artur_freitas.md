@@ -56,14 +56,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+As a PO, i didn't get deeply envolved on the team's implementation, but for what i am aware, the chosen technology was a good fit for the architecture and the implementation was correctly approached. I attended every meeting with the client in order to help my team understand what to do with the client's feedback.
 
 
 ### Product Realization
 
-...
+As a PO, i refined the product backlog and helped my team in whatever was necessary in terms of understanding the client feedback. The final product exhibits the quality attributes required and is ready to be delivered to the client.
 
 
 ### Value for the Client
 
-...
+As i attended all the meetings with the client, he was very happy about our features and the way that we implemented them, and also complimented the work done on the machine learning part of the project. The effort was appropriate for the curricular unit.
