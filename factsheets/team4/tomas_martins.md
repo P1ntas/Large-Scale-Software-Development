@@ -84,7 +84,7 @@ Even if some issues were successfully implemented, the most important one, regar
 
 ### The two pull requests that I am most proud of
 
-No relevant pull requests were created by me during sprint 4, besides some for documentation, for the project structure refactoring process and the ones that I approved but didn't create.
+Besides PR[#156](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/156), no relevant pull requests were created by me during sprint 4, besides some for documentation, for the project structure refactoring process and the ones that I approved but didn't create and were created by the developers of my team.
 
 ### Two contributions of other types that I am most proud of
 
