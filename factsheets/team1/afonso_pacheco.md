@@ -104,13 +104,12 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-I always used the available technologies and tried to extract the most from them, therefore my contributions to the project were technically sound. For all of the user stories we were assigned,followed this mentality, and we were able to implement them successfully.
+I always used the available technologies and tried to extract the most from them, therefore my contributions to the project were technically sound after getting familiarized with grafana, however using a technology with prior knowledge would made the implementation more accessible. For all of the user stories we were assigned,followed this mentality, and we were able to implement them successfully.
 
 ### Product Realization
 
-Transforming ideas into reality wasn't always straightforward. However, what we could implement were dashboards and the Data Analytics Page — a proof of successful component integration within our project.
-
+Transforming ideas into reality wasn't always straightforward. Our main task was hard to do without real data or at least data structures. However, the features implemented were viable for the problem and I would say the product feels as professional as students working in their first big project can make it to be. An extra sprint would allow us to soften some rough edges.
 
 ### Value for the Client
 
-In retrospect, my contributions hold significant value for the client. The data analytics page I helped develop was crucial, notifying about machine parameters and enabling quick detection of deviations. 
+In retrospect, my contributions hold significant value for the client. The client was very happy about our features and the way that we implemented them, and also complimented the work done on the machine learning part of the project. The effort was appropriate for the curricular unit.

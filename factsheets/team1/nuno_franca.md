@@ -100,14 +100,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+The chosen technologies were in fact a good fit for both the architecture and the problem and after getting familiarized with grafana I would say the implementation went well, however using a technology with prior knowledge would made the implementation more accessible. Nevertheless the implementation is still easy to understand and quite maintainable.
 
 
 ### Product Realization
 
-...
+The featues implemented were viable for the problem and I would say the product feels as professional as students working in their first big project can make it to be, while still exhibiting the quality attributes required and obeying to the technical constraints, those being mostly the time. That said, while the product being ready to be delivered, an extra sprint would allow us to soften some rough edges.
 
 
 ### Value for the Client
 
-...
+The handover was quite successful and the client was very happy with the implemented features. I reckon I contributed in a good way and I would say that my part was meaningful to the realization of the project as a whole, I could have done more, but the organization left a lot to be desired and that had an impact on my performance.
