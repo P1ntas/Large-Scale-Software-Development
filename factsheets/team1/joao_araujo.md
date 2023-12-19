@@ -107,9 +107,6 @@ This sprint ended with the overall product essentially done. The main focus was 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
 The chosen technologies, including DINASORE, Grafana, Docker, and Prometheus are a good fit for the architecture of the project. They provide the necessary tools and functionalities to address the problem at hand effectively. The implementation demonstrates a good application of these technologies, showcasing their capabilities and integrating them seamlessly. The code is easy to understand, maintainable, and robust, ensuring the long-term viability of the project.
