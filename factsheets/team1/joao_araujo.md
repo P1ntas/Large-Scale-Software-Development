@@ -97,7 +97,7 @@ This sprint ended with the overall product essentially done. The main focus was 
 
 - [#148](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/148) - This PR closes the issue [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) and provides an updated dashboard for the job scheduling task, as well as a form to create new tasks to be scheduled.
 
-- [#***]() - This PR reviews the documentation for Dinasore and the project as a whole, as well as the Changelog, to reflect the changes made in the project in sprint 4.
+- [#158](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/158) - This PR reviews the documentation for Dinasore and the project as a whole, as well as the general README, to reflect the changes made in the project in sprint 4.
 
 ### Two contributions of other types that I am most proud of
 
