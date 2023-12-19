@@ -110,9 +110,7 @@ Key achievements:
 
 ## Sprint 4
 
-During Sprint 4, the team focused on trying to implement machine learning models and auto-manage features for the machines. However, we could only research about this feature until we came to the conclusion that it was not feasible to implement, at least in the current state of the project, as we were not provided with any form of real data that would enable us to successfuly implement and test this feature. The team also worked on the documentation and followed the established guidelines in order to maintain the quality of the project.
-
-the team turned its focus on leveraging the capacities of Go's templating language to make maintenance notifications clearer and more human-readable. Also, the parameters for these notifications were reviewed: previously the notifications were firing based on hard-coded values, as at the time of the original implementation all we had was random mock data, which did not allow us to precisely set these parameters. This led to uncontrolalble notification firing, which obviously wasn't ideal.
+During Sprint 4, the team turned its focus on leveraging the capacities of Go's templating language to make maintenance notifications clearer and more human-readable. Also, the parameters for these notifications were reviewed: previously the notifications were firing based on hard-coded values, as at the time of the original implementation all we had was random mock data, which did not allow us to precisely set these parameters. This led to uncontrolalble notification firing, which obviously wasn't ideal.
 
 Key achievements:
 
