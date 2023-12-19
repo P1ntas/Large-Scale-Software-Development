@@ -30,8 +30,6 @@ In this section you can find a comprehensive guide on how to fully setup a produ
 
 - If you are running **Windows**, you can use the `install.bat` script. Otherwise, if you are using **Linux** or **Mac OS**, you can use the `install.sh` script.
 
-- **NOTE**: (If your python is tagged as `python3` instead of `python`, you will need to change the scripts accordingly)
-
 - This will install the necessary python packages and create the necessary docker containers, those being:
 
   - `Grafana` running under the port `3000`;
@@ -40,12 +38,12 @@ In this section you can find a comprehensive guide on how to fully setup a produ
   - `Prometheus` running under the port `9090`;
   - `Prometheus Pushgateway` running under the port `9091`.
   - `Mosquitto MQTT Broker` running under the port `1883`.
+  - `Dinasore (instance 1)` running under the port `61499` and `4840`.
+  - `Dinasore (instance 2)` running under the port `61500` and `4841`.
 
-  The script will populate the `PostgreSQL` database with the necessary tables and data after the containers are up and running.
+  The script will populate the `PostgreSQL` database with the necessary tables and data after the containers are up and running. Also generates fresh new data to be used overall.
 
-  Currently, the data generator script is not running, so the data is going to be the same across the board, but you can remove the comment from the `data_generator()` function on the `main.py` file to produce fresh data.
-
-  The generated data consists of 3 facilities. Each facility has 5-10 systems. Each system has 2-5 expansions, and each expansion 1-2 sensors.
+  The generated data consists of 3 facilities. Each facility has 5-10 systems. Each system has 2-5 expansions, and each expansion 1-2 sensors. From here, a system can have 3 different tasks associated and it is generated, for 24h, the distribution of tasks for each system. Tasks can also have gaps between them, which means that a system can be idle for a certain amount of time.
 
 ## Usage
 
