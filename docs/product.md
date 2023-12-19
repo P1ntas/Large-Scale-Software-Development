@@ -113,14 +113,14 @@ Similar to the first representation, this diagram represents the main entities o
 
 - **Factory**: The factory keeps being the main entity of the project. It represents the factory where the production takes place. It has multiple systems, those containing multiple sensors attatched to it. The data from the sensors are fetched by the systems and now are sent to a central MQTT broker.
 
-- **Eclipse Mosquitto**: Eclipse Mosquitto was used to create the MQTT broker that receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance. 
+- **Eclipse Mosquitto**: Eclipse Mosquitto was used to create the MQTT broker that receives all the data from the sensors via the MQTT protocol. It is responsible for sending the data to the EdgeX Foundry instance.
 
 - **Prometheus**: This database hold the data from the sensors. Prometheus has a built-in alert and graph system. Prometheus scrapes the data that the EdgeX Foundry instance has available.
 
 - **PostgreSQL**: This database hold the static data from the systems. This data is used to create the factories themselfs, systems, expansions and the sensors. It also holds the thresholds values of the sensors. While PostgreSQL being a relational database, it is suitable for the static data, since it is more structured and achieves an higher confidence level to integrate with Grafana.
 
 - **PyTorch**: PyTorch was used to create the **Machine Learning Model** that is responsible for the prediction of the sensors data. The results of a prediction will be sent to the **MQTT Broker** instance, so that it can be processed and filtered or it can be sent directly to the **PostgreSQL** database.
-  
+
 - **Grafana**: Grafana is the tool that is used to display the metrics to the final user. It shows the metrics via dashboards, and also displays alerts when they are triggered. The **Grafana** instance queries both the **Prometheus** and the **PostgreSQL** databases on a given interval and dashboard load, respectively. The user can manipulate the queries that are sent in an intuitive way, so that he can filter the data that he wants to see. From here, the user can also trigger any action through the outside systems, just like turning off a system.
 
 - **DINASORE**: The DINASORE platform allows the implementation of python Function Block (FB) based pipelines for sensor integration, data processing, and systems control. It uses the OPC-UA protocol to allow communication with the other industrial components.
@@ -150,11 +150,11 @@ Because of a health problem on the client, there was no meeting this third sprin
 
 ### **Sprint 4 (1 December - 14 December)**
 
-Team 1 continued their work around the Grafana System's page with a timeseries regarding sensors values and thresholds. Team 2 improved the CI pipeline; continued the implementation of the job scheduling feature; added SonarQube test coverage. Team 3 continued the work around system's alerts. Team 4 continued to work around the system optimization and creation of UI pages and respective functionalities.
+Team 1 continued their work around the Grafana System's page with a timeseries regarding sensors values and thresholds. Team 2 improved the CI/CD pipeline; continued the implementation of the job scheduling feature; added SonarQube test coverage. Team 3 continued the work around system's alerts. Team 4 continued to work around the system optimization and creation of UI pages and respective functionalities.
 
 All teams made the joint effort of improving the teamwork methodologies, documentation and coding guidelines.
 
-Due to client's unavailability, there was no meeting this fourth sprint and, thus, no feedback was received until the end of the sprint.
+The meeting with the client was postponed from the usual thursday afternoon (14/12/2023) to next week's tuesday (19/12/2023). As the final sprint meeting, we showed the final release version of our project, subject to only minor tweaks or fixes before a full handover is done. The client was overall satisfied with our product, asserting the fact that basically all features and requirements had been implemented, noting only a faulty presentation of the features, something both the team and the client agreed should be worked on until the final presentations.
 
 
 

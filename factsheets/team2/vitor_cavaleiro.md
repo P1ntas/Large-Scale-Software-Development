@@ -49,24 +49,28 @@ During this sprint, I concentrated on enhancing code analysis tools. The integra
 
 ## Sprint 4
 
-...
+### General considerations
 
+In the course of this sprint, I conducted a conclusive SonarQube analysis on the repository and delivered a final quality and security assurance report.
+
+### Two contributions that I am most proud of
+- Provide descriptions of identified code vulnerabilities and insights into code quality based on SonarQube analysis.
+- Develop a final quality and security assurance report.
+
+### Pull Requests Made
+- Documentation update for quality assurance and security concerns [here](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/164).
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+From my point of view, the technologies used are correspondent with what this project and architecture asked, and their choice of usage is already explained in the different other documents in this project. Their implementation in this project was streamlined to be as easy as possible to build upon. The only problem I can trace in these contexts are the usage of the 4DIAC-IDE, as a manual setup is needed every time a new sensor is added, and this must also be done on the remote server.
+In general, I think the technical soundness of the project is one of the things we can most be proud of.
 
 ### Product Realization
 
-...
-
+The features implemented were in-line with the goals outlined by the client. Their implementation borders on every point we discussed with the client and obey the technical constraints required. The features in which we (Team 2) worked on were implemented thoroughly and documented accordingly. However, the final product is missing the integration between the Machine Learning component and the rest of the project.
 
 ### Value for the Client
 
-...
+The feedback received from the client was mostly positive, as most of the project requirements were met and handover questions were discussed and rested. This project served as a testing ground for, specifically, DINASORE and 4DIAC-IDE usage, which was a point the client made right at the start, and one of the main tasks our team realized. In our understanding, what we gathered from its implementation will be useful going forward, as it was also discussed that there might be further work done on top of it.

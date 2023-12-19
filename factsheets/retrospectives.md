@@ -66,7 +66,7 @@ During this sprint, the most positive point was the good communication that was 
 
 ### Team 1 Retrospective
 
-#### Start: 
+#### Start:
     - Using a team branch to push the changes instead of creating a pull request of each feature/fix to the dev branch
     - Communicating more with the team members to better understand the progress of the sprint
 
@@ -84,13 +84,13 @@ Overall, we aren't totally happy with the work that was carried out this sprint.
 
 ### Team 2 Retrospective
 
-#### Start: 
+#### Start:
     - Collecting more metrics in order to better understand our performance during our sprint and identify bottlenecks
     - Enphasizing communication at the start of the sprint to make sure work is laid out more easily during its duration
     - Using a team-wide branch to push changes instead of committing directly to the *dev* branch
 
 #### Stop:
-    - Committing directly to the *dev* branch 
+    - Committing directly to the *dev* branch
 
 #### Continue:
     - Good communication throughout the sprint
@@ -100,7 +100,7 @@ Overall, we aren't totally happy with the work that was carried out this sprint.
 
 #### General Considerations:
 
-Overall, we are happy with how our work was carried out this sprint. We effectively tackled the issues assigned to us and divided the work evenly, allowing for our most productive sprint yet. We held two team-wide meetings to understand the current status of the progress made towards our goals and shifted priorities when needed, which proved to be immensely useful to get more work done better and more adequately. 
+Overall, we are happy with how our work was carried out this sprint. We effectively tackled the issues assigned to us and divided the work evenly, allowing for our most productive sprint yet. We held two team-wide meetings to understand the current status of the progress made towards our goals and shifted priorities when needed, which proved to be immensely useful to get more work done better and more adequately.
 
 ### Team 3 Retrospective
 
@@ -128,7 +128,7 @@ However, we can still analyze this sprint in the "Start, Stop, Continue" way.
 
 ### Team 4 Retrospective
 
-#### Start: 
+#### Start:
     - We will focus our attention on other issues aside the ML one.
 
 #### Stop:
@@ -150,7 +150,7 @@ The work developed so far is more than satisfactory. All noticed the improvement
 
 ### Team 1 Retrospective
 
-#### Start: 
+#### Start:
     - Weekly reunions with team members to check what everyone is up to more often.
 
 #### Stop:
@@ -166,6 +166,22 @@ The work developed so far is more than satisfactory. All noticed the improvement
 Overall, we didn't have enough time to work on this sprint, but we improved the communication between the team. We held a meeting at the start of the sprint, which proved useful to understand the status of the work done until that moment, as well to shift our priorities to the new up and coming tasks that were needed to conclude this sprint.
 
 ### Team 2 Retrospective
+
+#### Start:
+    - Schedule meetings earlier/at the start of the sprint, so as to make sure everyone can attend them
+
+#### Stop:
+    - Waiting for the end of the sprint to start filling out individual factsheets and other content to enable easier releases at the end of the sprint
+
+#### Continue:
+    - Having better communication throughout the sprint
+    - Following the coding guidelines correctly
+    - Good work balance between teammates
+    - Good overall productivity
+
+#### General Considerations:
+
+All in all, we are happy with our work this sprint. Because of our low availability due to lack of time, we ended up having less PBIs done - however, we were able to achieve the main points to achieve a working template to be built upon. Furthermore, even despite having less dedicated time, the team got together and worked continuously and together, discussing and helping each other when needed.
 
 ### Team 3 Retrospective
 
@@ -202,8 +218,8 @@ We will, as done before, analyze this sprint in the "Start, Stop, Continue" way.
 
 #### Continue (if there was another sprint)
 
-    - We commit to diligently and professionally addressing the assigned tasks, striving to provide optimal solutions.   
-    - We intend to maintain our organizational structure by adhering to effective coding and project management practices.    
+    - We commit to diligently and professionally addressing the assigned tasks, striving to provide optimal solutions.
+    - We intend to maintain our organizational structure by adhering to effective coding and project management practices.
     - We would continue with the good communication and team work spirit that has been developing thoughout this project.
 
 #### General Considerations:
