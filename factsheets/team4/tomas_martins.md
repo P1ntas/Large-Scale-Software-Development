@@ -104,4 +104,4 @@ Despite being far from finished, the product has most of the functionalities req
 
 ### Value for the Client
 
-The handover was successful, and the client approved our work. Despite the constraint of using DINASORE, it limited us in time, as we had to learn a new technology from scratch. Although research and study consumed most of the time, my effort matched the expected timeframe for this curricular unit.
+The handover was successful, and the client approved the work I was part of, despite the constraint of using DINASORE, that limited everyone in time, as we had to learn a new technology from scratch. Although research and study consumed most of the time, my effort matched the expected timeframe for this curricular unit.
