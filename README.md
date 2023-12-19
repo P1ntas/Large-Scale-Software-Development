@@ -2,7 +2,6 @@
 
 Our product aims to be a helpful, all-encompassing tool for industrial organizations to achieve the goals of [Industry 4.0](https://www.ibm.com/topics/industry-4-0) that consist in improving product quality, reducing costs, and meeting regulatory requirements while staying adaptable to changing market conditions. More information about our product's vision and objectives can be found in the [Product Management](docs/product.md) document.
  
-
 ## How to use
 
 ### Requirements
@@ -175,8 +174,6 @@ Now, you can open the 4DIAC-IDE and import the [function blocks folder](./resour
   14. Finally, to check the data structure or monitor the process using OPC-UA, you can use the [Prosys client](https://www.prosysopc.com/products/opc-client/), connecting to the component IP address at port 4840 and 4841.
 
 ## How to contribute
-
-Explain what a new developer to the project should know in order to develop the system, including who to build, run and test it in a development environment. 
 
 Defer more details about the technical vision to the [development](docs/development.md) documentation, which should include information on architectural, design and technical aspects of the project, justifying the most important choices to show the soundness of the technical vision.
 
