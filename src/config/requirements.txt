@@ -8,3 +8,4 @@ scikit-learn
 pandas
 paho.mqtt
 prometheus_client
+tox

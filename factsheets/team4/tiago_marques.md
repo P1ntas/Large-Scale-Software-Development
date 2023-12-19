@@ -20,7 +20,6 @@ Since this sprint was more focused on understanding and planning the project, an
 In this sprint I discussed some topics with my team and developed some code in python to generate the reference data for the temperature and pressure sensors (it was also supposed to generate the reference data for the flow rates, but that was not done). Also, by developing that code I also generated the correspondent csv files.
 
 
-
 ## Sprint 1
 
 ### The two user stories that I am most proud of
@@ -61,24 +60,30 @@ I miss-calculated the end of this sprint. I was not able to do the task I was as
 
 ## Sprint 4
 
-...
+On this sprint I was assigned an issue that near the end stoped existing (issue #8). There was a new issue assigned to me, #122, that I tried to develop. The way I was trying to implement it, with the support of my scrum master, Tomás Agante, involved the function blocks and the 4Diac IDE. We found that we could not open the function blocks on 4Diac, there was a null pointer exception error (and if that was solved, maybe new ones would appear). We then received some information regarding that and how we could proceed, which involved using the function blocks scripts in python, like if they were mere python scripts and not function blocks with the extension ".fbt". In the end we could not implement the issue, that was assigned on the last days and whose documentation was a little poor too.
+
+### The two user stories that I am most proud of
+
+ * The issue #122 wasn't a complete user story but a part of one. We did not complete the issue but I am proud that we even started it due to its challenges.
+
+
+### The two pull requests that I am most proud of
+
+ * Not a real pull request, but I'm proud of my organization and commits on the "documentation" branch for my factsheet. I remember in the beginning of the semester I was pushing my factsheet directly to the "main" branch. And after my scrum master explained me how I should push my changes, I started naming my commits correctly and pushing the changes to the corret branch, "documentation".
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
+I wouldn't say that the chosen technologies are a bad fit for the architecture or that the chosen technologies and architecture are a bad fit for the problem, I just don't think all of them are necessary. I think there were implemented too many technologies to try to make a more professional project and that may did not help a lot of students. The one technology I really think was well chosen was Grafana, for the front-end. Overall I don't believe that the implementation e easy to understand, maintainable or robust (there is a readme.md that helps though).
 
 
 ### Product Realization
 
-...
+The project was not concluded but has a lot of the functionalities required by the client. I would say that it has a good structure that could be considered professional (not excellent though). Our main task was hard to do without real data or at least data structures, so our ML model was not integrated with the project and the client understood that.
 
 
 ### Value for the Client
 
-...
+The handover was successfull and the client understood that with what he gave us we could not give him more than what we did. Although most of my work did not appear on commits or was integrated with the project directly I do think I have contributed in a good way. I still have the feeling I could have done a little more but that wasn't because of lack of effort or time spent, was because of the organization and the project itself.

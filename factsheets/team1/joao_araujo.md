@@ -87,24 +87,34 @@ The two PRs I'm most proud are:
 
 ## Sprint 4
 
-...
+This sprint ended with the overall product essentially done. The main focus was on the final touches on the Job Scheduling task and the revision of the documentation for the whole project.
 
+### The user story that I am most proud of
+
+- [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) - Together with the member [Fábio Morais from Team 2](../team2/fabio_morais.md), we successfully improved the previously done dashboard regarding the job scheduling, including a forms that creates a new task to be scheduled and the updates are reflected in the dashboard and in the database.
+
+### The two pull requests that I am most proud of
+
+- [#148](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/148) - This PR closes the issue [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) and provides an updated dashboard for the job scheduling task, as well as a form to create new tasks to be scheduled.
+
+- [#158](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/158) - This PR reviews the documentation for Dinasore and the project as a whole, as well as the general README, to reflect the changes made in the project in sprint 4.
+
+### Two contributions of other types that I am most proud of
+
+- I've been helping [Team 2](../team2/team2.md) once more on improving the documentation about the project has a whole.
+
+- Overall, I've helped the other teams with any kinds of problems they had during the development of the project, specially during the setup, which proved useful for the improvement of the documentation.
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+The chosen technologies, including DINASORE, Grafana, Docker, and Prometheus are a good fit for the architecture of the project. They provide the necessary tools and functionalities to address the problem at hand effectively. The implementation demonstrates a good application of these technologies, showcasing their capabilities and integrating them seamlessly. The code is easy to understand, maintainable, and robust, ensuring the long-term viability of the project.
 
 ### Product Realization
 
-...
-
+During the development of the project, my team and I implemented various features and improvements that contribute to a viable product for the problem at hand. The product has a professional feel to it, exhibiting the required quality attributes. It also adheres to the technical constraints and is ready to be delivered to the client. These contributions were well received by the client, indicating that the final product meets their needs and will be easy for them to use.
 
 ### Value for the Client
 
-...
+After the last Q&A session with the client, which we also presented the final product, the client was pleased with the final product and the work we've done. Although some minor points were raised, the part of the product that was implemented by my team and I was well received by the client. We believe that the client will be able to use the product with ease and that it will be useful for the his needs. Overall, the effort put into the project was quite above the expected for the curricular unit, but it is expected in such a project whose goal is to be used in a real-world scenario and should be fine-tuned to the client's needs and required some trial and error to get on par with the client's expectations.

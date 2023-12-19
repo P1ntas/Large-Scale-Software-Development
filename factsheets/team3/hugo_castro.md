@@ -101,14 +101,20 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-My contributions to the project were technically proficient, as I used the technical knowledge I acquired during the course to implement the features I was assigned to. I also strived to use the establsihed technologies for the project and also helped other team members when they had any doubts.
+
+My contributions to the project were technically proficient, as I used the technical knowledge I acquired during the course to implement the features I was assigned to. I also strived to use the establsihed technologies (which were a good fit) for the project and also helped other team members when they had any doubts. I also made sure all features were easy to understand and robust.
+
 
 
 ### Product Realization
 
-Acknowledging potential enhancements in the product's usability, I actively addressed this aspect. My collaboration with the team resulted in the implementation of streamlined and potent notifications, significantly elevating the overall user-friendliness of the product.
+
+Acknowledging potential enhancements in the product's usability, I actively addressed this aspect. My collaboration with the team resulted in the implementation of streamlined and potent notifications, significantly elevating the overall user-friendliness and professional look of the product, which clearly exhibits a good use of the chosen technologies.
+
 
 
 ### Value for the Client
 
-From my perspective, the final product, particularly the features we implemented, should leave the client satisfied, as we implememnted simple to use yet effective features.
+
+From my perspective, the final product, particularly the features we implemented, should leave the client satisfied and happy, as we implememnted simple to use yet effective features.
+

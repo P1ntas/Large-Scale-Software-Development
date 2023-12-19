@@ -67,6 +67,40 @@ For security-related questions regarding the project and respective testing logs
 
 For an explanation pertaining the project's quality assurance, please refer to the [Quality Assurance sheet](./development/quality_assurance.md).
 
+### Sonarqube
+
+To access the `Sonarqube` interface, go to `localhost:9000`. Login with the following credentials:
+```markdown
+**Username**: admin
+**Password**: admin
+```
+
+After logging in, change the password. You will be redirected to the `projects` page.
+
+![image](../docs/images/sonarqube_projects.png)
+
+The next step is to create a new project. For that, click on the `Add a project` button. Select the manual option, and give your project a name and project key. In this case, name it `MES`.
+
+![image](../docs/images/sonarqube_create_project.png)
+
+Afterward, you will be prompted to generate a token. We will name it `MES_Analysis`.
+
+![image](../docs/images/sonarqube_create_token.png)
+
+To generate the best command for the scanner, customize your environment and the system you are running.
+
+Follow the instructions on the screen to configure the scanner.
+
+![image](../docs/images/sonarqube_configuration.png)
+
+Before running the scanner, perform a code coverage analysis. SonarQube supports the reporting of test coverage information as part of the analysis of the project. However, SonarQube does not generate the coverage report itself. Using Tox, a local automated test tool, it is possible to assert code coverage and generate reports. There is a tox.ini file on the project root that can be configured to run the tests and generate the coverage report. To run the tests, run the command `tox` on the terminal in the project root. This will generate a coverage report in the `analysis` folder. Make sure you map the coverage report to the `sonar-project.properties` file.
+
+Finally, copy the scanner command and run it on a terminal on the project root.
+
+After scanning the files, you can check the results on the `Sonarqube` interface.
+
+![image](../docs/images/sonarqube_results.png)
+
 ## Metrics (10/10)
 For every sprint, the following process metrics are being recorded:
 
@@ -75,8 +109,9 @@ For every sprint, the following process metrics are being recorded:
 | 0 | - | - | - | - | 
 | 1 | - | - | - | - | 
 | 2 | one every two days | 3 hours | 2 weeks | 20% | 
-| 3 |   |   |   |   | 
-| 4 |   |   |   |   |
+| 3 | - | - | - | - | 
+| 4 | one every four days | 5 days | 2 weeks | 15% |
+
 
 | Sprint | Velocity (T1) | Velocity (T2) | Velocity (T3) | Velocity (T4) | Velocity (Product) |
 |-------------|-------------|-------------|-------------|-------------|-------------|
@@ -84,7 +119,7 @@ For every sprint, the following process metrics are being recorded:
 | 1 | 8 | 8 | 0 | 2 | 18 |
 | 2 | 10 | 3 | 1 | 0 | 13 |
 | 3 | 6 | 7 | 0 | - | 13 |
-| 4 | - | - | 1 | - | - |
+| 4 | 6 | - | 2 | 6 | 14 |
 
 ## Team Retrospectives
 

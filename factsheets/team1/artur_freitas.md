@@ -40,24 +40,27 @@ My team's user stories:
 
 ## Sprint 4
 
-...
+### Contribution
+Similar to the last sprint, as we didn't have the meeting with the client, it was not possible to have the feedback to improve some of the features or to add some new user stories. 
+
+Apart from that, i once again helped actively to ajust some inconsistencies in the product backlog and collaborated with the team in some technical detail understanding.
+
+### Contributions of other types that I am most proud of
+I also helped with the communication across teams, by sharing the progress with the rest of the Product Owner's and understanding their work to give my team mates an overall update.
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
+As a PO, i didn't get deeply envolved on the team's implementation, but for what i am aware, the chosen technology was a good fit for the architecture and the implementation was correctly approached. I attended every meeting with the client in order to help my team understand what to do with the client's feedback.
 
 
 ### Product Realization
 
-...
+As a PO, i refined the product backlog and helped my team in whatever was necessary in terms of understanding the client feedback. The final product exhibits the quality attributes required and is ready to be delivered to the client.
 
 
 ### Value for the Client
 
-...
+As i attended all the meetings with the client, he was very happy about our features and the way that we implemented them, and also complimented the work done on the machine learning part of the project. The effort was appropriate for the curricular unit.

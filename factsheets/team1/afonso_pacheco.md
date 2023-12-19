@@ -35,6 +35,7 @@ João did the biggest contribution to the project, in this phase my biggest cont
 
 ### Two contributions of other types that I am most proud of
 
+- The biggest contribution was sharing thoughts and ideas about the current and next sprints.
 
 ## Sprint 2
 
@@ -53,7 +54,7 @@ João did the biggest contribution to the project, in this phase my biggest cont
 ### Two contributions of other types that I am most proud of
 - Updated the product.md more specifically the recent tools that we're using in the project.
   
-- The biggest contribution was sharing thoughts and ideas about the current and next sprints 
+- The biggest contribution was sharing thoughts and ideas about the current and next sprints.
 
 
 ## Sprint 3
@@ -78,8 +79,23 @@ João did the biggest contribution to the project, in this phase my biggest cont
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
 
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Continue to develop the Data Analytics page.
+
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Improved how the maintenance features are implemented.
+
+### The two pull requests that I am most proud of
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Corrected a bug related to the dashboard use dinasore data on the new graphs.
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Created new graphs in grafana that are useful in reading the information related to the system.
+
+### Two contributions of other types that I am most proud of
+  
+- Sharing thoughts and ideas about the current sprint.
+
+- Engaging in talks with my team members in how to solve some problems.
 
 ## Overall Product
 
@@ -88,14 +104,12 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
-
+I always used the available technologies and tried to extract the most from them, therefore my contributions to the project were technically sound after getting familiarized with grafana, however using a technology with prior knowledge would made the implementation more accessible. For all of the user stories we were assigned,followed this mentality, and we were able to implement them successfully.
 
 ### Product Realization
 
-...
-
+Transforming ideas into reality wasn't always straightforward. Our main task was hard to do without real data or at least data structures. However, the features implemented were viable for the problem and I would say the product feels as professional as students working in their first big project can make it to be. An extra sprint would allow us to soften some rough edges.
 
 ### Value for the Client
 
-...
+In retrospect, my contributions hold significant value for the client. The client was very happy about our features and the way that we implemented them, and also complimented the work done on the machine learning part of the project. The effort was appropriate for the curricular unit.

@@ -49,7 +49,7 @@ In this sprint, I played a pivotal role in simplifying our team's workflow by ta
 
 1. Improving Git Organization and Code Review: I'm proud of our efforts to organize Git, making sure we have strong processes for reviewing pull requests and leaving comments on code changes and commits in general. This structured way of checking our code doesn't just make it better but also helps us work together as a large team.
 
-2. Proactive Support and Issue Resolution: I'm happy to actively helped my team with any issues related to the product and answer questions during production. By being available and responsive, I've contributed to a smoother code development process. This kind of support speeded up issue resolution.
+2. Proactive Support and Issue Resolution: I'm happy that I actively helped my team with any issues related to the product and answered questions during production. By being available and responsive, I've contributed to a smoother code development process. 
 
 ## Sprint 3
 During this Sprint review, as the Product Owner, I collaborated closely with team members, providing valuable support and guidance. I facilitated a productive atmosphere by streamlining and organizing both the team and product boards, ensuring clarity and efficiency in our workflow. Also, organized the product backlog by removing epics and drafts, and submitted a refined version focused on meaningful issues. 
@@ -58,25 +58,28 @@ During this Sprint review, as the Product Owner, I collaborated closely with tea
 
 1. Optimizing Team Dynamics: Recognizing Achievements and Addressing Areas for Improvement.
 ## Sprint 4
-
-...
+During this sprint, I mainly focused on making sure our team worked well together and got things done. I played a supporting role, helping out my colleagues whenever they needed it and making sure tasks were assigned smoothly.Also, I took charge of keeping track of tasks on the product board to ensure everything was organized and progressing as planned. In addition, I kept in touch with our client, reaching out to reschedule meetings to fit everyone's schedules. My goal in this final stage was to actively contribute to the team's efficiency and help us achieve our sprint objectives successfully.
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
+I haven't contributed significantly to Technical Soundness as other team members have it well-managed, utilizing effective tools, and handling it capably.
 
 
 ### Product Realization
 
-...
+I assigned tasks, wrote in the product backlog, and assisted colleagues by addressing questions throughout the production process. My focus was on effective delegation, organizing tasks, and providing support to ensure a smooth workflow.
 
 
 ### Value for the Client
 
-...
+I made sure to listen and understand our client's needs and preferences in meetings, aiming to make our MVP really useful for them. I wanted it to meet their expectations and requirements, ensuring it would be exactly what they needed."
+
+
+
+
+
+
+

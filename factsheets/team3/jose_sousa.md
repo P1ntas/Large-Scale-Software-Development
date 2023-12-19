@@ -106,14 +106,20 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-I always used the available technologies and tried to extract the most value from them, so I think that my contributions to the project were technically sound. For all of the user stories we were assigned,followed this mentality, and we were able to implement them successfully.
+
+I always used the available technologies and tried to extract the most value from them, so I think that my contributions to the project were technically sound. For all of the user stories we were assigned,followed this mentality, and we were able to implement them successfully, creating robust solutions that showed a good application of the technologies.
+
 
 
 ### Product Realization
 
 All of our features were implemented, however I think that the notifications could be improveed in the future, as for all of the  project we didn't have access to real data, so we could not define the best parameters, for example. I think the client was also responsible for this.
+Despite the setbacks I think the set of features implemented allow a viable product for the problem at hand, making it have a professional look and feel, exhibiting the quality attributes required while obeying the constraints imposed. 
+
 
 
 ### Value for the Client
 
-I think overall the final product still holds value for the client, as the features we and the other teams implemented allow to perform the main objectives established in the beginning of the project. However, this is still a base that could be improved with real data.
+
+I think overall the final product still holds value for the client, as the features we and the other teams implemented allow to perform the main objectives established in the beginning of the project. However, this is still a base that could be improved with real data. All in all, I think the client will be happy with the product we delivered.
+

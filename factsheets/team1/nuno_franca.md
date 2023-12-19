@@ -75,8 +75,23 @@ The biggest contribution to this sprint was without a doubt João Araújo.
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
 
+- [#56](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/56) - Updated how the real-time data interacts with grafana.
+
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Improved how the maintenance features are implemented.
+
+### The two pull requests that I am most proud of
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Debugged a problem related to how the real-time data is implemented
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Created new graphs in grafana that are useful in reading the information related to the system.
+
+### Two contributions of other types that I am most proud of
+
+- Engaging in talks with my team members in how to solve some related problems with our part.
+
+- Gave insightful information on how we should proceed into the next sprint.
 
 ## Overall Product
 
@@ -85,14 +100,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+The chosen technologies were in fact a good fit for both the architecture and the problem and after getting familiarized with grafana I would say the implementation went well, however using a technology with prior knowledge would made the implementation more accessible. Nevertheless the implementation is still easy to understand and quite maintainable.
 
 
 ### Product Realization
 
-...
+The featues implemented were viable for the problem and I would say the product feels as professional as students working in their first big project can make it to be, while still exhibiting the quality attributes required and obeying to the technical constraints, those being mostly the time. That said, while the product being ready to be delivered, an extra sprint would allow us to soften some rough edges.
 
 
 ### Value for the Client
 
-...
+The handover was quite successful and the client was very happy with the implemented features. I reckon I contributed in a good way and I would say that my part was meaningful to the realization of the project as a whole, I could have done more, but the organization left a lot to be desired and that had an impact on my performance.
