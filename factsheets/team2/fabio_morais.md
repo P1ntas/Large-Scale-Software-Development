@@ -27,8 +27,8 @@ Later in the sprint worked mostly together with [João Araújo](../team1/joao_ar
 
 This can include PRs that you have implemented or reviewed during the sprint.
 
- * #3 [83] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/83)
- * #4 [52] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/52)
+ * [83] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/83)
+ * [52] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/52)
 
 
 ### Two contributions of other types that I am most proud of
@@ -46,8 +46,8 @@ This can include PRs that you have implemented or reviewed during the sprint.
 
 This can include PRs that you have implemented or reviewed during the sprint.
 
- * #3 [114] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/114)
- * #4 [105] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/105)
+ *  [114] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/114)
+ *  [105] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/105)
 
 
 ### Two contributions of other types that I am most proud of
@@ -58,7 +58,20 @@ This can include PRs that you have implemented or reviewed during the sprint.
 
 ## Sprint 4
 
-...
+#### The user story that I am most proud of
+ * [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103)
+
+ ### The two pull requests that I am most proud of
+
+This can include PRs that you have implemented or reviewed during the sprint.
+
+ *  [148] (https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/148)
+
+ ### Two contributions of other types that I am most proud of
+
+- As grafana only works with one way the issue had to be done via plugin. This requested some work of familiarization with the new plugin.
+- Finished the task creation on grafana which was the first part of the issue attributed to me. Although I had some problems in commiting the grafana changes, those were solved with the help of [João Araújo](../team1/joao_araujo.md). Also helped him finish the rest of the issue.
+
 
 
 ## Overall Product
