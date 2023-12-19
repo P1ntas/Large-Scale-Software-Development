@@ -75,16 +75,16 @@ For every sprint, the following process metrics are being recorded:
 | 0 | - | - | - | - | 
 | 1 | - | - | - | - | 
 | 2 | one every two days | 3 hours | 2 weeks | 20% | 
-| 3 |   |   |   |   | 
-| 4 |   |   |   |   |
+| 3 | - | - | - | - | 
+| 4 | one every four days | 5 days | 2 weeks | 15% |
 
 | Sprint | Velocity (T1) | Velocity (T2) | Velocity (T3) | Velocity (T4) | Velocity (Product) |
 |-------------|-------------|-------------|-------------|-------------|-------------|
 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 8 | 8 | 0 | 2 | 18 |
 | 2 | 10 | 3 | 1 | 0 | 13 |
-| 3 | 6 | 7 | 0 | - | 13 |
-| 4 | - | - | 1 | - | - |
+| 3 | 6 | 7 | 0 | 2 | 13 |
+| 4 | - | - | 1 | 6 | 7 |
 
 ## Team Retrospectives
 
