@@ -49,8 +49,16 @@ During this sprint, I concentrated on enhancing code analysis tools. The integra
 
 ## Sprint 4
 
-...
+### General considerations
 
+In the course of this sprint, I conducted a conclusive SonarQube analysis on the repository and delivered a final quality and security assurance report.
+
+### Two contributions that I am most proud of
+- Provide descriptions of identified code vulnerabilities and insights into code quality based on SonarQube analysis.
+- Develop a final quality and security assurance report.
+
+### Pull Requests Made
+- Documentation update for quality assurance and security concerns [here](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/164).
 
 ## Overall Product
 
