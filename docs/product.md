@@ -148,3 +148,15 @@ All teams made the joint effort of improving the teamwork methodologies and codi
 
 Because of a health problem on the client, there was no meeting this third sprint and, thus, no feedback was received at the time of writing (30/11/2023).
 
+### **Sprint 4 (1 December - 14 December)**
+
+Team 1 continued their work around the Grafana System's page with a timeseries regarding sensors values and thresholds. Team 2 improved the CI pipeline; continued the implementation of the job scheduling feature; added SonarQube test coverage. Team 3 continued the work around system's alerts. Team 4 continued to work around the system optimization and creation of UI pages and respective functionalities.
+
+All teams made the joint effort of improving the teamwork methodologies, documentation and coding guidelines.
+
+Due to client's unavailability, there was no meeting this fourth sprint and, thus, no feedback was received until the end of the sprint.
+
+
+
+
+

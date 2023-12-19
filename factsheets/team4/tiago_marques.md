@@ -20,7 +20,6 @@ Since this sprint was more focused on understanding and planning the project, an
 In this sprint I discussed some topics with my team and developed some code in python to generate the reference data for the temperature and pressure sensors (it was also supposed to generate the reference data for the flow rates, but that was not done). Also, by developing that code I also generated the correspondent csv files.
 
 
-
 ## Sprint 1
 
 ### The two user stories that I am most proud of
@@ -61,7 +60,16 @@ I miss-calculated the end of this sprint. I was not able to do the task I was as
 
 ## Sprint 4
 
-...
+On this sprint I was assigned an issue that near the end stoped existing (issue #8). There was a new issue assigned to me, #122, that I tried to develop. The way I was trying to implement it, with the support of my scrum master, Tomás Agante, involved the function blocks and the 4Diac IDE. We found that we could not open the function blocks on 4Diac, there was a null pointer exception error (and if that was solved, maybe new ones would appear). We then received some information regarding that and how we could proceed, which involved using the function blocks scripts in python, like if they were mere python scripts and not function blocks with the extension ".fbt". In the end we could not implement the issue, that was assigned on the last days and whose documentation was a little poor too.
+
+### The two user stories that I am most proud of
+
+ * The issue #122 wasn't a complete user story but a part of one. We did not complete the issue but I am proud that we even started it due to its challenges.
+
+
+### The two pull requests that I am most proud of
+
+ * Not a real pull request, but I'm proud of my organization and commits on the "documentation" branch for my factsheet. I remember in the beginning of the semester I was pushing my factsheet directly to the "main" branch. And after my scrum master explained me how I should push my changes, I started naming my commits correctly and pushing the changes to the corret branch, "documentation".
 
 
 ## Overall Product

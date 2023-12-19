@@ -54,7 +54,7 @@
           "links": [
             {
               "title": "Check ${__data.fields.name} Factory",
-              "url": "http://localhost:3000/d/a8fd2bab-acc8-4bf5-a0f8-b874d82f481c/general-view?var-factory_name=${__data.fields.name}"
+              "url": "http://${host:query}:3000/d/a8fd2bab-acc8-4bf5-a0f8-b874d82f481c/general-view?var-factory_name=${__data.fields.name}"
             }
           ],
           "mappings": [],
@@ -735,7 +735,7 @@
                 "value": [
                   {
                     "title": "Check this system further",
-                    "url": "http://localhost:3000/d/c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b/systems-view?orgId=1&refresh=5s&${factory_name:queryparam}&${factory_id:queryparam}&var-system_id=${__data.fields.ID}"
+                    "url": "http://${host:query}:3000/d/c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b/systems-view?orgId=1&refresh=5s&${factory_name:queryparam}&${factory_id:queryparam}&var-system_id=${__data.fields.ID}"
                   }
                 ]
               }
@@ -877,9 +877,41 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "selected": true,
+          "text": "development",
+          "value": "localhost"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Host",
+        "multi": false,
+        "name": "host",
+        "options": [
+          {
+            "selected": true,
+            "text": "development",
+            "value": "localhost"
+          },
+          {
+            "selected": false,
+            "text": "deployment",
+            "value": "34.42.26.53"
+          }
+        ],
+        "query": "development : localhost, deployment : 34.42.26.53",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
         },
         "datasource": {
           "type": "postgres",
@@ -1003,6 +1035,6 @@
   "timezone": "",
   "title": "General View",
   "uid": "a8fd2bab-acc8-4bf5-a0f8-b874d82f481c",
-  "version": 1,
+  "version": 3,
   "weekStart": ""
 }

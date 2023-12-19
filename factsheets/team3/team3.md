@@ -145,9 +145,11 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
+
 During the project, the whole team strived to follow the establsihed guidelines and coding standards, in order to maintain the quality and scalability of the project. We also made sure to implement all of our features takeing into account the available technologies, and always documented our work.
 We think the chosen technologies were a good fit for the proposed architecture as Grafana and Prometheus are suitable for showing data (fed by live scraping) to the user in an intuitive way. Our implementation in particular showcases all of the potential of these technologies. It is also maintainable and robust, as the dashboards and other features can be easily understood and maintained.
 The work done laid the foundation for future work on the project, as it is independent of the set of data used, and we are proud of the results we achieved. Also, every member of the team contributed with technical knowledge, improving the overall technical soundness of the project.
+
 
 ### Product Realization
 
@@ -157,3 +159,4 @@ However, we think the product is ready to be delivered to the client, and it has
 ### Value for the Client
 
 The value for the client of our project is clear: together with the other teams, we were able to implement a system that allows the client to monitor the machines in real-time, and to be notified when something goes wrong, alo integrating more features such as the machine learning ones. As the client's requisites were a bit vague, we sometimes had to make decisions on our own, but we think that the client will be satisfied with the results we achieved, as the system is functional and meets the main client's needs. We also think the effort from everyone in our team was adequate to the expected for this project.
+

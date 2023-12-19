@@ -103,14 +103,20 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
+
 I think that my contributions to the project were technically sound. I was able to implement the notifications feature, which was the main goal of our user story, and I also researched about the grafana interface, which was very important for the development of our project and allowed our implementation to be understandable, maintainable and scalable, exhibitiing good applications of the chosen technologies.
+
 
 
 ### Product Realization
 
+
 Transforming ideas into reality wasn't always straightforward. However, what we could implement was functional Grafana notifications — a proof of successful component integration within our project. We think the product seems professional and effectively satisfies the requirements with viable solutions, making it ready to be delivered.
+
 
 
 ### Value for the Client
 
+
 I think that my work was valuable for the client. The alerting features our team implemented are crucial for monitoring the machines and identify anomalies, enhancing the client's performance and overall happinness.
+

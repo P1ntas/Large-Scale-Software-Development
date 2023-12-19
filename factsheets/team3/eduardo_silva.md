@@ -112,12 +112,16 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
+
 I made substantial, technically proficient contributions to the project, successfuly implementing the tasks that were assigned to me. I also always tried to follow the established project guidelines and coding standards. My contributions showed a good understanding of the technologies used and the project's architecture, and I was able to apply this knowledge to solve problems and implement robust features.
+
 
 
 ### Product Realization
 
+
 I think overall, the product could have been improved in its usability and user-friendliness. However, I think my contributions helped to make this issue less relevant, as I was able to implement simple and effective notifications with my team. I think the project is ready to be used by the client, and it is a good product overall, with a professional look.
+
 
 
 ### Value for the Client

@@ -9,4 +9,4 @@ dependencies:
   - wheel
   - conda-content-trust
   - conda-libmamba-solver
-prefix: /home/francisco/miniconda3
+prefix: /miniconda3
