@@ -22,15 +22,426 @@
   "liveNow": false,
   "panels": [
     {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "title": "System View",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "Maintenance Required": {
+                  "color": "yellow",
+                  "index": 2
+                },
+                "Offline": {
+                  "color": "red",
+                  "index": 3
+                },
+                "Online": {
+                  "color": "green",
+                  "index": 0
+                },
+                "Working": {
+                  "color": "blue",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^status$/",
+          "values": false
+        },
+        "textMode": "value"
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select status from system s where id = $system_id ",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Key"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 118
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 4,
+        "x": 0,
+        "y": 4
+      },
+      "id": 1,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": false,
+        "sortBy": []
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT 'Name' AS \"Key\", sm.name::text AS \"Value\" FROM system s\r\nINNER JOIN system_model sm ON sm.id = s.system_model_id\r\nWHERE s.id = $system_id\r\n\r\nUNION ALL\r\n\r\nSELECT 'Manufacturer' AS \"Key\", sm.manufacturer::text AS \"Value\" FROM system s\r\nINNER JOIN system_model sm ON sm.id = s.system_model_id\r\nWHERE s.id = $system_id\r\n\r\nUNION ALL\r\n\r\nSELECT 'Type' AS \"Key\", sm.type::text AS \"Value\" FROM system s\r\nINNER JOIN system_model sm ON sm.id = s.system_model_id\r\nWHERE s.id = $system_id\r\n\r\nUNION ALL\r\n\r\nSELECT 'Expansions' AS \"Key\", COUNT(e.id)::text AS \"Value\" FROM system s\r\nLEFT JOIN expansion e ON e.system_id = s.id\r\nWHERE s.id = $system_id;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "System Information",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PostgreSQL"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 4,
+        "y": 4
+      },
+      "id": 6,
+      "options": {
+        "baidu": {
+          "callback": "bmapReady",
+          "key": ""
+        },
+        "editor": {
+          "format": "auto",
+          "height": 600
+        },
+        "gaode": {
+          "key": "",
+          "plugin": "AMap.Scale,AMap.ToolBar"
+        },
+        "getOption": "let all_data = [];\nlet colorMap = {\n  'Expansions Online': '#91cc75',\n  'Expansions Working': '#5470c6',\n  'Expansions Requiring Maintenance': '#fac858',\n  'Expansions Offline': '#ee6666'\n};\n\ndata.series.forEach((s) => {\n  ['Expansions Online', 'Expansions Working', 'Expansions Requiring Maintenance', 'Expansions Offline'].forEach((status) => {\n    let value = s.fields.find((f) => f.name === status).values;\n    if (value > 0) {\n      all_data.push({ value, name: status, color: colorMap[status] });\n    }\n  });\n});\n\n// Sort the data for the chart by value in descending order\nall_data.sort((a, b) => b.value - a.value);\n\n// Define a custom order for the legend data\nconst customLegendOrder = ['Expansions Online', 'Expansions Working', 'Expansions Requiring Maintenance', 'Expansions Offline'];\n\n// Use the custom order for the legend data\nlet legendData = customLegendOrder.filter((item) => all_data.some((data) => data.name === item));\n\n// Use the all_data array for your chart\nreturn {\n  title: {\n    text: 'Expansion Status v3',\n    left: 'center'\n  },\n  tooltip: {\n    trigger: 'item',\n    formatter: '{a} <br/>{b}: {c} ({d}%)'\n  },\n  legend: {\n    orient: 'horizontal',\n    bottom: 10,\n    data: legendData // Use custom ordered legend data\n  },\n  series: [\n    {\n      name: 'System Status',\n      type: 'pie',\n      radius: '50%',\n      data: all_data, // Use all_data for your chart\n      emphasis: {\n        itemStyle: {\n          shadowBlur: 10,\n          shadowOffsetX: 0,\n          shadowColor: 'rgba(0, 0, 0, 0.5)'\n        }\n      },\n      // Set item color based on the color property in all_data\n      itemStyle: {\n        color: (params) => params.data.color\n      }\n    }\n  ]\n};\n",
+        "google": {
+          "callback": "gmapReady",
+          "key": ""
+        },
+        "map": "none",
+        "renderer": "canvas",
+        "themeEditor": {
+          "config": "{}",
+          "height": 400,
+          "name": "default"
+        }
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PostgreSQL"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    SUM(CASE WHEN expansion.status = 'Online' THEN 1 ELSE 0 END) AS \"Expansions Online\",\r\n    SUM(CASE WHEN expansion.status = 'Working' THEN 1 ELSE 0 END) AS \"Expansions Working\",\r\n    SUM(CASE WHEN expansion.status = 'Maintenance Required' THEN 1 ELSE 0 END) AS \"Expansions Requiring Maintenance\",\r\n    SUM(CASE WHEN expansion.status = 'Offline' THEN 1 ELSE 0 END) AS \"Expansions Offline\"\r\nFROM system\r\nINNER JOIN expansion ON system.id = expansion.system_id\r\nWHERE system.id = $system_id \r\n\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PCC52D03280B7034C"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "Maintenance Required": {
+                  "color": "yellow",
+                  "index": 2
+                },
+                "Offline": {
+                  "color": "red",
+                  "index": 3
+                },
+                "Online": {
+                  "color": "green",
+                  "index": 0
+                },
+                "Working": {
+                  "color": "blue",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Expansion Status"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 4
+      },
+      "id": 144,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    em.name AS \"Expansion Name\",\r\n    em.type AS \"Expansion Type\",\r\n    em.manufacturer AS \"Expansion Manufacturer\",\r\n    e.status AS \"Expansion Status\"\r\nFROM\r\n    expansion AS e\r\nJOIN\r\n    expansion_model AS em ON e.expansion_model_id = em.id\r\nWHERE\r\n    e.system_id = $system_id;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "System",
+      "type": "table"
+    },
+    {
       "datasource": {
         "type": "datasource",
         "uid": "grafana"
       },
+      "description": "Create a new task with the desired Name and the expected duration and energetic costs",
       "gridPos": {
-        "h": 8,
+        "h": 6,
         "w": 12,
         "x": 0,
-        "y": 0
+        "y": 13
       },
       "id": 106,
       "options": {
@@ -53,7 +464,7 @@
           {
             "hidden": false,
             "id": "name",
-            "labelWidth": 10,
+            "labelWidth": 15,
             "section": "",
             "title": "Name",
             "tooltip": "",
@@ -64,7 +475,7 @@
           },
           {
             "id": "duration",
-            "labelWidth": 10,
+            "labelWidth": 15,
             "section": "",
             "title": "Duration",
             "tooltip": "",
@@ -75,9 +486,9 @@
           },
           {
             "id": "energetic_costs",
-            "labelWidth": 10,
+            "labelWidth": 15,
             "section": "",
-            "title": "Energetic",
+            "title": "Energy Costs",
             "tooltip": "",
             "type": "number",
             "uid": "7f07b0f9-9725-4ffe-8976-0e61b922005b",
@@ -144,10 +555,10 @@
         "uid": "PCC52D03280B7034C"
       },
       "gridPos": {
-        "h": 8,
+        "h": 6,
         "w": 12,
         "x": 12,
-        "y": 0
+        "y": 13
       },
       "id": 119,
       "options": {
@@ -285,347 +696,6 @@
       ],
       "title": "Assign Task",
       "type": "volkovlabs-form-panel"
-    },
-    {
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 8
-      },
-      "id": 2,
-      "title": "System View",
-      "type": "row"
-    },
-    {
-      "datasource": {
-        "type": "postgres",
-        "uid": "PostgreSQL"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            {
-              "options": {
-                "Maintenance Required": {
-                  "color": "yellow",
-                  "index": 2
-                },
-                "Offline": {
-                  "color": "red",
-                  "index": 3
-                },
-                "Online": {
-                  "color": "green",
-                  "index": 0
-                },
-                "Working": {
-                  "color": "blue",
-                  "index": 1
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 24,
-        "x": 0,
-        "y": 9
-      },
-      "id": 4,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "/^status$/",
-          "values": false
-        },
-        "textMode": "value"
-      },
-      "pluginVersion": "10.1.4",
-      "targets": [
-        {
-          "datasource": {
-            "type": "postgres",
-            "uid": "PostgreSQL"
-          },
-          "editorMode": "code",
-          "format": "table",
-          "rawQuery": true,
-          "rawSql": "select status from system s where id = $system_id ",
-          "refId": "A",
-          "sql": {
-            "columns": [
-              {
-                "parameters": [],
-                "type": "function"
-              }
-            ],
-            "groupBy": [
-              {
-                "property": {
-                  "type": "string"
-                },
-                "type": "groupBy"
-              }
-            ],
-            "limit": 50
-          }
-        }
-      ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "postgres",
-        "uid": "PostgreSQL"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "auto",
-            "cellOptions": {
-              "type": "auto"
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Key"
-            },
-            "properties": [
-              {
-                "id": "custom.width",
-                "value": 118
-              }
-            ]
-          }
-        ]
-      },
-      "gridPos": {
-        "h": 9,
-        "w": 4,
-        "x": 0,
-        "y": 12
-      },
-      "id": 1,
-      "options": {
-        "cellHeight": "sm",
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": [
-            "sum"
-          ],
-          "show": false
-        },
-        "showHeader": false,
-        "sortBy": []
-      },
-      "pluginVersion": "10.1.4",
-      "targets": [
-        {
-          "datasource": {
-            "type": "postgres",
-            "uid": "PostgreSQL"
-          },
-          "editorMode": "code",
-          "format": "table",
-          "rawQuery": true,
-          "rawSql": "SELECT 'Name' AS \"Key\", sm.name::text AS \"Value\" FROM system s\r\nINNER JOIN system_model sm ON sm.id = s.system_model_id\r\nWHERE s.id = $system_id\r\n\r\nUNION ALL\r\n\r\nSELECT 'Manufacturer' AS \"Key\", sm.manufacturer::text AS \"Value\" FROM system s\r\nINNER JOIN system_model sm ON sm.id = s.system_model_id\r\nWHERE s.id = $system_id\r\n\r\nUNION ALL\r\n\r\nSELECT 'Type' AS \"Key\", sm.type::text AS \"Value\" FROM system s\r\nINNER JOIN system_model sm ON sm.id = s.system_model_id\r\nWHERE s.id = $system_id\r\n\r\nUNION ALL\r\n\r\nSELECT 'Expansions' AS \"Key\", COUNT(e.id)::text AS \"Value\" FROM system s\r\nLEFT JOIN expansion e ON e.system_id = s.id\r\nWHERE s.id = $system_id;\r\n",
-          "refId": "A",
-          "sql": {
-            "columns": [
-              {
-                "parameters": [],
-                "type": "function"
-              }
-            ],
-            "groupBy": [
-              {
-                "property": {
-                  "type": "string"
-                },
-                "type": "groupBy"
-              }
-            ],
-            "limit": 50
-          }
-        }
-      ],
-      "title": "System Information",
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "postgres",
-        "uid": "PostgreSQL"
-      },
-      "gridPos": {
-        "h": 9,
-        "w": 6,
-        "x": 4,
-        "y": 12
-      },
-      "id": 6,
-      "options": {
-        "baidu": {
-          "callback": "bmapReady",
-          "key": ""
-        },
-        "editor": {
-          "format": "auto",
-          "height": 600
-        },
-        "gaode": {
-          "key": "",
-          "plugin": "AMap.Scale,AMap.ToolBar"
-        },
-        "getOption": "let all_data = [];\nlet colorMap = {\n  'Expansions Online': '#91cc75',\n  'Expansions Working': '#5470c6',\n  'Expansions Requiring Maintenance': '#fac858',\n  'Expansions Offline': '#ee6666'\n};\n\ndata.series.forEach((s) => {\n  ['Expansions Online', 'Expansions Working', 'Expansions Requiring Maintenance', 'Expansions Offline'].forEach((status) => {\n    let value = s.fields.find((f) => f.name === status).values;\n    if (value > 0) {\n      all_data.push({ value, name: status, color: colorMap[status] });\n    }\n  });\n});\n\n// Sort the data for the chart by value in descending order\nall_data.sort((a, b) => b.value - a.value);\n\n// Define a custom order for the legend data\nconst customLegendOrder = ['Expansions Online', 'Expansions Working', 'Expansions Requiring Maintenance', 'Expansions Offline'];\n\n// Use the custom order for the legend data\nlet legendData = customLegendOrder.filter((item) => all_data.some((data) => data.name === item));\n\n// Use the all_data array for your chart\nreturn {\n  title: {\n    text: 'Expansion Status v3',\n    left: 'center'\n  },\n  tooltip: {\n    trigger: 'item',\n    formatter: '{a} <br/>{b}: {c} ({d}%)'\n  },\n  legend: {\n    orient: 'horizontal',\n    bottom: 10,\n    data: legendData // Use custom ordered legend data\n  },\n  series: [\n    {\n      name: 'System Status',\n      type: 'pie',\n      radius: '50%',\n      data: all_data, // Use all_data for your chart\n      emphasis: {\n        itemStyle: {\n          shadowBlur: 10,\n          shadowOffsetX: 0,\n          shadowColor: 'rgba(0, 0, 0, 0.5)'\n        }\n      },\n      // Set item color based on the color property in all_data\n      itemStyle: {\n        color: (params) => params.data.color\n      }\n    }\n  ]\n};\n",
-        "google": {
-          "callback": "gmapReady",
-          "key": ""
-        },
-        "map": "none",
-        "renderer": "canvas",
-        "themeEditor": {
-          "config": "{}",
-          "height": 400,
-          "name": "default"
-        }
-      },
-      "pluginVersion": "10.1.4",
-      "targets": [
-        {
-          "datasource": {
-            "type": "postgres",
-            "uid": "PostgreSQL"
-          },
-          "editorMode": "code",
-          "format": "table",
-          "rawQuery": true,
-          "rawSql": "SELECT\r\n    SUM(CASE WHEN expansion.status = 'Online' THEN 1 ELSE 0 END) AS \"Expansions Online\",\r\n    SUM(CASE WHEN expansion.status = 'Working' THEN 1 ELSE 0 END) AS \"Expansions Working\",\r\n    SUM(CASE WHEN expansion.status = 'Maintenance Required' THEN 1 ELSE 0 END) AS \"Expansions Requiring Maintenance\",\r\n    SUM(CASE WHEN expansion.status = 'Offline' THEN 1 ELSE 0 END) AS \"Expansions Offline\"\r\nFROM system\r\nINNER JOIN expansion ON system.id = expansion.system_id\r\nWHERE system.id = $system_id \r\n\r\n",
-          "refId": "A",
-          "sql": {
-            "columns": [
-              {
-                "parameters": [],
-                "type": "function"
-              }
-            ],
-            "groupBy": [
-              {
-                "property": {
-                  "type": "string"
-                },
-                "type": "groupBy"
-              }
-            ],
-            "limit": 50
-          }
-        }
-      ],
-      "type": "volkovlabs-echarts-panel"
-    },
-    {
-      "datasource": {
-        "type": "postgres",
-        "uid": "PCC52D03280B7034C"
-      },
-      "gridPos": {
-        "h": 9,
-        "w": 14,
-        "x": 10,
-        "y": 12
-      },
-      "id": 48,
-      "options": {
-        "dedupStrategy": "none",
-        "enableLogDetails": true,
-        "prettifyLogMessage": false,
-        "showCommonLabels": false,
-        "showLabels": false,
-        "showTime": false,
-        "sortOrder": "Descending",
-        "wrapLogMessage": false
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "postgres",
-            "uid": "PCC52D03280B7034C"
-          },
-          "editorMode": "code",
-          "format": "table",
-          "rawQuery": true,
-          "rawSql": "SELECT\r\n    timestamp AS \"time\",\r\n    s.id AS \"sensor_id\",\r\n    s.status AS \"sensor_status\"\r\nFROM\r\n    sensor s\r\nJOIN\r\n    expansion e ON s.expansion_id = e.id\r\nJOIN\r\n    system sys ON e.system_id = sys.id\r\nJOIN\r\n    factory f ON sys.factory_id = f.id\r\nWHERE\r\n    timestamp >= $__timeFrom() AND timestamp <= $__timeTo()\r\n",
-          "refId": "A",
-          "sql": {
-            "columns": [
-              {
-                "parameters": [],
-                "type": "function"
-              }
-            ],
-            "groupBy": [
-              {
-                "property": {
-                  "type": "string"
-                },
-                "type": "groupBy"
-              }
-            ],
-            "limit": 50
-          }
-        }
-      ],
-      "title": "Status Logs",
-      "type": "logs"
     },
     {
       "datasource": {
@@ -784,10 +854,10 @@
         ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 6,
         "w": 24,
         "x": 0,
-        "y": 21
+        "y": 19
       },
       "id": 80,
       "options": {
@@ -861,7 +931,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -876,7 +947,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 28
+        "y": 25
       },
       "id": 93,
       "options": {
@@ -932,7 +1003,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 33
+        "y": 30
       },
       "id": 3,
       "panels": [],
@@ -963,7 +1034,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -991,7 +1063,7 @@
         "h": 12,
         "w": 4,
         "x": 0,
-        "y": 34
+        "y": 31
       },
       "id": 7,
       "options": {
@@ -1050,7 +1122,7 @@
         "h": 12,
         "w": 5,
         "x": 4,
-        "y": 34
+        "y": 31
       },
       "id": 29,
       "options": {
@@ -1108,65 +1180,7 @@
         "h": 12,
         "w": 5,
         "x": 9,
-        "y": 34
-      },
-      "id": 32,
-      "options": {
-        "baidu": {
-          "callback": "bmapReady",
-          "key": ""
-        },
-        "editor": {
-          "format": "auto",
-          "height": 600
-        },
-        "gaode": {
-          "key": "",
-          "plugin": "AMap.Scale,AMap.ToolBar"
-        },
-        "getOption": "let value = 0\ndata.series.forEach((s) => {\n  let values = s.fields.find((f) => f.name === 'current_value').values;\n  value = values[values.length - 1].toFixed(2);;\n});\n\n\nreturn {\n  title: { // Add a title here\n    text: 'Temperature',\n    left: 'center', // Center the title\n    bottom: '10%'\n  },\n  series: [\n    {\n      type: 'gauge',\n      axisLine: {\n        lineStyle: {\n          width: 30,\n          color: [\n            [0.15, '#fd666d'],\n            [0.3, '#fac858'],\n            [0.7, '#91cc75'],\n            [0.85, '#fac858'],\n            [1, '#fd666d']\n          ]\n        }\n      },\n      pointer: {\n        itemStyle: {\n          color: 'auto'\n        }\n      },\n      axisTick: {\n        distance: -30,\n        length: 8,\n        lineStyle: {\n          color: '#fff',\n          width: 2\n        }\n      },\n      splitLine: {\n        distance: -30,\n        length: 30,\n        lineStyle: {\n          color: '#fff',\n          width: 4\n        }\n      },\n      axisLabel: {\n        color: 'inherit',\n        distance: 40,\n        fontSize: 20\n      },\n      detail: {\n        valueAnimation: true,\n        formatter: '{value} ºC',\n        color: 'inherit',\n        fontSize: 25,\n      },\n      data: [\n        {\n          value: value,\n          fontSize: 20\n        }\n      ]\n    }\n  ]\n};",
-        "google": {
-          "callback": "gmapReady",
-          "key": ""
-        },
-        "map": "none",
-        "renderer": "canvas",
-        "themeEditor": {
-          "config": "{}",
-          "height": 400,
-          "name": "default"
-        }
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "Prometheus"
-          },
-          "disableTextWrap": false,
-          "editorMode": "builder",
-          "expr": "current_value{sensor_id=\"$expansion_id\"}",
-          "fullMetaSearch": false,
-          "includeNullMetadata": true,
-          "instant": false,
-          "legendFormat": "__auto",
-          "range": true,
-          "refId": "A",
-          "useBackend": false
-        }
-      ],
-      "type": "volkovlabs-echarts-panel"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "gridPos": {
-        "h": 12,
-        "w": 5,
-        "x": 14,
-        "y": 34
+        "y": 31
       },
       "id": 31,
       "options": {
@@ -1223,8 +1237,8 @@
       "gridPos": {
         "h": 12,
         "w": 5,
-        "x": 19,
-        "y": 34
+        "x": 14,
+        "y": 31
       },
       "id": 30,
       "options": {
@@ -1272,6 +1286,129 @@
         }
       ],
       "type": "volkovlabs-echarts-panel"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "PCC52D03280B7034C"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "Maintenance Required": {
+                  "color": "yellow",
+                  "index": 2
+                },
+                "Offline": {
+                  "color": "red",
+                  "index": 3
+                },
+                "Online": {
+                  "color": "green",
+                  "index": 0
+                },
+                "Working": {
+                  "color": "blue",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Sensor Status"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 19,
+        "x": 0,
+        "y": 43
+      },
+      "id": 145,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.1.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "postgres",
+            "uid": "PCC52D03280B7034C"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    s.id AS \"Sensor ID\",\r\n    sm.name AS \"Sensor Name\",\r\n    sm.type AS \"Sensor Type\",\r\n    s.status AS \"Sensor Status\"\r\nFROM\r\n    sensor AS s\r\nJOIN\r\n    sensor_model AS sm ON s.sensor_model_id = sm.id\r\nWHERE\r\n    s.expansion_id = $expansion_id;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "table"
     }
   ],
   "refresh": "30s",
@@ -1311,8 +1448,8 @@
       {
         "current": {
           "selected": false,
-          "text": "Bosch",
-          "value": "Bosch"
+          "text": "Continental",
+          "value": "Continental"
         },
         "datasource": {
           "type": "postgres",
@@ -1335,8 +1472,8 @@
       {
         "current": {
           "selected": false,
-          "text": "2",
-          "value": "2"
+          "text": "1",
+          "value": "1"
         },
         "datasource": {
           "type": "postgres",
@@ -1359,8 +1496,8 @@
       {
         "current": {
           "selected": false,
-          "text": "9",
-          "value": "9"
+          "text": "2",
+          "value": "2"
         },
         "datasource": {
           "type": "postgres",
@@ -1456,8 +1593,8 @@
       {
         "current": {
           "selected": false,
-          "text": "17",
-          "value": "17"
+          "text": "4",
+          "value": "4"
         },
         "hide": 2,
         "includeAll": false,
@@ -1465,7 +1602,7 @@
         "name": "task_id",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "None",
             "value": "None"
           }
@@ -1478,8 +1615,8 @@
       {
         "current": {
           "selected": false,
-          "text": "416",
-          "value": "416"
+          "text": "59",
+          "value": "59"
         },
         "description": "",
         "hide": 2,
@@ -1488,7 +1625,7 @@
         "name": "task_timeseries_id",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "None",
             "value": "None"
           }
@@ -1508,6 +1645,6 @@
   "timezone": "",
   "title": "Systems View",
   "uid": "c7c8ba81-b8a4-4c6f-ae15-16bdb1dcf65b",
-  "version": 11,
+  "version": 96,
   "weekStart": ""
 }
