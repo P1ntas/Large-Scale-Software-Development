@@ -18,7 +18,7 @@ services:
     image: grafana/grafana:10.1.4
     container_name: grafana
     environment:
-      - GF_INSTALL_PLUGINS=volkovlabs-echarts-panel
+      - GF_INSTALL_PLUGINS=volkovlabs-echarts-panel,volkovlabs-form-panel
     depends_on:
       - postgres
       - prometheus
