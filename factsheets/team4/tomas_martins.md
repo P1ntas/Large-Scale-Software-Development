@@ -64,29 +64,44 @@ No relevant pull requests were created by me during sprint 2, besides some for d
 
 ## Sprint 3
 
-...
+In this sprint, the work was more around helping my team members further understanding the guidelines and helping them understand the workarounds of the tech stack chosen (and continuously being updated) and the system itself, in order for them to work with much more ease.
+
+### The two pull requests that I am most proud of
+
+No relevant pull requests were created by me during sprint 3, besides some for documentation and the some that I approved but didn't create.
+
+### Two contributions of other types that I am most proud of
+
+- Guiding my dev team and the contribution I did to establish a better communication between team members and between us and other teams.
+- Meeting the other scrum masters and being on watch about if the working guidelines are being complied with, such as the structure of commit messages, branch naming, pull requests' names, etc.
 
 
 ## Sprint 4
 
-...
+Worked with my team members (dev's) to help them with the issues that were assigned to them, i.e. the page that shows the machines available, with the proper filtering options to adjust the display settings.
+
+Even if some issues were successfully implemented, the most important one, regarding ML, couldn't be completely finished. 
+
+### The two pull requests that I am most proud of
+
+No relevant pull requests were created by me during sprint 4, besides some for documentation, for the project structure refactoring process and the ones that I approved but didn't create.
+
+### Two contributions of other types that I am most proud of
+
+- Guiding my dev team and the contribution I did to establish a better communication between team members and between us and other teams.
+- Meeting the other scrum masters and being on watch about if the working guidelines are being complied with, such as the structure of commit messages, branch naming, pull requests' names, etc.
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
-
+Having familiarized myself with the technologies, I discovered their user-friendly nature and suitability for the task. With prior knowledge, I could have contributed more, assisting with UI, optimization, and guiding the creation of a machine learning model, defining the approach and task distribution.
 
 ### Product Realization
 
-...
-
+Despite being far from finished, the product has most of the functionalities requested by the client. The client was satisfied and understood the lack of integration of the ML model, recognising the effort put into researching and creating it, a process to which I contributed.
 
 ### Value for the Client
 
-...
+The handover was successful, and the client approved our work. Despite the constraint of using DINASORE, it limited us in time, as we had to learn a new technology from scratch. Although research and study consumed most of the time, my effort matched the expected timeframe for this curricular unit.
