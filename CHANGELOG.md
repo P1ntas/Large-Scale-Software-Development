@@ -110,3 +110,26 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 - [Job Scheduling](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=45645025)
 - [ML data preparation](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=43786291)
 - [SonarQube](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=43786291)
+
+## [0.0.5] - 2023-12-15 (Sprint 4)
+
+### Added
+...
+
+### Fixed
+...
+
+### Changed
+...
+
+### Removed
+...
+
+### PBIs Done
+- [ML data pipeline](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/54)
+- [ML model evaluation](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/55)
+- [General machines display page (with filters)](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/57)
+- Specific machine page [#1](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/145) and [#2](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/2)
+
+
+
