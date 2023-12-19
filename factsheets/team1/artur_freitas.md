@@ -51,9 +51,6 @@ I also helped with the communication across teams, by sharing the progress with 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
 As a PO, i didn't get deeply envolved on the team's implementation, but for what i am aware, the chosen technology was a good fit for the architecture and the implementation was correctly approached. I attended every meeting with the client in order to help my team understand what to do with the client's feedback.
