@@ -136,6 +136,6 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 - [ML model evaluation](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/55)
 - [General machines display page (with filters)](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/57)
 - Specific machine page [#1](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/145) and [#2](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/2)
-
+- [Production workflow management: resource allocation module](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103)
 
 
