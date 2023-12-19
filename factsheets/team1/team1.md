@@ -164,14 +164,12 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
-
+The chosen technologies, including DINASORE, Grafana, Docker, and Prometheus are a good fit for the architecture of the project. They provide the necessary tools and functionalities to address the problem at hand effectively. The implementation demonstrates a good application of these technologies, showcasing their capabilities and integrating them seamlessly. The code is easy to understand, maintainable, and robust, ensuring the long-term viability of the project.
 
 ### Product Realization
 
-...
-
+During the development of the project, our team implemented various features and improvements that contribute to a viable product for the problem at hand. The product has a professional feel to it, exhibiting the required quality attributes. It also adheres to the technical constraints and is ready to be delivered to the client. These contributions were well received by the client, indicating that the final product meets their needs and will be easy for them to use.
 
 ### Value for the Client
 
-...
+After the last Q&A session with the client, which we also presented the final product, the client was pleased with the final product and the work we've done. Although some minor points were raised, the part of the product that was implemented by our team was well received by the client. We believe that the client will be able to use the product with ease and that it will be useful for the his needs. Overall, the effort put into the project was quite above the expected for the curricular unit, but it is expected in such a project whose goal is to be used in a real-world scenario and should be fine-tuned to the client's needs and required some trial and error to get on par with the client's expectations.
