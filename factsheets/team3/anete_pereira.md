@@ -82,8 +82,19 @@ With the knowledge that I acquired during this research, I helped my team member
 
 ## Sprint 4
 
-...
+During sprint 4, my primary focus was on refining the parameters which define the triggering of notifications to align with their specific contexts, as outlined in our revised user storie. This involved a comprehensive review and adjustment of the notification system to ensure that alerts are generated based on relevant criteria. To facilitate this task, I explored various documentation sources related to this. A key reference was the [Grafana Alerting Documentation](https://grafana.com/docs/grafana/latest/alerting/), which provided valuable insights into configuring notification parameters and aligning them with our project's requirements. Unlike in sprint 2 where mock data was utilized, this sprint involved practical and more realistic adjustments to the notification system.
 
+### The user storie that I am most proud of
+
+* [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented automatic notifications based on value ranges for sensor dynamic data - updated to feature Go's templating language and more accurate parameters
+
+ ### The pull request that I am most proud of
+
+* [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
+
+ ### Two contributions of other types that I am most proud of 
+Applied acquired knowledge to guide team members in understanding the new values of parameters set in the notifications and how it was done.
+I worked closely with Jose to implement this new part of our user storie, mainly doing pair programming.
 
 ## Overall Product
 
@@ -92,14 +103,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+I think that my contributions to the project were technically sound. I was able to implement the notifications feature, which was the main goal of our user story, and I also researched about the grafana interface, which was very important for the development of our project and allowed our implementation to be understandable, maintainable and scalable, exhibitiing good applications of the chosen technologies.
 
 
 ### Product Realization
 
-...
+Transforming ideas into reality wasn't always straightforward. However, what we could implement was functional Grafana notifications — a proof of successful component integration within our project. We think the product seems professional and effectively satisfies the requirements with viable solutions, making it ready to be delivered.
 
 
 ### Value for the Client
 
-...
+I think that my work was valuable for the client. The alerting features our team implemented are crucial for monitoring the machines and identify anomalies, enhancing the client's performance and overall happinness.

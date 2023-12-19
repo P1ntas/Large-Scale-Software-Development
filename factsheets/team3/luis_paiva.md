@@ -94,7 +94,7 @@ During this sprint, as the Product Owner, I upheld ongoing communication within 
 
  ### The pull request that I am most proud of
 
-* None relevant, as we did not implement any code.
+ * [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
 
  ### Two contributions of other types that I am most proud of
 
@@ -114,8 +114,8 @@ As a PO, I was not deeply involved in the technical aspects of the project. Howe
 
 ### Product Realization
 
-As a PO, my main focus was to facilitate communication between the team and the client, by attending all the meetings with the client and communicating his requirements to my team. I also helped to refine the product backlog and to ensure that the team was working well.
+As a PO, my main focus was to facilitate communication between the team and the client, by attending all the meetings with the client and communicating his requirements to my team. I also helped to refine the product backlog and to ensure that the team was working well, making sure the product was ready for the delivery.
 
 ### Value for the Client
 
-I think my contributions were important to make the end producted more aligned with the client's requirements, thus increasing its value. However, I think the result could have been much more interesting if the client showed more interest in the project and made the requirements clearer.
+I think my contributions were important to make the end producted more aligned with the client's requirements, thus increasing its value and making him happy with the reuslts. However, I think the result could have been much more interesting if the client showed more interest in the project and made the requirements clearer.

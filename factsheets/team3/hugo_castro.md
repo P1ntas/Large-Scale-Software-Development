@@ -80,8 +80,19 @@ I helped my team understand better how to customize notifications.
 
 ## Sprint 4
 
-...
+In this last sprint, my primary objective was refining the project's notification systems, streamlining the notification process through the use of the templating language. Harnessing the power of templates, I helped to build clearer and more concise notifications, which will make them hold more value and transmit information to the user in a better way. I actively collaborated with other team members to augment an existing feature (notifications), contributing for its improvement.
 
+### The user storie that I am most proud of
+
+* [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented automatic notifications based on value ranges for sensor dynamic data - updated to feature Go's templating language and more accurate parameters
+
+ ### The pull request that I am most proud of
+
+* [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
+
+### Two contributions of other types that I am most proud of
+I worked mainly with Afonso and Eduardo to implement more helpful notifications in the system.
+I also helped other team members when they had any doubts.
 
 ## Overall Product
 
@@ -90,14 +101,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+My contributions to the project were technically proficient, as I used the technical knowledge I acquired during the course to implement the features I was assigned to. I also strived to use the establsihed technologies (which were a good fit) for the project and also helped other team members when they had any doubts. I also made sure all features were easy to understand and robust.
 
 
 ### Product Realization
 
-...
+Acknowledging potential enhancements in the product's usability, I actively addressed this aspect. My collaboration with the team resulted in the implementation of streamlined and potent notifications, significantly elevating the overall user-friendliness and professional look of the product, which clearly exhibits a good use of the chosen technologies.
 
 
 ### Value for the Client
 
-...
+From my perspective, the final product, particularly the features we implemented, should leave the client satisfied and happy, as we implememnted simple to use yet effective features.
