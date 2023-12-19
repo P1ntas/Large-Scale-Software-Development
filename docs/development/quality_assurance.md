@@ -22,7 +22,7 @@ Bandit workflow configuration file:
 
 ## SonarQube - Latest scan on branch `main`
 
-The Sonar scanner reports a 6.0% code duplication. Additionally, the coverage report reveals a 3.2% code coverage. Regarding code smells, the scanner identifies 79 instances but assigns an A-grade rating for maintainability. In terms of reliability, the scanner points out 2 bugs.
+On the December 19, 2023, the SonarQube scanner reports a 6.0% code duplication. Additionally, the coverage report reveals a 3.2% code coverage. Regarding code smells, the scanner identifies 79 instances but assigns an A-grade rating for maintainability. In terms of reliability, the scanner points out 2 bugs.
 
 ![SonarQube Quality Rating](../images/sonarqube_quality.png)
 
