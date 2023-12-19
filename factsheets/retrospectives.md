@@ -149,6 +149,21 @@ TODO
 
 ### Team 1 Retrospective
 
+#### Start: 
+    - Weekly reunions with team members to check what everyone is up to more often.
+
+#### Stop:
+    - Not working as soon as expected to finish the assigned issues.
+
+#### Continue:
+    - Following the coding guidelines correctly.
+    - Following the documentation guidelines correctly.
+    - Continue the good communication between team members.
+
+#### General Considerations:
+
+Overall, we didn't have enough time to work on this sprint, but we improved the communication between the team. We held a meeting at the start of the sprint, which proved useful to understand the status of the work done until that moment, as well to shift our priorities to the new up and coming tasks that were needed to conclude this sprint.
+
 ### Team 2 Retrospective
 
 ### Team 3 Retrospective

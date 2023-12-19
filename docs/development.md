@@ -83,8 +83,8 @@ For every sprint, the following process metrics are being recorded:
 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 1 | 8 | 8 | 0 | 2 | 18 |
 | 2 | 10 | 3 | 1 | 0 | 13 |
-| 3 | 6 | 7 | 0 | 2 | 13 |
-| 4 | - | - | 1 | 6 | 7 |
+| 3 | 6 | 7 | 0 | - | 13 |
+| 4 | 6 | - | 1 | 6 | 13 |
 
 ## Team Retrospectives
 

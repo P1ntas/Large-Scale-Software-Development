@@ -40,7 +40,10 @@ My team's user stories:
 
 ## Sprint 4
 
-...
+### Contribution
+Similar to the last sprint, as we didn't have the meeting with the client, it was not possible to have the feedback to improve some of the features or to add some new user stories. 
+
+Apart from that, i once again helped actively to ajust some inconsistencies in the product backlog and collaborated with the team in some technical detail understanding.
 
 
 ## Overall Product
