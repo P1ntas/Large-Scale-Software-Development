@@ -38,28 +38,8 @@ In this third sprint, I worked on the CI integration, more specifically on the i
 
 ## Sprint 4
 
-Briefly state what you believe were your best contributions to the project during this period. Each of the sections below is mandatory unless otherwise stated. In each of them, you must link to any relevant observable evidence of your work when it exist (e.g., pull requests, specific commits, issues, markdown files) and very briefly explain why you think they are important. When you include an item that you worked on together with other people, state explicitly that that was the case, not forgetting to explain what was your specific role in it.
-
-
-### The two user stories that I am most proud of
-
-This can include user stories that you have written or refined during the sprint. If it was a refinement, explain what you have added or changed.
-
- * #1
- * #2
-
-
-### The two pull requests that I am most proud of
-
-This can include PRs that you have implemented or reviewed during the sprint.
-
- * #3
- * #4
-
-
-### Two contributions of other types that I am most proud of
-
-This can be anything that you think worked particularly well and benefited the project as whole, from a hard conversation with the PO that worked out very well, to the adoption of a new framework or library. 
+### General considerations
+During the final sprint of the project, with other academic obligations and job commitments, I was unable to contribute to the development of the product. However, I always tried to stay up to date and participate in the decisions necessary for the final phase of the project.
 
 
 ## Overall Product
