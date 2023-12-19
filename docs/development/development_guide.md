@@ -51,21 +51,21 @@ In this section you can find a comprehensive guide on how to fully setup a produ
 
 PgAdmin is a web interface for `PostgreSQL`. It will be essential to test your queries and to see the data in the database before using it in the `Grafana` dashboard.
 
-To access the `pgAdmin` interface, go to `localhost:4321` and login with the following credentials:
+To access the `pgAdmin` interface, go to [localhost:4321](http://127.0.0.1:4321) and login with the following default credentials:
 
 ```markdown
-**Email**: postgres@pg.pg
-**Password**: postgres
+Email: postgres@pg.pg
+Password: postgres
 ```
 
-Then, add a new server with the following credentials:
+Then, add a new server with the following default credentials:
 
 ```markdown
-**Host name/address**: postgres _(Under the docker network the hosts take the name you give them in the docker-compose file, instead of localhost)_
-**Port**: 5432
-**Maintenance database**: postgres
-**Username**: postgres
-**Password**: postgres
+Host name/address: postgres
+Port: 5432
+Maintenance database: postgres
+Username: postgres
+Password: postgres
 ```
 
 ![gif](../images/pgAdmin.gif)
@@ -84,16 +84,16 @@ Note: If you are having problems (for example, have postgres also installed on y
 
 ### Prometheus
 
-To access the `Prometheus` interface, go to `localhost:9090`.
+To access the `Prometheus` interface, go to [localhost:9090](http://127.0.0.1:9090).
 
 To verify if the data is being scraped from the `Pushgateway` server, go to the `Status > Targets` tab and check if the `pushgateway` is up and running. If it is, it should show `UP` under the `State` column.
 
 On the `Expression` tab, you can enter a query to verify the data that is being scraped. For example, you can enter the following queries:
 
 ```sql
-sensor_value
+current_value
 -- or
-sensor_value{sensor_id="1"}
+current_value{sensor_id="1"}
 -- or
 moving_average{sensor_id="1"}
 ```
@@ -102,7 +102,7 @@ The first one will show all the sensors data, while the second one will only sho
 
 ### Grafana
 
-To access the `Grafana` interface, go to `localhost:3000`. Login with the following credentials:
+To access the `Grafana` interface, go to [localhost:3000](http://127.0.0.1:3000). Login with the following default credentials:
 
 ```markdown
 **Username**: admin
@@ -126,9 +126,13 @@ If you want to create your own dashboard, you can use the Grafana's built-in too
 - [Variable Panel](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/);
 - [Canvas Panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/canvas/).
 
-To install any plugin, you need to access the Grafana's terminal through docker and run the install command for the plugin you want, following by a restart of the Grafana server.
+To install any plugin, you need to access the Grafana's terminal through docker and run the install command for the plugin you want, following by a restart of the Grafana server in Docker. If you want to the plugins above to be added to the docker-compose file, please add a new line under `grafana/environment` with the following format:
 
-Also, [here](https://play.grafana.org/dashboards) you can find some examples.
+```markdown
+GF_INSTALL_PLUGINS: <plugin_name>@<plugin_version>,<plugin_name>@<plugin_version>,...
+```
+
+Also, [here](https://play.grafana.org/dashboards) you can find some examples of existing Grafana's dashboards.
 
 ### MQTT Broker
 
@@ -138,42 +142,12 @@ The `Mosquitto MQTT Broker` is running under `localhost:1883`, with the service 
 
 To open the 4DIAC-IDE, go to the folder where you installed it and run the `4diac-ide.exe` file.
 
-In order to run the sensor simulator, you have to run DINASORE on your system. For that, you need to run the following commands:
+The Dinasore instances, which will be used by the 4DIAC-IDE, are running under the ports `61499` and `4840` for the first instance and `61500` and `4841` for the second instance, for the DIAC and OPC UA ports, respectively.
 
-```sh
-# Move to the dinasore's root folder
-cd src/dinasore
-
-# Default values:
-# <ip_address>=localhost, <port_diac>=61499,
-# <port_opc>=4840, <log_level>=ERROR,
-# <number_samples>=5, <seconds_per_sample>=20
-python core/main.py -a <ip_address> \
-                    -p <port_diac> \
-                    -u <port_opc> \
-                    -l <log_level> \
-                    -m <number_samples> <seconds_per_sample>
-
-```
-
-**NOTE**: For Mac and Linux users, run with the flag -B to avoid the creation of cache folders (conflicts with the FBs folders): `python -B core/main.py`
-
-For this project, we need to run two instances of DINASORE, one for the FORTE_PC and another for the FORTE_PC_1. For that, you need to run the following commands:
-
-```sh
-# On the first terminal
-
-python core/main.py
-
-# And on another terminal
-
-python core/main.py -p 61500 -u 4841
-```
-
-- Now, you can open the 4DIAC-IDE and import the [function blocks folder](./resources/function_blocks/). For that, you can follow the next steps:
+Now, you can open the 4DIAC-IDE and import the [function blocks folder](./resources/function_blocks/). For that, you can follow the next steps:
 
   1. Open the 4DIAC-IDE
-  2. Go to File -> New -> New System -> *Name the project as *MES\*\*\* -> Finish
+  2. Go to File -> New -> New System -> *Name the project as **MES*** -> Finish
   3. On the System Explorer, left click to open the **MES** -> Right click on the **Type Library** -> Import -> General -> File System -> Next -> Browse -> Select the [function blocks folder](./resources/function_blocks/) -> Finish
   4. On the System Explorer, open **System Configuration** (**1**). Now add 2 FORTE_PC (**2**) and 1 Ethernet (**3**). Link the Forte PCs to the Ethernet (**4**). Update the port of the second FORTE_PC to 61500 (**5**).
 
@@ -182,7 +156,7 @@ python core/main.py -p 61500 -u 4841
   5. On the System Explorer, open **MESApp**
   6. From the palette on the right side, drag the following function blocks:
 
-     - **SENSOR_SIMULATOR_V2**
+     - **SENSOR_SIMULATOR_V3**
      - **MOVING_AVERAGE_V2**
      - **MQTT_PUBLISHER_V3**
      - **MQTT_SUBSCRIBER_V3**
@@ -192,30 +166,39 @@ python core/main.py -p 61500 -u 4841
 
   7. Now, proceed to link the function blocks and fill the parameters with:
 
-     - **SENSOR_SIMULATOR_V2**: OFFSET = 0. You can twist this value to emulate, for example, a sensor that can overheat (Offset = 10) or a sensor that is working above the desired temperature (Offset = -10).
+     - **SENSOR_SIMULATOR_V3**: 
+       - POSTGRES_DB = *postgres*. This is the name of the database.
+       - POSTGRES_USER = *postgres*. This is the username of the database.
+       - POSTGRES_PASSWORD = *postgres*. This is the password of the database.
+       - POSTGRES_HOST = *postgres*. This is the IP address of the PostgreSQL database on your machine.
+       - POSTGRES_PORT = *5432*. This is the port of the PostgreSQL database on your machine.
+       - FAULT_RATIO = *0*. This is the failure ratio of the sensors. You can change this value to see how the failure ratio affects the data.
+       - FAULT_VALUE_MULTIPLIER = *1*. This is the multiplier of the fault value. You can change this value to see how the fault value multiplier affects the data. > 1 means that the fault value will be higher than the normal value, < 1 means that the fault value will be lower than the normal value.
+       - TIME_PER_CYCLE = *200*. This is the time, in seconds, that the sensor simulator will take for each cycle. You can change this value to see how the time per cycle affects the data.
+
      - **MOVING_AVERAGE_V2**: WINDOW = 5. This value is the number of samples that the moving average will use to calculate the average value. You can change this value to see how the moving average changes.
      - **MQTT_PUBLISHER_V3**:
-       - TOPIC = "sensor_data". This is the topic that the publisher will use to publish sensor data to.
-       - HOST = "localhost". This is the IP address of the MQTT Broker on your machine.
-       - PORT = 1883. This is the port of the MQTT Broker on your machine.
-       - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
-       - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
-       - VALUE_NAME_3 = "moving_average". This is the moving average of the sensor.
+       - TOPIC = *sensor_data*. This is the topic that the publisher will use to publish sensor data to.
+       - HOST = *mqtt5*. This is the IP address of the MQTT Broker on your machine.
+       - PORT = *1883*. This is the port of the MQTT Broker on your machine.
+       - VALUE_NAME_1 = *sensor_id*. This is the id of the sensor.
+       - VALUE_NAME_2 = *current_value*. This is the current value of the sensor.
+       - VALUE_NAME_3 = *moving_average*. This is the moving average of the sensor.
      - **MQTT_SUBSCRIBER_V3**:
-       - TOPIC = "sensor_data". This is the topic that the subscriber will use to subscribe to.
-       - HOST = "localhost". This is the IP address of the MQTT Broker on your machine.
-       - PORT = 1883. This is the port of the MQTT Broker on your machine.
-       - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
-       - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
-       - VALUE_NAME_3 = "moving_average". This is the moving average of the sensor.
+       - TOPIC = *sensor_data*. This is the topic that the subscriber will use to subscribe to.
+       - HOST = *mqtt5*. This is the IP address of the MQTT Broker on your machine.
+       - PORT = *1883* This is the port of the MQTT Broker on your machine.
+       - VALUE_NAME_1 = *sensor_id*. This is the id of the sensor.
+       - VALUE_NAME_2 = *current_value*. This is the current value of the sensor.
+       - VALUE_NAME_3 = *moving_average*. This is the moving average of the sensor.
      - **PROMETHEUS_WRITER**:
-       - HOST = "localhost". This is the IP address of the Prometheus Gateway running on docker.
-       - PORT = 9091. This is the port of the Prometheus Gateway running on docker.
-       - VALUE_NAME_1 = "sensor_id". This is the id of the sensor.
-       - VALUE_NAME_2 = "current_value". This is the current value of the sensor.
-       - VALUE_NAME_2_DESCR = "Current value of the sensor". This is the description of the current value of the sensor.
-       - VALUE_NAME_3 = "moving_average". This is the moving average of the sensor.
-       - VALUE_NAME_3_DESCR = "Moving average of the sensor". This is the description of the moving average of the sensor.
+       - HOST = *pushgateway*. This is the IP address of the Prometheus Gateway running on docker.
+       - PORT = *9091*. This is the port of the Prometheus Gateway running on docker.
+       - VALUE_NAME_1 = *sensor_id*. This is the id of the sensor.
+       - VALUE_NAME_2 = *current_value*. This is the current value of the sensor.
+       - VALUE_NAME_2_DESCR = *Current value of the sensor*. This is the description of the current value of the sensor.
+       - VALUE_NAME_3 = *moving_average*. This is the moving average of the sensor.
+       - VALUE_NAME_3_DESCR = *Moving average of the sensor*. This is the description of the moving average of the sensor.
        - JOB_NAME = "sensor_data". This is the job name of the sensor data.
 
      ![image](../images/Screenshot_3.png)
@@ -224,7 +207,7 @@ python core/main.py -p 61500 -u 4841
 
   8. Link the function blocks to the corresponding FORTE_PC:
 
-     - **SENSOR_SIMULATOR_V2**, **MOVING_AVERAGE_V2**, **MQTT_PUBLISHER_V3**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC" -> Select "EMB_RES"
+     - **SENSOR_SIMULATOR_V3**, **MOVING_AVERAGE_V2**, **MQTT_PUBLISHER_V3**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC" -> Select "EMB_RES"
      - **MQTT_SUBSCRIBER_V3**, **PROMETHEUS_WRITER**: Right click on the function block -> Select "Map to .." -> Select "FORTE_PC_1" -> Select "EMB_RES"
 
      ![image](../images/Screenshot_4.png)
