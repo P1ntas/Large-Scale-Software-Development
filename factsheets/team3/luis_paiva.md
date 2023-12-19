@@ -86,8 +86,21 @@ I helped to refine the product backlog.
 
 ## Sprint 4
 
-...
+During this sprint, as the Product Owner, I upheld ongoing communication within the team for a smooth workflow. Regrettably, the final meeting with the client was postponed, but we made productive use of the time to deepen our understanding of their requirements, refining one of our previous user stories. I also checked the sub-tasks the team was focused in implementing made sense to the project.
 
+### The user storie that I am most proud of
+
+* [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented automatic notifications based on value ranges for sensor dynamic data - updated to feature Go's templating language and more accurate parameters
+
+ ### The pull request that I am most proud of
+
+ * [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
+
+ ### Two contributions of other types that I am most proud of
+
+I facilitated cross-team collaboration by presenting our progress and initiatives to fellow product owners. Also, I played a crucial role in promoting knowledge exchange by sharing valuable insights and ideas from other product owners with my team.
+
+I helped to refine the product backlog.
 
 ## Overall Product
 
@@ -96,14 +109,13 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+As a PO, I was not deeply involved in the technical aspects of the project. However, I was able to understand the technical aspects of the project and communicate them to the client. I also helped my team to understand the (sometimes vague) client's requirements and to implement them in the project.
 
 
 ### Product Realization
 
-...
-
+As a PO, my main focus was to facilitate communication between the team and the client, by attending all the meetings with the client and communicating his requirements to my team. I also helped to refine the product backlog and to ensure that the team was working well.
 
 ### Value for the Client
 
-...
+I think my contributions were important to make the end producted more aligned with the client's requirements, thus increasing its value. However, I think the result could have been much more interesting if the client showed more interest in the project and made the requirements clearer.
