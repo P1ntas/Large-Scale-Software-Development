@@ -93,13 +93,11 @@ This sprint ended with the overall product essentially done. The main focus was 
 
 - [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) - Together with the member [Fábio Morais from Team 2](../team2/fabio_morais.md), we successfully improved the previously done dashboard regarding the job scheduling, including a forms that creates a new task to be scheduled and the updates are reflected in the dashboard and in the database.
 
-- TODO (until sunday)
-
 ### The two pull requests that I am most proud of
 
 - [#148](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/148) - This PR closes the issue [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) and provides an updated dashboard for the job scheduling task, as well as a form to create new tasks to be scheduled.
 
-- TODO (until sunday)
+- [#***]() - This PR reviews the documentation for Dinasore and the project as a whole, as well as the Changelog, to reflect the changes made in the project in sprint 4.
 
 ### Two contributions of other types that I am most proud of
 
