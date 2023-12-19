@@ -105,29 +105,66 @@ Additionally, we were was tasked with the responsibility of upgrading the existi
 
 ## Sprint 3
 
-...
+### The four user stories that we are most proud of
+
+- [#102](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/102) - Sucessfuly created new visualizations in Grafana with the details of a systems job scheduler. Also displays the jobs running at a given time and allows the user to see the details of a given job.
+
+- [#98](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/98) - Together with [Team 2](../team2/team2.md), we fixed the documentation content distribution across multiple files and fixed previous documentation issues.
+
+- [#56](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/56) - Integrate real-time data feeds for maintenance features.
+
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Created a Mockup
+
+### The pull requests that we are most proud of
+
+- [#114](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/114) - This PR was essential to add the new Grafana visualizations to the development branch according to a systems job scheduler.
+
+- [#101](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/101) - Updated the documentation and the Changelog to reflect the changes made in the project in sprint 2.
+
+- [#108](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/108) - Implemented maintenance status, schedule and logs.
+
+### Four contributions of other types that we are most proud of
+
+- I've been helping [Team 2](../team2/team2.md) with the fix of the documentation content distribution across multiple files and fixed previous documentation issues.
+
+- I've helped my team members to understand the new view of the project according to the client's feedback and helped them to understand the new requirements for the next sprint.
 
 
 ## Sprint 4
 
-...
+### The user stories that I am most proud of
+
+- [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) - Together with the member [Fábio Morais from Team 2](../team2/fabio_morais.md), we successfully improved the previously done dashboard regarding the job scheduling, including a forms that creates a new task to be scheduled and the updates are reflected in the dashboard and in the database.
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Corrected a bug related to the dashboard use dinasore data on the new graphs.
+
+- [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Remodeled the sql and worked on generator file but was not able to complete due to time.
+
+### The pull requests that we are most proud of
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Corrected a bug related to the dashboard use dinasore data on the new graphs.
+
+- [#148](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/148) - This PR closes the issue [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) and provides an updated dashboard for the job scheduling task, as well as a form to create new tasks to be scheduled.
+
+### Contributions of other types that I am most proud of
+
+- Helped [Team 2](../team2/team2.md) once more on improving the documentation about the project has a whole.
+
+- Helped the other teams with any kinds of problems they had during the development of the project, specially during the setup, which proved useful for the improvement of the documentation.
+
+- Engaging in talks with team members in how to solve some related problems.
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a size of 40~100 words.
-
-
 ### Technical Soundness
 
-...
-
+The chosen technologies, including DINASORE, Grafana, Docker, and Prometheus are a good fit for the architecture of the project. They provide the necessary tools and functionalities to address the problem at hand effectively. The implementation demonstrates a good application of these technologies, showcasing their capabilities and integrating them seamlessly. The code is easy to understand, maintainable, and robust, ensuring the long-term viability of the project.
 
 ### Product Realization
 
-...
-
+During the development of the project, our team implemented various features and improvements that contribute to a viable product for the problem at hand. The product has a professional feel to it, exhibiting the required quality attributes. It also adheres to the technical constraints and is ready to be delivered to the client. These contributions were well received by the client, indicating that the final product meets their needs and will be easy for them to use.
 
 ### Value for the Client
 
-...
+After the last Q&A session with the client, which we also presented the final product, the client was pleased with the final product and the work we've done. Although some minor points were raised, the part of the product that was implemented by our team was well received by the client. We believe that the client will be able to use the product with ease and that it will be useful for the his needs. Overall, the effort put into the project was quite above the expected for the curricular unit, but it is expected in such a project whose goal is to be used in a real-world scenario and should be fine-tuned to the client's needs and required some trial and error to get on par with the client's expectations.

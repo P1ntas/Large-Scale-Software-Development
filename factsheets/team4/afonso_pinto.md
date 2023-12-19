@@ -103,7 +103,26 @@ Finally, I tried to improve the models by utilising hyperparameter tuning. The m
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
+
+ * #1 As a User I want to be able to see a detailed page about a specific machine I choose so that I can monitor its current, real-time state
+
+
+### The pull request that I am most proud of
+
+This can include PRs that you have implemented or reviewed during the sprint.
+
+ * #3 feature/machine_page
+
+
+### Two contributions of other types that I am most proud of
+
+
+In creating the Grafana dashboard for monitoring factory machines, two contributions I am particularly proud of are:
+
+<b>Maintenance Alerts Panel:</b> This element enhances proactive maintenance planning by displaying upcoming scheduled maintenance events. It helps in minimizing unexpected downtimes and extending machine lifespan.
+
+<b>Energy Consumption Graph:</b> This graph provides real-time insights into the energy usage of machines. It is instrumental for identifying patterns in energy consumption, enabling the implementation of energy-saving measures and reducing operational costs.
 
 
 ## Overall Product
@@ -113,14 +132,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+Throughout the project, I focused on developing robust and scalable solutions. My contributions in data preparation and machine learning model development ensured high accuracy and reliability. These technical aspects not only enhanced the product's performance but also laid a strong foundation for future scalability and adaptability.
 
 
 ### Product Realization
 
-...
+My efforts were pivotal in turning conceptual ideas into a functional product. From generating mock-up data to implementing machine learning models, each step was crucial in realizing the product. The Grafana dashboard and maintenance alerts I developed are tangible outcomes that users can interact with and benefit from.
 
 
 ### Value for the Client
 
-...
+My contributions significantly elevated the product's value for the client. By integrating AI for autonomous decision-making and developing a user-friendly dashboard, I addressed key operational challenges. This not only streamlines the client's processes but also offers long-term benefits like predictive maintenance, energy efficiency, and enhanced operational insights.

@@ -91,8 +91,19 @@ During this sprint I collaborated closely with José to better undersand the sec
 
 ## Sprint 4
 
-...
+During this current sprint, my focus shifted towards enhancing project communication and notification systems. Specifically, I concentrated on optimizing the notification process using a templating language for our project. I delved into understanding the intricacies of crafting effective and dynamic notifications that can be customized using templates, helping other team members to further enhance this feature we had already developed. I also understood the new parameters for notifications which were implemented by another part of the team.
 
+### The user storie that I am most proud of
+
+* [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented automatic notifications based on value ranges for sensor dynamic data - updated to feature Go's templating language and more accurate parameters
+
+ ### The pull request that I am most proud of
+
+ * [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
+
+ ### Two contributions of other types that I am most proud of
+
+During this sprint I worked mainly with Afonso and Hugo to make the notifications format better using Go´s templating language.
 
 ## Overall Product
 
@@ -101,14 +112,18 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+
+I made substantial, technically proficient contributions to the project, successfuly implementing the tasks that were assigned to me. I also always tried to follow the established project guidelines and coding standards. My contributions showed a good understanding of the technologies used and the project's architecture, and I was able to apply this knowledge to solve problems and implement robust features.
+
 
 
 ### Product Realization
 
-...
+
+I think overall, the product could have been improved in its usability and user-friendliness. However, I think my contributions helped to make this issue less relevant, as I was able to implement simple and effective notifications with my team. I think the project is ready to be used by the client, and it is a good product overall, with a professional look.
+
 
 
 ### Value for the Client
 
-...
+In my point of view, the client will be satisfied with the final product, at least with the features that we implemented. They work and will be useful for the client once we have real data and parameters for the notifications.

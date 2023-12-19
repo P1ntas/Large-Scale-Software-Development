@@ -100,9 +100,6 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 - Updated the [create.sql](src/data/create.sql) file to contain the new tables for the job schedule and its tasks.
 - Updated the [generator.py](src/data/generator.py) script to include data for the tables of the job schedule and its tasks.
 
-### Removed
-...
-
 ### PBIs Done
 
 - [Fix Documentation](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=45604771)
@@ -110,3 +107,36 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 - [Job Scheduling](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=45645025)
 - [ML data preparation](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=43786291)
 - [SonarQube](https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=43786291)
+
+## [0.0.5] - 2023-12-15 (Sprint 4)
+
+### Added
+
+- Added an option to add a new task in Grafana.
+- Added a new visualization in Grafana to display the job schedule and its tasks.
+- Added an option to assign a task to a system in Grafana.
+- Added extra information to expansions and sensors on Grafana's system page.
+
+### Fixed
+
+- Fixed the [development guide](docs/development/development_guide.md) with the new printscreens for 4-DIAC and updated the values of the variables in the function blocks.
+
+### Changed
+
+- Updated the [generator.py](src/data/generator.py) script to generate a timeseries for the job schedule and its tasks.
+- Updated the [docker-compose.yml](src/docker-compose.yml) file to include the new Grafana plugin for the job schedule.
+- Updated the [create.sql](src/data/create.sql) file to include the new tables for the job schedule and its tasks.
+- Updated the production server with the Release 4 version.
+
+### Removed
+
+- Removed unused files from the [src](src) folder to improve the readability of the project.
+
+### PBIs Done
+- [ML data pipeline](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/54)
+- [ML model evaluation](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/55)
+- [General machines display page (with filters)](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/57)
+- Specific machine page [#1](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/145) and [#2](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/2)
+- [Production workflow management: resource allocation module](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103)
+
+

@@ -66,7 +66,7 @@ During this sprint, the most positive point was the good communication that was 
 
 ### Team 1 Retrospective
 
-#### Start: 
+#### Start:
     - Using a team branch to push the changes instead of creating a pull request of each feature/fix to the dev branch
     - Communicating more with the team members to better understand the progress of the sprint
 
@@ -84,13 +84,13 @@ Overall, we aren't totally happy with the work that was carried out this sprint.
 
 ### Team 2 Retrospective
 
-#### Start: 
+#### Start:
     - Collecting more metrics in order to better understand our performance during our sprint and identify bottlenecks
     - Enphasizing communication at the start of the sprint to make sure work is laid out more easily during its duration
     - Using a team-wide branch to push changes instead of committing directly to the *dev* branch
 
 #### Stop:
-    - Committing directly to the *dev* branch 
+    - Committing directly to the *dev* branch
 
 #### Continue:
     - Good communication throughout the sprint
@@ -100,7 +100,7 @@ Overall, we aren't totally happy with the work that was carried out this sprint.
 
 #### General Considerations:
 
-Overall, we are happy with how our work was carried out this sprint. We effectively tackled the issues assigned to us and divided the work evenly, allowing for our most productive sprint yet. We held two team-wide meetings to understand the current status of the progress made towards our goals and shifted priorities when needed, which proved to be immensely useful to get more work done better and more adequately. 
+Overall, we are happy with how our work was carried out this sprint. We effectively tackled the issues assigned to us and divided the work evenly, allowing for our most productive sprint yet. We held two team-wide meetings to understand the current status of the progress made towards our goals and shifted priorities when needed, which proved to be immensely useful to get more work done better and more adequately.
 
 ### Team 3 Retrospective
 
@@ -128,30 +128,102 @@ However, we can still analyze this sprint in the "Start, Stop, Continue" way.
 
 ### Team 4 Retrospective
 
-#### Start: 
-    - TODO
+#### Start:
+    - We will focus our attention on other issues aside the ML one.
 
 #### Stop:
-    - TODO
+    - We will focus less on the ML issue, because we don't have the client's help on giving us the data we need.
 
 #### Continue:
-    - TODO
+    - We will continue to make use of the good communication between team 4 members.
 
 #### General Considerations:
 
-TODO
+This sprint we didn't develop as much as we wished. For several reasons. Also, the lack of real data and communication on the clients side doesn't help.
 
 #
 
 ## **Sprint 4**
 
 ### Overall Retrospective
+The work developed so far is more than satisfactory. All noticed the improvements made so far, so it would be a matter of having more time to develop a more polished product.
 
 ### Team 1 Retrospective
 
+#### Start:
+    - Weekly reunions with team members to check what everyone is up to more often.
+
+#### Stop:
+    - Not working as soon as expected to finish the assigned issues.
+
+#### Continue:
+    - Following the coding guidelines correctly.
+    - Following the documentation guidelines correctly.
+    - Continue the good communication between team members.
+
+#### General Considerations:
+
+Overall, we didn't have enough time to work on this sprint, but we improved the communication between the team. We held a meeting at the start of the sprint, which proved useful to understand the status of the work done until that moment, as well to shift our priorities to the new up and coming tasks that were needed to conclude this sprint.
+
 ### Team 2 Retrospective
+
+#### Start:
+    - Schedule meetings earlier/at the start of the sprint, so as to make sure everyone can attend them
+
+#### Stop:
+    - Waiting for the end of the sprint to start filling out individual factsheets and other content to enable easier releases at the end of the sprint
+
+#### Continue:
+    - Having better communication throughout the sprint
+    - Following the coding guidelines correctly
+    - Good work balance between teammates
+    - Good overall productivity
+
+#### General Considerations:
+
+All in all, we are happy with our work this sprint. Because of our low availability due to lack of time, we ended up having less PBIs done - however, we were able to achieve the main points to achieve a working template to be built upon. Furthermore, even despite having less dedicated time, the team got together and worked continuously and together, discussing and helping each other when needed.
 
 ### Team 3 Retrospective
 
+During this sprint, our team was in charge of refining and making improvements to the issue [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5).
+
+The issue, in which we had already previously worked on, was related to implementing Grafana native notifications/alerts based on the data that is being streamed from Prometheus. The notifications are sent when the data is out of the normal range (firingg status), and another notification is sent when the data is back to normal (resolved status). This feature was already implemented, but it was not working as expected, as the notifications were being sent uncontrollably. So, we had to fix the issue adjusting the ranges and we took advantage of th opportunity to implement a templating language that could be of good use later on in the project, when we have real data.
+
+We will, as done before, analyze this sprint in the "Start, Stop, Continue" way.
+
+### Start (if there was another sprint)
+
+    - We would start to try to implement machine learning applied to our notifications.
+    - We would try to grab the client's attention to our needs.
+
+### Stop (if there was another sprint)
+
+    - We would stop spending so much time researching on the technologies we are using, as we sometimes are having less than ideal development time.
+
+### Continue (if there was another sprint)
+
+    - We would continue to work hard and professionally on the issues we are assigned and try to deliver the best possible solutions.
+    - We would continue to use good coding and project management practices, so we can stay organized.
+
 ### Team 4 Retrospective
 
+#### Start (if there was another sprint)
+
+    - We would've finish implementing a complete machine learning solution.
+    - Draw the customer's attention to the urgent need for real data.
+
+#### Stop (if there was another sprint)
+
+    - We would stop spending so much time researching on the technologies we are using, as we sometimes are having less than ideal development time.
+
+#### Continue (if there was another sprint)
+
+    - We commit to diligently and professionally addressing the assigned tasks, striving to provide optimal solutions.
+    - We intend to maintain our organizational structure by adhering to effective coding and project management practices.
+    - We would continue with the good communication and team work spirit that has been developing thoughout this project.
+
+#### General Considerations:
+
+During this sprint, our team did various different issues, not only concerning the previous theme assigned to us (optimization) but also other issues concerning the UI and user functionalities.
+
+The optimization issues could have been easier to work if the client made some real data available.

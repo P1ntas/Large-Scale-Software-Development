@@ -49,7 +49,7 @@ I was assigned to upgrade the current database uml and to create the SQL schema.
 ### The two user stories that I am most proud of
 
 - [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Upgraded the database schema in a way that is both scalable and optimized for enhanced performance.
-- 
+  
 - [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Created a SQL schema to be used in the next sprint.
 
 
@@ -83,7 +83,21 @@ As a scrum master I helped with preparing the sprint backlog and assigning team 
 
 ## Sprint 4
 
-...
+### The two user stories that I am most proud of
+
+- [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Remodeled the sql.
+  
+- [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Worked on generator file but was not able to complete due to time.
+
+
+### The two pull requests that I am most proud of
+
+N/A(No pull requests due to not having working code.)
+
+
+### Two contributions of other types that I am most proud of
+
+As a scrum master I helped with preparing the sprint backlog and assigning team members.
 
 
 ## Overall Product
@@ -93,14 +107,14 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+As a Scrum Master, ensuring the technical soundness of our project is pivotal. Just like fostering agile teamwork, maintaining a robust project foundation requires reliability, scalability, and seamless integration—crucial elements. Additionally I worked on database modifications.
 
 
 ### Product Realization
 
-...
+As a Scrum Master overseeing database product realization, I facilitate agile development cycles, ensuring seamless collaboration between team members.
 
 
 ### Value for the Client
 
-...
+The client would have a better experience with the upgraded database due to it being capable of much more than the old one and would be crucial in adding content to the project.

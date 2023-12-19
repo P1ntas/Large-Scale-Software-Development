@@ -78,29 +78,63 @@ Even though that, we managed to create a sensor data simulation with the help of
 
 ## Sprint 3
 
-...
+During Sprint 3, Team 4 made progress by focusing on the PBI's that were assigned. Throughout the sprint, our team managed to understand better the issue and to underline a solid way to approach it in order to come up with a solution.
+
+### The four user stories that we are most proud of
+
+No new user stories were created. We continued to work on the same issues that we didn't finish in the previous sprint.
+
+### The four pull requests that we are most proud of
+
+The [#111](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/111) pull request, was the major one our team dealt with. The other we about documentation more than anything.
+
+### Four contributions of other types that we are most proud of
+
+Were concerning the same things we have been doing since the previous sprint:
+
+1. **Client Collaboration**: Team 4 played their part in liaising with the client to understand their requirements. We facilitated effective communication between the Product Owner (PO) and the Development Team, ensuring that the client's vision was accurately represented in the project. This close collaboration was essential in aligning our efforts with the client's expectations.
+
+2. **Requirement Clarity**: We actively worked on clarifying requirements during discussions with the client. This was crucial in eliminating any ambiguities and uncertainties.
+
+3. **Adaptation to Client Needs**: We were agile in our approach and made necessary adjustments to the work being done based on feedback from the meetings with the client. This adaptability allowed us to better cater to the client's evolving needs and ensure the project was on the right track from the beginning.
+
+4. **Working guidelines**: During this sprint, Team 4 made a joint effort with other teams on the implementation of working guideline, such as commit message structure, branch naming, etc.
 
 
 ## Sprint 4
 
-...
+During Sprint 4, Team 4 made progress by focusing on the PBI's that were assigned. Throughout the sprint, our team managed to understand better the issue and to underline a solid way to approach it in order to come up with a solution.
+
+### The four user stories that we are most proud of
+
+No new user stories were created. We continued to work on the same issues that we didn't finish in the previous sprint.
+
+### The four pull requests that we are most proud of
+
+The [#145](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/145) and [#146](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/146) pull requests, were the major ones our team dealt with. The other we about documentation more than anything.
+
+### Four contributions of other types that we are most proud of
+
+Were concerning the same things we have been doing since the previous sprint:
+
+1. **Client Collaboration**: Team 4 played their part in liaising with the client to understand their requirements. We facilitated effective communication between the Product Owner (PO) and the Development Team, ensuring that the client's vision was accurately represented in the project. This close collaboration was essential in aligning our efforts with the client's expectations.
+
+2. **Requirement Clarity**: We actively worked on clarifying requirements during discussions with the client. This was crucial in eliminating any ambiguities and uncertainties.
+
+3. **Adaptation to Client Needs**: We were agile in our approach and made necessary adjustments to the work being done based on feedback from the meetings with the client. This adaptability allowed us to better cater to the client's evolving needs and ensure the project was on the right track from the beginning.
+
+4. **Working guidelines**: During this sprint, Team 4 made a joint effort with other teams on the implementation of working guideline, such as commit message structure, branch naming, etc.
 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a size of 40~100 words.
-
-
 ### Technical Soundness
-
-...
+As a team, we delved into the technologies and found them user-friendly and well-suited for the task at hand, even though it took too long for that. Had we known the technologies beforehand, we could have enhanced our contributions. Despite that, we covered UI, optimization, and collaboratively created a machine learning model. Our combined efforts shaped a more comprehensive approach and streamlined task distribution for greater efficiency and success, within our team.
 
 
 ### Product Realization
-
-...
-
+Other than the UI functionalities, with which the client was more than satisfied, as a team, we've made significant progress on the product, incorporating most client-requested functionalities. Although not fully complete, the client expressed satisfaction, acknowledging the absence of ML model integration. They recognized our dedicated research and development efforts. We remain committed to enhancing the product further and ensuring seamless integration of the machine learning model in the upcoming stages of development.
 
 ### Value for the Client
 
-...
+Our team accomplished a successful handover, earning client approval. Working within the DINASORE constraint posed a time challenge, requiring us to grasp a new technology swiftly. Despite the time-consuming research and study, the collective effort ensured adherence to the expected timeframe for this curricular unit, reflecting our commitment to delivering quality work within constraints.

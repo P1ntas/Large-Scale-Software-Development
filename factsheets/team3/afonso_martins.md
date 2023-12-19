@@ -96,8 +96,29 @@ I played a big part in organizing our team's work and making sure everyone had s
 
 ## Sprint 4
 
-...
+During this sprint, my contribution to the team and project overall, was to:
 
+- First, review the backlogs and adjust parameters for completeness/acceptance for issue number [5] (https://github.com/orgs/FEUP-MEIC-DS-2023-1MEIC06/projects/1?pane=issue&itemId=41407217), related to sending maintenance notifications
+
+- Second, i worked with other members of the team in order to successfuly implement Go's templating language in the aforementioned issue, in order to make the notifications clearer for the end-user. The documentation that I found and served as base can be found here: [Using Go´s Templating Language in Grafana](https://grafana.com/docs/grafana/latest/alerting/manage-notifications/template-notifications/using-go-templating-language/)
+
+Reflecting on this sprint, I think I coud have contributed in a more positive way if the issue assigned to our team was simpler, as conciliating such a complex theme with other projects was very difficult. In the next sprint
+
+Reflecting on this sprint, I think I improved my overall contribution in relation to the last sprint: the team produced more results and that made me feel that, as a Scrum Master, i did a better job of organizing work for this last sprint. Once again, I also interacted with the other teams Scrum Masters so we could decide what to do with a few issues we faced along this sprint.
+
+### The user storie that I am most proud of
+
+* [#5](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/5) - Implemented automatic notifications based on value ranges for sensor dynamic data - updated to feature Go's templating language and more accurate parameters
+
+ ### The pull request that I am most proud of
+
+ * [#151](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/151)
+
+ ### Two contributions of other types that I am most proud of
+
+I made sure that the team followed the established guidelines during the code implementation. This was specially important as we did not implement code in the previous sprint, and these good practices could have been forgotten.
+
+I helped my teammates when they needed support and made sure the work was evenly distributed, which was of key importance as the whole team was very busy with other projects.
 
 ## Overall Product
 
@@ -106,14 +127,13 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-...
+In the technical domain, I focused mainly on making things usable and reliable, crafting good solutions for our architecture. This work not only made our product perform well but also set it up for easy growth and future changes. As a SM I made sure the whole team was following established guidelines/standards.
 
 
 ### Product Realization
 
-...
-
+Although in this project it was not always feasible to turn ideas into something, each step (such as mock data) was vital in developing a usable product. The Grafana alerts concrete examples of things that are working. As SM I assured the team always worked towards the same goal, making the product feel professional and ready to be delivered.
 
 ### Value for the Client
 
-...
+In retrospect, my contributions hold significant value for the client. The alerting features I helped develop are crucial, notifying about machine parameters and enabling quick detection of deviations. Also, as SM I made sure the documentation was always up to date for the client to be enlightened about the project and happy with the results.
