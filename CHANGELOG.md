@@ -126,6 +126,7 @@ Note that the notion of a "changelog" (or of "release notes") is a common practi
 - Updated the [generator.py](src/data/generator.py) script to generate a timeseries for the job schedule and its tasks.
 - Updated the [docker-compose.yml](src/docker-compose.yml) file to include the new Grafana plugin for the job schedule.
 - Updated the [create.sql](src/data/create.sql) file to include the new tables for the job schedule and its tasks.
+- Updated the production server with the Release 4 version.
 
 ### Removed
 
