@@ -74,19 +74,16 @@ On this sprint I was assigned an issue that near the end stoped existing (issue 
 
 ## Overall Product
 
-Reflect on your specific contributions to the product, technically and as perceived by a user, along the three dimensions below (see Dashboard > Final outcomes > Product). Keep each section below to a maximum of 50 words.
-
-
 ### Technical Soundness
 
-...
+I wouldn't say that the chosen technologies are a bad fit for the architecture or that the chosen technologies and architecture are a bad fit for the problem, I just don't think all of them are necessary. I think there were implemented too many technologies to try to make a more professional project and that may did not help a lot of students. The one technology I really think was well chosen was Grafana, for the front-end. Overall I don't believe that the implementation e easy to understand, maintainable or robust (there is a readme.md that helps though).
 
 
 ### Product Realization
 
-...
+The project was not concluded but has a lot of the functionalities required by the client. I would say that it has a good structure that could be considered professional (not excellent though). Our main task was hard to do without real data or at least data structures, so our ML model was not integrated with the project and the client understood that.
 
 
 ### Value for the Client
 
-...
+The handover was successfull and the client understood that with what he gave us we could not give him more than what we did. Although most of my work did not appear on commits or was integrated with the project directly I do think I have contributed in a good way. I still have the feeling I could have done a little more but that wasn't because of lack of effort or time spent, was because of the organization and the project itself.
