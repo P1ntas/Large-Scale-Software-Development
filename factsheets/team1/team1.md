@@ -115,13 +115,11 @@ Additionally, we were was tasked with the responsibility of upgrading the existi
 
 - [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Created a Mockup
 
-### The four pull requests that we are most proud of
+### The pull requests that we are most proud of
 
 - [#114](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/114) - This PR was essential to add the new Grafana visualizations to the development branch according to a systems job scheduler.
 
 - [#101](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/101) - Updated the documentation and the Changelog to reflect the changes made in the project in sprint 2.
-
-- [Mockup](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/blob/documentation/docs/images/mockup.png) - Created a Mockup for Data Analytics page
 
 - [#108](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/108) - Implemented maintenance status, schedule and logs.
 
@@ -134,7 +132,7 @@ Additionally, we were was tasked with the responsibility of upgrading the existi
 
 ## Sprint 4
 
-### The four user stories that I am most proud of
+### The user stories that I am most proud of
 
 - [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) - Together with the member [Fábio Morais from Team 2](../team2/fabio_morais.md), we successfully improved the previously done dashboard regarding the job scheduling, including a forms that creates a new task to be scheduled and the updates are reflected in the dashboard and in the database.
 
@@ -142,13 +140,13 @@ Additionally, we were was tasked with the responsibility of upgrading the existi
 
 - [#14](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/14) - Remodeled the sql and worked on generator file but was not able to complete due to time.
 
-### The four pull requests that we are most proud of
+### The pull requests that we are most proud of
 
 - [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Corrected a bug related to the dashboard use dinasore data on the new graphs.
 
 - [#148](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/148) - This PR closes the issue [#103](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/103) and provides an updated dashboard for the job scheduling task, as well as a form to create new tasks to be scheduled.
 
-### Four contributions of other types that I am most proud of
+### Contributions of other types that I am most proud of
 
 - Helped [Team 2](../team2/team2.md) once more on improving the documentation about the project has a whole.
 
