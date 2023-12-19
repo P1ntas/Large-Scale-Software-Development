@@ -83,9 +83,13 @@ João did the biggest contribution to the project, in this phase my biggest cont
 
 - [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Continue to develop the Data Analytics page.
 
+- [#6](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/issues/6) - Improved how the maintenance features are implemented.
+
 ### The two pull requests that I am most proud of
 
 - [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Corrected a bug related to the dashboard use dinasore data on the new graphs.
+
+- [#147](https://github.com/FEUP-MEIC-DS-2023-1MEIC06/DS-Project/pull/147) - Created new graphs in grafana that are useful in reading the information related to the system.
 
 ### Two contributions of other types that I am most proud of
   
