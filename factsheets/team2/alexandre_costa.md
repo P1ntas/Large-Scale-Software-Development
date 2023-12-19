@@ -30,7 +30,7 @@ In this sprint, I worked on the implementation of Bandit to help finding common 
 
 ## Sprint 4
 
-...
+In this final sprint, I was unable to contribute to the development of the product. However, besides staying up to date and participate in the decisions necessary for the final phase of the project, I reviewed and approved pull requests.
 
 ## Overall Product
 
