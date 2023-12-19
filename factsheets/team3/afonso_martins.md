@@ -127,13 +127,13 @@ Reflect on your specific contributions to the product, technically and as percei
 
 ### Technical Soundness
 
-In the technical domain, I focused mainly on making things usable and reliable, crafting top-notch solutions. This work not only made our product perform well but also set it up for easy growth and future changes. As a SM I made sure the whole team was following established guidelines/standards.
+In the technical domain, I focused mainly on making things usable and reliable, crafting good solutions for our architecture. This work not only made our product perform well but also set it up for easy growth and future changes. As a SM I made sure the whole team was following established guidelines/standards.
 
 
 ### Product Realization
 
-Although in this project it was not always feasible to turn ideas into something, each step (such as mock data) was vital in developing a usable product. The Grafana alerts concrete examples of things that are working. As SM I assured the team always worked towards the same goal.
+Although in this project it was not always feasible to turn ideas into something, each step (such as mock data) was vital in developing a usable product. The Grafana alerts concrete examples of things that are working. As SM I assured the team always worked towards the same goal, making the product feel professional and ready to be delivered.
 
 ### Value for the Client
 
-In retrospect, my contributions hold significant value for the client. The alerting features I helped develop are crucial, notifying about machine parameters and enabling quick detection of deviations. Also, as SM I made sure the documentation was always up to date for the client to be enlightened about the project.
+In retrospect, my contributions hold significant value for the client. The alerting features I helped develop are crucial, notifying about machine parameters and enabling quick detection of deviations. Also, as SM I made sure the documentation was always up to date for the client to be enlightened about the project and happy with the results.
